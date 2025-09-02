@@ -11,10 +11,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Compliers - AI Law & Data Privacy Experts</title>
+        {/* Updated title and description to reflect new focus */}
+        <title>The Compliers – AI Law & IT & Data Privacy Specialists</title>
         <meta
           name="description"
-          content="Guiding organisations through the evolving landscape of artificial intelligence and data protection."
+          content="With our specialization in AI Law and legal aspects of IT & Data Privacy, we advise on and help with the conventional areas of law as well as the latest legal developments across the industries."
         />
         <link
           rel="stylesheet"
@@ -58,14 +59,22 @@ export default function Home() {
       {/* Hero Section */}
       <header id="hero">
         <div className="hero-content">
-          <h1>AI Law & Data Privacy Experts</h1>
+          {/* Updated hero headline and description */}
+          <h1>AI Law and legal aspects of IT & Data Privacy</h1>
           <p>
-            Guiding organisations through the evolving landscape of artificial
-            intelligence and data protection.
+            With our specialization in AI Law and legal aspects of IT & Data
+            Privacy, we advise on and help with the conventional areas of law as
+            well as the latest legal developments across the industries.
           </p>
-          <a href="#about" className="btn">
-            Learn More
-          </a>
+          {/* Two call‑to‑action buttons for better user engagement */}
+          <div className="hero-buttons">
+            <a href="#contact" className="btn">
+              Need Help
+            </a>
+            <a href="#services" className="btn btn-secondary">
+              Learning Center
+            </a>
+          </div>
         </div>
       </header>
 
@@ -89,7 +98,11 @@ export default function Home() {
       {/* Services Section */}
       <section id="services">
         <div className="container">
-          <h2>Our Services</h2>
+          {/* Updated services heading and description */}
+          <h2>Our Expertise</h2>
+          <p className="services-description">
+            Comprehensive legal solutions for the digital age
+          </p>
           <div className="services-grid">
             <div className="service">
               <i className="fa-solid fa-shield-check service-icon" aria-hidden="true"></i>
@@ -122,19 +135,60 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact">
         <div className="container">
-          <h2>Contact Us</h2>
-          <p>
-            Ready to start your compliance journey? Reach out and let's discuss
-            how we can help.
-          </p>
-          <form id="contact-form" onSubmit={handleSubmit}>
-            <input type="text" name="name" placeholder="Your Name" required />
-            <input type="email" name="email" placeholder="Your Email" required />
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit" className="btn">
-              Send Message
-            </button>
-          </form>
+          <div className="contact-wrapper">
+            {/* Left side: existing contact form */}
+            <div className="contact-form">
+              <h2>Contact Us</h2>
+              <p>
+                Ready to start your compliance journey? Reach out and let's
+                discuss how we can help.
+              </p>
+              <form id="contact-form" onSubmit={handleSubmit}>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  required
+                ></textarea>
+                <button type="submit" className="btn">
+                  Send Message
+                </button>
+              </form>
+            </div>
+            {/* Right side: why choose us content */}
+            <div className="contact-info">
+              <h3>Why Choose The Compliers?</h3>
+              <p>
+                We bridge the gap between cutting-edge technology and legal
+                compliance, ensuring your business stays ahead while remaining
+                compliant.
+              </p>
+              <ul>
+                <li>
+                  <span>Specialized Expertise</span>
+                  <small>
+                    Deep understanding of emerging technologies and their legal
+                    implications
+                  </small>
+                </li>
+                <li>
+                  <span>Industry Experience</span>
+                  <small>
+                    Proven track record across multiple industries and
+                    regulatory environments
+                  </small>
+                </li>
+                <li>
+                  <span>Future-Ready Solutions</span>
+                  <small>
+                    Stay ahead of regulatory changes and emerging legal
+                    challenges
+                  </small>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 
