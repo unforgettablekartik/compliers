@@ -12,10 +12,10 @@ export default function Home() {
     <>
       <Head>
         {/* Updated title and description to reflect new focus */}
-        <title>The Compliers – AI Law &amp; IT &amp; Data Privacy Specialists</title>
+        <title>The Compliers – AI Law & IT & Data Privacy Specialists</title>
         <meta
           name="description"
-          content="With our specialization in AI Law and legal aspects of IT &amp; Data Privacy, we advise on and help with the conventional areas of law as well as the latest legal developments across the industries."
+          content="With our specialization in AI Law and legal aspects of IT & Data Privacy, we advise on and help with the conventional areas of law as well as the latest legal developments across the industries."
         />
         <link
           rel="stylesheet"
@@ -60,9 +60,9 @@ export default function Home() {
       <header id="hero">
         <div className="hero-content">
           {/* Updated hero headline and description */}
-          <h1>AI Law and legal aspects of IT &amp; Data Privacy</h1>
+          <h1>AI Law and legal aspects of IT & Data Privacy</h1>
           <p>
-            With our specialization in AI Law and legal aspects of IT &amp; Data
+            With our specialization in AI Law and legal aspects of IT & Data
             Privacy, we advise on and help with the conventional areas of law as
             well as the latest legal developments across the industries.
           </p>
@@ -71,7 +71,7 @@ export default function Home() {
             <a href="#contact" className="btn">
               Need Help
             </a>
-            <a href="#services" className="btn btn-secondary">
+            <a href="/articles" className="btn btn-secondary">
               Learning Center
             </a>
           </div>
@@ -95,7 +95,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      {/* Expertise Section */}
       <section id="services">
         <div className="container">
           {/* Updated services heading and description */}
@@ -109,9 +109,9 @@ export default function Home() {
               <i className="fa-solid fa-robot service-icon" aria-hidden="true"></i>
               <h3>AI Law</h3>
               <p>
-                Navigate the complex landscape of artificial intelligence
-                regulations, compliance, and ethical considerations in AI
-                deployment.
+                Navigate the complex landscape of artificial intelligence regulations,
+                ethical considerations and nuances of Intellectual property (IP) in the
+                age of AI.
               </p>
             </div>
             {/* Data Privacy */}
@@ -119,8 +119,8 @@ export default function Home() {
               <i className="fa-solid fa-user-shield service-icon" aria-hidden="true"></i>
               <h3>Data Privacy</h3>
               <p>
-                Comprehensive data protection strategies, GDPR compliance, and
-                privacy‑by‑design implementation for your organization.
+                Comprehensive data protection strategies, privacy compliance, GDPR
+                considerations, and ISO/IEC 27701 implementation.
               </p>
             </div>
             {/* IT Law */}
@@ -128,8 +128,8 @@ export default function Home() {
               <i className="fa-solid fa-laptop-code service-icon" aria-hidden="true"></i>
               <h3>IT Law</h3>
               <p>
-                Technology contracts, software licensing, cybersecurity
-                compliance, and digital transformation legal support.
+                Technology contracts, software licensing, cybersecurity compliance,
+                and digital transformation legal support.
               </p>
             </div>
             {/* Contract Law */}
@@ -137,9 +137,9 @@ export default function Home() {
               <i className="fa-solid fa-file-contract service-icon" aria-hidden="true"></i>
               <h3>Contract Law</h3>
               <p>
-                Support for all kinds of contracts, agreements and legal
-                documents with expert drafting, review and analysis for risk
-                mitigation and dispute handling.
+                Support for all kinds of contracts, agreements and legal documents
+                with expert drafting, review and analysis for risk mitigation
+                and dispute handling.
               </p>
             </div>
           </div>
@@ -204,10 +204,24 @@ export default function Home() {
 
       {/* Footer */}
       <footer>
-        <div className="container">
+        <div className="container footer-content">
+          {/* Footer navigation links */}
+          <ul className="footer-nav">
+            <li>
+              <a href="#services">Our Expertise</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="/terms">Terms of Use</a>
+            </li>
+            <li>
+              <a href="/privacy">Privacy Policy</a>
+            </li>
+          </ul>
           <p>
-            &copy; {new Date().getFullYear()} The Compliers. All rights
-            reserved.
+            &copy; {new Date().getFullYear()} The Compliers. All rights reserved.
           </p>
         </div>
       </footer>
