@@ -12,10 +12,10 @@ export default function Home() {
     <>
       <Head>
         {/* Updated title and description to reflect new focus */}
-        <title>The Compliers – AI Law & IT & Data Privacy Specialists</title>
+        <title>The Compliers – AI Law &amp; IT &amp; Data Privacy Specialists</title>
         <meta
           name="description"
-          content="With our specialization in AI Law and legal aspects of IT & Data Privacy, we advise on and help with the conventional areas of law as well as the latest legal developments across the industries."
+          content="With our specialization in AI Law and legal aspects of IT &amp; Data Privacy, we advise on and help with the conventional areas of law as well as the latest legal developments across the industries."
         />
         <link
           rel="stylesheet"
@@ -60,9 +60,9 @@ export default function Home() {
       <header id="hero">
         <div className="hero-content">
           {/* Updated hero headline and description */}
-          <h1>AI Law and legal aspects of IT & Data Privacy</h1>
+          <h1>AI Law and legal aspects of IT &amp; Data Privacy</h1>
           <p>
-            With our specialization in AI Law and legal aspects of IT & Data
+            With our specialization in AI Law and legal aspects of IT &amp; Data
             Privacy, we advise on and help with the conventional areas of law as
             well as the latest legal developments across the industries.
           </p>
@@ -104,28 +104,42 @@ export default function Home() {
             Comprehensive legal solutions for the digital age
           </p>
           <div className="services-grid">
+            {/* AI Law */}
             <div className="service">
-              <i className="fa-solid fa-shield-check service-icon" aria-hidden="true"></i>
-              <h3>AI Compliance</h3>
+              <i className="fa-solid fa-robot service-icon" aria-hidden="true"></i>
+              <h3>AI Law</h3>
               <p>
-                Assess and implement strategies that ensure your AI systems comply
-                with local and global regulations.
+                Navigate the complex landscape of artificial intelligence
+                regulations, compliance, and ethical considerations in AI
+                deployment.
               </p>
             </div>
+            {/* Data Privacy */}
             <div className="service">
-              <i className="fa-solid fa-lock service-icon" aria-hidden="true"></i>
-              <h3>Data Protection</h3>
+              <i className="fa-solid fa-user-shield service-icon" aria-hidden="true"></i>
+              <h3>Data Privacy</h3>
               <p>
-                Design data governance frameworks that prioritise privacy and
-                security across the data lifecycle.
+                Comprehensive data protection strategies, GDPR compliance, and
+                privacy‑by‑design implementation for your organization.
               </p>
             </div>
+            {/* IT Law */}
             <div className="service">
-              <i className="fa-solid fa-chalkboard-user service-icon" aria-hidden="true"></i>
-              <h3>Training & Workshops</h3>
+              <i className="fa-solid fa-laptop-code service-icon" aria-hidden="true"></i>
+              <h3>IT Law</h3>
               <p>
-                Equip your team with the knowledge to develop, deploy and manage
-                AI responsibly through engaging sessions.
+                Technology contracts, software licensing, cybersecurity
+                compliance, and digital transformation legal support.
+              </p>
+            </div>
+            {/* Contract Law */}
+            <div className="service">
+              <i className="fa-solid fa-file-contract service-icon" aria-hidden="true"></i>
+              <h3>Contract Law</h3>
+              <p>
+                Support for all kinds of contracts, agreements and legal
+                documents with expert drafting, review and analysis for risk
+                mitigation and dispute handling.
               </p>
             </div>
           </div>
@@ -138,11 +152,7 @@ export default function Home() {
           <div className="contact-wrapper">
             {/* Left side: existing contact form */}
             <div className="contact-form">
-              <h2>Contact Us</h2>
-              <p>
-                Ready to start your compliance journey? Reach out and let's
-                discuss how we can help.
-              </p>
+              <h2>Contact for Enquiries</h2>
               <form id="contact-form" onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
