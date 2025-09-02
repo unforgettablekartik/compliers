@@ -317,3 +317,24 @@ footer p {
     font-size: 1rem;
   }
 }
+/* Custom spacing and layout adjustments */
+#services .services-grid {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#services h2 {
+  margin-bottom: 0.8rem;
+}
+
+.services-description {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#contact .contact-form h2 {
+  margin-bottom: 0.8rem;
+}
+
+#contact {
+  padding-bottom: 2rem;
+}
