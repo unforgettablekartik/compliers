@@ -1,0 +1,238 @@
+/*
+ * Global styles for the Compliers Next.js website.
+ *
+ * These styles mirror the minimalistic design from the static HTML
+ * version, adapted for a React/Next.js project. A soft colour palette,
+ * generous spacing and subtle interactions provide a refined user
+ * experience without sacrificing simplicity.
+ */
+
+/* Enable smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Reset some basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #2d3748;
+  background-color: #f9fafb;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Navbar */
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+}
+
+#navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+#navbar .logo a {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #1a202c;
+  text-decoration: none;
+}
+
+#navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+#navbar .nav-links a {
+  text-decoration: none;
+  color: #4a5568;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+#navbar .nav-links a:hover {
+  color: #2b6cb0;
+}
+
+/* Hero Section */
+#hero {
+  height: 90vh;
+  background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 1rem;
+  overflow: hidden;
+}
+
+#hero .hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #1a202c;
+}
+
+#hero .hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #4a5568;
+}
+
+/* Buttons */
+.btn {
+  display: inline-block;
+  padding: 0.8rem 1.6rem;
+  background-color: #2b6cb0;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  background-color: #2c5282;
+  transform: translateY(-2px);
+}
+
+/* Sections */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1a202c;
+}
+
+/* Services Section */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+
+.service {
+  background-color: #ffffff;
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.service:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
+.service-icon {
+  font-size: 2.7rem;
+  color: #2b6cb0;
+  margin-bottom: 1rem;
+}
+
+.service h3 {
+  margin-bottom: 0.6rem;
+  font-size: 1.6rem;
+  color: #1a202c;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #4a5568;
+  line-height: 1.5;
+}
+
+/* Contact Section */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  margin-top: 2rem;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  padding: 0.8rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: #ffffff;
+  color: #2d3748;
+  resize: vertical;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+#contact input[type="text"]:focus,
+#contact input[type="email"]:focus,
+#contact textarea:focus {
+  outline: none;
+  border-color: #2b6cb0;
+  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
+}
+
+#contact textarea {
+  min-height: 160px;
+}
+
+#contact button.btn {
+  align-self: flex-start;
+  margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #hero .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  #hero .hero-content p {
+    font-size: 1rem;
+  }
+}
