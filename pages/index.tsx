@@ -11,25 +11,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        {/* Updated title and description to reflect new focus */}
-        <title>The Compliers – AI Law & IT & Data Privacy Specialists</title>
+        {/* Updated title and description */}
+        <title>The Compliers – Law & Technology Specialists</title>
         <meta
           name="description"
-          content="With our specialization in AI Law and legal aspects of IT & Data Privacy, we advise on and help with the conventional areas of law as well as the latest legal developments across the industries."
+          content="Rendering support on the conventional areas of law as well as the latest legal developments across the industries."
         />
-        <link
-          rel="stylesheet"
-          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
-          integrity="sha512-GmSWFp6J6IWgpr9RwQbZHhSBWfHnVeymm7oWf22C6T6QS0+hZqmYAjwoM+I3/Z+9k7EIDs4FAOMeG2E6O7G4Pg=="
-          crossOrigin="anonymous"
-          referrerPolicy="no-referrer"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-          rel="stylesheet"
-        />
-
-        {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
@@ -43,15 +30,10 @@ export default function Home() {
             <a href="#">The Compliers</a>
           </div>
           <ul className="nav-links">
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#services">Services</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="/articles">Blogs</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
       </nav>
@@ -59,21 +41,17 @@ export default function Home() {
       {/* Hero Section */}
       <header id="hero">
         <div className="hero-content">
-          {/* Updated hero headline and description */}
-          <h1>AI Law and legal aspects of IT & Data Privacy</h1>
-          <p>
-            With our specialization in AI Law and legal aspects of IT & Data
-            Privacy, we advise on and help with the conventional areas of law as
-            well as the latest legal developments across the industries.
-          </p>
-          {/* Two call‑to‑action buttons for better user engagement */}
+          {/* New hero headline with two lines */}
+          <h1>
+            <span className="hero-line1">| Contracts & Risk Mitigation | Intellectual Property | Corporate Law |</span><br />
+            <span className="hero-line2">legal aspects of AI, IT & Data Privacy</span>
+          </h1>
+          <p>Rendering support on the conventional areas of law as well as the latest legal developments across the industries.</p>
+          <p className="highlight">Special assistance for new entrepreneurs and startups in making.</p>
+          {/* Two call-to-action buttons */}
           <div className="hero-buttons">
-            <a href="#contact" className="btn">
-              Need Help
-            </a>
-            <a href="/articles" className="btn btn-secondary">
-              Learning Center
-            </a>
+            <a href="#contact" className="btn">Need Help</a>
+            <a href="/articles" className="btn btn-secondary">Learning Center</a>
           </div>
         </div>
       </header>
@@ -82,16 +60,8 @@ export default function Home() {
       <section id="about">
         <div className="container">
           <h2>About Us</h2>
-          <p>
-            The Compliers are a group of passionate legal and technical
-            professionals dedicated to helping businesses navigate AI regulation
-            and data protection. We combine expertise in technology, law and
-            policy to deliver practical compliance solutions.
-          </p>
-          <p>
-            Our mission is to empower companies to innovate responsibly by
-            aligning AI development with ethical and legal standards.
-          </p>
+          <p>The Compliers are a group of passionate legal and technical professionals dedicated to helping businesses navigate AI regulation and data protection. We combine expertise in technology, law and policy to deliver practical compliance solutions.</p>
+          <p>Our mission is to empower companies to innovate responsibly by aligning AI development with ethical and legal standards.</p>
         </div>
       </section>
 
@@ -100,47 +70,31 @@ export default function Home() {
         <div className="container">
           {/* Updated services heading and description */}
           <h2>Our Expertise</h2>
-          <p className="services-description">
-            Comprehensive legal solutions for the digital age
-          </p>
+          <p className="services-description">Comprehensive legal solutions for the digital age</p>
           <div className="services-grid">
-            {/* AI Law */}
+            {/* Contract Law - moved to first position */}
             <div className="service">
-              <i className="fa-solid fa-robot service-icon" aria-hidden="true"></i>
-              <h3>AI Law</h3>
-              <p>
-                Navigate the complex landscape of artificial intelligence regulations,
-                ethical considerations and nuances of Intellectual property (IP) in the
-                age of AI.
-              </p>
+              <i className="fa-solid fa-file-contract service-icon" aria-hidden="true"></i>
+              <h3>Contract Law</h3>
+              <p>Support for all kinds of contracts, agreements and legal documents with expert drafting, review and analysis for risk mitigation and dispute handling.</p>
             </div>
             {/* Data Privacy */}
             <div className="service">
               <i className="fa-solid fa-user-shield service-icon" aria-hidden="true"></i>
               <h3>Data Privacy</h3>
-              <p>
-                Comprehensive data protection strategies, privacy compliance, GDPR
-                considerations, and ISO/IEC 27701 implementation.
-              </p>
+              <p>Comprehensive data protection strategies, privacy compliance, GDPR considerations, and ISO/IEC 27701 implementation.</p>
             </div>
             {/* IT Law */}
             <div className="service">
               <i className="fa-solid fa-laptop-code service-icon" aria-hidden="true"></i>
               <h3>IT Law</h3>
-              <p>
-                Technology contracts, software licensing, cybersecurity compliance,
-                and digital transformation legal support.
-              </p>
+              <p>Technology contracts, software licensing, cybersecurity compliance, and digital transformation legal support.</p>
             </div>
-            {/* Contract Law */}
+            {/* AI Law - moved to last */}
             <div className="service">
-              <i className="fa-solid fa-file-contract service-icon" aria-hidden="true"></i>
-              <h3>Contract Law</h3>
-              <p>
-                Support for all kinds of contracts, agreements and legal documents
-                with expert drafting, review and analysis for risk mitigation
-                and dispute handling.
-              </p>
+              <i className="fa-solid fa-robot service-icon" aria-hidden="true"></i>
+              <h3>AI Law</h3>
+              <p>Navigate the complex landscape of artificial intelligence regulations, ethical considerations and nuances of intellectual property (IP) in the age of AI.</p>
             </div>
           </div>
         </div>
@@ -156,45 +110,26 @@ export default function Home() {
               <form id="contact-form" onSubmit={handleSubmit}>
                 <input type="text" name="name" placeholder="Your Name" required />
                 <input type="email" name="email" placeholder="Your Email" required />
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  required
-                ></textarea>
-                <button type="submit" className="btn">
-                  Send Message
-                </button>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" className="btn">Send Message</button>
               </form>
             </div>
             {/* Right side: why choose us content */}
             <div className="contact-info">
               <h3>Why Choose The Compliers?</h3>
-              <p>
-                We bridge the gap between cutting-edge technology and legal
-                compliance, ensuring your business stays ahead while remaining
-                compliant.
-              </p>
+              <p>We bridge the gap between cutting-edge technology and legal compliance, ensuring your business stays ahead while remaining compliant.</p>
               <ul>
                 <li>
                   <span>Specialized Expertise</span>
-                  <small>
-                    Deep understanding of emerging technologies and their legal
-                    implications
-                  </small>
+                  <small>Deep understanding of emerging technologies and their legal implications</small>
                 </li>
                 <li>
                   <span>Industry Experience</span>
-                  <small>
-                    Proven track record across multiple industries and
-                    regulatory environments
-                  </small>
+                  <small>Proven track record across multiple industries and regulatory environments</small>
                 </li>
                 <li>
                   <span>Future-Ready Solutions</span>
-                  <small>
-                    Stay ahead of regulatory changes and emerging legal
-                    challenges
-                  </small>
+                  <small>Stay ahead of regulatory changes and emerging legal challenges</small>
                 </li>
               </ul>
             </div>
@@ -207,22 +142,12 @@ export default function Home() {
         <div className="container footer-content">
           {/* Footer navigation links */}
           <ul className="footer-nav">
-            <li>
-              <a href="#services">Our Expertise</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-            <li>
-              <a href="/terms">Terms of Use</a>
-            </li>
-            <li>
-              <a href="/privacy">Privacy Policy</a>
-            </li>
+            <li><a href="#services">Our Expertise</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
           </ul>
-          <p>
-            &copy; {new Date().getFullYear()} The Compliers. All rights reserved.
-          </p>
+          <p>&copy; {new Date().getFullYear()} The Compliers. All rights reserved.</p>
         </div>
       </footer>
     </>
