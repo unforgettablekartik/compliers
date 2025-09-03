@@ -428,8 +428,9 @@ footer p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #555;
+  }
   
-/* Hero new lines styling */
+/*/* Hero new lines styling */
 .hero-line1,
 .hero-line2 {
   display: block;
@@ -456,7 +457,9 @@ footer p {
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border-radius: 6px;
-  font-weight: 600;
+/*l*//* end */: 600;
 }
-l;
+/*00; */
+}
+l
 }
