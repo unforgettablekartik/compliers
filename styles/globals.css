@@ -415,6 +415,8 @@ footer p {
   padding-bottom: 4rem;
   max-width: 800px;
   margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 .legal-page h1 {
@@ -424,12 +426,23 @@ footer p {
   text-align: center;
 }
 
-.legal-page p {
+.legal-page p,
+.legal-page li {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #555;
+  text-align: justify;
+  line-height: 1.8;
+  word-break: break-word;
+}
+
+@media (max-width: 600px) {
+  .legal-page .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
-  
+}
+
 /*/* Hero new lines styling */
 .hero-line1,
 .hero-line2 {
@@ -457,9 +470,5 @@ footer p {
   padding: 0.5rem 1rem;
   margin-top: 1rem;
   border-radius: 6px;
-/*l*//* end */: 600;
-}
-/*00; */
-}
-l
+  font-weight: 600;
 }
