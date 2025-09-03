@@ -147,8 +147,11 @@ export default function Home() {
           <li><a href="#contact">Contact</a></li>
           <li><a href="/terms">Terms of Use</a></li>
           <li><a href="/privacy">Privacy Policy</a></li>
+            </ul>
        
         </div>
+        </ul>
+        
       </footer>
     </>
   );
