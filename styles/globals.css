@@ -1,474 +1,69 @@
-/*
- * Global styles for the Compliers Next.js website.
- *
- * These styles mirror the minimalistic design from the static HTML
- * version, adapted for a React/Next.js project. A soft colour palette,
- * generous spacing and subtle interactions provide a refined user
- * experience without sacrificing simplicity.
- */
-
-/* Enable smooth scrolling for anchor links */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Reset some basic styles */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Inter', sans-serif;
-  line-height: 1.6;
-  color: #2d3748;
-  background-color: #f9fafb;
-}
-
-.container {
-  width: 90%;
-  max-width: 1100px;
-  margin: 0 auto;
-  padding: 2rem 0;
-}
-
-/* Navbar */
-#navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background-color: rgba(255, 255, 255, 0.9);
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(5px);
-  z-index: 1000;
-}
-
-#navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem 0;
-}
-
-#navbar .logo a {
-  font-size: 1.6rem;
-  font-weight: 700;
-  color: #1a202c;
-  text-decoration: none;
-}
-
-#navbar .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-}
-
-#navbar .nav-links a {
-  text-decoration: none;
-  color: #4a5568;
-  font-weight: 600;
-  transition: color 0.2s ease;
-}
-
-#navbar .nav-links a:hover {
-  color: #2b6cb0;
-}
-
-/* Hero Section */
-#hero {
-  height: 90vh;
-  background: linear-gradient(135deg, #edf2f7 0%, #e2e8f0 100%);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 0 1rem;
-  overflow: hidden;
-}
-
-#hero .hero-content h1 {
-  font-size: 3rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #1a202c;
-}
-
-#hero .hero-content p {
-  font-size: 1.2rem;
-  margin-bottom: 1.5rem;
-  max-width: 640px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #4a5568;
-}
-
-/* Buttons */
-.btn {
-  display: inline-block;
-  padding: 0.8rem 1.6rem;
-  background-color: #2b6cb0;
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: background-color 0.25s ease, transform 0.25s ease;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.btn:hover {
-  background-color: #2c5282;
-  transform: translateY(-2px);
-}
-
-/* Secondary button style for alternate call-to-action */
-.btn-secondary {
-  background-color: #edf2f7;
-  color: #2b6cb0;
-  border: 1px solid #2b6cb0;
-}
-
-.btn-secondary:hover {
-  background-color: #e2e8f0;
-  color: #1a202c;
-}
-
-/* Layout for multiple buttons in hero section */
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  flex-wrap: wrap;
-}
-
-/* Sections */
-section {
-  padding: 4rem 0;
-}
-
-section h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: #1a202c;
-}
-
-/* Services Section */
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 2rem;
-}
-
-/* Description beneath services heading */
-.services-description {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 1.1rem;
-  color: #4a5568;
-}
-
-.service {
-  background-color: #ffffff;
-  border-radius: 10px;
-  padding: 2rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.service:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
-}
-
-.service-icon {
-  font-size: 2.7rem;
-  color: #2b6cb0;
-  margin-bottom: 1rem;
-}
-
-.service h3 {
-  margin-bottom: 0.6rem;
-  font-size: 1.6rem;
-  color: #1a202c;
-}
-
-.service p {
-  font-size: 1rem;
-  color: #4a5568;
-  line-height: 1.5;
-}
-
-/* Contact Section */
-#contact form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 600px;
-  margin: 0 auto;
-  margin-top: 2rem;
-}
-
-/* Split layout for contact section */
-#contact .contact-wrapper {
-  display: flex;
-  gap: 2rem;
-  flex-wrap: wrap;
-}
-
-#contact .contact-form {
-  flex: 1 1 300px;
-}
-
-#contact .contact-info {
-  flex: 1 1 300px;
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.03);
-}
-
-#contact .contact-info h3 {
-  margin-bottom: 1rem;
-  font-size: 1.6rem;
-  color: #1a202c;
-}
-
-#contact .contact-info p {
-  font-size: 1rem;
-  color: #4a5568;
-  margin-bottom: 1.5rem;
-  line-height: 1.5;
-}
-
-#contact .contact-info ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-#contact .contact-info li {
-  margin-bottom: 1rem;
-}
-
-#contact .contact-info li span {
-  display: block;
-  font-weight: 600;
-  color: #1a202c;
-}
-
-#contact .contact-info li small {
-  display: block;
-  color: #4a5568;
-  margin-top: 0.25rem;
-}
-
-#contact input[type="text"],
-#contact input[type="email"],
-#contact textarea {
-  padding: 0.8rem 1rem;
-  border: 1px solid #cbd5e0;
-  border-radius: 6px;
-  font-size: 1rem;
-  background-color: #ffffff;
-  color: #2d3748;
-  resize: vertical;
-  transition: border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-#contact input[type="text"]:focus,
-#contact input[type="email"]:focus,
-#contact textarea:focus {
-  outline: none;
-  border-color: #2b6cb0;
-  box-shadow: 0 0 0 3px rgba(43, 108, 176, 0.15);
-}
-
-#contact textarea {
-  min-height: 160px;
-}
-
-#contact button.btn {
-  align-self: flex-start;
-  margin-top: 0.5rem;
-}
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-footer p {
-  margin: 0;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  #hero .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  #hero .hero-content p {
-    font-size: 1rem;
-  }
-}
-/* Custom spacing and layout adjustments */
-#services .services-grid {
-  grid-template-columns: repeat(4, 1fr);
-}
-
-#services h2 {
-  margin-bottom: 0.8rem;
-}
-
-.services-description {
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-}
-
-#contact .contact-form h2 {
-  margin-bottom: 0.8rem;
-}
-
-#contact {
-  padding-bottom: 2rem;
-}
-
-/* Footer navigation styling */
-.footer-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.footer-nav {
-  list-style: none;
-  display: flex;
-  gap: 1.5rem;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-nav a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.footer-nav a:hover {
-  color: #aad4f0;
-}
-
-/* Articles page */
-.articles-page .container {
-  padding-top: 8rem;
-  padding-bottom: 4rem;
-  text-align: center;
-}
-
-.articles-page h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #3a3a3a;
-}
-
-.articles-intro {
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #555;
-}
-
-.articles-categories {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.article-category {
-  display: block;
-  padding: 1rem 1.5rem;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  background-color: #f8f8f8;
-  color: #0077cc;
-  font-weight: 600;
-  text-decoration: none;
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-.article-category:hover {
-  background-color: #0077cc;
-  color: #fff;
-}
-
-/* Legal pages (terms and privacy) */
-.legal-page .container {
-  padding-top: 8rem;
-  padding-bottom: 4rem;
-  max-width: 800px;
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-.legal-page h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1.5rem;
-  color: #3a3a3a;
-  text-align: center;
-}
-
-.legal-page p,
-.legal-page li {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-  color: #555;
-  text-align: justify;
-  line-height: 1.8;
-  word-break: break-word;
-}
-
-@media (max-width: 600px) {
-  .legal-page .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-/*/* Hero new lines styling */
+/* Ensure hero lines appear on separate rows */
 .hero-line1,
 .hero-line2 {
   display: block;
 }
 
-.hero-line1 {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #0c2340;
-}
-
-.hero-line2 {
-  font-size: 1.5rem;
-  font-weight: 600;
-  color: #0c2340;
-  margin-top: 0.25rem;
-}
-
-/* Highlight tagline styling */
+/* Highlight for special notice */
 .highlight {
-  background-color: #e6f3ff;
-  color: #0077cc;
-  display: inline-block;
-  padding: 0.5rem 1rem;
-  margin-top: 1rem;
-  border-radius: 6px;
-  font-weight: 600;
+  background-color: #000;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+}
+
+/* Footer layout and link styling */
+.footer-content {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  /* Stack navigation links vertically and adjust hero and footer layout */
+  nav .nav-links {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  #hero {
+    padding-top: 6rem;
+    text-align: center;
+  }
+
+  .hero-line1 {
+    font-size: 1.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Two columns for services on tablet-sized screens */
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
