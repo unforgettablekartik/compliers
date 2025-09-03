@@ -1,10 +1,260 @@
-/* Ensure hero lines appear on separate rows */
+/* Reset and base typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Container utility */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* Navbar */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #3a3a3a;
+  text-decoration: none;
+}
+
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav .nav-links a {
+  text-decoration: none;
+  color: #3a3a3a;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+nav .nav-links a:hover {
+  color: #0077cc;
+}
+
+/* Hero */
+#hero {
+  min-height: 100vh;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f5f5f5 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 8rem 1rem 4rem;
+}
+
+#hero .hero-content h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #3a3a3a;
+}
+
+#hero .hero-content p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #555;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  background-color: #0077cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #005fa3;
+}
+
+.btn-secondary {
+  background-color: #f0f0f0;
+  color: #0077cc;
+}
+
+.btn-secondary:hover {
+  background-color: #e0e7ff;
+}
+
+/* Section spacing */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3a3a3a;
+}
+
+/* Expertise / Services */
+.services-description {
+  max-width: 650px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  color: #555;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.service {
+  background-color: #f8f8f8;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.service-icon {
+  font-size: 2.5rem;
+  color: #0077cc;
+  margin-bottom: 1rem;
+}
+
+.service h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  color: #3a3a3a;
+}
+
+.service p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Contact section */
+#contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+#contact input[type="text"],
+#contact input[type="email"],
+#contact textarea {
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+#contact textarea {
+  min-height: 150px;
+}
+
+#contact button.btn {
+  align-self: flex-start;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* Contact split */
+.contact-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-info {
+  flex: 1;
+}
+
+.contact-info ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin-bottom: 1rem;
+}
+
+/* Custom footer navigation */
+.container.footer-content {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-nav {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer-nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-nav a:hover {
+  text-decoration: underline;
+}
+
+/* Hero line styling and highlight box */
 .hero-line1,
 .hero-line2 {
   display: block;
 }
 
-/* Highlight for special notice */
 .highlight {
   background-color: #000;
   color: #fff;
@@ -12,42 +262,15 @@
   border-radius: 4px;
 }
 
-/* Footer layout and link styling */
-.footer-content {
-  display: flex;
-  justify-content: center;
-}
-
-.footer-nav {
-  display: flex;
-  gap: 1rem;
-  list-style: none;
-}
-
-.footer-nav a {
-  color: #fff;
-  text-decoration: none;
-}
-
-.footer-nav a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive adjustments */
+/* Responsive breakpoints */
 @media (max-width: 768px) {
-  /* Stack navigation links vertically and adjust hero and footer layout */
+  #hero {
+    padding: 6rem 1rem 3rem;
+  }
+
   nav .nav-links {
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  #hero {
-    padding-top: 6rem;
-    text-align: center;
-  }
-
-  .hero-line1 {
-    font-size: 1.5rem;
   }
 
   .services-grid {
@@ -56,13 +279,12 @@
 
   .footer-nav {
     flex-direction: column;
-    gap: 0.5rem;
     align-items: flex-start;
+    gap: 0.5rem;
   }
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
-  /* Two columns for services on tablet-sized screens */
   .services-grid {
     grid-template-columns: repeat(2, 1fr);
   }
