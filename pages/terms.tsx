@@ -5,18 +5,43 @@ export default function Terms() {
     <>
       <Head>
         <title>Terms of Use | The Compliers</title>
-        <meta name="description" content="Read the terms and conditions governing the use of our website and services." />
+        <meta name="description" content="Review the Terms of Use for The Compliers." />
       </Head>
+      {/* Site Navigation */}
+      <nav id="navbar">
+        <div className="container">
+          <div className="logo"><a href="/">The Compliers</a></div>
+          <ul className="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Our Expertise</a></li>
+            <li><a href="/articles">Blogs</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      {/* Main content */}
       <main className="legal-page">
         <div className="container">
           <h1>Terms of Use</h1>
-          <p>Welcome to The Compliers. By accessing our website, you agree to abide by the following terms and conditions. This page outlines our service terms, intellectual property rights, and limitations of liability. Please read these terms carefully before using our website.</p>
+          <p>These terms govern your use of The Compliers’ website and services. By accessing or using our site, you agree to be bound by these terms. Please read them carefully.</p>
           <h2>Use of the Site</h2>
-          <p>This site is provided for informational purposes only. We do not provide legal advice through this website. The information presented here should not be construed as legal counsel or as creating a lawyer-client relationship.</p>
+          <p>You agree to use the site for lawful purposes only and in a manner that does not infringe the rights of or restrict the use of the site by any third party.</p>
           <h2>Intellectual Property</h2>
-          <p>All content on this site, including text, graphics and logos, is the property of The Compliers or its content suppliers and is protected by international copyright laws.</p>
+          <p>All content on this site is the property of The Compliers or its licensors. Unauthorized reproduction or redistribution is prohibited.</p>
         </div>
       </main>
+      {/* Footer */}
+      <footer>
+        <div className="container footer-content">
+          <ul className="footer-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Our Expertise</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </footer>
     </>
   );
 }
