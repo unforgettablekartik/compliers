@@ -5,20 +5,43 @@ export default function Privacy() {
     <>
       <Head>
         <title>Privacy Policy | The Compliers</title>
-        <meta name="description" content="Our privacy policy outlines how we handle your data." />
+        <meta name="description" content="Learn about The Compliers’ privacy practices." />
       </Head>
+      {/* Site Navigation */}
+      <nav id="navbar">
+        <div className="container">
+          <div className="logo"><a href="/">The Compliers</a></div>
+          <ul className="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Our Expertise</a></li>
+            <li><a href="/articles">Blogs</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      {/* Main content */}
       <main className="legal-page">
         <div className="container">
           <h1>Privacy Policy</h1>
-          <p>Your privacy is important to us. This policy describes how we handle your data.</p>
+          <p>This Privacy Policy explains how The Compliers collects, uses, and protects your personal data when you use our website or services.</p>
           <h2>Information We Collect</h2>
-          <p>We collect personal information you provide directly, including when you contact us via our forms or subscribe to updates. We also collect data automatically through analytics tools to understand how our site is used.</p>
-          <h2>Use of Your Information</h2>
-          <p>We use the information to respond to your inquiries, improve our services, and comply with legal obligations.</p>
-          <h2>Contact Us</h2>
-          <p>If you have questions about this Privacy Policy, please contact us through the form on our website.</p>
+          <p>We may collect personal information such as your name, contact details, and any other information you voluntarily provide.</p>
+          <h2>How We Use Your Information</h2>
+          <p>We use the information to provide and improve our services, respond to inquiries, and comply with legal obligations.</p>
         </div>
       </main>
+      {/* Footer */}
+      <footer>
+        <div className="container footer-content">
+          <ul className="footer-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Our Expertise</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </footer>
     </>
   );
 }
