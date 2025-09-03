@@ -5,8 +5,24 @@ export default function Articles() {
     <>
       <Head>
         <title>Learning Center | The Compliers</title>
-        <meta name="description" content="Explore educational resources across Artificial Intelligence, Data Privacy, Information Technology, and Contracts & Disputes." />
+        <meta
+          name="description"
+          content="Explore educational resources on Artificial Intelligence, Data Privacy, Information Technology, and Contracts & Disputes."
+        />
       </Head>
+      {/* Site Navigation */}
+      <nav id="navbar">
+        <div className="container">
+          <div className="logo"><a href="/">The Compliers</a></div>
+          <ul className="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Our Expertise</a></li>
+            <li><a href="/articles">Blogs</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      {/* Main content */}
       <main className="articles-page">
         <div className="container">
           <h1>Learning Center</h1>
@@ -20,19 +36,31 @@ export default function Articles() {
             </div>
             <div className="article-category">
               <h2>Data Privacy</h2>
-              <p>Insights into data protection laws and best practices for privacy compliance.</p>
+              <p>Insights into data protection laws, privacy compliance, GDPR considerations, and ISO/IEC 27701 implementation.</p>
             </div>
             <div className="article-category">
               <h2>Information Technology</h2>
-              <p>Updates on IT law, cybersecurity, digital transformation and emerging technologies.</p>
+              <p>Updates on IT law, cybersecurity, and digital transformation legal support.</p>
             </div>
             <div className="article-category">
               <h2>Contracts & Disputes</h2>
-              <p>Guidance on drafting agreements, contract law, risk mitigation and dispute resolution.</p>
+              <p>Articles on contract drafting, negotiation, risk mitigation and dispute resolution.</p>
             </div>
           </div>
         </div>
       </main>
+      {/* Footer */}
+      <footer>
+        <div className="container footer-content">
+          <ul className="footer-nav">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Our Expertise</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/terms">Terms of Use</a></li>
+            <li><a href="/privacy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </footer>
     </>
   );
 }
