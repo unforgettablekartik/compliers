@@ -428,5 +428,35 @@ footer p {
   font-size: 1.1rem;
   margin-bottom: 1.5rem;
   color: #555;
-  line-height: 1.6;
+  
+/* Hero new lines styling */
+.hero-line1,
+.hero-line2 {
+  display: block;
+}
+
+.hero-line1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0c2340;
+}
+
+.hero-line2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #0c2340;
+  margin-top: 0.25rem;
+}
+
+/* Highlight tagline styling */
+.highlight {
+  background-color: #e6f3ff;
+  color: #0077cc;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  margin-top: 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+}
+l;
 }
