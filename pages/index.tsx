@@ -150,7 +150,7 @@ export default function Home() {
             </ul>
        
         </div>
-        </ul>
+      
         
       </footer>
     </>
