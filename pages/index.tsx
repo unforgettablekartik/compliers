@@ -142,12 +142,12 @@ export default function Home() {
         <div className="container footer-content">
           {/* Footer navigation links */}
           <ul className="footer-nav">
-            <li><a href="#services">Our Expertise</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="/terms">Terms of Use</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-          </ul>
-          <p>&copy; {new Date().getFullYear()} The Compliers. All rights reserved.</p>
+            <li><a href="/">Home</a></li>
+          <li><a href="#services">Our Expertise</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="/terms">Terms of Use</a></li>
+          <li><a href="/privacy">Privacy Policy</a></li>
+       
         </div>
       </footer>
     </>
