@@ -1,4 +1,5 @@
 import Head from 'next/head';
+import React from 'react';
 
 export default function Home() {
   // Handle form submission with a simple alert
@@ -21,6 +22,18 @@ export default function Home() {
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
         <link rel="icon" href="/favicon.ico" />
+        {/* Font Awesome and Google Fonts */}
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+          integrity="sha512-GmSWFp6J6IWgpr9RwQbZHhSBWfHnVeymm7oWf22C6T6QS0+hZqmYAjwoM+I3/Z+9k7EIDs4FAOMeG2E6O7G4Pg=="
+          crossOrigin="anonymous"
+          referrerPolicy="no-referrer"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       {/* Navigation */}
@@ -40,8 +53,8 @@ export default function Home() {
       <header id="hero">
         <div className="hero-content">
           <h1>
-            <span className="hero-line1">Contracts & Risk Mitigation | Intellectual Property</span>
-            <span className="hero-line2">Corporate Law | Legal aspects of AI, IT & Data Privacy</span>
+            <span className="hero-line1">Contracts &amp; Risk Mitigation | Intellectual Property</span>
+            <span className="hero-line2">Corporate Law | Legal aspects of AI, IT &amp; Data Privacy</span>
           </h1>
           <p>
             Rendering support on the conventional areas of law as well as the latest legal developments across the industries.
@@ -56,8 +69,74 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Rest of your page content… (About, Our Expertise, Contact, etc.) */}
-      {/* Ensure these sections remain unchanged unless you need further edits. */}
+      {/* About section */}
+      <section id="about">
+        <div className="container">
+          <h2>About Us</h2>
+          <p>The Compliers are a group of passionate legal and technical professionals dedicated to helping businesses navigate AI regulation and data protection. We combine expertise in technology, law and policy to deliver practical compliance solutions.</p>
+          <p>Our mission is to empower companies to innovate responsibly by aligning AI development with ethical and legal standards.</p>
+        </div>
+      </section>
+
+      {/* Our Expertise section */}
+      <section id="services">
+        <div className="container">
+          <h2>Our Expertise</h2>
+          <p className="services-description">Comprehensive legal solutions for the digital age</p>
+          <div className="services-grid">
+            {/* Contract Law block */}
+            <div className="service">
+              <i className="fa-solid fa-file-contract service-icon" aria-hidden="true"></i>
+              <h3>Contract Law</h3>
+              <p>Support for all kinds of contracts, agreements and legal documents with expert drafting, review and analysis for risk mitigation and dispute handling.</p>
+            </div>
+            {/* Data Privacy block */}
+            <div className="service">
+              <i className="fa-solid fa-lock service-icon" aria-hidden="true"></i>
+              <h3>Data Privacy</h3>
+              <p>Comprehensive data protection strategies, privacy compliance, GDPR considerations, and ISO/IEC 27701 implementation.</p>
+            </div>
+            {/* IT Law block */}
+            <div className="service">
+              <i className="fa-solid fa-laptop-code service-icon" aria-hidden="true"></i>
+              <h3>IT Law</h3>
+              <p>Technology contracts, software licensing, cybersecurity compliance, and digital transformation legal support.</p>
+            </div>
+            {/* AI Law block */}
+            <div className="service">
+              <i className="fa-solid fa-robot service-icon" aria-hidden="true"></i>
+              <h3>AI Law</h3>
+              <p>Navigate the complex landscape of artificial intelligence regulations, ethical considerations and nuances of intellectual property (IP) in the age of AI.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact section */}
+      <section id="contact">
+        <div className="container">
+          <h2>Contact for Enquiries</h2>
+          <div className="contact-wrapper">
+            <div className="contact-form">
+              <form id="contact-form" onSubmit={handleSubmit}>
+                <input type="text" name="name" placeholder="Your Name" required />
+                <input type="email" name="email" placeholder="Your Email" required />
+                <textarea name="message" placeholder="Your Message" required></textarea>
+                <button type="submit" className="btn">Send Message</button>
+              </form>
+            </div>
+            <div className="contact-info">
+              <h3>Why Choose The Compliers?</h3>
+              <p>We bridge the gap between cutting-edge technology and legal compliance, ensuring your business stays ahead while remaining compliant.</p>
+              <ul>
+                <li><strong>Specialized Expertise</strong><br />Deep understanding of emerging technologies and their legal implications</li>
+                <li><strong>Industry Experience</strong><br />Proven track record across multiple industries and regulatory environments</li>
+                <li><strong>Future-Ready Solutions</strong><br />Stay ahead of regulatory changes and emerging legal challenges</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer>
