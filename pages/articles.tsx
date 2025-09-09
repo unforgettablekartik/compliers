@@ -1,6 +1,12 @@
 import Head from 'next/head';
+import type { GetStaticProps } from 'next';
+import { getPosts, type BlogPost } from '../lib/notion';
 
-export default function Articles() {
+type ArticlesProps = {
+  posts: BlogPost[];
+};
+
+export default function Articles({ posts }: ArticlesProps) {
   return (
     <>
       <Head>
@@ -38,28 +44,15 @@ export default function Articles() {
           <p className="articles-intro">
             Explore resources across key topics to stay informed and compliant.
           </p>
-          <div className="articles-grid">
-            <div className="article-card">
-              <i className="fa-solid fa-robot article-card-icon" aria-hidden="true"></i>
-              <h2>Artificial Intelligence</h2>
-              <p>Latest articles on AI regulations, ethics and the impact of AI on society.</p>
+            <div className="articles-grid">
+              {posts.map((post) => (
+                <div className="article-card" key={post.id}>
+                  <h2>{post.title}</h2>
+                  {post.excerpt && <p>{post.excerpt}</p>}
+                  <a href={`/blog/${post.slug}`}>Read more</a>
+                </div>
+              ))}
             </div>
-            <div className="article-card">
-              <i className="fa-solid fa-user-shield article-card-icon" aria-hidden="true"></i>
-              <h2>Data Privacy</h2>
-              <p>Insights into data protection laws, privacy compliance, GDPR considerations, and ISO/IEC 27701 implementation.</p>
-            </div>
-            <div className="article-card">
-              <i className="fa-solid fa-laptop-code article-card-icon" aria-hidden="true"></i>
-              <h2>Information Technology</h2>
-              <p>Updates on IT law, cybersecurity, and digital transformation legal support.</p>
-            </div>
-            <div className="article-card">
-              <i className="fa-solid fa-file-contract article-card-icon" aria-hidden="true"></i>
-              <h2>Contracts & Disputes</h2>
-              <p>Articles on contract drafting, negotiation, risk mitigation and dispute resolution.</p>
-            </div>
-          </div>
         </div>
       </main>
 
@@ -78,3 +71,11 @@ export default function Articles() {
     </>
   );
 }
+
+export const getStaticProps: GetStaticProps<ArticlesProps> = async () => {
+  const posts = await getPosts();
+  return {
+    props: { posts },
+    revalidate: 60,
+  };
+};

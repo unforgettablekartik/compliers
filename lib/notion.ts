@@ -51,6 +51,10 @@ export async function getAllPublishedPosts(): Promise<BlogPost[]> {
   return res.results.map(mapPage);
 }
 
+// Temporary alias to maintain compatibility with existing pages code.
+// TODO: consolidate `getAllPublishedPosts` and `getPosts` if both are required.
+export const getPosts = getAllPublishedPosts;
+
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
   const res = await notion.databases.query({
     database_id: databaseId,
