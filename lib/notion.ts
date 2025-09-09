@@ -1,81 +1,65 @@
 // lib/notion.ts
-import { Client } from '@notionhq/client';
+import { Client } from "@notionhq/client";
 
-export const notion = new Client({ auth: process.env.NOTION_SECRET });
-export const NOTION_DB = process.env.NOTION_DATABASE_ID as string;
+export const notion = new Client({ auth: process.env.NOTION_TOKEN });
+export const databaseId = process.env.NOTION_DATABASE_ID!;
 
-export type Post = {
+export type BlogPost = {
   id: string;
-  slug: string;
   title: string;
+  slug: string;
   excerpt?: string;
-  coverImage?: string | null;
-  date?: string | null;
+  text?: string;
+  published: boolean;
+  status?: string;
+  publishDate?: string; // ISO date
   tags: string[];
-  notionUrl: string;
+  categories: string[];
 };
 
-function rtToPlain(rt: any[]): string {
-  return (rt || []).map((r: any) => r?.plain_text ?? '').join('');
+function getPlainText(rich: any[]): string {
+  return (rich || []).map((r: any) => r?.plain_text ?? "").join("");
 }
 
-function firstFileUrl(files: any[]): string | null {
-  if (!files || !files.length) return null;
-  const f = files[0];
-  if (f.type === 'external') return f.external?.url ?? null;
-  if (f.type === 'file') return f.file?.url ?? null;
-  return null;
-}
-
-export function mapPageToPost(page: any): Post {
-  const p = page.properties;
+export function mapPage(p: any): BlogPost {
+  const props = p.properties;
   return {
-    id: page.id,
-    slug: rtToPlain(p?.Slug?.rich_text ?? []),
-    title: rtToPlain(p?.Title?.title ?? []),
-    excerpt: rtToPlain(p?.Excerpt?.rich_text ?? []),
-    coverImage: firstFileUrl(p?.Cover?.files ?? []),
-    date: p?.Date?.date?.start ?? null,
-    tags: (p?.Tags?.multi_select ?? []).map((t: any) => t.name),
-    notionUrl: page.url,
+    id: p.id,
+    title: props.Title?.title ? getPlainText(props.Title.title) : "",
+    slug: props.Slug?.rich_text ? getPlainText(props.Slug.rich_text) : "",
+    excerpt: props.Excerpt?.rich_text ? getPlainText(props.Excerpt.rich_text) : "",
+    text: props.Text?.rich_text ? getPlainText(props.Text.rich_text) : "",
+    published: props.Published?.checkbox ?? false,
+    status: props.Status?.status?.name,
+    publishDate: props["Publish Date"]?.date?.start ?? undefined,
+    tags: (props.Tags?.multi_select || []).map((o: any) => o.name),
+    categories: (props.Categories?.multi_select || []).map((o: any) => o.name),
   };
 }
 
-export async function getAllPosts(): Promise<Post[]> {
-  const resp = await notion.databases.query({
-    database_id: NOTION_DB,
-    filter: { and: [{ property: 'Published', checkbox: { equals: true } }] },
-    sorts: [{ property: 'Date', direction: 'descending' }],
-    page_size: 100,
-  });
-  return (resp.results as any[]).map(mapPageToPost).filter(p => p.slug);
-}
-
-export async function getPostBySlug(slug: string): Promise<Post | null> {
-  const resp = await notion.databases.query({
-    database_id: NOTION_DB,
+export async function getAllPublishedPosts(): Promise<BlogPost[]> {
+  const res = await notion.databases.query({
+    database_id: databaseId,
     filter: {
       and: [
-        { property: 'Slug', rich_text: { equals: slug } },
-        { property: 'Published', checkbox: { equals: true } },
-      ],
+        { property: "Published", checkbox: { equals: true } },
+        { property: "Status", status: { equals: "Published" } }
+      ]
     },
-    page_size: 1,
+    sorts: [{ property: "Publish Date", direction: "descending" }]
   });
-  const page = resp.results?.[0];
-  return page ? mapPageToPost(page) : null;
+  return res.results.map(mapPage);
 }
 
-export async function getBlocks(pageId: string) {
-  const blocks: any[] = [];
-  let cursor: string | undefined;
-  do {
-    const resp: any = await notion.blocks.children.list({
-      block_id: pageId,
-      start_cursor: cursor,
-    });
-    blocks.push(...(resp.results || []));
-    cursor = resp.has_more ? resp.next_cursor : undefined;
-  } while (cursor);
-  return blocks;
+export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  const res = await notion.databases.query({
+    database_id: databaseId,
+    filter: {
+      property: "Slug",
+      rich_text: { equals: slug }
+    },
+    page_size: 1
+  });
+  if (!res.results.length) return null;
+  return mapPage(res.results[0]);
 }
