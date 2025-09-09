@@ -25,7 +25,7 @@ export default function Articles() {
           <ul className="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/#services">Our Expertise</a></li>
-            <li><a href="/articles">Blogs</a></li>
+            <li><a href="/blog">Blogs</a></li>
             <li><a href="/#contact">Contact</a></li>
           </ul>
         </div>
