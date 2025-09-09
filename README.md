@@ -3,7 +3,7 @@
 This Next.js project uses Notion as a data source. Configure the following environment variables before running or deploying the app:
 
 ```
-NOTION_TOKEN=<your integration token>
+NOTION_SECRET=<your integration secret>
 NOTION_DATABASE_ID=<database id>
 ```
 

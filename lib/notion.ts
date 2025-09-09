@@ -1,8 +1,8 @@
 // lib/notion.ts
 import { Client } from "@notionhq/client";
 
-// NOTION_TOKEN and NOTION_DATABASE_ID should be set in the environment
-export const notion = new Client({ auth: process.env.NOTION_TOKEN });
+// NOTION_SECRET and NOTION_DATABASE_ID should be set in the environment
+export const notion = new Client({ auth: process.env.NOTION_SECRET });
 export const databaseId = process.env.NOTION_DATABASE_ID!;
 
 export type BlogPost = {
