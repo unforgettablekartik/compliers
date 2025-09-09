@@ -1,20 +1,16 @@
-const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID;
+import { Client } from '@notionhq/client';
+
+const NOTION_DATABASE_ID = process.env.NOTION_DATABASE_ID as string;
 const NOTION_SECRET = process.env.NOTION_SECRET;
 
+const notion = new Client({ auth: NOTION_SECRET });
+
 export async function getPosts() {
-  const res = await fetch(`https://api.notion.com/v1/databases/${NOTION_DATABASE_ID}/query`, {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${NOTION_SECRET}`,
-      'Content-Type': 'application/json',
-      'Notion-Version': '2022-06-28'
-    },
-    body: JSON.stringify({})
-  });
-
-  if (!res.ok) {
-    console.error(`Notion API request failed with status ${res.status}: ${res.statusText}`);
+  try {
+    return await notion.databases.query({ database_id: NOTION_DATABASE_ID });
+  } catch (error) {
+    console.error('Notion API request failed', error);
+    throw error;
   }
-
-  return res.json();
 }
+
