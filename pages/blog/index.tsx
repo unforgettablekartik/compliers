@@ -1,13 +1,19 @@
 import Head from 'next/head';
+import Link from 'next/link';
+import { getPosts, NotionPost } from '../../lib/notion';
 
-export default function Terms() {
+interface Props {
+  posts: NotionPost[];
+}
+
+export default function BlogIndex({ posts }: Props) {
   return (
     <>
       <Head>
-        <title>Terms of Use | The Compliers</title>
-        <meta name="description" content="Review the Terms of Use for The Compliers." />
+        <title>Blog | The Compliers</title>
+        <meta name="description" content="Latest insights from The Compliers." />
       </Head>
-      {/* Site Navigation */}
+
       <nav id="navbar">
         <div className="container">
           <div className="logo"><a href="/">The Compliers</a></div>
@@ -19,18 +25,21 @@ export default function Terms() {
           </ul>
         </div>
       </nav>
-      {/* Main content */}
-      <main className="legal-page">
+
+      <main className="articles-page">
         <div className="container">
-          <h1>Terms of Use</h1>
-          <p>These terms govern your use of The Compliers’ website and services. By accessing or using our site, you agree to be bound by these terms. Please read them carefully.</p>
-          <h2>Use of the Site</h2>
-          <p>You agree to use the site for lawful purposes only and in a manner that does not infringe the rights of or restrict the use of the site by any third party.</p>
-          <h2>Intellectual Property</h2>
-          <p>All content on this site is the property of The Compliers or its licensors. Unauthorized reproduction or redistribution is prohibited.</p>
+          <h1>Blog</h1>
+          {posts.length === 0 && <p>No posts found.</p>}
+          <ul>
+            {posts.map((post) => (
+              <li key={post.id}>
+                <Link href={`/blog/${post.slug}`}>{post.title}</Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </main>
-      {/* Footer */}
+
       <footer>
         <div className="container footer-content">
           <ul className="footer-nav">
@@ -44,4 +53,9 @@ export default function Terms() {
       </footer>
     </>
   );
+}
+
+export async function getServerSideProps() {
+  const posts = await getPosts();
+  return { props: { posts } };
 }
