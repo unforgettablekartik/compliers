@@ -1,8 +1,17 @@
 // lib/notion.ts
 import { Client } from "@notionhq/client";
 
-export const notion = new Client({ auth: process.env.NOTION_TOKEN });
-export const databaseId = process.env.NOTION_DATABASE_ID!;
+const notionToken = process.env.NOTION_TOKEN;
+const notionDatabaseId = process.env.NOTION_DATABASE_ID;
+
+if (!notionToken || !notionDatabaseId) {
+  throw new Error(
+    "Missing required Notion environment variables: NOTION_TOKEN and NOTION_DATABASE_ID must be set."
+  );
+}
+
+export const notion = new Client({ auth: notionToken });
+export const databaseId = notionDatabaseId;
 
 export type BlogPost = {
   id: string;
