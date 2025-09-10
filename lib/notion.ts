@@ -1,7 +1,9 @@
 // lib/notion.ts
 import { Client } from "@notionhq/client";
 
-export const notion = new Client({ auth: process.env.NOTION_TOKEN });
+// Support both legacy NOTION_TOKEN and the recommended NOTION_SECRET
+const authToken = process.env.NOTION_SECRET || process.env.NOTION_TOKEN;
+export const notion = new Client({ auth: authToken });
 export const databaseId = process.env.NOTION_DATABASE_ID!;
 
 export type BlogPost = {
