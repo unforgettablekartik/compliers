@@ -14,7 +14,7 @@ export default async function BlogIndex() {
             <a href={`/blog/${p.slug}`}>
               <h2>{p.title}</h2>
               <p>{p.excerpt}</p>
-              <small>{p.publishDate}</small>
+              <small>{p.publishedAt}</small>
             </a>
           </li>
         ))}

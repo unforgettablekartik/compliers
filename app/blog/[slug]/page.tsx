@@ -16,7 +16,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   return (
     <article>
       <h1>{post.title}</h1>
-      {post.publishDate ? <p>Published on {post.publishDate}</p> : null}
+      {post.publishedAt ? <p>Published on {post.publishedAt}</p> : null}
       {post.excerpt ? <p><em>{post.excerpt}</em></p> : null}
       {/* If you plan to store full content in "Text" as markdown or HTML, render it here */}
       {post.text ? <div>{post.text}</div> : null}
