@@ -16,14 +16,23 @@ export type BlogPost = {
   publishDate?: string; // ISO date
   tags: string[];
   categories: string[];
+  coverImage?: string | null;        // ← NEW
 };
 
 function getPlainText(rich: any[]): string {
   return (rich || []).map((r: any) => r?.plain_text ?? "").join("");
 }
 
+function firstFileUrl(files: any[] | undefined): string | null {
+  if (!files || !files.length) return null;
+  const f = files[0];
+  if (f.type === "external") return f.external?.url ?? null;
+  if (f.type === "file") return f.file?.url ?? null;
+  return null;
+}
+
 export function mapPage(p: any): BlogPost {
-  const props = p.properties;
+  const props = p.properties || {};
   return {
     id: p.id,
     title: props.Title?.title ? getPlainText(props.Title.title) : "",
@@ -35,6 +44,7 @@ export function mapPage(p: any): BlogPost {
     publishDate: props["Publish Date"]?.date?.start ?? undefined,
     tags: (props.Tags?.multi_select || []).map((o: any) => o.name),
     categories: (props.Categories?.multi_select || []).map((o: any) => o.name),
+    coverImage: firstFileUrl(props.Cover?.files),    // ← NEW (expects a Files & media prop named "Cover")
   };
 }
 
@@ -46,10 +56,10 @@ export async function getAllPublishedPosts(): Promise<BlogPost[]> {
       filter: {
         and: [
           { property: "Published", checkbox: { equals: true } },
-          { property: "Status", status: { equals: "Published" } },
-        ],
+          { property: "Status", status: { equals: "Published" } }
+        ]
       },
-      sorts: [{ property: "Publish Date", direction: "descending" }],
+      sorts: [{ property: "Publish Date", direction: "descending" }]
     });
     return res.results.map(mapPage);
   } catch (err) {
@@ -65,9 +75,9 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       database_id: databaseId,
       filter: {
         property: "Slug",
-        rich_text: { equals: slug },
+        rich_text: { equals: slug }
       },
-      page_size: 1,
+      page_size: 1
     });
     if (!res.results.length) return null;
     return mapPage(res.results[0]);
@@ -79,14 +89,12 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
 
 /**
  * Fetch all content blocks for a given Notion page (by page/block ID).
- * - Paginates through children
- * - Filters out archived blocks
- * - Returns a flat array of blocks (you can group list items at render time)
+ * Paginates through children and returns a flat array of blocks.
  */
 export async function getBlocks(pageId: string): Promise<any[]> {
   if (!process.env.NOTION_TOKEN) return [];
   const all: any[] = [];
-  let cursor: string | undefined = undefined;
+  let cursor: string | undefined;
 
   try {
     do {
