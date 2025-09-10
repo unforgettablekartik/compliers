@@ -1,5 +1,4 @@
 // lib/notion.ts
-import { Client } from "@notionhq/client";
 
 const notionToken = process.env.NOTION_TOKEN;
 const notionDatabaseId = process.env.NOTION_DATABASE_ID;
@@ -10,8 +9,23 @@ if (!notionToken || !notionDatabaseId) {
   );
 }
 
-export const notion = new Client({ auth: notionToken });
-export const databaseId = notionDatabaseId;
+const NOTION_API_URL = "https://api.notion.com/v1";
+
+async function notionFetch<T>(endpoint: string, body: any): Promise<T> {
+  const res = await fetch(`${NOTION_API_URL}${endpoint}`, {
+    method: "POST",
+    headers: {
+      "Authorization": `Bearer ${notionToken}`,
+      "Notion-Version": "2022-06-28",
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(body)
+  });
+  if (!res.ok) {
+    throw new Error(`Notion API error: ${res.status} ${res.statusText}`);
+  }
+  return res.json();
+}
 
 export type BlogPost = {
   id: string;
@@ -30,7 +44,7 @@ function getPlainText(rich: any[]): string {
   return (rich || []).map((r: any) => r?.plain_text ?? "").join("");
 }
 
-export function mapPage(p: any): BlogPost {
+function mapPage(p: any): BlogPost {
   const props = p.properties;
   return {
     id: p.id,
@@ -47,28 +61,36 @@ export function mapPage(p: any): BlogPost {
 }
 
 export async function getAllPublishedPosts(): Promise<BlogPost[]> {
-  const res = await notion.databases.query({
-    database_id: databaseId,
-    filter: {
-      and: [
-        { property: "Published", checkbox: { equals: true } },
-        { property: "Status", status: { equals: "Published" } }
-      ]
-    },
-    sorts: [{ property: "Publish Date", direction: "descending" }]
-  });
-  return res.results.map(mapPage);
+  try {
+    const data = await notionFetch<{ results: any[] }>(`/databases/${notionDatabaseId}/query`, {
+      filter: {
+        and: [
+          { property: "Published", checkbox: { equals: true } },
+          { property: "Status", status: { equals: "Published" } }
+        ]
+      },
+      sorts: [{ property: "Publish Date", direction: "descending" }]
+    });
+    return data.results.map(mapPage);
+  } catch (err) {
+    console.error("Failed to fetch posts from Notion", err);
+    return [];
+  }
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  const res = await notion.databases.query({
-    database_id: databaseId,
-    filter: {
-      property: "Slug",
-      rich_text: { equals: slug }
-    },
-    page_size: 1
-  });
-  if (!res.results.length) return null;
-  return mapPage(res.results[0]);
+  try {
+    const data = await notionFetch<{ results: any[] }>(`/databases/${notionDatabaseId}/query`, {
+      filter: {
+        property: "Slug",
+        rich_text: { equals: slug }
+      },
+      page_size: 1
+    });
+    if (!data.results.length) return null;
+    return mapPage(data.results[0]);
+  } catch (err) {
+    console.error("Failed to fetch post from Notion", err);
+    return null;
+  }
 }
