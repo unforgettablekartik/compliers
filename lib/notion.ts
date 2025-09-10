@@ -46,10 +46,10 @@ export async function getAllPublishedPosts(): Promise<BlogPost[]> {
       filter: {
         and: [
           { property: "Published", checkbox: { equals: true } },
-          { property: "Status", status: { equals: "Published" } }
-        ]
+          { property: "Status", status: { equals: "Published" } },
+        ],
       },
-      sorts: [{ property: "Publish Date", direction: "descending" }]
+      sorts: [{ property: "Publish Date", direction: "descending" }],
     });
     return res.results.map(mapPage);
   } catch (err) {
@@ -65,9 +65,9 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       database_id: databaseId,
       filter: {
         property: "Slug",
-        rich_text: { equals: slug }
+        rich_text: { equals: slug },
       },
-      page_size: 1
+      page_size: 1,
     });
     if (!res.results.length) return null;
     return mapPage(res.results[0]);
@@ -75,4 +75,33 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     console.warn("Failed to fetch post from Notion", err);
     return null;
   }
+}
+
+/**
+ * Fetch all content blocks for a given Notion page (by page/block ID).
+ * - Paginates through children
+ * - Filters out archived blocks
+ * - Returns a flat array of blocks (you can group list items at render time)
+ */
+export async function getBlocks(pageId: string): Promise<any[]> {
+  if (!process.env.NOTION_TOKEN) return [];
+  const all: any[] = [];
+  let cursor: string | undefined = undefined;
+
+  try {
+    do {
+      const resp: any = await notion.blocks.children.list({
+        block_id: pageId,
+        start_cursor: cursor,
+      });
+      const items = (resp.results || []).filter((b: any) => !b?.archived);
+      all.push(...items);
+      cursor = resp.has_more ? resp.next_cursor : undefined;
+    } while (cursor);
+  } catch (err) {
+    console.warn("Failed to fetch blocks from Notion", err);
+    return [];
+  }
+
+  return all;
 }
