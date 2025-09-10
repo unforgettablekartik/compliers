@@ -1,25 +1,24 @@
 // lib/notion.ts
 
-const notionToken = process.env.NOTION_TOKEN;
+const notionToken = process.env.NOTION_SECRET || process.env.NOTION_TOKEN;
 const notionDatabaseId = process.env.NOTION_DATABASE_ID;
 
-if (!notionToken || !notionDatabaseId) {
-  throw new Error(
-    "Missing required Notion environment variables: NOTION_TOKEN and NOTION_DATABASE_ID must be set."
-  );
-}
+export const isNotionConfigured = Boolean(notionToken && notionDatabaseId);
 
 const NOTION_API_URL = "https://api.notion.com/v1";
 
 async function notionFetch<T>(endpoint: string, body: any): Promise<T> {
+  if (!isNotionConfigured) {
+    throw new Error("Notion environment variables are not configured");
+  }
   const res = await fetch(`${NOTION_API_URL}${endpoint}`, {
     method: "POST",
     headers: {
-      "Authorization": `Bearer ${notionToken}`,
+      Authorization: `Bearer ${notionToken}`,
       "Notion-Version": "2022-06-28",
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-    body: JSON.stringify(body)
+    body: JSON.stringify(body),
   });
   if (!res.ok) {
     throw new Error(`Notion API error: ${res.status} ${res.statusText}`);
@@ -61,15 +60,19 @@ function mapPage(p: any): BlogPost {
 }
 
 export async function getAllPublishedPosts(): Promise<BlogPost[]> {
+  if (!isNotionConfigured) {
+    console.warn("Notion environment variables are missing");
+    return [];
+  }
   try {
     const data = await notionFetch<{ results: any[] }>(`/databases/${notionDatabaseId}/query`, {
       filter: {
         and: [
           { property: "Published", checkbox: { equals: true } },
-          { property: "Status", status: { equals: "Published" } }
-        ]
+          { property: "Status", status: { equals: "Published" } },
+        ],
       },
-      sorts: [{ property: "Publish Date", direction: "descending" }]
+      sorts: [{ property: "Publish Date", direction: "descending" }],
     });
     return data.results.map(mapPage);
   } catch (err) {
@@ -79,13 +82,17 @@ export async function getAllPublishedPosts(): Promise<BlogPost[]> {
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
+  if (!isNotionConfigured) {
+    console.warn("Notion environment variables are missing");
+    return null;
+  }
   try {
     const data = await notionFetch<{ results: any[] }>(`/databases/${notionDatabaseId}/query`, {
       filter: {
         property: "Slug",
-        rich_text: { equals: slug }
+        rich_text: { equals: slug },
       },
-      page_size: 1
+      page_size: 1,
     });
     if (!data.results.length) return null;
     return mapPage(data.results[0]);
