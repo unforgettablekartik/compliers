@@ -10,6 +10,7 @@ export type BlogPost = {
   slug: string;
   excerpt?: string;
   text?: string;
+  content?: string;
   published: boolean;
   status?: string;
   publishDate?: string; // ISO date
@@ -61,5 +62,41 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     page_size: 1
   });
   if (!res.results.length) return null;
-  return mapPage(res.results[0]);
+  const page = res.results[0];
+
+  // Retrieve block children to build full page content
+  let blocks: any[] = [];
+  let cursor: string | undefined = undefined;
+  do {
+    const blockRes: any = await notion.blocks.children.list({
+      block_id: page.id,
+      start_cursor: cursor,
+    });
+    blocks = blocks.concat(blockRes.results);
+    cursor = blockRes.has_more ? blockRes.next_cursor : undefined;
+  } while (cursor);
+
+  const content = blocksToHtml(blocks);
+
+  return { ...mapPage(page), content };
+}
+
+function blocksToHtml(blocks: any[]): string {
+  return blocks
+    .map((block: any) => {
+      const text = getPlainText(block[block.type]?.rich_text || []);
+      switch (block.type) {
+        case "paragraph":
+          return `<p>${text}</p>`;
+        case "heading_1":
+          return `<h1>${text}</h1>`;
+        case "heading_2":
+          return `<h2>${text}</h2>`;
+        case "heading_3":
+          return `<h3>${text}</h3>`;
+        default:
+          return text ? `<div>${text}</div>` : "";
+      }
+    })
+    .join("\n");
 }
