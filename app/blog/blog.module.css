@@ -4,18 +4,10 @@
   padding: 0 1rem;
 }
 
-.header {
+.pageHeader {
   max-width: 800px;
-  margin: 2rem auto 1rem;
+  margin: 6rem auto 1rem;
   padding: 0 1rem;
-}
-
-.logo {
-  display: block;
-  font-weight: 700;
-  font-size: 1.25rem;
-  text-decoration: none;
-  color: inherit;
 }
 
 .pageTitle {

@@ -11,8 +11,20 @@ export default async function BlogIndex() {
   const posts = await getAllPublishedPosts();
   return (
     <>
-      <header className={styles.header}>
-        <Link href="/" className={styles.logo}>The Compliers</Link>
+      <nav id="navbar">
+        <div className="container">
+          <div className="logo">
+            <Link href="/">The Compliers</Link>
+          </div>
+          <ul className="nav-links">
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/#services">Our Expertise</Link></li>
+            <li><Link href="/blog">Blogs</Link></li>
+            <li><Link href="/#contact">Contact</Link></li>
+          </ul>
+        </div>
+      </nav>
+      <header className={styles.pageHeader}>
         <h1 className={styles.pageTitle}>Blogs</h1>
       </header>
       <main>
