@@ -69,6 +69,14 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
             ))}
           </select>
         )}
+        <input
+          type="text"
+          className={styles.search}
+          placeholder="Search..."
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          onKeyDown={e => e.key === 'Enter' && setQuery(search)}
+        />
         <button
           type="button"
           className={styles.searchButton}
@@ -86,14 +94,6 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
         >
           Reset
         </button>
-        <input
-          type="text"
-          className={styles.search}
-          placeholder="Search..."
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          onKeyDown={e => e.key === 'Enter' && setQuery(search)}
-        />
       </div>
 
       <ul className={styles.postList}>

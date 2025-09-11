@@ -112,6 +112,13 @@ nav .nav-links a:hover {
   background-color: #e0e7ff;
 }
 
+.hero-buttons {
+  margin-top: 2cm;
+  display: flex;
+  gap: 4cm;
+  justify-content: center;
+}
+
 /* Section spacing */
 section {
   padding: 4rem 0;
@@ -291,7 +298,7 @@ footer p {
   }
 }
 
-/* Blog (Learning Center) styling */
+/* Blog (Our Blogs) styling */
 .articles-page {
   padding: 4rem 0;
 }
