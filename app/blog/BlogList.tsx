@@ -76,6 +76,16 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
         >
           Go
         </button>
+        <button
+          type="button"
+          className={styles.resetButton}
+          onClick={() => {
+            setSearch('');
+            setQuery('');
+          }}
+        >
+          Reset
+        </button>
         <input
           type="text"
           className={styles.search}
