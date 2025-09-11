@@ -15,36 +15,22 @@
   font-size: 2rem;
 }
 
-.filters {
+.controls {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: flex-end;
   gap: 0.5rem;
   margin-bottom: 1rem;
 }
 
-.filterGroup {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.filterGroup span {
-  font-weight: 600;
-}
-
-.filterButton {
-  border: 1px solid #0077cc;
+.controls select,
+.controls input {
   padding: 0.25rem 0.5rem;
+  border: 1px solid #ccc;
   border-radius: 4px;
-  background: #fff;
-  color: #0077cc;
-  cursor: pointer;
 }
 
-.active {
-  background: #0077cc;
-  color: #fff;
+.search {
+  min-width: 160px;
 }
 
 .postList {

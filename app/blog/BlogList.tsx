@@ -12,55 +12,69 @@ function formatDate(date?: string) {
 export default function BlogList({ posts }: { posts: BlogPost[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [query, setQuery] = useState('');
   const [activePost, setActivePost] = useState<BlogPost | null>(null);
 
   const categories = Array.from(new Set(posts.flatMap(p => p.categories)));
   const tags = Array.from(new Set(posts.flatMap(p => p.tags)));
 
-  const filtered = posts.filter(p =>
-    (!selectedCategory || p.categories.includes(selectedCategory)) &&
-    (!selectedTag || p.tags.includes(selectedTag))
-  );
+  function extractText(blocks: any[]): string {
+    return (blocks || [])
+      .map((block: any) => {
+        const rich = block[block.type]?.rich_text || [];
+        const text = rich.map((r: any) => r.plain_text).join('');
+        const children = block.children ? extractText(block.children) : '';
+        return text + ' ' + children;
+      })
+      .join(' ');
+  }
 
-  const toggleCategory = (cat: string) => {
-    setSelectedCategory(cat === selectedCategory ? null : cat);
-  };
-
-  const toggleTag = (tag: string) => {
-    setSelectedTag(tag === selectedTag ? null : tag);
-  };
+  const filtered = posts.filter(p => {
+    const matchesCategory = !selectedCategory || p.categories.includes(selectedCategory);
+    const matchesTag = !selectedTag || p.tags.includes(selectedTag);
+    const searchText = (
+      p.title + ' ' + (p.excerpt || '') + ' ' + extractText(p.content || [])
+    ).toLowerCase();
+    const matchesQuery = !query || searchText.includes(query.toLowerCase());
+    return matchesCategory && matchesTag && matchesQuery;
+  });
 
   return (
     <div className={styles.container}>
-      <div className={styles.filters}>
+      <div className={styles.controls}>
         {categories.length > 0 && (
-          <div className={styles.filterGroup}>
-            <span>Categories:</span>
+          <select
+            value={selectedCategory ?? ''}
+            onChange={e => setSelectedCategory(e.target.value || null)}
+          >
+            <option value="">All Categories</option>
             {categories.map(c => (
-              <button
-                key={c}
-                className={`${styles.filterButton} ${c === selectedCategory ? styles.active : ''}`}
-                onClick={() => toggleCategory(c)}
-              >
+              <option key={c} value={c}>
                 {c}
-              </button>
+              </option>
             ))}
-          </div>
+          </select>
         )}
         {tags.length > 0 && (
-          <div className={styles.filterGroup}>
-            <span>Tags:</span>
+          <select
+            value={selectedTag ?? ''}
+            onChange={e => setSelectedTag(e.target.value || null)}
+          >
+            <option value="">All Tags</option>
             {tags.map(t => (
-              <button
-                key={t}
-                className={`${styles.filterButton} ${t === selectedTag ? styles.active : ''}`}
-                onClick={() => toggleTag(t)}
-              >
+              <option key={t} value={t}>
                 {t}
-              </button>
+              </option>
             ))}
-          </div>
+          </select>
         )}
+        <input
+          type="text"
+          className={styles.search}
+          placeholder="Search..."
+          value={query}
+          onChange={e => setQuery(e.target.value)}
+        />
       </div>
 
       <ul className={styles.postList}>
