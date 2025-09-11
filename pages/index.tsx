@@ -43,7 +43,7 @@ export default function Home() {
           <ul className="nav-links">
             <li><a href="/">Home</a></li>
             <li><a href="/#services">Our Expertise</a></li>
-            <li><a href="/articles">Blogs</a></li>
+            <li><a href="/blog">Blogs</a></li>
             <li><a href="/#contact">Contact</a></li>
           </ul>
         </div>
@@ -64,7 +64,7 @@ export default function Home() {
           </span>
           <div className="hero-buttons">
             <a href="/#contact" className="btn">Need Help</a>
-            <a href="/articles" className="btn btn-secondary">Learning Center</a>
+            <a href="/blog" className="btn btn-secondary">Learning Center</a>
           </div>
         </div>
       </header>

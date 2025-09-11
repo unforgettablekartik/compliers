@@ -1,8 +1,9 @@
 // lib/notion.ts
 import { Client } from "@notionhq/client";
 
+// NOTION_TOKEN and NOTION_DATABASE_ID should be set in the environment
 export const notion = new Client({ auth: process.env.NOTION_TOKEN });
-export const databaseId = process.env.NOTION_DATABASE_ID!;
+export const databaseId = process.env.NOTION_DATABASE_ID;
 
 export type BlogPost = {
   id: string;
@@ -38,28 +39,39 @@ export function mapPage(p: any): BlogPost {
 }
 
 export async function getAllPublishedPosts(): Promise<BlogPost[]> {
-  const res = await notion.databases.query({
-    database_id: databaseId,
-    filter: {
-      and: [
-        { property: "Published", checkbox: { equals: true } },
-        { property: "Status", status: { equals: "Published" } }
-      ]
-    },
-    sorts: [{ property: "Publish Date", direction: "descending" }]
-  });
-  return res.results.map(mapPage);
+  if (!databaseId || !process.env.NOTION_TOKEN) return [];
+  try {
+    const res = await notion.databases.query({
+      database_id: databaseId,
+      filter: {
+        property: "Published",
+        checkbox: { equals: true }
+      },
+      sorts: [{ property: "Publish Date", direction: "descending" }]
+    });
+    const posts = res.results.map(mapPage);
+    return posts.filter(p => !p.status || p.status === "Published");
+  } catch (err) {
+    console.warn("Failed to fetch posts from Notion", err);
+    return [];
+  }
 }
 
 export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
-  const res = await notion.databases.query({
-    database_id: databaseId,
-    filter: {
-      property: "Slug",
-      rich_text: { equals: slug }
-    },
-    page_size: 1
-  });
-  if (!res.results.length) return null;
-  return mapPage(res.results[0]);
+  if (!databaseId || !process.env.NOTION_TOKEN) return null;
+  try {
+    const res = await notion.databases.query({
+      database_id: databaseId,
+      filter: {
+        property: "Slug",
+        rich_text: { equals: slug }
+      },
+      page_size: 1
+    });
+    if (!res.results.length) return null;
+    return mapPage(res.results[0]);
+  } catch (err) {
+    console.warn("Failed to fetch post from Notion", err);
+    return null;
+  }
 }
