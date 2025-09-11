@@ -29,13 +29,36 @@ export function mapPage(p: any): BlogPost {
     title: props.Title?.title ? getPlainText(props.Title.title) : "",
     slug: props.Slug?.rich_text ? getPlainText(props.Slug.rich_text) : "",
     excerpt: props.Excerpt?.rich_text ? getPlainText(props.Excerpt.rich_text) : "",
-    text: props.Text?.rich_text ? getPlainText(props.Text.rich_text) : "",
     published: props.Published?.checkbox ?? false,
     status: props.Status?.status?.name,
     publishDate: props["Publish Date"]?.date?.start ?? undefined,
     tags: (props.Tags?.multi_select || []).map((o: any) => o.name),
     categories: (props.Categories?.multi_select || []).map((o: any) => o.name),
   };
+}
+
+async function getPageContent(pageId: string): Promise<string> {
+  try {
+    const blocks: string[] = [];
+    let cursor: string | undefined = undefined;
+    do {
+      const res: any = await notion.blocks.children.list({
+        block_id: pageId,
+        start_cursor: cursor,
+      });
+      res.results.forEach((block: any) => {
+        const rich = block[block.type]?.rich_text;
+        if (rich) {
+          blocks.push(getPlainText(rich));
+        }
+      });
+      cursor = res.has_more ? res.next_cursor : undefined;
+    } while (cursor);
+    return blocks.join("\n\n");
+  } catch (err) {
+    console.warn("Failed to fetch page content from Notion", err);
+    return "";
+  }
 }
 
 export async function getAllPublishedPosts(): Promise<BlogPost[]> {
@@ -50,7 +73,10 @@ export async function getAllPublishedPosts(): Promise<BlogPost[]> {
       sorts: [{ property: "Publish Date", direction: "descending" }]
     });
     const posts = res.results.map(mapPage);
-    return posts.filter(p => !p.status || p.status === "Published");
+    const withContent = await Promise.all(
+      posts.map(async p => ({ ...p, text: await getPageContent(p.id) }))
+    );
+    return withContent.filter(p => !p.status || p.status === "Published");
   } catch (err) {
     console.warn("Failed to fetch posts from Notion", err);
     return [];
@@ -69,7 +95,9 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
       page_size: 1
     });
     if (!res.results.length) return null;
-    return mapPage(res.results[0]);
+    const base = mapPage(res.results[0]);
+    const text = await getPageContent(base.id);
+    return { ...base, text };
   } catch (err) {
     console.warn("Failed to fetch post from Notion", err);
     return null;

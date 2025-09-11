@@ -100,7 +100,10 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
                 <span className={styles.tags}> | {activePost.tags.join(', ')}</span>
               )}
             </div>
-            {activePost.text && <p>{activePost.text}</p>}
+            {activePost.text &&
+              activePost.text.split("\n").map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
           </div>
         </div>
       )}
