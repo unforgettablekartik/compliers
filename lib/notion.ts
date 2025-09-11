@@ -10,7 +10,7 @@ export type BlogPost = {
   title: string;
   slug: string;
   excerpt?: string;
-  text?: string;
+  content?: any[];
   published: boolean;
   status?: string;
   publishDate?: string; // ISO date
@@ -37,27 +37,27 @@ export function mapPage(p: any): BlogPost {
   };
 }
 
-async function getPageContent(pageId: string): Promise<string> {
+async function getPageContent(pageId: string): Promise<any[]> {
   try {
-    const blocks: string[] = [];
+    const blocks: any[] = [];
     let cursor: string | undefined = undefined;
     do {
       const res: any = await notion.blocks.children.list({
         block_id: pageId,
         start_cursor: cursor,
       });
-      res.results.forEach((block: any) => {
-        const rich = block[block.type]?.rich_text;
-        if (rich) {
-          blocks.push(getPlainText(rich));
+      for (const block of res.results) {
+        if (block.has_children) {
+          block.children = await getPageContent(block.id);
         }
-      });
+        blocks.push(block);
+      }
       cursor = res.has_more ? res.next_cursor : undefined;
     } while (cursor);
-    return blocks.join("\n\n");
+    return blocks;
   } catch (err) {
     console.warn("Failed to fetch page content from Notion", err);
-    return "";
+    return [];
   }
 }
 
@@ -74,7 +74,7 @@ export async function getAllPublishedPosts(): Promise<BlogPost[]> {
     });
     const posts = res.results.map(mapPage);
     const withContent = await Promise.all(
-      posts.map(async p => ({ ...p, text: await getPageContent(p.id) }))
+      posts.map(async p => ({ ...p, content: await getPageContent(p.id) }))
     );
     return withContent.filter(p => !p.status || p.status === "Published");
   } catch (err) {
@@ -96,8 +96,8 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     });
     if (!res.results.length) return null;
     const base = mapPage(res.results[0]);
-    const text = await getPageContent(base.id);
-    return { ...base, text };
+    const content = await getPageContent(base.id);
+    return { ...base, content };
   } catch (err) {
     console.warn("Failed to fetch post from Notion", err);
     return null;

@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import type { BlogPost } from '@/lib/notion';
+import NotionRenderer from '@/components/NotionRenderer';
 import styles from './blog.module.css';
 
 function formatDate(date?: string) {
@@ -100,10 +101,11 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
                 <span className={styles.tags}> | {activePost.tags.join(', ')}</span>
               )}
             </div>
-            {activePost.text &&
-              activePost.text.split("\n").map((para, i) => (
-                <p key={i}>{para}</p>
-              ))}
+            {activePost?.content && (
+              <div className={styles.content}>
+                <NotionRenderer blocks={activePost.content} />
+              </div>
+            )}
           </div>
         </div>
       )}
