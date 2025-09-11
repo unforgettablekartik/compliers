@@ -12,6 +12,7 @@ function formatDate(date?: string) {
 export default function BlogList({ posts }: { posts: BlogPost[] }) {
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [search, setSearch] = useState('');
   const [query, setQuery] = useState('');
   const [activePost, setActivePost] = useState<BlogPost | null>(null);
 
@@ -68,12 +69,20 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
             ))}
           </select>
         )}
+        <button
+          type="button"
+          className={styles.searchButton}
+          onClick={() => setQuery(search)}
+        >
+          Go
+        </button>
         <input
           type="text"
           className={styles.search}
           placeholder="Search..."
-          value={query}
-          onChange={e => setQuery(e.target.value)}
+          value={search}
+          onChange={e => setSearch(e.target.value)}
+          onKeyDown={e => e.key === 'Enter' && setQuery(search)}
         />
       </div>
 
