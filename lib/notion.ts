@@ -10,6 +10,7 @@ export type BlogPost = {
   slug: string;
   excerpt?: string;
   text?: string;
+  blocks?: any[];
   published: boolean;
   status?: string;
   publishDate?: string; // ISO date
@@ -19,6 +20,20 @@ export type BlogPost = {
 
 function getPlainText(rich: any[]): string {
   return (rich || []).map((r: any) => r?.plain_text ?? "").join("");
+}
+
+export async function getPageBlocks(pageId: string): Promise<any[]> {
+  const blocks: any[] = [];
+  let cursor: string | undefined = undefined;
+  do {
+    const res = await notion.blocks.children.list({
+      block_id: pageId,
+      start_cursor: cursor
+    });
+    blocks.push(...res.results);
+    cursor = res.has_more ? res.next_cursor || undefined : undefined;
+  } while (cursor);
+  return blocks;
 }
 
 export function mapPage(p: any): BlogPost {
@@ -61,5 +76,7 @@ export async function getPostBySlug(slug: string): Promise<BlogPost | null> {
     page_size: 1
   });
   if (!res.results.length) return null;
-  return mapPage(res.results[0]);
+  const post = mapPage(res.results[0]);
+  post.blocks = await getPageBlocks(post.id);
+  return post;
 }
