@@ -73,6 +73,8 @@
   font-size: 0.9rem;
   color: #555;
   margin-bottom: 0.5rem;
+  background-color: rgba(15, 70, 98, 0.1);
+  padding: 0.25rem 0.5rem;
 }
 
 .categories,
