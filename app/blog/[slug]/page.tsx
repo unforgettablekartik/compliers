@@ -228,17 +228,22 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               {new Date(post.publishDate).toLocaleDateString()}
             </time>
           )}
-          {post.category && (
+          {post.categories?.length ? (
             <>
               <span>•</span>
-              <Link
-                href={`/blog/category/${encodeURIComponent(post.category)}`}
-                className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
-              >
-                {post.category}
-              </Link>
+              <span className="flex flex-wrap gap-1">
+                {post.categories.map((category: string) => (
+                  <Link
+                    key={category}
+                    href={`/blog/category/${encodeURIComponent(category)}`}
+                    className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
+                  >
+                    {category}
+                  </Link>
+                ))}
+              </span>
             </>
-          )}
+          ) : null}
           {post.tags?.length ? (
             <>
               <span>•</span>
