@@ -6,6 +6,7 @@ import {
   getPostBySlug,
   getBlocks, // ensure this exists in lib/notion.ts
 } from "@/lib/notion";
+import styles from "../blog.module.css";
 
 export const revalidate = 3600;
 
@@ -33,14 +34,15 @@ function RichText({ text }: { text: any[] }) {
       {text?.map((t: any, i: number) => {
         let node: any = t?.plain_text ?? "";
         const a = t?.annotations ?? {};
-        if (a.code) node = <code className="rounded bg-neutral-100 px-1 py-0.5">{node}</code>;
+        if (a.code)
+          node = <code className={styles.inlineCode}>{node}</code>;
         if (a.bold) node = <strong>{node}</strong>;
         if (a.italic) node = <em>{node}</em>;
         if (a.underline) node = <u>{node}</u>;
         if (a.strikethrough) node = <s>{node}</s>;
         if (t.href) {
           node = (
-            <a className="underline" href={t.href} target="_blank" rel="noreferrer">
+            <a className={styles.inlineLink} href={t.href} target="_blank" rel="noreferrer">
               {node}
             </a>
           );
@@ -58,55 +60,31 @@ function Block({ block }: { block: any }) {
 
   switch (type) {
     case "paragraph":
-      return (
-        <p className="my-4 text-[1.05rem] leading-7">
-          <RichText text={b.rich_text} />
-        </p>
-      );
+      return <p className={styles.postParagraph}><RichText text={b.rich_text} /></p>;
 
     case "heading_1":
-      return (
-        <h1 className="mt-8 mb-3 text-3xl font-semibold">
-          <RichText text={b.rich_text} />
-        </h1>
-      );
+      return <h2 className={styles.postHeadingOne}><RichText text={b.rich_text} /></h2>;
     case "heading_2":
-      return (
-        <h2 className="mt-8 mb-3 text-2xl font-semibold">
-          <RichText text={b.rich_text} />
-        </h2>
-      );
+      return <h3 className={styles.postHeadingTwo}><RichText text={b.rich_text} /></h3>;
     case "heading_3":
-      return (
-        <h3 className="mt-6 mb-2 text-xl font-semibold">
-          <RichText text={b.rich_text} />
-        </h3>
-      );
+      return <h4 className={styles.postHeadingThree}><RichText text={b.rich_text} /></h4>;
 
     case "bulleted_list_item":
-      return (
-        <li className="list-disc ml-6 my-1">
-          <RichText text={b.rich_text} />
-        </li>
-      );
+      return <li className={styles.postListItem}><RichText text={b.rich_text} /></li>;
 
     case "numbered_list_item":
-      return (
-        <li className="list-decimal ml-6 my-1">
-          <RichText text={b.rich_text} />
-        </li>
-      );
+      return <li className={styles.postListItem}><RichText text={b.rich_text} /></li>;
 
     case "quote":
       return (
-        <blockquote className="border-l-4 pl-4 italic my-4 text-neutral-700">
+        <blockquote className={styles.postQuote}>
           <RichText text={b.rich_text} />
         </blockquote>
       );
 
     case "code":
       return (
-        <pre className="my-4 overflow-x-auto rounded-xl border bg-neutral-50 p-4 text-sm">
+        <pre className={styles.postCode}>
           <code>{b.rich_text?.map((t: any) => t.plain_text).join("")}</code>
         </pre>
       );
@@ -115,39 +93,37 @@ function Block({ block }: { block: any }) {
       const src = b?.type === "external" ? b.external?.url : b.file?.url;
       const cap = b?.caption?.[0]?.plain_text;
       return (
-        <figure className="my-6">
+        <figure className={styles.postFigure}>
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={src} alt={cap || "image"} className="rounded-xl border" />
-          {cap && <figcaption className="text-sm text-neutral-500 mt-2">{cap}</figcaption>}
+          <img src={src} alt={cap || "image"} className={styles.postImage} />
+          {cap && <figcaption className={styles.postFigcaption}>{cap}</figcaption>}
         </figure>
       );
     }
 
     case "callout": {
       return (
-        <div className="my-4 rounded-xl border bg-neutral-50 p-4">
+        <div className={styles.postCallout}>
           <RichText text={b?.rich_text || []} />
         </div>
       );
     }
 
     case "divider":
-      return <hr className="my-8 border-neutral-200" />;
+      return <hr className={styles.postDivider} />;
 
     case "to_do":
       return (
-        <label className="my-1 ml-1 flex items-center gap-2">
+        <label className={styles.postTodo}>
           <input type="checkbox" disabled checked={b?.checked} />
-          <span>
-            <RichText text={b?.rich_text || []} />
-          </span>
+          <span><RichText text={b?.rich_text || []} /></span>
         </label>
       );
 
     case "bookmark":
       return (
-        <p className="my-3">
-          <a className="underline" href={b?.url} target="_blank" rel="noreferrer">
+        <p className={styles.postBookmark}>
+          <a className={styles.inlineLink} href={b?.url} target="_blank" rel="noreferrer">
             {b?.url}
           </a>
         </p>
@@ -169,7 +145,7 @@ function renderBlocksGrouped(blocks: any[]) {
     if (!buf.length) return;
     if (current === "ul")
       out.push(
-        <ul className="my-3" key={`ul-${out.length}`}>
+        <ul className={styles.postUnorderedList} key={`ul-${out.length}`}>
           {buf.map((b, i) => (
             <Block key={i} block={b} />
           ))}
@@ -177,7 +153,7 @@ function renderBlocksGrouped(blocks: any[]) {
       );
     if (current === "ol")
       out.push(
-        <ol className="my-3" key={`ol-${out.length}`}>
+        <ol className={styles.postOrderedList} key={`ol-${out.length}`}>
           {buf.map((b, i) => (
             <Block key={i} block={b} />
           ))}
@@ -218,61 +194,76 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const blocks = await getBlocks(post.id);
 
   return (
-    <article className="prose prose-neutral max-w-none">
-      <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
-
-        <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
-          {post.publishDate && (
-            <time dateTime={post.publishDate}>
-              {new Date(post.publishDate).toLocaleDateString()}
-            </time>
-          )}
-          {post.categories?.length ? (
-            <>
-              <span>•</span>
-              <span className="flex flex-wrap gap-1">
-                {post.categories.map((category: string) => (
-                  <Link
-                    key={category}
-                    href={`/blog/category/${encodeURIComponent(category)}`}
-                    className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
-                  >
-                    {category}
-                  </Link>
-                ))}
-              </span>
-            </>
-          ) : null}
-          {post.tags?.length ? (
-            <>
-              <span>•</span>
-              <span className="flex flex-wrap gap-1">
-                {post.tags.map((t: string) => (
-                  <Link
-                    key={t}
-                    href={`/blog/tag/${encodeURIComponent(t)}`}
-                    className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs hover:bg-neutral-100"
-                  >
-                    #{t}
-                  </Link>
-                ))}
-              </span>
-            </>
-          ) : null}
+    <>
+      <nav id="navbar">
+        <div className="container">
+          <div className="logo">
+            <a href="/">The Compliers</a>
+          </div>
+          <ul className="nav-links">
+            <li><a href="/">Home</a></li>
+            <li><a href="/#services">Our Expertise</a></li>
+            <li><a href="/blog">Blogs</a></li>
+            <li><a href="/#contact">Contact</a></li>
+          </ul>
         </div>
+      </nav>
+      <main className={styles.postPage}>
+        <article className={styles.postArticle}>
+          <header className={styles.postHeader}>
+            <h1 className={styles.postHeading}>{post.title}</h1>
 
-        {post.coverImage && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={post.coverImage} alt="cover" className="mt-6 rounded-2xl border" />
-        )}
+            <div className={styles.postMeta}>
+              {post.publishDate && (
+                <time dateTime={post.publishDate} className={styles.metaItem}>
+                  {new Date(post.publishDate).toLocaleDateString()}
+                </time>
+              )}
+              {post.categories?.length ? (
+                <>
+                  <span className={styles.metaSeparator}>•</span>
+                  <span className={`${styles.metaItem} ${styles.metaChips}`}>
+                    {post.categories.map((category: string) => (
+                      <Link
+                        key={category}
+                        href={`/blog/category/${encodeURIComponent(category)}`}
+                        className={styles.categoryChip}
+                      >
+                        {category}
+                      </Link>
+                    ))}
+                  </span>
+                </>
+              ) : null}
+              {post.tags?.length ? (
+                <>
+                  <span className={styles.metaSeparator}>•</span>
+                  <span className={`${styles.metaItem} ${styles.metaChips}`}>
+                    {post.tags.map((t: string) => (
+                      <Link
+                        key={t}
+                        href={`/blog/tag/${encodeURIComponent(t)}`}
+                        className={styles.tagChip}
+                      >
+                        #{t}
+                      </Link>
+                    ))}
+                  </span>
+                </>
+              ) : null}
+            </div>
 
-        {post.excerpt ? (
-          <p className="mt-4 italic text-neutral-700">{post.excerpt}</p>
-        ) : null}
-      </header>
+            {post.coverImage && (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img src={post.coverImage} alt="cover" className={styles.postCover} />
+            )}
 
-      <section>{renderBlocksGrouped(blocks)}</section>
-    </article>
+            {post.excerpt ? <p className={styles.postExcerpt}>{post.excerpt}</p> : null}
+          </header>
+
+          <section className={styles.postBody}>{renderBlocksGrouped(blocks)}</section>
+        </article>
+      </main>
+    </>
   );
 }

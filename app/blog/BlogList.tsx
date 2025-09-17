@@ -30,6 +30,9 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
 
   return (
     <div className={styles.container}>
+      <header className={styles.pageHeader}>
+        <h1 className={styles.pageTitle}>Blogs</h1>
+      </header>
       <div className={styles.filters}>
         {categories.length > 0 && (
           <div className={styles.filterGroup}>

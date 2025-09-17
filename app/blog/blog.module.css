@@ -1,7 +1,28 @@
+.pageMain {
+  padding: 7.5rem 0 4rem;
+  background: #f8fafc;
+}
+
 .container {
   max-width: 1080px;
-  margin: 3rem auto 4rem;
+  margin: 0 auto 4rem;
   padding: 0 clamp(1rem, 4vw, 2.5rem);
+}
+
+.pageHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.pageTitle {
+  margin: 0;
+  font-size: clamp(2.2rem, 4vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0f172a;
 }
 
 .filters {
@@ -159,6 +180,271 @@
   color: #0ea5e9;
 }
 
+.postPage {
+  padding: 7.5rem 0 5rem;
+  background: #f8fafc;
+}
+
+.postArticle {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: clamp(2rem, 5vw, 3rem);
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 24px;
+  box-shadow: 0 24px 48px rgba(15, 23, 42, 0.08);
+}
+
+.postHeader {
+  margin-bottom: 2.5rem;
+}
+
+.postHeading {
+  margin: 0;
+  font-size: clamp(2.2rem, 4.5vw, 3rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: #0f172a;
+}
+
+.postMeta {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  color: #475569;
+}
+
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.metaSeparator {
+  color: #cbd5f5;
+  font-weight: 600;
+}
+
+.metaChips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.categoryChip,
+.tagChip {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.categoryChip {
+  border: 1px solid #cbd5f5;
+  background: #ecfeff;
+  color: #0369a1;
+}
+
+.categoryChip:hover,
+.categoryChip:focus-visible {
+  border-color: #7dd3fc;
+  background: #bae6fd;
+  color: #024f83;
+}
+
+.tagChip {
+  border: 1px solid #e2e8f0;
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+.tagChip:hover,
+.tagChip:focus-visible {
+  border-color: #cbd5f5;
+  background: #e2e8f0;
+}
+
+.postCover {
+  width: 100%;
+  margin-top: 2rem;
+  border-radius: 22px;
+  border: 1px solid #e2e8f0;
+  object-fit: cover;
+}
+
+.postExcerpt {
+  margin-top: 1.75rem;
+  font-size: 1.05rem;
+  font-style: italic;
+  color: #475569;
+}
+
+.postBody {
+  color: #1f2937;
+}
+
+.postParagraph {
+  margin: 1.2rem 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.postHeadingOne {
+  margin: 2.5rem 0 1.25rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.postHeadingTwo {
+  margin: 2rem 0 1rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.postHeadingThree {
+  margin: 1.75rem 0 0.75rem;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.postUnorderedList,
+.postOrderedList {
+  margin: 1.25rem 0 1.25rem 1.5rem;
+  padding-left: 0.75rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.postUnorderedList {
+  list-style: disc;
+}
+
+.postOrderedList {
+  list-style: decimal;
+}
+
+.postListItem {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.75;
+}
+
+.postQuote {
+  margin: 1.5rem 0;
+  padding-left: 1.25rem;
+  border-left: 4px solid #cbd5f5;
+  font-style: italic;
+  color: #475569;
+}
+
+.postCode {
+  margin: 1.5rem 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  border-radius: 18px;
+  border: 1px solid #1e293b;
+  background: #0f172a;
+  color: #e2e8f0;
+  font-family: 'Source Code Pro', 'Fira Code', monospace;
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.postFigure {
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.postImage {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid #e2e8f0;
+}
+
+.postFigcaption {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #64748b;
+}
+
+.postCallout {
+  margin: 1.5rem 0;
+  padding: 1.25rem 1.5rem;
+  border-radius: 18px;
+  border: 1px solid #cbd5f5;
+  background: #f8fafc;
+}
+
+.postDivider {
+  margin: 3rem 0;
+  border: none;
+  border-top: 1px solid #e2e8f0;
+}
+
+.postTodo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin: 0.75rem 0;
+  font-size: 1rem;
+}
+
+.postTodo input {
+  width: 1rem;
+  height: 1rem;
+  accent-color: #0369a1;
+}
+
+.postBookmark {
+  margin: 1.5rem 0;
+  font-size: 1rem;
+}
+
+.inlineCode {
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  background: #e2e8f0;
+  font-family: 'Source Code Pro', 'Fira Code', monospace;
+  font-size: 0.95rem;
+}
+
+.inlineLink {
+  color: #0369a1;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  transition: color 0.2s ease;
+}
+
+.inlineLink:hover,
+.inlineLink:focus-visible {
+  color: #0ea5e9;
+}
+
+@media (max-width: 900px) {
+  .pageMain {
+    padding-top: 7rem;
+  }
+
+  .postPage {
+    padding-top: 7rem;
+  }
+
+  .postArticle {
+    border-radius: 20px;
+  }
+}
+
 @media (max-width: 600px) {
   .filters {
     flex-direction: column;
@@ -167,5 +453,18 @@
 
   .filterGroup {
     justify-content: flex-start;
+  }
+
+  .postArticle {
+    padding: 1.75rem;
+  }
+
+  .postHeading {
+    font-size: 2.2rem;
+  }
+
+  .postUnorderedList,
+  .postOrderedList {
+    margin-left: 1.25rem;
   }
 }
