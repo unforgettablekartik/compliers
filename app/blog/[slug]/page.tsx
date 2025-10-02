@@ -59,7 +59,7 @@ function Block({ block }: { block: any }) {
   switch (type) {
     case "paragraph":
       return (
-        <p className="my-4 text-[1.05rem] leading-7">
+        <p className="my-6 text-[1.05rem] leading-8">
           <RichText text={b.rich_text} />
         </p>
       );
@@ -221,46 +221,53 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   return (
     <div className="blogPostShell">
       <article className="prose prose-neutral max-w-none">
-        <header className="mb-8">
+        <header className="mb-10">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-          <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
+          <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-500">
             {post.publishDate && (
-              <time dateTime={post.publishDate}>
-                {new Date(post.publishDate).toLocaleDateString()}
-              </time>
+              <div className="flex items-center gap-2">
+                <span className="font-medium text-neutral-700">Date</span>
+                <time dateTime={post.publishDate} className="text-neutral-600">
+                  {new Date(post.publishDate).toLocaleDateString("en-US", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </time>
+              </div>
             )}
             {categories.length ? (
-              <>
-                <span>•</span>
-                <span className="flex flex-wrap gap-1">
+              <div className="flex items-center gap-2">
+                <span className="font-medium text-neutral-700">Categories</span>
+                <span className="flex flex-wrap gap-2">
                   {categories.map((category) => (
                     <Link
                       key={category}
                       href={`/blog/category/${encodeURIComponent(category)}`}
-                      className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
+                      className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs text-neutral-600 hover:bg-neutral-50"
                     >
                       {category}
                     </Link>
                   ))}
                 </span>
-              </>
+              </div>
             ) : null}
             {post.tags?.length ? (
-              <>
-                <span>•</span>
-                <span className="flex flex-wrap gap-1">
+              <div className="flex items-center gap-2">
+                <span className="font-medium text-neutral-700">Tags</span>
+                <span className="flex flex-wrap gap-2">
                   {post.tags.map((t: string) => (
                     <Link
                       key={t}
                       href={`/blog/tag/${encodeURIComponent(t)}`}
-                      className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs hover:bg-neutral-100"
+                      className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs text-neutral-600 hover:bg-neutral-100"
                     >
                       #{t}
                     </Link>
                   ))}
                 </span>
-              </>
+              </div>
             ) : null}
           </div>
 
@@ -270,7 +277,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           )}
 
           {post.excerpt ? (
-            <p className="mt-4 italic text-neutral-700">{post.excerpt}</p>
+            <p className="mt-6 mb-8 text-[1.05rem] font-semibold leading-7 text-neutral-700">
+              {post.excerpt}
+            </p>
           ) : null}
         </header>
 
