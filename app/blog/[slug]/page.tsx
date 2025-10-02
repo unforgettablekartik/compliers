@@ -6,7 +6,6 @@ import {
   getPostBySlug,
   getBlocks, // ensure this exists in lib/notion.ts
 } from "@/lib/notion";
-import styles from "./blogMeta.module.css";
 
 export const revalidate = 3600;
 
@@ -223,45 +222,40 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-        <ul className={styles.blogMetaBar}>
+        <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
           {post.publishDate && (
-            <li className={styles.blogMetaItem}>
-              <time dateTime={post.publishDate}>
-                {new Date(post.publishDate).toLocaleDateString()}
-              </time>
-            </li>
+            <time dateTime={post.publishDate}>
+              {new Date(post.publishDate).toLocaleDateString()}
+            </time>
           )}
-          {post.categories?.length ? (
-            <li className={styles.blogMetaItem}>
-              <span className={styles.blogMetaTags}>
-                {post.categories.map((category: string) => (
-                  <Link
-                    key={category}
-                    href={`/blog/category/${encodeURIComponent(category)}`}
-                    className={styles.blogMetaPill}
-                  >
-                    {category}
-                  </Link>
-                ))}
-              </span>
-            </li>
-          ) : null}
+          {post.category && (
+            <>
+              <span>•</span>
+              <Link
+                href={`/blog/category/${encodeURIComponent(post.category)}`}
+                className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
+              >
+                {post.category}
+              </Link>
+            </>
+          )}
           {post.tags?.length ? (
-            <li className={styles.blogMetaItem}>
-              <span className={styles.blogMetaTags}>
+            <>
+              <span>•</span>
+              <span className="flex flex-wrap gap-1">
                 {post.tags.map((t: string) => (
                   <Link
                     key={t}
                     href={`/blog/tag/${encodeURIComponent(t)}`}
-                    className={styles.blogMetaPill}
+                    className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs hover:bg-neutral-100"
                   >
                     #{t}
                   </Link>
                 ))}
               </span>
-            </li>
+            </>
           ) : null}
-        </ul>
+        </div>
 
         {post.coverImage && (
           // eslint-disable-next-line @next/next/no-img-element

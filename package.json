@@ -18,8 +18,6 @@
   "devDependencies": {
     "typescript": "5.2.2",
     "@types/react": "18.2.14",
-    "@types/node": "20.2.5",
-    "eslint": "file:vendor/eslint",
-    "eslint-config-next": "file:vendor/eslint-config-next"
+    "@types/node": "20.2.5"
   }
 }
