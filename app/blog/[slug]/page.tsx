@@ -216,6 +216,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
   // Fetch the content blocks from Notion by page ID
   const blocks = await getBlocks(post.id);
+  const categories = post.categories ?? [];
 
   return (
     <article className="prose prose-neutral max-w-none">
@@ -228,17 +229,22 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               {new Date(post.publishDate).toLocaleDateString()}
             </time>
           )}
-          {post.category && (
+          {categories.length ? (
             <>
               <span>•</span>
-              <Link
-                href={`/blog/category/${encodeURIComponent(post.category)}`}
-                className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
-              >
-                {post.category}
-              </Link>
+              <span className="flex flex-wrap gap-1">
+                {categories.map((category: string) => (
+                  <Link
+                    key={category}
+                    href={`/blog/category/${encodeURIComponent(category)}`}
+                    className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
+                  >
+                    {category}
+                  </Link>
+                ))}
+              </span>
             </>
-          )}
+          ) : null}
           {post.tags?.length ? (
             <>
               <span>•</span>
