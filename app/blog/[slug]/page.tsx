@@ -6,6 +6,7 @@ import {
   getPostBySlug,
   getBlocks, // ensure this exists in lib/notion.ts
 } from "@/lib/notion";
+import styles from "./blogMeta.module.css";
 
 export const revalidate = 3600;
 
@@ -222,40 +223,40 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-        <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
+        <ul className={styles.blogMetaBar}>
           {post.publishDate && (
-            <time dateTime={post.publishDate}>
-              {new Date(post.publishDate).toLocaleDateString()}
-            </time>
+            <li className={styles.blogMetaItem}>
+              <time dateTime={post.publishDate}>
+                {new Date(post.publishDate).toLocaleDateString()}
+              </time>
+            </li>
           )}
           {post.category && (
-            <>
-              <span>•</span>
+            <li className={styles.blogMetaItem}>
               <Link
                 href={`/blog/category/${encodeURIComponent(post.category)}`}
-                className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
+                className={styles.blogMetaPill}
               >
                 {post.category}
               </Link>
-            </>
+            </li>
           )}
           {post.tags?.length ? (
-            <>
-              <span>•</span>
-              <span className="flex flex-wrap gap-1">
+            <li className={styles.blogMetaItem}>
+              <span className={styles.blogMetaTags}>
                 {post.tags.map((t: string) => (
                   <Link
                     key={t}
                     href={`/blog/tag/${encodeURIComponent(t)}`}
-                    className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs hover:bg-neutral-100"
+                    className={styles.blogMetaPill}
                   >
                     #{t}
                   </Link>
                 ))}
               </span>
-            </>
+            </li>
           ) : null}
-        </div>
+        </ul>
 
         {post.coverImage && (
           // eslint-disable-next-line @next/next/no-img-element
