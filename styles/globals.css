@@ -11,6 +11,10 @@ body {
   color: #333;
 }
 
+.site-content {
+  display: block;
+}
+
 /* Container utility */
 .container {
   width: 90%;
@@ -192,11 +196,12 @@ section h2 {
 }
 
 /* Footer */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem 0;
+.site-footer {
+  background-color: #f1f1f1;
+  color: #000;
+  padding: 1.5rem 0 0;
   text-align: center;
+  border-top: 1px solid #e0e0e0;
 }
 
 .blogPostShell {
@@ -221,8 +226,11 @@ footer {
   }
 }
 
-footer p {
-  margin: 0;
+.site-footer .footer-copy {
+  margin-top: 1rem;
+  padding: 0.75rem 0 1.5rem;
+  font-weight: 600;
+  color: #000;
 }
 
 /* Contact split */
@@ -253,16 +261,19 @@ footer p {
 .container.footer-content {
   display: flex;
   justify-content: center;
+  padding: 0;
+  flex-wrap: wrap;
 }
 
 .footer-nav {
   display: flex;
   gap: 1.5rem;
   list-style: none;
+  flex-wrap: wrap;
 }
 
 .footer-nav a {
-  color: #fff;
+  color: #000;
   text-decoration: none;
   font-weight: 600;
 }
@@ -298,6 +309,30 @@ footer p {
   flex-shrink: 0;
 }
 
+.legal-page {
+  padding: 7rem 0 4rem;
+}
+
+.legal-page .container {
+  padding-top: 0;
+}
+
+.legal-page h1 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.blogPage {
+  padding: 7rem 0 4rem;
+}
+
+.blogPageTitle {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #3a3a3a;
+}
+
 /* Responsive breakpoints */
 @media (max-width: 768px) {
   #hero {
@@ -315,7 +350,7 @@ footer p {
 
   .footer-nav {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 0.5rem;
   }
 }

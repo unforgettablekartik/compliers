@@ -5,43 +5,18 @@ export default function Privacy() {
     <>
       <Head>
         <title>Privacy Policy | The Compliers</title>
-        <meta name="description" content="Learn about The Compliers’ privacy practices." />
+        <meta name="description" content="Learn how The Compliers handle your data." />
       </Head>
-      {/* Site Navigation */}
-      <nav id="navbar">
-        <div className="container">
-          <div className="logo"><a href="/">The Compliers</a></div>
-          <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/#services">Our Expertise</a></li>
-            <li><a href="/blog">Blogs</a></li>
-            <li><a href="/#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-      {/* Main content */}
-      <main className="legal-page">
+      <section className="legal-page">
         <div className="container">
           <h1>Privacy Policy</h1>
-          <p>This Privacy Policy explains how The Compliers collects, uses, and protects your personal data when you use our website or services.</p>
+          <p>Your privacy is important to us. This policy explains how we collect, use and protect your personal information when you interact with The Compliers.</p>
           <h2>Information We Collect</h2>
-          <p>We may collect personal information such as your name, contact details, and any other information you voluntarily provide.</p>
-          <h2>How We Use Your Information</h2>
-          <p>We use the information to provide and improve our services, respond to inquiries, and comply with legal obligations.</p>
+          <p>We may collect personal information such as your name, email address and company details when you contact us or use our services.</p>
+          <h2>How We Use Information</h2>
+          <p>Information is used to respond to inquiries, provide services, improve our offerings and comply with legal obligations. We do not sell your personal data.</p>
         </div>
-      </main>
-      {/* Footer */}
-      <footer>
-        <div className="container footer-content">
-          <ul className="footer-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/#services">Our Expertise</a></li>
-            <li><a href="/#contact">Contact</a></li>
-            <li><a href="/terms">Terms of Use</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </footer>
+      </section>
     </>
   );
 }

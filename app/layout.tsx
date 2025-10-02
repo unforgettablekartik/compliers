@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import React from 'react';
 import '../styles/globals.css';
+import SiteFooter from '@/components/SiteFooter';
+import SiteHeader from '@/components/SiteHeader';
 
 export const metadata: Metadata = {
   title: 'The Compliers Blog',
@@ -14,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SiteHeader />
+        <main className="site-content">{children}</main>
+        <SiteFooter />
+      </body>
     </html>
   );
 }

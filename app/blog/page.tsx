@@ -7,9 +7,11 @@ export const revalidate = 3600; // ISR every hour
 export default async function BlogIndex() {
   const posts = await getAllPublishedPosts();
   return (
-    <main>
-      <h1>Blog</h1>
-      <BlogList posts={posts} />
-    </main>
+    <section className="blogPage">
+      <div className="container">
+        <h1 className="blogPageTitle">Blog</h1>
+        <BlogList posts={posts} />
+      </div>
+    </section>
   );
 }

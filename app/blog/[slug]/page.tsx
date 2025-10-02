@@ -216,7 +216,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
   // Fetch the content blocks from Notion by page ID
   const blocks = await getBlocks(post.id);
-  const categories = post.categories.filter(Boolean);
+  const categories = (post.categories ?? []).filter(Boolean);
 
   return (
     <div className="blogPostShell">
@@ -224,55 +224,55 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-        <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
-          {post.publishDate && (
-            <time dateTime={post.publishDate}>
-              {new Date(post.publishDate).toLocaleDateString()}
-            </time>
+          <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
+            {post.publishDate && (
+              <time dateTime={post.publishDate}>
+                {new Date(post.publishDate).toLocaleDateString()}
+              </time>
+            )}
+            {categories.length ? (
+              <>
+                <span>•</span>
+                <span className="flex flex-wrap gap-1">
+                  {categories.map((category) => (
+                    <Link
+                      key={category}
+                      href={`/blog/category/${encodeURIComponent(category)}`}
+                      className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
+                    >
+                      {category}
+                    </Link>
+                  ))}
+                </span>
+              </>
+            ) : null}
+            {post.tags?.length ? (
+              <>
+                <span>•</span>
+                <span className="flex flex-wrap gap-1">
+                  {post.tags.map((t: string) => (
+                    <Link
+                      key={t}
+                      href={`/blog/tag/${encodeURIComponent(t)}`}
+                      className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs hover:bg-neutral-100"
+                    >
+                      #{t}
+                    </Link>
+                  ))}
+                </span>
+              </>
+            ) : null}
+          </div>
+
+          {post.coverImage && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={post.coverImage} alt="cover" className="mt-6 rounded-2xl border" />
           )}
-          {categories.length ? (
-            <>
-              <span>•</span>
-              <span className="flex flex-wrap gap-1">
-                {categories.map((category) => (
-                  <Link
-                    key={category}
-                    href={`/blog/category/${encodeURIComponent(category)}`}
-                    className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
-                  >
-                    {category}
-                  </Link>
-                ))}
-              </span>
-            </>
-          ) : null}
-          {post.tags?.length ? (
-            <>
-              <span>•</span>
-              <span className="flex flex-wrap gap-1">
-                {post.tags.map((t: string) => (
-                  <Link
-                    key={t}
-                    href={`/blog/tag/${encodeURIComponent(t)}`}
-                    className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs hover:bg-neutral-100"
-                  >
-                    #{t}
-                  </Link>
-                ))}
-              </span>
-            </>
-          ) : null}
-        </div>
 
-        {post.coverImage && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={post.coverImage} alt="cover" className="mt-6 rounded-2xl border" />
-        )}
-
-        {post.excerpt ? (
-          <p className="mt-4 italic text-neutral-700">{post.excerpt}</p>
-        ) : null}
-      </header>
+          {post.excerpt ? (
+            <p className="mt-4 italic text-neutral-700">{post.excerpt}</p>
+          ) : null}
+        </header>
 
         <section>{renderBlocksGrouped(blocks)}</section>
       </article>

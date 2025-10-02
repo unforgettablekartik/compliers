@@ -36,19 +36,6 @@ export default function Home() {
         />
       </Head>
 
-      {/* Navigation */}
-      <nav id="navbar">
-        <div className="container">
-          <div className="logo"><a href="/">The Compliers</a></div>
-          <ul className="nav-links">
-            <li><a href="/">Home</a></li>
-            <li><a href="/#services">Our Expertise</a></li>
-            <li><a href="/blog">Blogs</a></li>
-            <li><a href="/#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
-
       {/* Hero section */}
       <header id="hero">
         <div className="hero-content">
@@ -131,19 +118,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer>
-        <div className="container footer-content">
-          <ul className="footer-nav">
-            <li><a href="/">Home</a></li>
-            <li><a href="/#services">Our Expertise</a></li>
-            <li><a href="/#contact">Contact</a></li>
-            <li><a href="/terms">Terms of Use</a></li>
-            <li><a href="/privacy">Privacy Policy</a></li>
-          </ul>
-        </div>
-      </footer>
     </>
   );
 }
