@@ -1,6 +1,5 @@
 // app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
-import Link from "next/link";
 import {
   getAllPublishedPosts,
   getPostBySlug,
@@ -217,6 +216,19 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   // Fetch the content blocks from Notion by page ID
   const blocks = await getBlocks(post.id);
   const categories = (post.categories ?? []).filter(Boolean);
+  const tags = (post.tags ?? []).filter(Boolean);
+  const formattedDate = post.publishDate
+    ? new Date(post.publishDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : null;
+  const metadataSegments = [
+    formattedDate,
+    categories.length ? categories.join(", ") : null,
+    tags.length ? tags.map((t: string) => `#${t}`).join(", ") : null,
+  ].filter(Boolean) as string[];
 
   return (
     <div className="blogPostShell">
@@ -224,52 +236,15 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         <header className="mb-10">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-          <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm text-neutral-500">
-            {post.publishDate && (
-              <div className="flex items-center gap-2">
-                <span className="font-medium text-neutral-700">Date</span>
-                <time dateTime={post.publishDate} className="text-neutral-600">
-                  {new Date(post.publishDate).toLocaleDateString("en-US", {
-                    year: "numeric",
-                    month: "long",
-                    day: "numeric",
-                  })}
-                </time>
-              </div>
-            )}
-            {categories.length ? (
-              <div className="flex items-center gap-2">
-                <span className="font-medium text-neutral-700">Categories</span>
-                <span className="flex flex-wrap gap-2">
-                  {categories.map((category) => (
-                    <Link
-                      key={category}
-                      href={`/blog/category/${encodeURIComponent(category)}`}
-                      className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs text-neutral-600 hover:bg-neutral-50"
-                    >
-                      {category}
-                    </Link>
-                  ))}
+          {metadataSegments.length ? (
+            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-full bg-[#e0e7ff] px-5 py-2 text-sm font-semibold text-[#005fa3]">
+              {metadataSegments.map((segment, index) => (
+                <span key={`${segment}-${index}`} className="flex items-center gap-2">
+                  {segment}
                 </span>
-              </div>
-            ) : null}
-            {post.tags?.length ? (
-              <div className="flex items-center gap-2">
-                <span className="font-medium text-neutral-700">Tags</span>
-                <span className="flex flex-wrap gap-2">
-                  {post.tags.map((t: string) => (
-                    <Link
-                      key={t}
-                      href={`/blog/tag/${encodeURIComponent(t)}`}
-                      className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs text-neutral-600 hover:bg-neutral-100"
-                    >
-                      #{t}
-                    </Link>
-                  ))}
-                </span>
-              </div>
-            ) : null}
-          </div>
+              ))}
+            </div>
+          ) : null}
 
           {post.coverImage && (
             // eslint-disable-next-line @next/next/no-img-element
@@ -277,7 +252,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           )}
 
           {post.excerpt ? (
-            <p className="mt-6 mb-8 text-[1.05rem] font-semibold leading-7 text-neutral-700">
+            <p className="mt-4 mb-4 text-[1.05rem] font-semibold leading-7 text-neutral-700">
               {post.excerpt}
             </p>
           ) : null}
