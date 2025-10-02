@@ -1,4 +1,5 @@
 // app/blog/[slug]/page.tsx
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   getAllPublishedPosts,
@@ -230,26 +231,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       label: "Category",
       value: categories.length ? categories.join(", ") : "—",
     },
-    { label: "Tag", value: tags.length ? tags.join(", ") : "—" },
+    { label: "Tags", value: tags.length ? tags.join(", ") : "—" },
   ];
-  const metadataLine = metadataSegments.flatMap(({ label, value }, index) => {
-    const nodes = [
-      (
-        <span key={label} className="flex items-center gap-2 whitespace-nowrap">
-          <span className="opacity-80">{label}</span>
-          <span>{value}</span>
-        </span>
-      ),
-    ];
-    if (index < metadataSegments.length - 1) {
-      nodes.push(
-        <span key={`sep-${label}`} className="opacity-60">
-          |
-        </span>
-      );
-    }
-    return nodes;
-  });
 
   return (
     <div className="blogPostShell">
@@ -257,8 +240,17 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         <header className="mb-10">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-          <div className="mt-4 flex flex-wrap items-center gap-4 rounded-full bg-[#e0e7ff] px-6 py-2 text-sm font-semibold text-[#005fa3]">
-            {metadataLine}
+          <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-full bg-[#e5efff] px-6 py-3 text-sm font-medium text-[#0b3a7a]">
+            {metadataSegments.map(({ label, value }, index) => (
+              <span
+                key={label}
+                className="flex items-center gap-2 whitespace-nowrap text-[#0b3a7a]"
+              >
+                {index > 0 ? <span className="text-[#0b3a7a]">|</span> : null}
+                <span>{label}:</span>
+                <span className="font-semibold text-[#062a5c]">{value}</span>
+              </span>
+            ))}
           </div>
 
           {post.coverImage && (
@@ -267,13 +259,25 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           )}
 
           {post.excerpt ? (
-            <p className="mt-4 mb-2 text-[1.05rem] font-semibold leading-7 text-neutral-700">
+            <p className="mt-4 mb-4 text-[1.05rem] font-semibold leading-7 text-neutral-700">
               {post.excerpt}
             </p>
           ) : null}
         </header>
 
         <section>{renderBlocksGrouped(blocks)}</section>
+
+        <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl border border-[#d1ddf5] bg-[#f4f7ff] px-6 py-6 text-[#0b3a7a] md:flex-row md:items-center md:justify-between">
+          <p className="text-base font-medium">
+            For the latest in law, keep connected with The Compliers.
+          </p>
+          <Link
+            href="/newsletter"
+            className="inline-flex items-center justify-center rounded-full bg-[#0b3a7a] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#062a5c]"
+          >
+            Subscribe to the Newsletter
+          </Link>
+        </div>
       </article>
     </div>
   );
