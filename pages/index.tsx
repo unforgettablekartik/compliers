@@ -84,29 +84,20 @@ export default function Home() {
           <h2>Our Expertise</h2>
           <p className="services-description">Comprehensive legal solutions for the digital age</p>
           <div className="services-grid">
-            {/* Contract Law block */}
             <div className="service">
-              <i className="fa-solid fa-file-contract service-icon" aria-hidden="true"></i>
-              <h3>Contract Law</h3>
-              <p>Support for all kinds of contracts, agreements and legal documents with expert drafting, review and analysis for risk mitigation and dispute handling.</p>
+              <i className="fa-solid fa-file-signature service-icon" aria-hidden="true"></i>
+              <h3>Commercial Contracts</h3>
+              <p>Drafting, reviewing, and negotiating commercial agreements, supplier terms, and partnership frameworks that secure business relationships and reduce exposure.</p>
             </div>
-            {/* Data Privacy block */}
             <div className="service">
-              <i className="fa-solid fa-lock service-icon" aria-hidden="true"></i>
-              <h3>Data Privacy</h3>
-              <p>Comprehensive data protection strategies, privacy compliance, GDPR considerations, and ISO/IEC 27701 implementation.</p>
+              <i className="fa-solid fa-lightbulb service-icon" aria-hidden="true"></i>
+              <h3>Intellectual Property</h3>
+              <p>Protect innovation with portfolio strategy, trademark and copyright management, licensing structures, and IP due diligence for emerging technologies.</p>
             </div>
-            {/* IT Law block */}
             <div className="service">
-              <i className="fa-solid fa-laptop-code service-icon" aria-hidden="true"></i>
-              <h3>IT Law</h3>
-              <p>Technology contracts, software licensing, cybersecurity compliance, and digital transformation legal support.</p>
-            </div>
-            {/* AI Law block */}
-            <div className="service">
-              <i className="fa-solid fa-robot service-icon" aria-hidden="true"></i>
-              <h3>AI Law</h3>
-              <p>Navigate the complex landscape of artificial intelligence regulations, ethical considerations and nuances of intellectual property (IP) in the age of AI.</p>
+              <i className="fa-solid fa-shield-halved service-icon" aria-hidden="true"></i>
+              <h3>IT &amp; Data Privacy</h3>
+              <p>Implement privacy-by-design programs, meet cybersecurity obligations, and govern data lifecycles—including cross-border transfers—with confidence.</p>
             </div>
           </div>
         </div>
@@ -148,6 +139,9 @@ export default function Home() {
             <li><a href="/terms">Terms of Use</a></li>
             <li><a href="/privacy">Privacy Policy</a></li>
           </ul>
+        </div>
+        <div className="footer-bottom">
+          <p>The Compliers © all rights reserved</p>
         </div>
       </footer>
     </>
