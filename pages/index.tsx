@@ -86,8 +86,8 @@ export default function Home() {
           <div className="services-grid">
             <div className="service">
               <i className="fa-solid fa-file-signature service-icon" aria-hidden="true"></i>
-              <h3>Contract &amp; Agreements</h3>
-              <p>Drafting, reviewing, and negotiating commercial arrangements, vendor agreements, and customized terms that secure your business relationships and reduce risk.</p>
+              <h3>Commercial Contracts</h3>
+              <p>Drafting, reviewing, and negotiating commercial agreements, supplier terms, and partnership frameworks that secure business relationships and reduce exposure.</p>
             </div>
             <div className="service">
               <i className="fa-solid fa-lightbulb service-icon" aria-hidden="true"></i>
