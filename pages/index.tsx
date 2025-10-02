@@ -140,6 +140,9 @@ export default function Home() {
             <li><a href="/privacy">Privacy Policy</a></li>
           </ul>
         </div>
+        <div className="footer-bottom">
+          <p>The Compliers © all rights reserved</p>
+        </div>
       </footer>
     </>
   );
