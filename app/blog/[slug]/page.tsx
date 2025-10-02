@@ -225,10 +225,31 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       })
     : null;
   const metadataSegments = [
-    formattedDate,
-    categories.length ? categories.join(", ") : null,
-    tags.length ? tags.map((t: string) => `#${t}`).join(", ") : null,
-  ].filter(Boolean) as string[];
+    { label: "Date", value: formattedDate ?? "—" },
+    {
+      label: "Category",
+      value: categories.length ? categories.join(", ") : "—",
+    },
+    { label: "Tag", value: tags.length ? tags.join(", ") : "—" },
+  ];
+  const metadataLine = metadataSegments.flatMap(({ label, value }, index) => {
+    const nodes = [
+      (
+        <span key={label} className="flex items-center gap-2 whitespace-nowrap">
+          <span className="opacity-80">{label}</span>
+          <span>{value}</span>
+        </span>
+      ),
+    ];
+    if (index < metadataSegments.length - 1) {
+      nodes.push(
+        <span key={`sep-${label}`} className="opacity-60">
+          |
+        </span>
+      );
+    }
+    return nodes;
+  });
 
   return (
     <div className="blogPostShell">
@@ -236,15 +257,9 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         <header className="mb-10">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-          {metadataSegments.length ? (
-            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-2 rounded-full bg-[#e0e7ff] px-5 py-2 text-sm font-semibold text-[#005fa3]">
-              {metadataSegments.map((segment, index) => (
-                <span key={`${segment}-${index}`} className="flex items-center gap-2">
-                  {segment}
-                </span>
-              ))}
-            </div>
-          ) : null}
+          <div className="mt-4 flex flex-wrap items-center gap-4 rounded-full bg-[#e0e7ff] px-6 py-2 text-sm font-semibold text-[#005fa3]">
+            {metadataLine}
+          </div>
 
           {post.coverImage && (
             // eslint-disable-next-line @next/next/no-img-element
@@ -252,7 +267,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           )}
 
           {post.excerpt ? (
-            <p className="mt-4 mb-4 text-[1.05rem] font-semibold leading-7 text-neutral-700">
+            <p className="mt-4 mb-2 text-[1.05rem] font-semibold leading-7 text-neutral-700">
               {post.excerpt}
             </p>
           ) : null}
