@@ -48,14 +48,15 @@
   padding-bottom: 1rem;
 }
 
-.titleButton {
-  background: none;
-  border: none;
+.titleLink {
   color: #0077cc;
   font-size: 1.25rem;
-  cursor: pointer;
-  text-align: left;
-  padding: 0;
+  text-decoration: none;
+}
+
+.titleLink:hover,
+.titleLink:focus {
+  text-decoration: underline;
 }
 
 .meta {
@@ -73,36 +74,27 @@
   margin-bottom: 0.5rem;
 }
 
-.modalOverlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
+.readMore {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-  z-index: 1000;
+  gap: 0.25rem;
+  font-weight: 600;
+  color: #0077cc;
+  text-decoration: none;
 }
 
-.modal {
-  background: #fff;
-  max-width: 800px;
-  width: 90%;
-  max-height: 90vh;
-  overflow: auto;
-  padding: 1rem 1.5rem;
-  border-radius: 8px;
-  position: relative;
+.readMore::after {
+  content: '→';
+  transition: transform 0.2s ease;
 }
 
-.closeButton {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
+.readMore:hover::after,
+.readMore:focus::after {
+  transform: translateX(2px);
+}
+
+.emptyState {
+  padding: 2rem 0;
+  text-align: center;
+  color: #555;
 }
