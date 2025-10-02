@@ -219,9 +219,10 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   const categories = post.categories.filter(Boolean);
 
   return (
-    <article className="prose prose-neutral max-w-none">
-      <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
+    <div className="blogPostShell">
+      <article className="prose prose-neutral max-w-none">
+        <header className="mb-8">
+          <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
         <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
           {post.publishDate && (
@@ -273,7 +274,8 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         ) : null}
       </header>
 
-      <section>{renderBlocksGrouped(blocks)}</section>
-    </article>
+        <section>{renderBlocksGrouped(blocks)}</section>
+      </article>
+    </div>
   );
 }
