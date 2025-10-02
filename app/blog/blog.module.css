@@ -106,3 +106,95 @@
   font-size: 1.5rem;
   cursor: pointer;
 }
+
+.blogMetaBar {
+  list-style: none;
+  margin: 1.25rem 0 1.5rem;
+  padding: 0.85rem 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  border-radius: 9999px;
+  background: linear-gradient(135deg, #e2f1ff, #d0e4ff);
+  color: #0f2957;
+  box-shadow: inset 0 0 0 1px rgba(30, 64, 175, 0.15);
+}
+
+.blogMetaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: inherit;
+  position: relative;
+}
+
+.blogMetaItem:not(:first-child)::before {
+  content: "|";
+  margin-right: 0.75rem;
+  color: rgba(15, 41, 87, 0.45);
+  font-weight: 600;
+}
+
+.blogMetaLabel {
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(15, 41, 87, 0.7);
+}
+
+.blogMetaPills {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.blogMetaPill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.125rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #ffffff;
+  background: #1d4ed8;
+  border: 1px solid #1d4ed8;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.blogMetaPill:hover,
+.blogMetaPill:focus-visible {
+  background: #1e40af;
+  border-color: #1e40af;
+  color: #ffffff;
+}
+
+.blogMetaTag {
+  color: #1e3a8a;
+  background: rgba(255, 255, 255, 0.85);
+  border-color: rgba(147, 197, 253, 0.8);
+}
+
+.blogMetaTag:hover,
+.blogMetaTag:focus-visible {
+  background: #1e3a8a;
+  color: #ffffff;
+  border-color: #1e3a8a;
+}
+
+.blogExcerpt {
+  margin-top: 1.75rem;
+  margin-bottom: 2.5rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #1f2a44;
+}
+
+.blogContent {
+  margin-top: 1.5rem;
+}

@@ -1,6 +1,7 @@
 // app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import styles from "../blog.module.css";
 import {
   getAllPublishedPosts,
   getPostBySlug,
@@ -222,40 +223,47 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       <header className="mb-8">
         <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-        <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
-          {post.publishDate && (
-            <time dateTime={post.publishDate}>
-              {new Date(post.publishDate).toLocaleDateString()}
-            </time>
-          )}
-          {post.category && (
-            <>
-              <span>•</span>
-              <Link
-                href={`/blog/category/${encodeURIComponent(post.category)}`}
-                className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50"
-              >
-                {post.category}
-              </Link>
-            </>
-          )}
-          {post.tags?.length ? (
-            <>
-              <span>•</span>
-              <span className="flex flex-wrap gap-1">
-                {post.tags.map((t: string) => (
+        <ul className={styles.blogMetaBar}>
+          {post.publishDate ? (
+            <li className={styles.blogMetaItem}>
+              <time dateTime={post.publishDate}>
+                {new Date(post.publishDate).toLocaleDateString()}
+              </time>
+            </li>
+          ) : null}
+          {post.categories?.length ? (
+            <li className={styles.blogMetaItem}>
+              <span className={styles.blogMetaLabel}>Categories</span>
+              <span className={styles.blogMetaPills}>
+                {post.categories.map((category: string) => (
                   <Link
-                    key={t}
-                    href={`/blog/tag/${encodeURIComponent(t)}`}
-                    className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs hover:bg-neutral-100"
+                    key={category}
+                    href={`/blog/category/${encodeURIComponent(category)}`}
+                    className={styles.blogMetaPill}
                   >
-                    #{t}
+                    {category}
                   </Link>
                 ))}
               </span>
-            </>
+            </li>
           ) : null}
-        </div>
+          {post.tags?.length ? (
+            <li className={styles.blogMetaItem}>
+              <span className={styles.blogMetaLabel}>Tags</span>
+              <span className={styles.blogMetaPills}>
+                {post.tags.map((tag: string) => (
+                  <Link
+                    key={tag}
+                    href={`/blog/tag/${encodeURIComponent(tag)}`}
+                    className={`${styles.blogMetaPill} ${styles.blogMetaTag}`}
+                  >
+                    #{tag}
+                  </Link>
+                ))}
+              </span>
+            </li>
+          ) : null}
+        </ul>
 
         {post.coverImage && (
           // eslint-disable-next-line @next/next/no-img-element
@@ -263,11 +271,11 @@ export default async function BlogPost({ params }: { params: { slug: string } })
         )}
 
         {post.excerpt ? (
-          <p className="mt-4 italic text-neutral-700">{post.excerpt}</p>
+          <p className={`${styles.blogExcerpt} italic`}>{post.excerpt}</p>
         ) : null}
       </header>
 
-      <section>{renderBlocksGrouped(blocks)}</section>
+      <section className={styles.blogContent}>{renderBlocksGrouped(blocks)}</section>
     </article>
   );
 }
