@@ -231,16 +231,21 @@ export default async function BlogPost({ params }: { params: { slug: string } })
               </time>
             </li>
           )}
-          {post.category && (
+          {post.categories?.length ? (
             <li className={styles.blogMetaItem}>
-              <Link
-                href={`/blog/category/${encodeURIComponent(post.category)}`}
-                className={styles.blogMetaPill}
-              >
-                {post.category}
-              </Link>
+              <span className={styles.blogMetaTags}>
+                {post.categories.map((category: string) => (
+                  <Link
+                    key={category}
+                    href={`/blog/category/${encodeURIComponent(category)}`}
+                    className={styles.blogMetaPill}
+                  >
+                    {category}
+                  </Link>
+                ))}
+              </span>
             </li>
-          )}
+          ) : null}
           {post.tags?.length ? (
             <li className={styles.blogMetaItem}>
               <span className={styles.blogMetaTags}>
