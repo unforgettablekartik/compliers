@@ -263,6 +263,19 @@ footer p {
   border-radius: 4px;
 }
 
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.8rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+  flex-shrink: 0;
+}
+
 /* Responsive breakpoints */
 @media (max-width: 768px) {
   #hero {
