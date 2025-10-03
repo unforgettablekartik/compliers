@@ -1,17 +1,13 @@
 import React from 'react';
-import Footer from './Footer';
+import SiteFooter from './SiteFooter';
+import SiteHeader from './SiteHeader';
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <header>
-        {/* Add your site navigation or logo here */}
-        <h1>Compilers Next.js App</h1>
-      </header>
-      <main>
-        {children}
-      </main>
-      <Footer />
+      <SiteHeader />
+      <main className="site-content">{children}</main>
+      <SiteFooter />
     </>
   );
 }

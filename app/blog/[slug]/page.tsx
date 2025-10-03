@@ -1,5 +1,7 @@
+// app/blog/[slug]/page.tsx
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 import {
   getAllPublishedPosts,
   getPostBySlug,
@@ -58,7 +60,7 @@ function Block({ block }: { block: any }) {
   switch (type) {
     case "paragraph":
       return (
-        <p className="my-4 text-[1.05rem] leading-7">
+        <p className="my-6 text-[1.05rem] leading-8">
           <RichText text={b.rich_text} />
         </p>
       );
@@ -204,12 +206,39 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
   // Fetch the content blocks from Notion by page ID
   const blocks = await getBlocks(post.id);
+  const categories = (post.categories ?? []).filter(Boolean);
+  const tags = (post.tags ?? []).filter(Boolean);
+  const formattedDate = post.publishDate
+    ? new Date(post.publishDate).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "numeric",
+      })
+    : null;
+  const metadataSegments = [
+    { label: "Date", value: formattedDate ?? "—" },
+    {
+      label: "Category",
+      value: categories.length ? categories.join(", ") : "—",
+    },
+    { label: "Tags", value: tags.length ? tags.join(", ") : "—" },
+  ];
 
   return (
-    <article className="prose prose-neutral max-w-none">
-      <header className="mb-8">
-        <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
+    <div className="blogPostShell">
+      <article className="prose prose-neutral max-w-none">
+        <header className="mb-10">
+          <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
+          <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-full bg-[#e5efff] px-6 py-3 text-sm font-medium text-[#0b3a7a]">
+            {metadataSegments.map(({ label, value }, index) => (
+              <span
+                key={label}
+                className="flex items-center gap-2 whitespace-nowrap text-[#0b3a7a]"
+              >
+                {index > 0 ? <span className="text-[#0b3a7a]">|</span> : null}
+                <span>{label}:</span>
+                <span className="font-semibold text-[#062a5c]">{value}</span>
         <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
           {post.publishDate && (
             <time dateTime={post.publishDate}>
@@ -241,21 +270,35 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                   </Link>
                 ))}
               </span>
-            </>
+            ))}
+          </div>
+
+          {post.coverImage && (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={post.coverImage} alt="cover" className="mt-6 rounded-2xl border" />
+          )}
+
+          {post.excerpt ? (
+            <p className="mt-4 mb-4 text-[1.05rem] font-semibold leading-7 text-neutral-700">
+              {post.excerpt}
+            </p>
           ) : null}
+        </header>
+
+        <section>{renderBlocksGrouped(blocks)}</section>
+
+        <div className="mt-12 flex flex-col items-start gap-4 rounded-2xl border border-[#d1ddf5] bg-[#f4f7ff] px-6 py-6 text-[#0b3a7a] md:flex-row md:items-center md:justify-between">
+          <p className="text-base font-medium">
+            For the latest in law, keep connected with The Compliers.
+          </p>
+          <Link
+            href="/newsletter"
+            className="inline-flex items-center justify-center rounded-full bg-[#0b3a7a] px-5 py-2 text-sm font-semibold text-white transition hover:bg-[#062a5c]"
+          >
+            Subscribe to the Newsletter
+          </Link>
         </div>
-
-        {post.coverImage && (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={post.coverImage} alt="cover" className="mt-6 rounded-2xl border" />
-        )}
-
-        {post.excerpt ? (
-          <p className="mt-4 italic text-neutral-700">{post.excerpt}</p>
-        ) : null}
-      </header>
-
-      <section>{renderBlocksGrouped(blocks)}</section>
-    </article>
+      </article>
+    </div>
   );
 }
