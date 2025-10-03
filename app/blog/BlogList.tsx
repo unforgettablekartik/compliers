@@ -5,7 +5,7 @@ import type { BlogPost } from '@/lib/notion';
 import styles from './blog.module.css';
 
 function formatDate(date?: string) {
-  return date ? new Date(date).toLocaleDateString() : '';
+  return date ? new Date(date).toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' }) : '';
 }
 
 export default function BlogList({ posts }: { posts: BlogPost[] }) {
@@ -71,12 +71,22 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
               </button>
             </h2>
             <div className={styles.meta}>
-              {p.publishDate && <span>{formatDate(p.publishDate)}</span>}
+              {p.publishDate && (
+                <span className={styles.date}>{formatDate(p.publishDate)}</span>
+              )}
               {p.categories.length > 0 && (
-                <span className={styles.categories}> | {p.categories.join(', ')}</span>
+                <span className={styles.categories}>
+                  {p.categories.map(cat => (
+                    <span key={cat} className={styles.categoryTag}>{cat}</span>
+                  ))}
+                </span>
               )}
               {p.tags.length > 0 && (
-                <span className={styles.tags}> | {p.tags.join(', ')}</span>
+                <span className={styles.tags}>
+                  {p.tags.map(tag => (
+                    <span key={tag} className={styles.categoryTag}>#{tag}</span>
+                  ))}
+                </span>
               )}
             </div>
             {p.excerpt && <p className={styles.excerpt}>{p.excerpt}</p>}
@@ -92,12 +102,22 @@ export default function BlogList({ posts }: { posts: BlogPost[] }) {
             </button>
             <h2>{activePost.title}</h2>
             <div className={styles.meta}>
-              {activePost.publishDate && <span>{formatDate(activePost.publishDate)}</span>}
+              {activePost.publishDate && (
+                <span className={styles.date}>{formatDate(activePost.publishDate)}</span>
+              )}
               {activePost.categories.length > 0 && (
-                <span className={styles.categories}> | {activePost.categories.join(', ')}</span>
+                <span className={styles.categories}>
+                  {activePost.categories.map(cat => (
+                    <span key={cat} className={styles.categoryTag}>{cat}</span>
+                  ))}
+                </span>
               )}
               {activePost.tags.length > 0 && (
-                <span className={styles.tags}> | {activePost.tags.join(', ')}</span>
+                <span className={styles.tags}>
+                  {activePost.tags.map(tag => (
+                    <span key={tag} className={styles.categoryTag}>#{tag}</span>
+                  ))}
+                </span>
               )}
             </div>
             {activePost.text && <p>{activePost.text}</p>}
