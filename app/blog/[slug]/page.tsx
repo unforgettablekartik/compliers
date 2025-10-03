@@ -1,4 +1,5 @@
 // app/blog/[slug]/page.tsx
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -63,7 +64,6 @@ function Block({ block }: { block: any }) {
           <RichText text={b.rich_text} />
         </p>
       );
-
     case "heading_1":
       return (
         <h1 className="mt-8 mb-3 text-3xl font-semibold">
@@ -82,35 +82,30 @@ function Block({ block }: { block: any }) {
           <RichText text={b.rich_text} />
         </h3>
       );
-
     case "bulleted_list_item":
       return (
         <li className="list-disc ml-6 my-1">
           <RichText text={b.rich_text} />
         </li>
       );
-
     case "numbered_list_item":
       return (
         <li className="list-decimal ml-6 my-1">
           <RichText text={b.rich_text} />
         </li>
       );
-
     case "quote":
       return (
         <blockquote className="border-l-4 pl-4 italic my-4 text-neutral-700">
           <RichText text={b.rich_text} />
         </blockquote>
       );
-
     case "code":
       return (
         <pre className="my-4 overflow-x-auto rounded-xl border bg-neutral-50 p-4 text-sm">
           <code>{b.rich_text?.map((t: any) => t.plain_text).join("")}</code>
         </pre>
       );
-
     case "image": {
       const src = b?.type === "external" ? b.external?.url : b.file?.url;
       const cap = b?.caption?.[0]?.plain_text;
@@ -122,7 +117,6 @@ function Block({ block }: { block: any }) {
         </figure>
       );
     }
-
     case "callout": {
       return (
         <div className="my-4 rounded-xl border bg-neutral-50 p-4">
@@ -130,10 +124,8 @@ function Block({ block }: { block: any }) {
         </div>
       );
     }
-
     case "divider":
       return <hr className="my-8 border-neutral-200" />;
-
     case "to_do":
       return (
         <label className="my-1 ml-1 flex items-center gap-2">
@@ -143,7 +135,6 @@ function Block({ block }: { block: any }) {
           </span>
         </label>
       );
-
     case "bookmark":
       return (
         <p className="my-3">
@@ -152,7 +143,6 @@ function Block({ block }: { block: any }) {
           </a>
         </p>
       );
-
     default:
       // Unsupported blocks are skipped; add cases as needed
       return null;
@@ -249,6 +239,36 @@ export default async function BlogPost({ params }: { params: { slug: string } })
                 {index > 0 ? <span className="text-[#0b3a7a]">|</span> : null}
                 <span>{label}:</span>
                 <span className="font-semibold text-[#062a5c]">{value}</span>
+        <div className="text-sm text-neutral-500 mt-2 flex flex-wrap items-center gap-2">
+          {post.publishDate && (
+            <time dateTime={post.publishDate}>
+              {new Date(post.publishDate).toLocaleDateString()}
+            </time>
+          )}
+          {post.categories && post.categories.length > 0 && post.categories.map((cat) => (
+            <span key={cat} className="flex items-center">
+              <span>•</span>
+              <Link
+                href={`/blog/category/${encodeURIComponent(cat)}`}
+                className="inline-flex items-center rounded-full border px-2 py-0.5 text-xs hover:bg-neutral-50 ml-1"
+              >
+                {cat}
+              </Link>
+            </span>
+          ))}
+          {post.tags?.length ? (
+            <>
+              <span>•</span>
+              <span className="flex flex-wrap gap-1">
+                {post.tags.map((t: string) => (
+                  <Link
+                    key={t}
+                    href={`/blog/tag/${encodeURIComponent(t)}`}
+                    className="inline-flex items-center rounded-full border bg-neutral-50 px-2 py-0.5 text-xs hover:bg-neutral-100"
+                  >
+                    #{t}
+                  </Link>
+                ))}
               </span>
             ))}
           </div>
