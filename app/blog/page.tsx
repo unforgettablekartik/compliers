@@ -9,7 +9,7 @@ export default async function BlogIndex() {
   return (
     <section className="blogPage">
       <div className="container">
-        <h1 className="blogPageTitle">Blog</h1>
+  <h1 className="blogPageTitle">Our Blogs</h1>
         <BlogList posts={posts} />
       </div>
     </section>
