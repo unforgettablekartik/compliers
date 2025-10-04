@@ -48,10 +48,19 @@
   padding-bottom: 1rem;
 }
 
+
 .titleLink {
   color: #0077cc;
   font-size: 1.25rem;
   text-decoration: none;
+  line-height: 1.05;
+  margin-bottom: 0;
+}
+
+/* Make blog list h2 more compact */
+.postItem h2 {
+  margin: 0 0 0.1rem 0;
+  line-height: 1.1;
 }
 
 .titleLink:hover,
