@@ -57,7 +57,7 @@ export default function Home() {
       </header>
 
       {/* About section */}
-      <section id="about">
+      <section id="about" className="about-section">
         <div className="container">
           <h2>About Us</h2>
           <p>
