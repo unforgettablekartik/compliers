@@ -210,6 +210,26 @@ section h2 {
   padding: 0 1.5rem 3rem;
 }
 
+/* Blog post title and metadata improvements */
+.blogPostShell header > h1 {
+  margin-bottom: 2.2rem;
+}
+
+.blogPostMeta {
+  background: #e5efff;
+  border-radius: 0 0 18px 18px;
+  padding: 1.1rem 2rem 1.1rem 2rem;
+  margin-bottom: 2.2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.2rem 2.2rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #0b3a7a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+
 @media (min-width: 768px) {
   .blogPostShell {
     margin-top: 7.5rem;

@@ -237,18 +237,19 @@ export default async function BlogPost({ params }: { params: { slug: string } })
   return (
     <div className="blogPostShell">
       <article className="prose prose-neutral max-w-none">
+
         <header className="mb-10">
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
-          <div className="mt-4 flex flex-wrap items-center gap-x-6 gap-y-2 rounded-full bg-[#e5efff] px-6 py-3 text-sm font-medium text-[#0b3a7a]">
+          <div className="blogPostMeta">
             {metadataSegments.map(({ label, value }, index) => (
               <span
                 key={label}
-                className="flex items-center gap-2 whitespace-nowrap text-[#0b3a7a]"
+                className="flex items-center gap-2 whitespace-nowrap"
               >
-                {index > 0 ? <span className="text-[#0b3a7a]">|</span> : null}
+                {index > 0 ? <span>|</span> : null}
                 <span>{label}:</span>
-                <span className="font-semibold text-[#062a5c]">{value}</span>
+                <span className="font-semibold" style={{ color: '#062a5c' }}>{value}</span>
               </span>
             ))}
           </div>
