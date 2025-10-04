@@ -210,9 +210,69 @@ section h2 {
   padding: 0 1.5rem 3rem;
 }
 
+
 /* Blog post title and metadata improvements */
 .blogPostShell header > h1 {
   margin-bottom: 2.2rem;
+  text-align: left;
+}
+
+/* Blog content headings left-aligned and spaced */
+.blogPostShell h1,
+.blogPostShell h2,
+.blogPostShell h3,
+.blogPostShell h4,
+.blogPostShell h5,
+.blogPostShell h6 {
+  text-align: left;
+  margin-top: 2.2rem;
+  margin-bottom: 1.1rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.blogPostShell h1 {
+  font-size: 2.2rem;
+}
+.blogPostShell h2 {
+  font-size: 1.6rem;
+}
+.blogPostShell h3 {
+  font-size: 1.25rem;
+}
+.blogPostShell h4 {
+  font-size: 1.1rem;
+}
+.blogPostShell h5,
+.blogPostShell h6 {
+  font-size: 1rem;
+}
+
+@media (max-width: 600px) {
+  .blogPostShell h1 {
+    font-size: 1.5rem;
+  }
+  .blogPostShell h2 {
+    font-size: 1.2rem;
+  }
+  .blogPostShell h3 {
+    font-size: 1.05rem;
+  }
+}
+
+/* Blog content paragraphs and lists for readability */
+.blogPostShell p,
+.blogPostShell ul,
+.blogPostShell ol {
+  text-align: left;
+  margin-bottom: 1.2rem;
+  font-size: 1.08rem;
+  line-height: 1.7;
+}
+
+.blogPostShell ul,
+.blogPostShell ol {
+  padding-left: 1.5rem;
 }
 
 .blogPostMeta {
