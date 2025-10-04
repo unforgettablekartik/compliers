@@ -15,6 +15,9 @@ export default function SiteHeader() {
             <Link href="/">Home</Link>
           </li>
           <li>
+            <Link href="/#about">About Us</Link>
+          </li>
+          <li>
             <Link href="/#services">Our Expertise</Link>
           </li>
           <li>

@@ -1,14 +1,17 @@
 /* About Us section styling */
 .about-section {
-  background: linear-gradient(120deg, #f5faff 0%, #e5efff 100%);
-  border-radius: 18px;
   margin: 3rem 0 2.5rem 0;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
   padding: 2.5rem 0;
 }
-.about-section .container {
-  padding-top: 0;
-  padding-bottom: 0;
+.about-section.no-bg {
+  background: none;
+  box-shadow: none;
+}
+.about-container {
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+  padding-left: 0;
+  padding-right: 0;
 }
 .about-section h2 {
   text-align: center;
@@ -32,6 +35,10 @@
   .about-section {
     padding: 1.2rem 0.2rem;
     border-radius: 10px;
+  }
+  .about-container {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
   }
   .about-section h2 {
     font-size: 1.3rem;

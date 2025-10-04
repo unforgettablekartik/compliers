@@ -57,8 +57,8 @@ export default function Home() {
       </header>
 
       {/* About section */}
-      <section id="about" className="about-section">
-        <div className="container">
+      <section id="about" className="about-section no-bg">
+        <div className="container about-container">
           <h2>About Us</h2>
           <p>
             At The Compliers, we unite deep expertise in law, technology, and policy to deliver tailored solutions for ambitious entrepreneurs and modern businesses. We go beyond traditional legal counsel—offering strategic guidance and fulfillment that empowers your growth in a rapidly evolving digital world.
