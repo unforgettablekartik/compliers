@@ -217,6 +217,15 @@ section h2 {
   text-align: left;
 }
 
+/* Blog excerpt styling */
+.blogPostExcerpt {
+  font-style: italic;
+  color: #555;
+  margin-top: 1.2rem;
+  margin-bottom: 0.7rem;
+  font-size: 1.08rem;
+}
+
 /* Blog content headings left-aligned and spaced */
 .blogPostShell h1,
 .blogPostShell h2,

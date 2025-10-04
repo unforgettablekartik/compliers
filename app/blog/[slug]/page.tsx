@@ -259,7 +259,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
           )}
 
           {post.excerpt ? (
-            <p className="mt-4 mb-4 text-[1.05rem] font-semibold leading-7 text-neutral-700">
+            <p className="blogPostExcerpt">
               {post.excerpt}
             </p>
           ) : null}
