@@ -60,8 +60,15 @@ export default function Home() {
       <section id="about">
         <div className="container">
           <h2>About Us</h2>
-          <p>The Compliers are a group of passionate legal and technical professionals dedicated to helping businesses navigate AI regulation and data protection. We combine expertise in technology, law and policy to deliver practical compliance solutions.</p>
-          <p>Our mission is to empower companies to innovate responsibly by aligning AI development with ethical and legal standards.</p>
+          <p>
+            At The Compliers, we unite deep expertise in law, technology, and policy to deliver tailored solutions for ambitious entrepreneurs and modern businesses. We go beyond traditional legal counsel—offering strategic guidance and fulfillment that empowers your growth in a rapidly evolving digital world.
+          </p>
+          <p>
+            Our services cover the entire spectrum, from safeguarding your Intellectual Property to drafting robust Commercial Contracts, and from pioneering Data Privacy strategies to integrating the latest in Legal-Tech. We thrive at the intersection of innovation and compliance, providing advanced alternatives to conventional legal services.
+          </p>
+          <p>
+            With us, you don’t just solve legal challenges—you gain a proactive partner committed to your long-term success. Join us as we reimagine what legal support can mean for tomorrow’s leaders.
+          </p>
         </div>
       </section>
 
