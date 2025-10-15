@@ -39,7 +39,7 @@ export default function Home() {
   };
 
   return (
-    <>
+    <> 
       <Head>
         <title>The Compliers – Law & Technology Specialists</title>
         <meta
@@ -90,7 +90,7 @@ export default function Home() {
         <div className="container about-container">
           <h2>About Us</h2>
           <p>
-            At The Compliers, we unite deep expertise in law, technology, and policy to deliver tailored solutions for ambitious entrepreneurs and modern businesses. We go beyond traditional legal counsel—offering strategic guidance and fulfillment that empowers your growth in a rapidly evolving digital world.
+            At The Compliers, we unite deep expertise in law, technology, and policy to deliver tailored solutions for ambitious entrepreneurs and modern businesses. We go beyond traditional legal services, leveraging technology and data-driven strategies to help you minimize risks and maximize opportunities.
           </p>
           <p>
             Our services cover the entire spectrum, from safeguarding your Intellectual Property to drafting robust Commercial Contracts, and from pioneering Data Privacy strategies to integrating the latest in Legal-Tech. We thrive at the intersection of innovation and compliance, providing advanced alternatives to conventional legal services.
@@ -136,9 +136,9 @@ export default function Home() {
           <div className="contact-wrapper">
             <div className="contact-form">
               <form id="contact-form" onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Your Name" required />
-                <input type="email" name="email" placeholder="Your Email" required />
-                <textarea name="message" placeholder="Your Message" required></textarea>
+                <input type="text" name="name" placeholder="Name" required className="contact-placeholder" />
+                <input type="email" name="email" placeholder="Email" required className="contact-placeholder" />
+                <textarea name="message" placeholder="Message" required className="contact-placeholder"></textarea>
                 <button type="submit" className="btn">Send Message</button>
               </form>
             </div>
@@ -154,6 +154,5 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </>
-  );
+    </> 
 }
