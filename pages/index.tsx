@@ -39,7 +39,7 @@ export default function Home() {
   };
 
   return (
-    <> 
+    <>
       <Head>
         <title>The Compliers – Law & Technology Specialists</title>
         <meta
@@ -154,5 +154,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </> 
+    </>
+  );
 }
