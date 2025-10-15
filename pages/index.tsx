@@ -2,11 +2,40 @@ import Head from 'next/head';
 import React from 'react';
 
 export default function Home() {
-  // Handle form submission with a simple alert
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Handle form submission by calling the contact API
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    alert('Thank you for reaching out! We will get back to you soon.');
-    (e.target as HTMLFormElement).reset();
+    
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    
+    const data = {
+      name: formData.get('name') as string,
+      email: formData.get('email') as string,
+      message: formData.get('message') as string,
+    };
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        alert('Thank you for reaching out! We will get back to you soon.');
+        form.reset();
+      } else {
+        alert(`Error: ${result.message || 'Failed to send message. Please try again.'}`);
+      }
+    } catch (error) {
+      alert('Failed to send message. Please try again later.');
+      console.error('Error submitting form:', error);
+    }
   };
 
   return (
