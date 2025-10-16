@@ -132,7 +132,13 @@ export default function Home() {
       {/* Contact section */}
       <section id="contact">
         <div className="container">
-          <h2>Contact for Enquiries</h2>
+          <div className="contact-header-row">
+            <h2>Contact for Enquiries</h2>
+            <a href="https://wa.me/message/CWIULESUWOHBE1" className="whatsapp-link" target="_blank" rel="noopener noreferrer">
+              <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <span>Connect on WhatsApp</span>
+            </a>
+          </div>
           <div className="contact-wrapper">
             <div className="contact-form">
               <form id="contact-form" onSubmit={handleSubmit}>
