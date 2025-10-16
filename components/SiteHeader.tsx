@@ -1,7 +1,15 @@
+'use client';
+
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 
 export default function SiteHeader() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
+
   return (
     <nav id="navbar">
       <div className="container">
@@ -10,7 +18,17 @@ export default function SiteHeader() {
             The Compliers
           </Link>
         </div>
-        <ul className="nav-links">
+        <button
+          className="hamburger"
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={menuOpen}
+        >
+          <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
+          <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
+          <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
+        </button>
+        <ul className={menuOpen ? 'nav-links mobile-open' : 'nav-links'}>
           <li>
             <Link href="/">Home</Link>
           </li>
