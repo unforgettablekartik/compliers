@@ -258,6 +258,58 @@ section h2 {
 }
 
 /* Contact section */
+.contact-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.contact-header-row h2 {
+  margin: 0;
+  text-align: left;
+}
+
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: #25D366;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.whatsapp-link:hover {
+  background-color: #20BA5A;
+}
+
+.whatsapp-link i {
+  font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+  }
+
+  .contact-header-row h2 {
+    font-size: 1.5rem;
+  }
+
+  .whatsapp-link {
+    align-self: flex-start;
+  }
+}
+
 #contact form {
   display: flex;
   flex-direction: column;
