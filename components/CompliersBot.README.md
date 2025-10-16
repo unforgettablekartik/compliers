@@ -64,7 +64,7 @@ NEXT_PUBLIC_EMAILJS_TEMPLATE_ID=your_emailjs_template_id
 NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_emailjs_public_key
 
 # WhatsApp Number (format: country code + number, no + or spaces)
-NEXT_PUBLIC_WHATSAPP_NUMBER=919876543210
+NEXT_PUBLIC_WHATSAPP_NUMBER=919540101740
 ```
 
 ### EmailJS Setup

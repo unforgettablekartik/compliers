@@ -170,7 +170,7 @@ const CompliersBot: React.FC = () => {
             other: 'Other Query',
           };
           
-          const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919876543210';
+          const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919540101740';
           const whatsappMessage = encodeURIComponent(
             `Hi, I'm ${userInfo.name}. I need help with ${selectedCategory ? categoryNames[selectedCategory] : 'a query'}.\n\nEmail: ${userInfo.email}\nPhone: ${userInfo.phone}`
           );
