@@ -239,6 +239,12 @@ export default async function BlogPost({ params }: { params: { slug: string } })
       <article className="prose prose-neutral max-w-none">
 
         <header className="mb-10">
+          <Link
+            href="/blog"
+            className="back-to-blogs-link"
+          >
+            <span aria-hidden="true">←</span> Back to Blogs
+          </Link>
           <h1 className="text-3xl md:text-4xl font-semibold leading-tight">{post.title}</h1>
 
           <div className="blogPostMeta">

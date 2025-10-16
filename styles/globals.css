@@ -296,6 +296,35 @@ section h2 {
   padding: 0 1.5rem 3rem;
 }
 
+/* Back to Blogs link */
+.back-to-blogs-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-to-blogs-link:hover,
+.back-to-blogs-link:focus {
+  color: #005fa3;
+  text-decoration: underline;
+}
+
+.back-to-blogs-link:hover span,
+.back-to-blogs-link:focus span {
+  transform: translateX(-2px);
+}
+
+.back-to-blogs-link span {
+  display: inline-block;
+  transition: transform 0.2s ease;
+}
+
 
 /* Blog post title and metadata improvements */
 .blogPostShell header > h1 {
