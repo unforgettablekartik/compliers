@@ -3,6 +3,7 @@ import React from 'react';
 import '../styles/globals.css';
 import SiteFooter from '@/components/SiteFooter';
 import SiteHeader from '@/components/SiteHeader';
+import CompliersBot from '@/components/CompliersBot';
 
 export const metadata: Metadata = {
   title: 'The Compliers Blog',
@@ -20,6 +21,7 @@ export default function RootLayout({
         <SiteHeader />
         <main className="site-content">{children}</main>
         <SiteFooter />
+        <CompliersBot />
       </body>
     </html>
   );

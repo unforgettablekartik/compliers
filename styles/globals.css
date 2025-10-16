@@ -1,3 +1,6 @@
+/* Import Compliers Bot styles */
+@import './compliers-bot.css';
+
 /* About Us section styling */
 .about-section {
   margin: 3rem 0 2.5rem 0;
