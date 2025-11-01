@@ -1,5 +1,5 @@
 import React from "react";
-export function Button({ asChild, className = "", children, ...props }) {
+export function Button({ asChild = false, className = "", children, ...props }) {
   const Comp = asChild ? "span" : "button";
   return (
     <Comp
