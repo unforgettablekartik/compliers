@@ -176,17 +176,27 @@ export default function MarksterLanding() {
               { icon: BellRing, title: "60‑day Watch", desc: "Weekly bulletins scanned for conflicting marks; early-warning alerts.", color: "purple" },
               { icon: ShieldCheck, title: "Use & Policing Kit", desc: "™/® usage guide, website/footer specimens, brand policing SOP for your team.", color: "pink" },
               { icon: Globe2, title: "Scale Options", desc: "Extra classes, device/logo filing, oppositions, & Madrid coordination as add-ons.", color: "gray" },
-            ].map((f, i) => (
+            ].map((f, i) => {
+              const colorClassMap: { [key: string]: string } = {
+                blue: "markster-icon-pastel-blue",
+                green: "markster-icon-pastel-green",
+                amber: "markster-icon-pastel-amber",
+                purple: "markster-icon-pastel-purple",
+                pink: "markster-icon-pastel-pink",
+                gray: "markster-icon-pastel-gray"
+              };
+              return (
               <div key={i} className="markster-feature-card">
                 <div className="flex items-start gap-4 mb-4">
-                  <div className={`markster-icon-pastel-${f.color}`}>
+                  <div className={colorClassMap[f.color]}>
                     <f.icon className="h-7 w-7" aria-hidden />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900">{f.title}</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">{f.desc}</p>
               </div>
-            ))}
+            )})}
+
           </div>
         </Container>
       </Section>
