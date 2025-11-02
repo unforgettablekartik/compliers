@@ -228,6 +228,76 @@ nav .nav-links a:hover {
   transform: rotate(-45deg) translate(7px, -7px);
 }
 
+/* Markster Banner */
+.markster-banner {
+  position: fixed;
+  top: 60px;
+  width: 100%;
+  background: linear-gradient(135deg, #0ea5e9 0%, #0284c7 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  transition: all 0.3s ease;
+}
+
+.markster-banner .container {
+  padding: 0;
+}
+
+.markster-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.5rem;
+  width: 100%;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.markster-button:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0369a1 100%);
+}
+
+.markster-icon {
+  font-size: 1.4rem;
+}
+
+.markster-text {
+  flex: 1;
+  text-align: center;
+  font-size: 0.95rem;
+}
+
+.markster-text strong {
+  font-weight: 700;
+}
+
+.markster-arrow {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .markster-banner {
+    top: 60px;
+  }
+  
+  .markster-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .markster-text {
+    font-size: 0.85rem;
+  }
+  
+  .markster-icon {
+    font-size: 1.2rem;
+  }
+}
+
 /* Hero */
 #hero {
   min-height: 100vh;
@@ -236,7 +306,7 @@ nav .nav-links a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 8rem 1rem 4rem;
+  padding: 10rem 1rem 4rem;
 }
 
 #hero .hero-content h1 {
