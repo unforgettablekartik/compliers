@@ -11,41 +11,54 @@ export default function SiteHeader() {
   };
 
   return (
-    <nav id="navbar">
-      <div className="container">
-        <div className="logo">
-          <Link href="/" className="logo-link">
-            The Compliers
+    <>
+      <nav id="navbar">
+        <div className="container">
+          <div className="logo">
+            <Link href="/" className="logo-link">
+              The Compliers
+            </Link>
+          </div>
+          <button
+            className="hamburger"
+            onClick={toggleMenu}
+            aria-label="Toggle navigation menu"
+            aria-expanded={menuOpen}
+          >
+            <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
+            <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
+            <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
+          </button>
+          <ul className={menuOpen ? 'nav-links mobile-open' : 'nav-links'}>
+            <li>
+              <Link href="/">Home</Link>
+            </li>
+            <li>
+              <Link href="/#about">About Us</Link>
+            </li>
+            <li>
+              <Link href="/#services">Our Expertise</Link>
+            </li>
+            <li>
+              <Link href="/blog">Blogs</Link>
+            </li>
+            <li>
+              <Link href="/#contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div className="markster-banner">
+        <div className="container">
+          <Link href="/markster" className="markster-button">
+            <span className="markster-icon">🛡️</span>
+            <span className="markster-text">
+              <strong>Markster™</strong> - File Your Trademark Today
+            </span>
+            <span className="markster-arrow">→</span>
           </Link>
         </div>
-        <button
-          className="hamburger"
-          onClick={toggleMenu}
-          aria-label="Toggle navigation menu"
-          aria-expanded={menuOpen}
-        >
-          <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
-          <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
-          <span className={menuOpen ? 'hamburger-line open' : 'hamburger-line'}></span>
-        </button>
-        <ul className={menuOpen ? 'nav-links mobile-open' : 'nav-links'}>
-          <li>
-            <Link href="/">Home</Link>
-          </li>
-          <li>
-            <Link href="/#about">About Us</Link>
-          </li>
-          <li>
-            <Link href="/#services">Our Expertise</Link>
-          </li>
-          <li>
-            <Link href="/blog">Blogs</Link>
-          </li>
-          <li>
-            <Link href="/#contact">Contact</Link>
-          </li>
-        </ul>
       </div>
-    </nav>
+    </>
   );
 }
