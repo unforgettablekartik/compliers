@@ -320,42 +320,42 @@ export default function MarksterLanding() {
       </Section>
 
       {/* FAQ */}
-      <Section className="bg-white">
+      <Section>
         <Container>
-          <div className="mb-10 text-center">
-            <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Frequently asked questions</h2>
+          <div className="mb-8 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl">Frequently asked questions</h2>
           </div>
-          <Accordion type="single" collapsible className="mx-auto max-w-3xl space-y-4">
-            <AccordionItem value="q1" className="markster-feature-card">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 px-6 py-4 bg-transparent hover:bg-gray-50">Can I use ™ right after filing?</AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 bg-transparent border-l-0">Yes. You may use ™ immediately after filing. Switch to ® only after registration is granted.</AccordionContent>
+          <Accordion type="single" collapsible className="mx-auto max-w-3xl">
+            <AccordionItem value="q1">
+              <AccordionTrigger>Can I use ™ right after filing?</AccordionTrigger>
+              <AccordionContent>Yes. You may use ™ immediately after filing. Switch to ® only after registration is granted.</AccordionContent>
             </AccordionItem>
-            <AccordionItem value="q2" className="markster-feature-card">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 px-6 py-4 bg-transparent hover:bg-gray-50">Do I need use evidence to file?</AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 bg-transparent border-l-0">Not necessarily. You can file on a “proposed to be used” basis. Use evidence strengthens examination/opposition stages.</AccordionContent>
+            <AccordionItem value="q2">
+              <AccordionTrigger>Do I need use evidence to file?</AccordionTrigger>
+              <AccordionContent>Not necessarily. You can file on a “proposed to be used” basis. Use evidence strengthens examination/opposition stages.</AccordionContent>
             </AccordionItem>
-            <AccordionItem value="q3" className="markster-feature-card">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 px-6 py-4 bg-transparent hover:bg-gray-50">How many classes should I choose?</AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 bg-transparent border-l-0">Select classes that reflect actual/near‑term (3–12 months) goods/services. We map this during kickoff to avoid waste.</AccordionContent>
+            <AccordionItem value="q3">
+              <AccordionTrigger>How many classes should I choose?</AccordionTrigger>
+              <AccordionContent>Select classes that reflect actual/near‑term (3–12 months) goods/services. We map this during kickoff to avoid waste.</AccordionContent>
             </AccordionItem>
-            <AccordionItem value="q4" className="markster-feature-card">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 px-6 py-4 bg-transparent hover:bg-gray-50">Will you attend hearings?</AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 bg-transparent border-l-0">Hearing appearance is an add‑on. We include a hearing brief and can appear/brief counsel upon request.</AccordionContent>
+            <AccordionItem value="q4">
+              <AccordionTrigger>Will you attend hearings?</AccordionTrigger>
+              <AccordionContent>Hearing appearance is an add‑on. We include a hearing brief and can appear/brief counsel upon request.</AccordionContent>
             </AccordionItem>
-            <AccordionItem value="q5" className="markster-feature-card">
-              <AccordionTrigger className="text-left font-semibold text-gray-900 px-6 py-4 bg-transparent hover:bg-gray-50">Can you help with global protection?</AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 bg-transparent border-l-0">Yes. We coordinate Madrid Protocol and national filings with partner counsel and timeline planning.</AccordionContent>
+            <AccordionItem value="q5">
+              <AccordionTrigger>Can you help with global protection?</AccordionTrigger>
+              <AccordionContent>Yes. We coordinate Madrid Protocol and national filings with partner counsel and timeline planning.</AccordionContent>
             </AccordionItem>
           </Accordion>
         </Container>
       </Section>
 
       {/* Start / Contact */}
-      <Section id="start" className="bg-gradient-to-b from-sky-50 to-white">
+      <Section id="start" className="bg-sky-50">
         <Container>
           <div className="grid items-center gap-8 md:grid-cols-2">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 md:text-4xl">Ready to file your mark this week?</h2>
+              <h2 className="text-2xl font-bold md:text-3xl">Ready to file your mark this week?</h2>
               <p className="mt-2 text-gray-700">We’ll run the search, map classes, and file cleanly—then watch the journals for conflicts. You get clear timelines and a status dashboard.</p>
               <ul className="mt-6 space-y-3 text-sm text-gray-700">
                 <ListItem>Search memo in 48 hours</ListItem>

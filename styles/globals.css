@@ -135,9 +135,10 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Inter', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   color: #333;
+  background-color: #fafbfc;
 }
 
 .site-content {
@@ -790,5 +791,261 @@ section h2 {
 @media (min-width: 769px) and (max-width: 1024px) {
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===== Markster Landing Page Modern Redesign ===== */
+
+/* Import modern rounded sans-serif fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Nunito:wght@400;500;600;700;800;900&display=swap');
+
+/* Markster-specific modern styles */
+.markster-page {
+  font-family: 'Inter', 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(to bottom, #f0f7ff 0%, #ffffff 100%);
+}
+
+/* Very light blue background for hero */
+.markster-hero {
+  background: linear-gradient(135deg, #f0f7ff 0%, #e8f3ff 50%, #ffffff 100%);
+  min-height: 100vh;
+  padding: 6rem 1.5rem 4rem;
+}
+
+/* Large, bold headline with partial coloring */
+.markster-headline {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  color: #1e293b;
+}
+
+.markster-headline .highlight-text {
+  color: #0369a1;
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Pill-shaped badge with shadow */
+.markster-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: white;
+  border: 1px solid #e0e7ff;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06), 0 1px 3px rgba(0, 0, 0, 0.04);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #475569;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.markster-badge:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+  transform: translateY(-1px);
+}
+
+/* Large pill-shaped buttons with strong contrast */
+.markster-btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #0369a1 0%, #0284c7 100%);
+  color: white;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  border: none;
+  box-shadow: 0 4px 14px rgba(3, 105, 161, 0.3), 0 2px 6px rgba(3, 105, 161, 0.2);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.markster-btn-primary:hover {
+  background: linear-gradient(135deg, #025a8a 0%, #0369a1 100%);
+  box-shadow: 0 6px 20px rgba(3, 105, 161, 0.4), 0 3px 8px rgba(3, 105, 161, 0.25);
+  transform: translateY(-2px);
+}
+
+.markster-btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  background: white;
+  color: #0369a1;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border-radius: 9999px;
+  border: 2px solid #e0e7ff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.markster-btn-secondary:hover {
+  background: #f0f7ff;
+  border-color: #bfdbfe;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Feature card with softer pastel backgrounds */
+.markster-feature-card {
+  background: white;
+  border-radius: 1.5rem;
+  padding: 2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06), 0 1px 4px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  border: 1px solid #f1f5f9;
+}
+
+.markster-feature-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1), 0 4px 8px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+
+/* Pastel icon backgrounds */
+.markster-icon-pastel-blue {
+  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+  padding: 1rem;
+  border-radius: 1.25rem;
+  display: inline-flex;
+  color: #0369a1;
+}
+
+.markster-icon-pastel-green {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+  padding: 1rem;
+  border-radius: 1.25rem;
+  display: inline-flex;
+  color: #047857;
+}
+
+.markster-icon-pastel-amber {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  padding: 1rem;
+  border-radius: 1.25rem;
+  display: inline-flex;
+  color: #d97706;
+}
+
+.markster-icon-pastel-purple {
+  background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 100%);
+  padding: 1rem;
+  border-radius: 1.25rem;
+  display: inline-flex;
+  color: #7c3aed;
+}
+
+.markster-icon-pastel-pink {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  padding: 1rem;
+  border-radius: 1.25rem;
+  display: inline-flex;
+  color: #be185d;
+}
+
+.markster-icon-pastel-gray {
+  background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+  padding: 1rem;
+  border-radius: 1.25rem;
+  display: inline-flex;
+  color: #475569;
+}
+
+/* Premium spacing */
+.markster-section {
+  padding: 5rem 1.5rem;
+}
+
+.markster-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Enhanced check/cross lists */
+.markster-check-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.markster-check-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.markster-check-list .check-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #10b981;
+  margin-top: 0.125rem;
+}
+
+.markster-cross-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.markster-cross-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 0.75rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #64748b;
+}
+
+.markster-cross-list .cross-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  color: #f43f5e;
+  margin-top: 0.125rem;
+}
+
+/* Divider lines */
+.markster-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent 0%, #e2e8f0 50%, transparent 100%);
+  margin: 1.5rem 0;
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .markster-headline {
+    font-size: 2rem;
+  }
+
+  .markster-btn-primary,
+  .markster-btn-secondary {
+    width: 100%;
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+
+  .markster-section {
+    padding: 3rem 1rem;
+  }
+
+  .markster-feature-card {
+    padding: 1.5rem;
   }
 }
