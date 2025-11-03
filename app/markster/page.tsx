@@ -53,39 +53,39 @@ export default function MarksterLanding() {
       />
 
       {/* Hero */}
-      <Section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-transparent">
+      <Section className="markster-hero">
         <Container>
-          <div className="grid items-start gap-10 md:grid-cols-2">
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-left">
-              <div className="mb-6 inline-flex items-center gap-2 rounded-full border bg-white/80 px-3 py-1 text-xs shadow-sm md:text-sm">
+          <div className="markster-hero-grid">
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="markster-hero-left">
+              <div className="markster-brand-chip">
                 <ShieldCheck className="h-4 w-4" aria-hidden />
-                <span><span className="rounded-md bg-white px-2 py-1 font-bold">Markster™</span> by The Compliers</span>
+                <span><span className="markster-brand-name">Markster™</span> by The Compliers</span>
               </div>
-              <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
-                <span className="block text-gray-900">File today. Defend early.</span>
-                <span className="block text-blue-600">Own your brand.</span>
+              <h1 className="markster-hero-title">
+                <span className="markster-title-line1">File today. Defend early.</span>
+                <span className="markster-title-line2">Own your brand.</span>
               </h1>
-              <p className="mt-6 text-base leading-relaxed text-gray-700 md:text-lg">
+              <p className="markster-hero-description">
                 Lawyer‑led, fixed‑fee trademark package for Indian startups &amp; MSMEs: deep search &amp; risk opinion, smart class specs, filing (TM‑A), one examination reply, and 60‑day watch—wrapped in clear timelines and a status dashboard.
               </p>
-              <div className="mt-8 flex flex-wrap gap-4">
-                <Button className="rounded-2xl bg-gray-900 px-8 py-6 text-base font-medium text-white hover:bg-gray-800" asChild>
+              <div className="markster-hero-buttons">
+                <Button className="markster-btn-primary" asChild>
                   <a href="#start">Get started</a>
                 </Button>
-                <Button variant="outline" className="rounded-2xl border-2 border-gray-900 bg-white px-8 py-6 text-base font-medium text-gray-900 hover:bg-gray-50" asChild>
+                <Button variant="outline" className="markster-btn-secondary" asChild>
                   <a href="#pricing">See pricing</a>
                 </Button>
               </div>
-              <div className="mt-8 flex flex-wrap gap-6 text-sm text-gray-700">
-                <div className="flex items-center gap-2">
+              <div className="markster-hero-benefits">
+                <div className="markster-benefit-item">
                   <Search className="h-4 w-4" aria-hidden />
                   <span>Search memo in 48 hours</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="markster-benefit-item">
                   <FileText className="h-4 w-4" aria-hidden />
                   <span>TM-A filing in 72 hours</span>
                 </div>
-                <div className="flex items-center gap-2">
+                <div className="markster-benefit-item">
                   <BellRing className="h-4 w-4" aria-hidden />
                   <span>Journal watch included</span>
                 </div>
@@ -93,44 +93,44 @@ export default function MarksterLanding() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-              <div className="rounded-3xl border bg-white p-6 shadow-lg">
-                <div className="flex items-start gap-4">
-                  <div className="rounded-2xl bg-indigo-100 p-3">
-                    <Search className="h-6 w-6 text-indigo-700" aria-hidden />
+              <div className="markster-hero-card">
+                <div className="markster-card-item">
+                  <div className="markster-card-icon indigo">
+                    <Search className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Comprehensive Search</h3>
-                    <p className="mt-1 text-sm text-gray-600">Conflict check across identical & phonetically similar marks, classes, and prior filings.</p>
+                    <h3 className="markster-card-title">Comprehensive Search</h3>
+                    <p className="markster-card-text">Conflict check across identical & phonetically similar marks, classes, and prior filings.</p>
                   </div>
                 </div>
-                <div className="my-4 h-px bg-gray-100" />
-                <div className="flex items-start gap-4">
-                  <div className="rounded-2xl bg-emerald-100 p-3">
-                    <FileText className="h-6 w-6 text-emerald-700" aria-hidden />
+                <div className="markster-card-divider" />
+                <div className="markster-card-item">
+                  <div className="markster-card-icon emerald">
+                    <FileText className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Clean TM-A Filing</h3>
-                    <p className="mt-1 text-sm text-gray-600">Properly classed, accurate goods/services, and Vienna codes for device marks.</p>
+                    <h3 className="markster-card-title">Clean TM-A Filing</h3>
+                    <p className="markster-card-text">Properly classed, accurate goods/services, and Vienna codes for device marks.</p>
                   </div>
                 </div>
-                <div className="my-4 h-px bg-gray-100" />
-                <div className="flex items-start gap-4">
-                  <div className="rounded-2xl bg-amber-100 p-3">
-                    <AlertTriangle className="h-6 w-6 text-amber-700" aria-hidden />
+                <div className="markster-card-divider" />
+                <div className="markster-card-item">
+                  <div className="markster-card-icon amber">
+                    <AlertTriangle className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Early Conflict Alerts</h3>
-                    <p className="mt-1 text-sm text-gray-600">60 or 90-day journal watch; we flag any conflicting applications so you can act fast.</p>
+                    <h3 className="markster-card-title">Early Conflict Alerts</h3>
+                    <p className="markster-card-text">60 or 90-day journal watch; we flag any conflicting applications so you can act fast.</p>
                   </div>
                 </div>
-                <div className="my-4 h-px bg-gray-100" />
-                <div className="flex items-start gap-4">
-                  <div className="rounded-2xl bg-sky-100 p-3">
-                    <ShieldCheck className="h-6 w-6 text-sky-700" aria-hidden />
+                <div className="markster-card-divider" />
+                <div className="markster-card-item">
+                  <div className="markster-card-icon sky">
+                    <ShieldCheck className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="font-semibold">Exam Reply Included</h3>
-                    <p className="mt-1 text-sm text-gray-600">One objection response at no extra charge. Hearing brief also provided.</p>
+                    <h3 className="markster-card-title">Exam Reply Included</h3>
+                    <p className="markster-card-text">One objection response at no extra charge. Hearing brief also provided.</p>
                   </div>
                 </div>
               </div>

@@ -866,3 +866,201 @@ section h2 {
     padding: 1rem 2rem;
   }
 }
+
+/* Markster Page Styles */
+.markster-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #2563eb 0%, #3b82f6 20%, rgba(59, 130, 246, 0.3) 60%, transparent 100%);
+  padding: 4rem 0;
+}
+
+.markster-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.markster-hero-left {
+  text-align: left;
+}
+
+.markster-brand-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.markster-brand-name {
+  background: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.markster-hero-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-title {
+    font-size: 3.75rem;
+  }
+}
+
+.markster-title-line1 {
+  display: block;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.markster-title-line2 {
+  display: block;
+  color: #2563eb;
+}
+
+.markster-hero-description {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.75;
+  color: #374151;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-description {
+    font-size: 1.125rem;
+  }
+}
+
+.markster-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.markster-btn-primary {
+  background: #111827;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.markster-btn-primary:hover {
+  background: #1f2937;
+  transform: translateY(-2px);
+}
+
+.markster-btn-secondary {
+  background: #fff;
+  color: #111827;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #111827;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.markster-btn-secondary:hover {
+  background: #f9fafb;
+}
+
+.markster-hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.markster-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.markster-hero-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.markster-card-item {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.markster-card-icon {
+  border-radius: 12px;
+  padding: 0.75rem;
+  flex-shrink: 0;
+}
+
+.markster-card-icon.indigo {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.markster-card-icon.emerald {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.markster-card-icon.amber {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.markster-card-icon.sky {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.markster-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.markster-card-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.markster-card-divider {
+  height: 1px;
+  background: #f3f4f6;
+  margin: 1rem 0;
+}
