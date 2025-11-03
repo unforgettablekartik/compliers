@@ -59,7 +59,7 @@ export default function MarksterLanding() {
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border bg-white/80 px-3 py-1 text-xs shadow-sm md:text-sm">
                 <ShieldCheck className="h-4 w-4" aria-hidden />
-                <span>Markster™ by The Compliers</span>
+                <span><span className="rounded-md bg-white px-2 py-1 font-bold">Markster™</span> by The Compliers</span>
               </div>
               <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">
                 File today. Defend early. <span className="text-sky-700">Own your brand.</span>
