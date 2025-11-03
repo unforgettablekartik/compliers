@@ -792,3 +792,77 @@ section h2 {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* Markster Banner Styles */
+.markster-banner {
+  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+  padding: 2rem 0;
+  margin-top: -1px;
+}
+
+.markster-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.markster-content h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.markster-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.btn-markster {
+  background: #fff;
+  color: #0ea5e9;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-markster:hover {
+  background: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: #0284c7;
+}
+
+@media (max-width: 768px) {
+  .markster-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .markster-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .markster-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn-markster {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
