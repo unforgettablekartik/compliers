@@ -53,39 +53,40 @@ export default function MarksterLanding() {
       />
 
       {/* Hero */}
-      <Section className="bg-gradient-to-b from-sky-50 to-white">
+      <Section className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-blue-500 to-transparent">
         <Container>
-          <div className="grid items-center gap-10 md:grid-cols-2">
-            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+          <div className="grid items-start gap-10 md:grid-cols-2">
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="text-left">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full border bg-white/80 px-3 py-1 text-xs shadow-sm md:text-sm">
                 <ShieldCheck className="h-4 w-4" aria-hidden />
                 <span><span className="rounded-md bg-white px-2 py-1 font-bold">Markster™</span> by The Compliers</span>
               </div>
-              <h1 className="text-3xl font-extrabold tracking-tight md:text-5xl">
-                File today. Defend early. <span className="text-sky-700">Own your brand.</span>
+              <h1 className="text-4xl font-extrabold tracking-tight md:text-6xl">
+                <span className="block text-gray-900">File today. Defend early.</span>
+                <span className="block text-blue-600">Own your brand.</span>
               </h1>
-              <p className="mt-4 text-base text-gray-700 md:text-lg">
-                Full-service trademark filing, search, and early conflict monitoring—delivered with transparency, fixed fees, and a lawyer-reviewed dossier.
+              <p className="mt-6 text-base leading-relaxed text-gray-700 md:text-lg">
+                Lawyer‑led, fixed‑fee trademark package for Indian startups &amp; MSMEs: deep search &amp; risk opinion, smart class specs, filing (TM‑A), one examination reply, and 60‑day watch—wrapped in clear timelines and a status dashboard.
               </p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button className="rounded-2xl px-6 py-6 text-base" asChild>
+              <div className="mt-8 flex flex-wrap gap-4">
+                <Button className="rounded-2xl bg-gray-900 px-8 py-6 text-base font-medium text-white hover:bg-gray-800" asChild>
                   <a href="#start">Get started</a>
                 </Button>
-                <Button variant="outline" className="rounded-2xl px-6 py-6 text-base" asChild>
+                <Button variant="outline" className="rounded-2xl border-2 border-gray-900 bg-white px-8 py-6 text-base font-medium text-gray-900 hover:bg-gray-50" asChild>
                   <a href="#pricing">See pricing</a>
                 </Button>
               </div>
-              <div className="mt-6 flex flex-wrap gap-6 text-sm text-gray-600">
+              <div className="mt-8 flex flex-wrap gap-6 text-sm text-gray-700">
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4" aria-hidden />
+                  <Search className="h-4 w-4" aria-hidden />
                   <span>Search memo in 48 hours</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4" aria-hidden />
+                  <FileText className="h-4 w-4" aria-hidden />
                   <span>TM-A filing in 72 hours</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <CheckCircle2 className="h-4 w-4" aria-hidden />
+                  <BellRing className="h-4 w-4" aria-hidden />
                   <span>Journal watch included</span>
                 </div>
               </div>
