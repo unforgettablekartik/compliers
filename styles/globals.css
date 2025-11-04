@@ -1086,3 +1086,17 @@ section h2 {
 .to-sky-50 {
   --tw-gradient-to: #f0f9ff;
 }
+
+/* Markster Page Container Margins */
+.markster-page-container {
+  margin-top: 48px;      /* 0.5 inches at 96 DPI */
+  margin-left: 96px;     /* 1 inch at 96 DPI */
+  margin-right: 96px;    /* 1 inch at 96 DPI */
+}
+
+@media (max-width: 768px) {
+  .markster-page-container {
+    margin-left: 24px;   /* Reduced margin for mobile devices */
+    margin-right: 24px;  /* Reduced margin for mobile devices */
+  }
+}

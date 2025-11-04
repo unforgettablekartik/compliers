@@ -31,7 +31,7 @@ export default function MarksterLanding() {
   const PRO_SCALE = 34900; // starting
 
   return (
-    <div className="relative min-h-screen bg-white text-gray-900">
+    <div className="markster-page-container relative min-h-screen bg-white text-gray-900">
       {/* SEO JSON-LD */}
       <script
         type="application/ld+json"
