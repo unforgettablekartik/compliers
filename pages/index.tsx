@@ -85,6 +85,21 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Markster Button Section */}
+      <section className="markster-banner">
+        <div className="container">
+          <div className="markster-cta">
+            <div className="markster-content">
+              <h3>🛡️ Trademark Filing Made Simple</h3>
+              <p>File your trademark with lawyer-led, fixed-fee package for Indian startups & MSMEs</p>
+            </div>
+            <a href="/markster" className="btn btn-markster">
+              Explore Markster™
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* About section */}
       <section id="about" className="about-section no-bg">
         <div className="container about-container">

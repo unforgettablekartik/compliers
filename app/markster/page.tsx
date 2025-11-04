@@ -1,8 +1,8 @@
-use client;
+"use client";
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, MessageSquare } from "lucide-react";
+import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, MessageSquare, Target, Zap, Eye } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -26,12 +26,12 @@ const CrossItem = ({ children }: { children: React.ReactNode }) => (
 
 // --- Main Page ---
 export default function MarksterLanding() {
-  const PRO_SINGLE = 14900;
-  const PRO_PLUS = 22900;
+  const PRO_SINGLE = 9900;
+  const PRO_PLUS = 17900;
   const PRO_SCALE = 34900; // starting
 
   return (
-    <div className="relative min-h-screen bg-white text-gray-900">
+    <div className="markster-page-container relative min-h-screen bg-white text-gray-900">
       {/* SEO JSON-LD */}
       <script
         type="application/ld+json"
@@ -44,15 +44,282 @@ export default function MarksterLanding() {
             areaServed: "IN",
             serviceType: "Trademark search, filing, examination reply, watch alerts",
             offers: [
-              { "@type": "Offer", name: "Single Class (Word)", priceCurrency: "INR", price: PRO_SINGLE },
-              { "@type": "Offer", name: "BrandShield Plus", priceCurrency: "INR", price: PRO_PLUS },
-              { "@type": "Offer", name: "Scale (starting)", priceCurrency: "INR", price: PRO_SCALE }
+              { "@type": "Offer", name: "Single Class (Word)", priceCurrency: "INR", price: 9900 },
+              { "@type": "Offer", name: "Markster Plus", priceCurrency: "INR", price: 17900 },
+              { "@type": "Offer", name: "Scale (starting)", priceCurrency: "INR", price: 34900 }
             ],
           }),
         }}
       />
 
-      {/* ... keep hero/trust/features/process/inclusions sections as is ... */}
+      {/* Hero */}
+      <Section className="markster-hero">
+        <Container>
+          <div className="markster-hero-grid">
+            <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="markster-hero-left">
+              <div className="markster-brand-chip">
+                <ShieldCheck className="h-4 w-4" aria-hidden />
+                <span><span className="markster-brand-name">Markster™</span> by The Compliers</span>
+              </div>
+              <h1 className="markster-hero-title">
+                <span className="markster-title-line1">File today.</span>
+                <span className="markster-title-line2">Defend early.</span>
+                <span className="markster-title-line3">Own your brand.</span>
+              </h1>
+              <p className="markster-hero-description">
+                Lawyer‑led, fixed‑fee trademark package for Indian startups &amp; MSMEs: deep search &amp; risk opinion, smart class specs, filing (TM‑A), one examination reply, and 60‑day watch—wrapped in clear timelines and a status dashboard.
+              </p>
+              <div className="markster-hero-buttons">
+                <Button className="markster-btn-primary" asChild>
+                  <a href="#start">Get started</a>
+                </Button>
+                <Button variant="outline" className="markster-btn-secondary" asChild>
+                  <a href="#pricing">See pricing</a>
+                </Button>
+              </div>
+              <div className="markster-hero-benefits">
+                <div className="markster-benefit-item">
+                  <Search className="h-4 w-4" aria-hidden />
+                  <span>Search memo in 48 hours</span>
+                </div>
+                <div className="markster-benefit-item">
+                  <FileText className="h-4 w-4" aria-hidden />
+                  <span>TM-A filing in 72 hours</span>
+                </div>
+                <div className="markster-benefit-item">
+                  <BellRing className="h-4 w-4" aria-hidden />
+                  <span>Journal watch included</span>
+                </div>
+              </div>
+            </motion.div>
+
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
+              <div className="markster-hero-card">
+                <div className="markster-card-item">
+                  <div className="markster-card-icon indigo">
+                    <Search className="h-6 w-6" aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="markster-card-title">Comprehensive Search</h3>
+                    <p className="markster-card-text">Conflict check across identical & phonetically similar marks, classes, and prior filings.</p>
+                  </div>
+                </div>
+                <div className="markster-card-divider" />
+                <div className="markster-card-item">
+                  <div className="markster-card-icon emerald">
+                    <FileText className="h-6 w-6" aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="markster-card-title">Clean TM-A Filing</h3>
+                    <p className="markster-card-text">Properly classed, accurate goods/services, and Vienna codes for device marks.</p>
+                  </div>
+                </div>
+                <div className="markster-card-divider" />
+                <div className="markster-card-item">
+                  <div className="markster-card-icon amber">
+                    <AlertTriangle className="h-6 w-6" aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="markster-card-title">Early Conflict Alerts</h3>
+                    <p className="markster-card-text">60 or 90-day journal watch; we flag any conflicting applications so you can act fast.</p>
+                  </div>
+                </div>
+                <div className="markster-card-divider" />
+                <div className="markster-card-item">
+                  <div className="markster-card-icon sky">
+                    <ShieldCheck className="h-6 w-6" aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="markster-card-title">Exam Reply Included</h3>
+                    <p className="markster-card-text">One objection response at no extra charge. Hearing brief also provided.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Trust Bar */}
+      <Section>
+        <Container>
+          <div className="grid grid-cols-1 gap-6 text-sm text-gray-600 md:grid-cols-2">
+            <div className="flex items-start gap-3">
+              <Scale className="mt-1 h-5 w-5 flex-none" aria-hidden />
+              <span>Services by Licensed Lawyers</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <Globe2 className="mt-1 h-5 w-5 flex-none" aria-hidden />
+              <span>Fixed‑fee · Transparent timelines</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <ShieldCheck className="mt-1 h-5 w-5 flex-none" aria-hidden />
+              <span>Dossier &amp; status dashboard access</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <Clock className="mt-1 h-5 w-5 flex-none" aria-hidden />
+              <span>Priority turnaround options</span>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Features */}
+      <Section>
+        <Container>
+          <div className="mb-10 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl">What's included</h2>
+            <p className="mt-2 text-gray-600">Every Markster™ engagement includes search, filing, objection handling, and journal monitoring.</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <Card className="rounded-2xl">
+              <CardHeader>
+                <div className="mb-2 inline-flex items-center gap-2">
+                  <div className="rounded-2xl bg-gray-100 p-3">
+                    <Search className="h-6 w-6" aria-hidden />
+                  </div>
+                </div>
+                <CardTitle>Trademark Search</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Comprehensive conflict check across identical, similar, and phonetically alike marks in relevant classes.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl">
+              <CardHeader>
+                <div className="mb-2 inline-flex items-center gap-2">
+                  <div className="rounded-2xl bg-gray-100 p-3">
+                    <FileText className="h-6 w-6" aria-hidden />
+                  </div>
+                </div>
+                <CardTitle>TM-A Filing</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Clean application with correct class mapping, goods/services descriptions, and Vienna codes (for device marks).</p>
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl">
+              <CardHeader>
+                <div className="mb-2 inline-flex items-center gap-2">
+                  <div className="rounded-2xl bg-gray-100 p-3">
+                    <AlertTriangle className="h-6 w-6" aria-hidden />
+                  </div>
+                </div>
+                <CardTitle>Examination Reply</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">One comprehensive response to objections raised by the examiner. Hearing brief also provided.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl">
+              <CardHeader>
+                <div className="mb-2 inline-flex items-center gap-2">
+                  <div className="rounded-2xl bg-gray-100 p-3">
+                    <Eye className="h-6 w-6" aria-hidden />
+                  </div>
+                </div>
+                <CardTitle>Journal Watch</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">60 or 90-day monitoring of the TM Journal for conflicting marks filed by third parties.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl">
+              <CardHeader>
+                <div className="mb-2 inline-flex items-center gap-2">
+                  <div className="rounded-2xl bg-gray-100 p-3">
+                    <ShieldCheck className="h-6 w-6" aria-hidden />
+                  </div>
+                </div>
+                <CardTitle>Status Dashboard</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">Live dashboard with timelines, application status, and any alerts or action items.</p>
+              </CardContent>
+            </Card>
+
+            <Card className="rounded-2xl">
+              <CardHeader>
+                <div className="mb-2 inline-flex items-center gap-2">
+                  <div className="rounded-2xl bg-gray-100 p-3">
+                    <Target className="h-6 w-6" aria-hidden />
+                  </div>
+                </div>
+                <CardTitle>Dossier Access</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-gray-600">All correspondence, forms, and evidence compiled in one place—yours to keep.</p>
+              </CardContent>
+            </Card>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Process */}
+      <Section className="bg-gray-50">
+        <Container>
+          <div className="mb-10 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl">How it works</h2>
+            <p className="mt-2 text-gray-600">Three simple steps from kickoff to filing and ongoing watch.</p>
+          </div>
+          <div className="grid gap-6 md:grid-cols-3">
+            <div className="rounded-3xl border bg-white p-6 shadow-sm">
+              <div className="mb-3 text-xs text-gray-600">Step 1</div>
+              <h3 className="text-lg font-semibold">Kickoff &amp; Search</h3>
+              <p className="mt-2 text-sm text-gray-600">We collect applicant details, the mark, classes, and run a comprehensive search. You receive a memo in 48 hours.</p>
+            </div>
+            <div className="rounded-3xl border bg-white p-6 shadow-sm">
+              <div className="mb-3 text-xs text-gray-600">Step 2</div>
+              <h3 className="text-lg font-semibold">Review &amp; File</h3>
+              <p className="mt-2 text-sm text-gray-600">Draft application shared for your approval. Once confirmed, we file the TM-A and share the application number within 72 hours.</p>
+            </div>
+            <div className="rounded-3xl border bg-white p-6 shadow-sm">
+              <div className="mb-3 text-xs text-gray-600">Step 3</div>
+              <h3 className="text-lg font-semibold">Monitor &amp; Defend</h3>
+              <p className="mt-2 text-sm text-gray-600">Journal watch active for 60 or 90 days. We alert you to conflicts and handle the first examination reply.</p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Inclusions / Exclusions */}
+      <Section>
+        <Container>
+          <div className="mb-10 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl">What's in, what's out</h2>
+            <p className="mt-2 text-gray-600">Clear scope so you know exactly what's covered.</p>
+          </div>
+          <div className="grid gap-8 md:grid-cols-2">
+            <div>
+              <h3 className="mb-4 text-lg font-semibold">Included in all tiers</h3>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <ListItem>Comprehensive trademark search &amp; conflict report</ListItem>
+                <ListItem>TM-A application drafting &amp; filing</ListItem>
+                <ListItem>One examination reply (objection response)</ListItem>
+                <ListItem>Hearing brief (attendance is add-on)</ListItem>
+                <ListItem>60 or 90-day journal watch</ListItem>
+                <ListItem>Status dashboard &amp; dossier access</ListItem>
+                <ListItem>Fixed professional fee + govt fee at cost</ListItem>
+              </ul>
+            </div>
+            <div>
+              <h3 className="mb-4 text-lg font-semibold">Not included (quoted separately)</h3>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <CrossItem>Hearing appearance (counsel briefing available)</CrossItem>
+                <CrossItem>Opposition proceedings (defensive or offensive)</CrossItem>
+                <CrossItem>Madrid Protocol / foreign filings</CrossItem>
+                <CrossItem>Multiple examination replies beyond the first</CrossItem>
+                <CrossItem>Rectification or cancellation actions</CrossItem>
+                <CrossItem>Renewal after 10 years (we'll remind you)</CrossItem>
+              </ul>
+            </div>
+          </div>
+        </Container>
+      </Section>
 
       {/* Pricing */}
       <Section id="pricing" className="bg-gradient-to-b from-white to-sky-50">
@@ -83,11 +350,11 @@ export default function MarksterLanding() {
               </CardContent>
             </Card>
 
-            {/* Plus (BrandShield) */}
+            {/* Plus (Markster) */}
             <Card className="rounded-3xl border-2 border-sky-600 shadow-xl">
               <CardHeader>
                 <div className="inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-xs text-sky-800">Most Popular</div>
-                <CardTitle>BrandShield™ Plus</CardTitle>
+                <CardTitle>Markster™ Plus</CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-4xl font-extrabold tracking-tight">₹{PRO_PLUS.toLocaleString("en-IN")}</p>
@@ -130,10 +397,10 @@ export default function MarksterLanding() {
             </AccordionItem>
             <AccordionItem value="q2">
               <AccordionTrigger>Do I need use evidence to file?</AccordionTrigger>
-              <AccordionContent>Not necessarily. You can file on a “proposed to be used” basis. Use evidence strengthens examination/opposition stages.</AccordionContent>
+              <AccordionContent>Not necessarily. You can file on a "proposed to be used" basis. Use evidence strengthens examination/opposition stages.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q3">
-              <AccordionTrigger><span className="underline">How many classes should I choose?</span></AccordionTrigger>
+              <AccordionTrigger>How many classes should I choose?</AccordionTrigger>
               <AccordionContent>Select classes that reflect actual/near‑term (3–12 months) goods/services. We map this during kickoff to avoid waste.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q4">
@@ -148,30 +415,31 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Recommendation & Contact */}
+      {/* Start / Contact */}
       <Section id="start" className="bg-sky-50">
         <Container>
           <div className="grid items-center gap-8 md:grid-cols-2">
             <div>
               <h2 className="text-2xl font-bold md:text-3xl">Ready to file your mark this week?</h2>
-              <p className="mt-2 text-gray-700">We’ll run the search, map classes, and file cleanly—then watch the journals for conflicts. You get clear timelines and a status dashboard.</p>
+              <p className="mt-2 text-gray-700">We'll run the search, map classes, and file cleanly—then watch the journals for conflicts. You get clear timelines and a status dashboard.</p>
               <ul className="mt-6 space-y-3 text-sm text-gray-700">
                 <ListItem>Search memo in 48 hours</ListItem>
                 <ListItem>Drafts ready in 72 hours post-docs</ListItem>
                 <ListItem>Monthly status updates + early alerts</ListItem>
               </ul>
+              <p className="mt-4 text-sm text-gray-700">Still have a query? Speak to a lawyer over a 20‑min call.</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Button className="rounded-2xl px-6 py-6 text-base" asChild>
-                  <a href="/contact">Book a 20-min consult</a>
+                  <a href="/contact">Book a FREE consultation</a>
                 </Button>
                 <Button variant="outline" className="rounded-2xl px-6 py-6 text-base" asChild>
-                  <a href="/checkout/markster">Start with BrandShield™</a>
+                  <a href="/checkout/markster">Start with Markster™</a>
                 </Button>
               </div>
               <p className="mt-3 text-xs text-gray-600">Ethical note: We provide factual, educational information and fixed-fee options—no comparative claims or solicitations.</p>
             </div>
             <div className="rounded-3xl border bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold">Quick intake (what we’ll ask)</h3>
+              <h3 className="text-lg font-semibold">Quick intake (what we'll ask)</h3>
               <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-gray-700">
                 <li>Applicant details & fee category (Individual/Startup/MSME/Company)</li>
                 <li>Brand name/logo & high-res asset (for device marks)</li>
@@ -179,15 +447,26 @@ export default function MarksterLanding() {
                 <li>TM-48 (Authorization) and KYC (as applicable)</li>
               </ol>
               <div className="mt-6 flex flex-col gap-2 text-sm text-gray-700">
-                <div className="flex items-center gap-2"><span role="img" aria-label="telephone">📞</span> +91-XXXXXXXXXXX</div>
-                <div className="flex items-center gap-2"><Mail className="h-4 w-4" /><a className="underline" href="mailto:hello@thecompliers.com">hello@thecompliers.com</a></div>
+                <div className="flex items-center gap-2"><Mail className="h-4 w-4" /><a className="underline" href="mailto:markster@thecompliers.info">markster@thecompliers.info</a></div>
                 <div className="flex items-center gap-2"><MessageSquare className="h-4 w-4" /><a className="underline" href="https://wa.me/91XXXXXXXXXXX">WhatsApp</a></div>
               </div>
             </div>
           </div>
         </Container>
       </Section>
-      {/* Footer as is ... */}
+
+      {/* Footer */}
+      <footer className="border-t bg-white py-8">
+        <Container>
+          <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-600 md:flex-row">
+            <div>© 2025 The Compliers. All rights reserved.</div>
+            <div className="flex gap-6">
+              <a href="/privacy" className="underline hover:text-gray-900">Privacy</a>
+              <a href="/terms" className="underline hover:text-gray-900">Terms</a>
+            </div>
+          </div>
+        </Container>
+      </footer>
     </div>
   );
 }

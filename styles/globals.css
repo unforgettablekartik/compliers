@@ -1,16 +1,18 @@
 /* Import Compliers Bot styles */
 @import './compliers-bot.css';
 
-/* Disclosure Banner */
+/* Disclosure Banner - Now positioned at bottom with transparency */
 .disclosure-banner {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #0b3a7a;
+  background-color: rgba(11, 58, 122, 0.5); /* 50% transparency */
   color: #fff;
   z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .disclosure-banner-content {
@@ -790,5 +792,367 @@ section h2 {
 @media (min-width: 769px) and (max-width: 1024px) {
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Markster Banner Styles */
+.markster-banner {
+  background: linear-gradient(135deg, #0ea5e9 0%, #3b82f6 100%);
+  padding: 2rem 0;
+  margin-top: -1px;
+}
+
+.markster-cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.markster-content h3 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+}
+
+.markster-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.btn-markster {
+  background: #fff;
+  color: #0ea5e9;
+  padding: 0.875rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-markster:hover {
+  background: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  color: #0284c7;
+}
+
+@media (max-width: 768px) {
+  .markster-cta {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.5rem;
+  }
+
+  .markster-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .markster-content p {
+    font-size: 0.9rem;
+  }
+
+  .btn-markster {
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+}
+
+/* Markster Page Styles */
+.markster-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #f0f9ff 0%, #ffffff 100%);
+  padding: 4rem 0;
+}
+
+.markster-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+}
+
+.markster-hero-left {
+  text-align: left;
+}
+
+.markster-brand-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1.5rem;
+}
+
+.markster-brand-name {
+  background: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.markster-hero-title {
+  font-size: 2.25rem;  /* Reduced by 10% from 2.5rem */
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-title {
+    font-size: 3.375rem;  /* Reduced by 10% from 3.75rem */
+  }
+}
+
+.markster-title-line1 {
+  display: block;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.markster-title-line2 {
+  display: block;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.markster-title-line3 {
+  display: block;
+  color: #2563eb;
+}
+
+.markster-hero-description {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;  /* Reduced by 10% from 1rem */
+  line-height: 1.75;
+  color: #374151;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-description {
+    font-size: 1.0125rem;  /* Reduced by 10% from 1.125rem */
+  }
+}
+
+.markster-hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.markster-btn-primary {
+  background: #000 !important;
+  color: #fff !important;
+  padding: 0.875rem 2rem;  /* Reduced height (py from 1.5rem to 0.875rem) */
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.markster-btn-primary:hover {
+  background: #1f2937 !important;
+  color: #fff !important;
+  transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+.markster-btn-primary:visited,
+.markster-btn-primary:link,
+.markster-btn-primary:active {
+  background: #000 !important;
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.markster-btn-secondary {
+  background: #fff !important;
+  color: #000 !important;
+  padding: 0.875rem 2rem;  /* Reduced height (py from 1.5rem to 0.875rem) */
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 1rem;
+  border: 2px solid #000 !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+}
+
+.markster-btn-secondary:hover {
+  background: #f9fafb !important;
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+.markster-btn-secondary:visited,
+.markster-btn-secondary:link,
+.markster-btn-secondary:active {
+  background: #fff !important;
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+/* Anchor tags inside buttons */
+.markster-btn-primary a,
+.markster-btn-primary a:hover,
+.markster-btn-primary a:visited,
+.markster-btn-primary a:link,
+.markster-btn-primary a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.markster-btn-secondary a,
+.markster-btn-secondary a:hover,
+.markster-btn-secondary a:visited,
+.markster-btn-secondary a:link,
+.markster-btn-secondary a:active {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+.markster-hero-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.markster-benefit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.markster-hero-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 1.275rem;  /* Reduced by 15%: 1.5 * 0.85 = 1.275 */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: scale(0.85);  /* Scale down by 15% */
+  transform-origin: top center;
+}
+
+.markster-card-item {
+  display: flex;
+  align-items: start;
+  gap: 1rem;
+}
+
+.markster-card-icon {
+  border-radius: 12px;
+  padding: 0.75rem;
+  flex-shrink: 0;
+}
+
+.markster-card-icon.indigo {
+  background: #e0e7ff;
+  color: #4338ca;
+}
+
+.markster-card-icon.emerald {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.markster-card-icon.amber {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.markster-card-icon.sky {
+  background: #e0f2fe;
+  color: #0369a1;
+}
+
+.markster-card-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0 0 0.25rem 0;
+}
+
+.markster-card-text {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.markster-card-divider {
+  height: 1px;
+  background: #f3f4f6;
+  margin: 1rem 0;
+}
+
+/* Section background utilities for Markster page */
+.bg-gray-50 {
+  background-color: #f9fafb;
+}
+
+.bg-sky-50 {
+  background-color: #f0f9ff;
+}
+
+.bg-gradient-to-b {
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+}
+
+.from-white {
+  --tw-gradient-from: #ffffff;
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgba(255, 255, 255, 0));
+}
+
+.to-sky-50 {
+  --tw-gradient-to: #f0f9ff;
+}
+
+/* Markster Page Container Margins */
+/* Markster page - margins only for content, not background */
+.markster-page-container {
+  padding-top: 48px;      /* 0.5 inches at 96 DPI */
+}
+
+/* Add content margins to containers */
+.markster-page-container .mx-auto {
+  margin-left: 96px !important;     /* 1 inch at 96 DPI */
+  margin-right: 96px !important;    /* 1 inch at 96 DPI */
+}
+
+@media (max-width: 768px) {
+  .markster-page-container .mx-auto {
+    margin-left: 24px !important;   /* Reduced margin for mobile devices */
+    margin-right: 24px !important;  /* Reduced margin for mobile devices */
   }
 }
