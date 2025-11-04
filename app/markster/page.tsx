@@ -62,8 +62,9 @@ export default function MarksterLanding() {
                 <span><span className="markster-brand-name">Markster™</span> by The Compliers</span>
               </div>
               <h1 className="markster-hero-title">
-                <span className="markster-title-line1">File today. Defend early.</span>
-                <span className="markster-title-line2">Own your brand.</span>
+                <span className="markster-title-line1">File today.</span>
+                <span className="markster-title-line2">Defend early.</span>
+                <span className="markster-title-line3">Own your brand.</span>
               </h1>
               <p className="markster-hero-description">
                 Lawyer‑led, fixed‑fee trademark package for Indian startups &amp; MSMEs: deep search &amp; risk opinion, smart class specs, filing (TM‑A), one examination reply, and 60‑day watch—wrapped in clear timelines and a status dashboard.

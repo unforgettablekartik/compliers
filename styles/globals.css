@@ -1,16 +1,18 @@
 /* Import Compliers Bot styles */
 @import './compliers-bot.css';
 
-/* Disclosure Banner */
+/* Disclosure Banner - Now positioned at bottom with transparency */
 .disclosure-banner {
   position: fixed;
-  top: 0;
+  bottom: 0;
   left: 0;
   width: 100%;
-  background-color: #0b3a7a;
+  background-color: rgba(11, 58, 122, 0.5); /* 50% transparency */
   color: #fff;
   z-index: 1001;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .disclosure-banner-content {
@@ -935,6 +937,12 @@ section h2 {
 
 .markster-title-line2 {
   display: block;
+  color: #111827;
+  margin-bottom: 0.5rem;
+}
+
+.markster-title-line3 {
+  display: block;
   color: #2563eb;
 }
 
@@ -961,7 +969,7 @@ section h2 {
 .markster-btn-primary {
   background: #000 !important;
   color: #fff !important;
-  padding: 1.5rem 2rem;
+  padding: 0.875rem 2rem;  /* Reduced height (py from 1.5rem to 0.875rem) */
   border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
@@ -989,7 +997,7 @@ section h2 {
 .markster-btn-secondary {
   background: #fff !important;
   color: #000 !important;
-  padding: 1.5rem 2rem;
+  padding: 0.875rem 2rem;  /* Reduced height (py from 1.5rem to 0.875rem) */
   border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
