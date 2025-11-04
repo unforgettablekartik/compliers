@@ -959,8 +959,8 @@ section h2 {
 }
 
 .markster-btn-primary {
-  background: #111827;
-  color: #fff;
+  background: #000 !important;
+  color: #fff !important;
   padding: 1.5rem 2rem;
   border-radius: 12px;
   font-weight: 600;
@@ -971,24 +971,26 @@ section h2 {
 }
 
 .markster-btn-primary:hover {
-  background: #1f2937;
+  background: #1f2937 !important;
+  color: #fff !important;
   transform: translateY(-2px);
 }
 
 .markster-btn-secondary {
-  background: #fff;
-  color: #111827;
+  background: #fff !important;
+  color: #000 !important;
   padding: 1.5rem 2rem;
   border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
-  border: 2px solid #111827;
+  border: 2px solid #000;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
 .markster-btn-secondary:hover {
-  background: #f9fafb;
+  background: #f9fafb !important;
+  color: #000 !important;
 }
 
 .markster-hero-benefits {
@@ -1010,8 +1012,10 @@ section h2 {
   background: #fff;
   border: 1px solid #e5e7eb;
   border-radius: 24px;
-  padding: 1.5rem;
+  padding: 1.275rem;  /* Reduced by 15%: 1.5 * 0.85 = 1.275 */
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  transform: scale(0.85);  /* Scale down by 15% */
+  transform-origin: top center;
 }
 
 .markster-card-item {
@@ -1088,15 +1092,20 @@ section h2 {
 }
 
 /* Markster Page Container Margins */
+/* Markster page - margins only for content, not background */
 .markster-page-container {
-  margin-top: 48px;      /* 0.5 inches at 96 DPI */
-  margin-left: 96px;     /* 1 inch at 96 DPI */
-  margin-right: 96px;    /* 1 inch at 96 DPI */
+  padding-top: 48px;      /* 0.5 inches at 96 DPI */
+}
+
+/* Add content margins to containers */
+.markster-page-container .mx-auto {
+  margin-left: 96px !important;     /* 1 inch at 96 DPI */
+  margin-right: 96px !important;    /* 1 inch at 96 DPI */
 }
 
 @media (max-width: 768px) {
-  .markster-page-container {
-    margin-left: 24px;   /* Reduced margin for mobile devices */
-    margin-right: 24px;  /* Reduced margin for mobile devices */
+  .markster-page-container .mx-auto {
+    margin-left: 24px !important;   /* Reduced margin for mobile devices */
+    margin-right: 24px !important;  /* Reduced margin for mobile devices */
   }
 }

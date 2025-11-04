@@ -142,7 +142,7 @@ export default function MarksterLanding() {
       {/* Trust Bar */}
       <Section>
         <Container>
-          <div className="grid grid-cols-2 gap-6 text-sm text-gray-600 md:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 text-sm text-gray-600 md:grid-cols-2">
             <div className="flex items-start gap-3">
               <Scale className="mt-1 h-5 w-5 flex-none" aria-hidden />
               <span>Services by Licensed Lawyers</span>
