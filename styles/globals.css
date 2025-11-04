@@ -914,7 +914,7 @@ section h2 {
 }
 
 .markster-hero-title {
-  font-size: 2.5rem;
+  font-size: 2.25rem;  /* Reduced by 10% from 2.5rem */
   font-weight: 800;
   line-height: 1.1;
   letter-spacing: -0.025em;
@@ -923,7 +923,7 @@ section h2 {
 
 @media (min-width: 768px) {
   .markster-hero-title {
-    font-size: 3.75rem;
+    font-size: 3.375rem;  /* Reduced by 10% from 3.75rem */
   }
 }
 
@@ -940,14 +940,14 @@ section h2 {
 
 .markster-hero-description {
   margin-top: 1.5rem;
-  font-size: 1rem;
+  font-size: 0.9rem;  /* Reduced by 10% from 1rem */
   line-height: 1.75;
   color: #374151;
 }
 
 @media (min-width: 768px) {
   .markster-hero-description {
-    font-size: 1.125rem;
+    font-size: 1.0125rem;  /* Reduced by 10% from 1.125rem */
   }
 }
 
@@ -965,15 +965,25 @@ section h2 {
   border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
-  border: none;
+  border: none !important;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none !important;
 }
 
 .markster-btn-primary:hover {
   background: #1f2937 !important;
   color: #fff !important;
   transform: translateY(-2px);
+  text-decoration: none !important;
+}
+
+.markster-btn-primary:visited,
+.markster-btn-primary:link,
+.markster-btn-primary:active {
+  background: #000 !important;
+  color: #fff !important;
+  text-decoration: none !important;
 }
 
 .markster-btn-secondary {
@@ -983,14 +993,43 @@ section h2 {
   border-radius: 12px;
   font-weight: 600;
   font-size: 1rem;
-  border: 2px solid #000;
+  border: 2px solid #000 !important;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none !important;
 }
 
 .markster-btn-secondary:hover {
   background: #f9fafb !important;
   color: #000 !important;
+  text-decoration: none !important;
+}
+
+.markster-btn-secondary:visited,
+.markster-btn-secondary:link,
+.markster-btn-secondary:active {
+  background: #fff !important;
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+/* Anchor tags inside buttons */
+.markster-btn-primary a,
+.markster-btn-primary a:hover,
+.markster-btn-primary a:visited,
+.markster-btn-primary a:link,
+.markster-btn-primary a:active {
+  color: #fff !important;
+  text-decoration: none !important;
+}
+
+.markster-btn-secondary a,
+.markster-btn-secondary a:hover,
+.markster-btn-secondary a:visited,
+.markster-btn-secondary a:link,
+.markster-btn-secondary a:active {
+  color: #000 !important;
+  text-decoration: none !important;
 }
 
 .markster-hero-benefits {
