@@ -1130,36 +1130,40 @@ section h2 {
   margin: 1rem 0;
 }
 
-.markster-trust-items {
+/* Trust Bar - Single Line Below Hero */
+.markster-trust-bar-single-line {
   display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding-top: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
 }
 
 @media (min-width: 768px) {
-  .markster-trust-items {
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1rem 1.5rem;
+  .markster-trust-bar-single-line {
+    gap: 2rem 3rem;
   }
 }
 
-.markster-trust-item {
+.markster-trust-item-compact {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  font-size: 0.875rem;
-  color: #374151;
-  line-height: 1.5;
+  font-size: 0.8125rem;
+  color: #6b7280;
+  line-height: 1.4;
 }
 
-.markster-trust-item span {
+.markster-trust-item-compact span {
   white-space: nowrap;
 }
 
 @media (max-width: 767px) {
-  .markster-trust-item span {
+  .markster-trust-item-compact {
+    font-size: 0.75rem;
+  }
+  
+  .markster-trust-item-compact span {
     white-space: normal;
   }
 }

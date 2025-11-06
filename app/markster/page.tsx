@@ -134,27 +134,32 @@ export default function MarksterLanding() {
                     <p className="markster-card-text">One objection response at no extra charge. Hearing brief also provided.</p>
                   </div>
                 </div>
-                <div className="markster-card-divider" />
-                <div className="markster-trust-items">
-                  <div className="markster-trust-item">
-                    <Scale className="h-5 w-5 flex-none" aria-hidden />
-                    <span>Services by Licensed Lawyers</span>
-                  </div>
-                  <div className="markster-trust-item">
-                    <Globe2 className="h-5 w-5 flex-none" aria-hidden />
-                    <span>Fixed‑fee · Transparent timelines</span>
-                  </div>
-                  <div className="markster-trust-item">
-                    <ShieldCheck className="h-5 w-5 flex-none" aria-hidden />
-                    <span>Dossier &amp; status dashboard access</span>
-                  </div>
-                  <div className="markster-trust-item">
-                    <Clock className="h-5 w-5 flex-none" aria-hidden />
-                    <span>Priority turnaround options</span>
-                  </div>
-                </div>
               </div>
             </motion.div>
+          </div>
+        </Container>
+      </Section>
+
+      {/* Trust Bar - Single Line */}
+      <Section className="py-8 md:py-12">
+        <Container>
+          <div className="markster-trust-bar-single-line">
+            <div className="markster-trust-item-compact">
+              <Scale className="h-4 w-4 flex-none" aria-hidden />
+              <span>Services by Licensed Lawyers</span>
+            </div>
+            <div className="markster-trust-item-compact">
+              <Globe2 className="h-4 w-4 flex-none" aria-hidden />
+              <span>Fixed‑fee · Transparent timelines</span>
+            </div>
+            <div className="markster-trust-item-compact">
+              <ShieldCheck className="h-4 w-4 flex-none" aria-hidden />
+              <span>Dossier &amp; status dashboard access</span>
+            </div>
+            <div className="markster-trust-item-compact">
+              <Clock className="h-4 w-4 flex-none" aria-hidden />
+              <span>Priority turnaround options</span>
+            </div>
           </div>
         </Container>
       </Section>
