@@ -1065,6 +1065,20 @@ section h2 {
   transform-origin: top center;
 }
 
+.markster-hero-card-new {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .markster-hero-card-new {
+    padding: 2rem;
+  }
+}
+
 .markster-card-item {
   display: flex;
   align-items: start;
@@ -1114,6 +1128,40 @@ section h2 {
   height: 1px;
   background: #f3f4f6;
   margin: 1rem 0;
+}
+
+.markster-trust-items {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .markster-trust-items {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem 1.5rem;
+  }
+}
+
+.markster-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
+}
+
+.markster-trust-item span {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .markster-trust-item span {
+    white-space: normal;
+  }
 }
 
 /* Section background utilities for Markster page */

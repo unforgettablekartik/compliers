@@ -94,7 +94,7 @@ export default function MarksterLanding() {
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-              <div className="markster-hero-card">
+              <div className="markster-hero-card-new">
                 <div className="markster-card-item">
                   <div className="markster-card-icon indigo">
                     <Search className="h-6 w-6" aria-hidden />
@@ -134,32 +134,27 @@ export default function MarksterLanding() {
                     <p className="markster-card-text">One objection response at no extra charge. Hearing brief also provided.</p>
                   </div>
                 </div>
+                <div className="markster-card-divider" />
+                <div className="markster-trust-items">
+                  <div className="markster-trust-item">
+                    <Scale className="h-5 w-5 flex-none" aria-hidden />
+                    <span>Services by Licensed Lawyers</span>
+                  </div>
+                  <div className="markster-trust-item">
+                    <Globe2 className="h-5 w-5 flex-none" aria-hidden />
+                    <span>Fixed‑fee · Transparent timelines</span>
+                  </div>
+                  <div className="markster-trust-item">
+                    <ShieldCheck className="h-5 w-5 flex-none" aria-hidden />
+                    <span>Dossier &amp; status dashboard access</span>
+                  </div>
+                  <div className="markster-trust-item">
+                    <Clock className="h-5 w-5 flex-none" aria-hidden />
+                    <span>Priority turnaround options</span>
+                  </div>
+                </div>
               </div>
             </motion.div>
-          </div>
-        </Container>
-      </Section>
-
-      {/* Trust Bar */}
-      <Section>
-        <Container>
-          <div className="grid grid-cols-1 gap-6 text-sm text-gray-600 md:grid-cols-2">
-            <div className="flex items-start gap-3">
-              <Scale className="mt-1 h-5 w-5 flex-none" aria-hidden />
-              <span>Services by Licensed Lawyers</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <Globe2 className="mt-1 h-5 w-5 flex-none" aria-hidden />
-              <span>Fixed‑fee · Transparent timelines</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <ShieldCheck className="mt-1 h-5 w-5 flex-none" aria-hidden />
-              <span>Dossier &amp; status dashboard access</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <Clock className="mt-1 h-5 w-5 flex-none" aria-hidden />
-              <span>Priority turnaround options</span>
-            </div>
           </div>
         </Container>
       </Section>
@@ -168,8 +163,8 @@ export default function MarksterLanding() {
       <Section>
         <Container>
           <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">What's included</h2>
-            <p className="mt-2 text-gray-600">Every Markster™ engagement includes search, filing, objection handling, and journal monitoring.</p>
+            <h2 className="text-2xl font-bold md:text-3xl">What you get from Markster</h2>
+            <p className="mt-2 text-gray-600">From search to filing to early defence - everything required to launch without brand anxiety.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             <Card className="rounded-2xl">
