@@ -101,7 +101,7 @@ export default function MarksterLanding() {
                   </div>
                   <div>
                     <h3 className="markster-card-title">Comprehensive Search</h3>
-                    <p className="markster-card-text">Conflict check across identical & phonetically similar marks, classes, and prior filings.</p>
+                    <p className="markster-card-text">Identical/phonetic/visual · Related classes · Strategy memo</p>
                   </div>
                 </div>
                 <div className="markster-card-divider" />
@@ -110,8 +110,8 @@ export default function MarksterLanding() {
                     <FileText className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="markster-card-title">Clean TM-A Filing</h3>
-                    <p className="markster-card-text">Properly classed, accurate goods/services, and Vienna codes for device marks.</p>
+                    <h3 className="markster-card-title">Smart Filing (TM‑A)</h3>
+                    <p className="markster-card-text">Spec drafting that balances breadth with survivability</p>
                   </div>
                 </div>
                 <div className="markster-card-divider" />
@@ -120,8 +120,8 @@ export default function MarksterLanding() {
                     <AlertTriangle className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="markster-card-title">Early Conflict Alerts</h3>
-                    <p className="markster-card-text">60 or 90-day journal watch; we flag any conflicting applications so you can act fast.</p>
+                    <h3 className="markster-card-title">1 Examination Reply Included</h3>
+                    <p className="markster-card-text">Arguments &amp; evidence; hearing brief if listed</p>
                   </div>
                 </div>
                 <div className="markster-card-divider" />
@@ -130,8 +130,8 @@ export default function MarksterLanding() {
                     <ShieldCheck className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="markster-card-title">Exam Reply Included</h3>
-                    <p className="markster-card-text">One objection response at no extra charge. Hearing brief also provided.</p>
+                    <h3 className="markster-card-title">60‑day Trademark Watch</h3>
+                    <p className="markster-card-text">Weekly bulletin scan · Early warnings · Action plan</p>
                   </div>
                 </div>
               </div>
