@@ -88,7 +88,7 @@ export default function MarksterLanding() {
                 </div>
                 <div className="markster-benefit-item">
                   <BellRing className="h-4 w-4" aria-hidden />
-                  <span>Journal watch included</span>
+                  <span>Monthly status updates</span>
                 </div>
               </div>
             </motion.div>
