@@ -888,11 +888,34 @@ section h2 {
   .markster-hero-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
+    align-items: stretch;
   }
 }
 
 .markster-hero-left {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-left {
+    justify-content: space-between;
+  }
+}
+
+.markster-hero-right {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-right {
+    /* Align card to match button bottom edge */
+    /* Adjusted to align top with title and bottom with buttons */
+    margin-top: 3.875rem;
+    margin-bottom: 3rem;  /* Space to align with button area */
+  }
 }
 
 .markster-brand-chip {
@@ -948,14 +971,15 @@ section h2 {
 
 .markster-hero-description {
   margin-top: 1.5rem;
-  font-size: 0.9rem;  /* Reduced by 10% from 1rem */
-  line-height: 1.75;
+  font-size: 0.81rem;  /* Reduced by 10% from 0.9rem (total 19% reduction from 1rem) */
+  line-height: 1.6;  /* Tighter line height to fit in 3 lines */
   color: #374151;
 }
 
 @media (min-width: 768px) {
   .markster-hero-description {
-    font-size: 1.0125rem;  /* Reduced by 10% from 1.125rem */
+    font-size: 0.91125rem;  /* Reduced by 10% from 1.0125rem */
+    line-height: 1.65;
   }
 }
 
@@ -1065,6 +1089,22 @@ section h2 {
   transform-origin: top center;
 }
 
+.markster-hero-card-new {
+  background: #fafafa;  /* Off-white background for overlapped appearance */
+  border: 1px solid #e5e7eb;
+  border-radius: 24px;
+  padding: 1.5rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);  /* Enhanced shadow for elevated overlapped look */
+  position: relative;
+  z-index: 10;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-card-new {
+    padding: 2rem;
+  }
+}
+
 .markster-card-item {
   display: flex;
   align-items: start;
@@ -1114,6 +1154,44 @@ section h2 {
   height: 1px;
   background: #f3f4f6;
   margin: 1rem 0;
+}
+
+/* Trust Bar - Single Line Below Hero */
+.markster-trust-bar-single-line {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .markster-trust-bar-single-line {
+    gap: 2rem 3rem;
+  }
+}
+
+.markster-trust-item-compact {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.8125rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+.markster-trust-item-compact span {
+  white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .markster-trust-item-compact {
+    font-size: 0.75rem;
+  }
+  
+  .markster-trust-item-compact span {
+    white-space: normal;
+  }
 }
 
 /* Section background utilities for Markster page */
