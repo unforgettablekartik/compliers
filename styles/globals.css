@@ -1090,11 +1090,13 @@ section h2 {
 }
 
 .markster-hero-card-new {
-  background: #fff;
+  background: #fafafa;  /* Off-white background for overlapped appearance */
   border: 1px solid #e5e7eb;
   border-radius: 24px;
   padding: 1.5rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);  /* Enhanced shadow for elevated overlapped look */
+  position: relative;
+  z-index: 10;
 }
 
 @media (min-width: 768px) {
