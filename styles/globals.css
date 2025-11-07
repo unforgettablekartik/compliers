@@ -888,11 +888,33 @@ section h2 {
   .markster-hero-grid {
     grid-template-columns: 1fr 1fr;
     gap: 2.5rem;
+    align-items: stretch;
   }
 }
 
 .markster-hero-left {
   text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-left {
+    justify-content: space-between;
+  }
+}
+
+.markster-hero-right {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-right {
+    /* Offset to align top of card with "File today" heading */
+    /* Skip: brand chip (approx 2.375rem total with margin) */
+    margin-top: 3.875rem;
+  }
 }
 
 .markster-brand-chip {
