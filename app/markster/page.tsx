@@ -45,7 +45,7 @@ export default function MarksterLanding() {
             serviceType: "Trademark search, filing, examination reply, watch alerts",
             offers: [
               { "@type": "Offer", name: "Single Class (Word)", priceCurrency: "INR", price: 9900 },
-              { "@type": "Offer", name: "Markster Plus", priceCurrency: "INR", price: 17900 },
+              { "@type": "Offer", name: "Markster™ Plus", priceCurrency: "INR", price: 17900 },
               { "@type": "Offer", name: "Scale (starting)", priceCurrency: "INR", price: 34900 }
             ],
           }),
@@ -168,8 +168,8 @@ export default function MarksterLanding() {
       <Section>
         <Container>
           <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">What you get from Markster</h2>
-            <p className="mt-2 text-gray-600">From search to filing to early defence - everything required to launch without brand anxiety.</p>
+            <h2 className="text-2xl font-bold md:text-3xl">What you get from Markster™</h2>
+            <p className="mt-2 text-gray-600 text-center">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             <Card className="rounded-2xl">
