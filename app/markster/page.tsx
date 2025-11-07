@@ -227,88 +227,64 @@ export default function MarksterLanding() {
             <p className="mt-2 text-gray-600 text-center">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <div className="mb-2 inline-flex items-center gap-2">
-                  <div className="rounded-2xl bg-gray-100 p-3">
-                    <Search className="h-6 w-6" aria-hidden />
-                  </div>
+            <Card className="rounded-2xl p-6">
+              <div className="flex flex-col items-start">
+                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
+                  <Search className="h-6 w-6" aria-hidden />
                 </div>
-                <CardTitle>Trademark Search</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <h3 className="font-semibold text-lg mb-2">Trademark Search</h3>
                 <p className="text-gray-600">Comprehensive conflict check across identical, similar, and phonetically alike marks in relevant classes.</p>
-              </CardContent>
+              </div>
             </Card>
 
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <div className="mb-2 inline-flex items-center gap-2">
-                  <div className="rounded-2xl bg-gray-100 p-3">
-                    <FileText className="h-6 w-6" aria-hidden />
-                  </div>
+            <Card className="rounded-2xl p-6">
+              <div className="flex flex-col items-start">
+                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
+                  <FileText className="h-6 w-6" aria-hidden />
                 </div>
-                <CardTitle>TM-A Filing</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <h3 className="font-semibold text-lg mb-2">TM-A Filing</h3>
                 <p className="text-gray-600">Clean application with correct class mapping, goods/services descriptions, and Vienna codes (for device marks).</p>
-              </CardContent>
+              </div>
             </Card>
 
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <div className="mb-2 inline-flex items-center gap-2">
-                  <div className="rounded-2xl bg-gray-100 p-3">
-                    <AlertTriangle className="h-6 w-6" aria-hidden />
-                  </div>
+            <Card className="rounded-2xl p-6">
+              <div className="flex flex-col items-start">
+                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
+                  <AlertTriangle className="h-6 w-6" aria-hidden />
                 </div>
-                <CardTitle>Examination Reply</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <h3 className="font-semibold text-lg mb-2">Examination Reply</h3>
                 <p className="text-gray-600">One comprehensive response to objections raised by the examiner. Hearing brief also provided.</p>
-              </CardContent>
+              </div>
             </Card>
 
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <div className="mb-2 inline-flex items-center gap-2">
-                  <div className="rounded-2xl bg-gray-100 p-3">
-                    <Eye className="h-6 w-6" aria-hidden />
-                  </div>
+            <Card className="rounded-2xl p-6">
+              <div className="flex flex-col items-start">
+                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
+                  <Eye className="h-6 w-6" aria-hidden />
                 </div>
-                <CardTitle>Journal Watch</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <h3 className="font-semibold text-lg mb-2">Journal Watch</h3>
                 <p className="text-gray-600">60 or 90-day monitoring of the TM Journal for conflicting marks filed by third parties.</p>
-              </CardContent>
+              </div>
             </Card>
 
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <div className="mb-2 inline-flex items-center gap-2">
-                  <div className="rounded-2xl bg-gray-100 p-3">
-                    <ShieldCheck className="h-6 w-6" aria-hidden />
-                  </div>
+            <Card className="rounded-2xl p-6">
+              <div className="flex flex-col items-start">
+                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
+                  <ShieldCheck className="h-6 w-6" aria-hidden />
                 </div>
-                <CardTitle>Status Dashboard</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <h3 className="font-semibold text-lg mb-2">Status Dashboard</h3>
                 <p className="text-gray-600">Live dashboard with timelines, application status, and any alerts or action items.</p>
-              </CardContent>
+              </div>
             </Card>
 
-            <Card className="rounded-2xl">
-              <CardHeader>
-                <div className="mb-2 inline-flex items-center gap-2">
-                  <div className="rounded-2xl bg-gray-100 p-3">
-                    <Target className="h-6 w-6" aria-hidden />
-                  </div>
+            <Card className="rounded-2xl p-6">
+              <div className="flex flex-col items-start">
+                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
+                  <Target className="h-6 w-6" aria-hidden />
                 </div>
-                <CardTitle>Dossier Access</CardTitle>
-              </CardHeader>
-              <CardContent>
+                <h3 className="font-semibold text-lg mb-2">Dossier Access</h3>
                 <p className="text-gray-600">All correspondence, forms, and evidence compiled in one place—yours to keep.</p>
-              </CardContent>
+              </div>
             </Card>
           </div>
         </Container>
