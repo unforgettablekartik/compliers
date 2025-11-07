@@ -45,7 +45,7 @@ export default function MarksterLanding() {
             serviceType: "Trademark search, filing, examination reply, watch alerts",
             offers: [
               { "@type": "Offer", name: "Single Class (Word)", priceCurrency: "INR", price: 9900 },
-              { "@type": "Offer", name: "Markster Plus", priceCurrency: "INR", price: 17900 },
+              { "@type": "Offer", name: "Markster™ Plus", priceCurrency: "INR", price: 17900 },
               { "@type": "Offer", name: "Scale (starting)", priceCurrency: "INR", price: 34900 }
             ],
           }),
@@ -88,20 +88,20 @@ export default function MarksterLanding() {
                 </div>
                 <div className="markster-benefit-item">
                   <BellRing className="h-4 w-4" aria-hidden />
-                  <span>Journal watch included</span>
+                  <span>Monthly status updates</span>
                 </div>
               </div>
             </motion.div>
 
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }}>
-              <div className="markster-hero-card">
+            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="markster-hero-right">
+              <div className="markster-hero-card-new">
                 <div className="markster-card-item">
                   <div className="markster-card-icon indigo">
                     <Search className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
                     <h3 className="markster-card-title">Comprehensive Search</h3>
-                    <p className="markster-card-text">Conflict check across identical & phonetically similar marks, classes, and prior filings.</p>
+                    <p className="markster-card-text">Identical/phonetic/visual · Related classes · Strategy memo</p>
                   </div>
                 </div>
                 <div className="markster-card-divider" />
@@ -110,8 +110,8 @@ export default function MarksterLanding() {
                     <FileText className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="markster-card-title">Clean TM-A Filing</h3>
-                    <p className="markster-card-text">Properly classed, accurate goods/services, and Vienna codes for device marks.</p>
+                    <h3 className="markster-card-title">Smart Filing (TM‑A)</h3>
+                    <p className="markster-card-text">Spec drafting that balances breadth with survivability</p>
                   </div>
                 </div>
                 <div className="markster-card-divider" />
@@ -120,8 +120,8 @@ export default function MarksterLanding() {
                     <AlertTriangle className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="markster-card-title">Early Conflict Alerts</h3>
-                    <p className="markster-card-text">60 or 90-day journal watch; we flag any conflicting applications so you can act fast.</p>
+                    <h3 className="markster-card-title">1 Examination Reply Included</h3>
+                    <p className="markster-card-text">Arguments &amp; evidence; hearing brief if listed</p>
                   </div>
                 </div>
                 <div className="markster-card-divider" />
@@ -130,8 +130,8 @@ export default function MarksterLanding() {
                     <ShieldCheck className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="markster-card-title">Exam Reply Included</h3>
-                    <p className="markster-card-text">One objection response at no extra charge. Hearing brief also provided.</p>
+                    <h3 className="markster-card-title">60‑day Trademark Watch</h3>
+                    <p className="markster-card-text">Weekly bulletin scan · Early warnings · Action plan</p>
                   </div>
                 </div>
               </div>
@@ -140,24 +140,24 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Trust Bar */}
-      <Section>
+      {/* Trust Bar - Single Line */}
+      <Section className="py-8 md:py-12">
         <Container>
-          <div className="grid grid-cols-1 gap-6 text-sm text-gray-600 md:grid-cols-2">
-            <div className="flex items-start gap-3">
-              <Scale className="mt-1 h-5 w-5 flex-none" aria-hidden />
+          <div className="markster-trust-bar-single-line">
+            <div className="markster-trust-item-compact">
+              <Scale className="h-4 w-4 flex-none" aria-hidden />
               <span>Services by Licensed Lawyers</span>
             </div>
-            <div className="flex items-start gap-3">
-              <Globe2 className="mt-1 h-5 w-5 flex-none" aria-hidden />
+            <div className="markster-trust-item-compact">
+              <Globe2 className="h-4 w-4 flex-none" aria-hidden />
               <span>Fixed‑fee · Transparent timelines</span>
             </div>
-            <div className="flex items-start gap-3">
-              <ShieldCheck className="mt-1 h-5 w-5 flex-none" aria-hidden />
+            <div className="markster-trust-item-compact">
+              <ShieldCheck className="h-4 w-4 flex-none" aria-hidden />
               <span>Dossier &amp; status dashboard access</span>
             </div>
-            <div className="flex items-start gap-3">
-              <Clock className="mt-1 h-5 w-5 flex-none" aria-hidden />
+            <div className="markster-trust-item-compact">
+              <Clock className="h-4 w-4 flex-none" aria-hidden />
               <span>Priority turnaround options</span>
             </div>
           </div>
@@ -168,8 +168,8 @@ export default function MarksterLanding() {
       <Section>
         <Container>
           <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">What's included</h2>
-            <p className="mt-2 text-gray-600">Every Markster™ engagement includes search, filing, objection handling, and journal monitoring.</p>
+            <h2 className="text-2xl font-bold md:text-3xl">What you get from Markster™</h2>
+            <p className="mt-2 text-gray-600 text-center">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
             <Card className="rounded-2xl">
