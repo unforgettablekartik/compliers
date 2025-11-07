@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, MessageSquare, Target, Zap, Eye } from "lucide-react";
+import { FaSearch, FaRegFileAlt, FaExclamationTriangle, FaBell, FaShieldAlt, FaGlobe } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
@@ -23,6 +24,58 @@ const ListItem = ({ children }: { children: React.ReactNode }) => (
 const CrossItem = ({ children }: { children: React.ReactNode }) => (
   <li className="flex items-start gap-3"><XCircle className="mt-1 h-5 w-5 flex-none" aria-hidden /><span>{children}</span></li>
 );
+
+// --- Markster Benefits Section ---
+function MarksterBenefits() {
+  const benefits = [
+    {
+      icon: <FaSearch className="text-2xl md:text-3xl" />, 
+      title: "Search & Risk Opinion",
+      desc: "Identical/phonetic/visual search across target & related classes with a clear availability rating."
+    },
+    {
+      icon: <FaRegFileAlt className="text-2xl md:text-3xl" />, 
+      title: "Filing Strategy & TM-A",
+      desc: "Class mapping, specification drafting, TM-48, and clean e-filing with stamped acknowledgments."
+    },
+    {
+      icon: <FaExclamationTriangle className="text-2xl md:text-3xl" />, 
+      title: "Examination Reply (1 round)",
+      desc: "Substantive reply with case-law where useful; hearing brief if listed."
+    },
+    {
+      icon: <FaBell className="text-2xl md:text-3xl" />, 
+      title: "60-day Watch",
+      desc: "Weekly bulletins scanned for conflicting marks; early-warning alerts."
+    },
+    {
+      icon: <FaShieldAlt className="text-2xl md:text-3xl" />, 
+      title: "Use & Policing Kit",
+      desc: "™/® usage guide, website/footer specimens, brand policing SOP for your team."
+    },
+    {
+      icon: <FaGlobe className="text-2xl md:text-3xl" />, 
+      title: "Scale Options",
+      desc: "Extra classes, device/logo filing, oppositions, & Madrid coordination as add-ons."
+    }
+  ];
+  return (
+    <section className="mb-16">
+      <div className="container mx-auto">
+        <h2 className="text-3xl font-bold text-center mb-8">What you get from Markster™</h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {benefits.map((b, idx) => (
+            <div key={idx} className="bg-white rounded-2xl shadow p-7 flex flex-col items-start">
+              <div className="mb-3 p-3 bg-gray-100 rounded-xl">{b.icon}</div>
+              <h3 className="font-semibold text-xl mb-2">{b.title}</h3>
+              <p className="text-gray-700">{b.desc}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
 
 // --- Main Page ---
 export default function MarksterLanding() {
@@ -51,8 +104,7 @@ export default function MarksterLanding() {
           }),
         }}
       />
-
-      {/* Hero */}
+      {/* Hero and other sections ... */}
       <Section className="markster-hero">
         <Container>
           <div className="markster-hero-grid">
@@ -139,6 +191,9 @@ export default function MarksterLanding() {
           </div>
         </Container>
       </Section>
+      
+      {/* Insert new Markster Benefits cards section here */}
+      <MarksterBenefits />
 
       {/* Trust Bar - Single Line */}
       <Section className="py-8 md:py-12">
