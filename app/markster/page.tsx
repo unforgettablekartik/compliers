@@ -163,7 +163,7 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Features */}
+      {/* Features - What you get from Markster™ */}
       <Section>
         <Container>
           <div className="mb-10 text-center">
