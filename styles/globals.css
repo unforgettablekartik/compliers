@@ -1252,6 +1252,11 @@ section h2 {
   gap: 0.5rem;
 }
 
+/* Text alignment utilities */
+.text-center {
+  text-align: center;
+}
+
 /* Responsive grid for small screens (640px+) */
 @media (min-width: 640px) {
   .sm\:grid-cols-2 {
