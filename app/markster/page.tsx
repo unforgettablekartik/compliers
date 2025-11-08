@@ -17,11 +17,11 @@ const Container = ({ children, className = "" }: { children: React.ReactNode; cl
 );
 
 const ListItem = ({ children }: { children: React.ReactNode }) => (
-  <li className="flex items-start gap-3"><CheckCircle2 className="mt-1 h-5 w-5 flex-none" aria-hidden /><span>{children}</span></li>
+  <li className="flex items-start"><span>{children}</span></li>
 );
 
 const CrossItem = ({ children }: { children: React.ReactNode }) => (
-  <li className="flex items-start gap-3"><XCircle className="mt-1 h-5 w-5 flex-none" aria-hidden /><span>{children}</span></li>
+  <li className="flex items-start"><span>{children}</span></li>
 );
 
 // --- Main Page ---
@@ -166,9 +166,9 @@ export default function MarksterLanding() {
       {/* Features - What you get from Markster™ - Updated */}
       <Section className="bg-gray-50">
         <Container>
-          <div className="mb-12 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl mb-4">What you get from Markster™</h2>
-            <p className="mt-4 text-gray-600 text-center max-w-3xl mx-auto">From search to filing to early defence—everything required to launch without brand anxiety.</p>
+          <div className="mb-16 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">What you get from Markster™</h2>
+            <p className="mt-2 text-gray-600">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
             <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
@@ -237,8 +237,8 @@ export default function MarksterLanding() {
       {/* Process */}
       <Section className="bg-gray-50">
         <Container>
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">How it works</h2>
+          <div className="mb-16 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">How it works</h2>
             <p className="mt-2 text-gray-600">Three simple steps from kickoff to filing and ongoing watch.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -264,14 +264,17 @@ export default function MarksterLanding() {
       {/* Inclusions / Exclusions */}
       <Section>
         <Container>
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">What's in, what's out</h2>
+          <div className="mb-16 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">What's covered, what's not</h2>
             <p className="mt-2 text-gray-600">Clear scope so you know exactly what's covered.</p>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <h3 className="mb-4 text-lg font-semibold">Included in all tiers</h3>
-              <ul className="space-y-3 text-sm text-gray-700">
+              <h3 className="mb-4 text-lg font-semibold flex items-center gap-4">
+                <CheckCircle2 className="h-5 w-5 text-green-600 mt-1" />
+                What's Included
+              </h3>
+              <ul className="space-y-4 text-sm text-gray-700">
                 <ListItem>Comprehensive trademark search &amp; conflict report</ListItem>
                 <ListItem>TM-A application drafting &amp; filing</ListItem>
                 <ListItem>One examination reply (objection response)</ListItem>
@@ -282,8 +285,11 @@ export default function MarksterLanding() {
               </ul>
             </div>
             <div>
-              <h3 className="mb-4 text-lg font-semibold">Not included (quoted separately)</h3>
-              <ul className="space-y-3 text-sm text-gray-700">
+              <h3 className="mb-4 text-lg font-semibold flex items-center gap-4">
+                <XCircle className="h-5 w-5 text-red-600 mt-1" />
+                Not Included (available on request)
+              </h3>
+              <ul className="space-y-4 text-sm text-gray-700">
                 <CrossItem>Hearing appearance (counsel briefing available)</CrossItem>
                 <CrossItem>Opposition proceedings (defensive or offensive)</CrossItem>
                 <CrossItem>Madrid Protocol / foreign filings</CrossItem>
@@ -299,8 +305,8 @@ export default function MarksterLanding() {
       {/* Pricing */}
       <Section id="pricing" className="bg-gradient-to-b from-white to-sky-50">
         <Container>
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">Transparent, fixed‑fee pricing</h2>
+          <div className="mb-16 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed‑fee pricing</h2>
             <p className="mt-2 text-gray-600">Official government fees vary by entity & per class—billed at cost. Professional fees below are for our work.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -430,18 +436,6 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Footer */}
-      <footer className="border-t bg-white py-8">
-        <Container>
-          <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-600 md:flex-row">
-            <div>© 2025 The Compliers. All rights reserved.</div>
-            <div className="flex gap-6">
-              <a href="/privacy" className="underline hover:text-gray-900">Privacy</a>
-              <a href="/terms" className="underline hover:text-gray-900">Terms</a>
-            </div>
-          </div>
-        </Container>
-      </footer>
     </div>
   );
 }
