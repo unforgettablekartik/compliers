@@ -270,8 +270,8 @@ export default function MarksterLanding() {
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <h3 className="mb-4 text-lg font-semibold flex items-center gap-2">
-                <CheckCircle2 className="h-5 w-5 text-green-600" />
+              <h3 className="mb-4 text-lg font-semibold flex items-center gap-3">
+                <CheckCircle2 className="h-5 w-5 text-green-600 mt-0.5" />
                 What's Included
               </h3>
               <ul className="space-y-3 text-sm text-gray-700">
@@ -285,7 +285,10 @@ export default function MarksterLanding() {
               </ul>
             </div>
             <div>
-              <h3 className="mb-4 text-lg font-semibold">Not Included (available on request)</h3>
+              <h3 className="mb-4 text-lg font-semibold flex items-center gap-3">
+                <XCircle className="h-5 w-5 text-red-600 mt-0.5" />
+                Not Included (available on request)
+              </h3>
               <ul className="space-y-3 text-sm text-gray-700">
                 <CrossItem>Hearing appearance (counsel briefing available)</CrossItem>
                 <CrossItem>Opposition proceedings (defensive or offensive)</CrossItem>
