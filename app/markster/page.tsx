@@ -299,8 +299,8 @@ export default function MarksterLanding() {
       {/* Pricing */}
       <Section id="pricing" className="bg-gradient-to-b from-white to-sky-50">
         <Container>
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">Transparent, fixed‑fee pricing</h2>
+          <div className="mb-16 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed‑fee pricing</h2>
             <p className="mt-2 text-gray-600">Official government fees vary by entity & per class—billed at cost. Professional fees below are for our work.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
