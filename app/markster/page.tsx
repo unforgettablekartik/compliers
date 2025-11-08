@@ -166,9 +166,9 @@ export default function MarksterLanding() {
       {/* Features - What you get from Markster™ - Updated */}
       <Section className="bg-gray-50">
         <Container>
-          <div className="mb-12 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl mb-4">What you get from Markster™</h2>
-            <p className="mt-4 text-gray-600">From search to filing to early defence—everything required to launch without brand anxiety.</p>
+          <div className="mb-16 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">What you get from Markster™</h2>
+            <p className="mt-2 text-gray-600">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
             <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">

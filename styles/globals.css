@@ -1257,6 +1257,19 @@ section h2 {
   text-align: center;
 }
 
+/* Margin utilities */
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mb-16 {
+  margin-bottom: 4rem;
+}
+
 /* Responsive grid for small screens (640px+) */
 @media (min-width: 640px) {
   .sm\:grid-cols-2 {
