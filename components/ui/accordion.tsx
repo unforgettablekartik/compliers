@@ -50,15 +50,15 @@ export function AccordionTrigger({
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
   return (
     <button
-      className={`w-full text-left font-medium py-4 px-0 bg-white flex justify-between items-center hover:opacity-70 transition-opacity ${className}`}
+      className={`w-full text-left py-3 px-0 bg-white flex justify-between items-center hover:text-gray-600 transition-colors ${className}`}
       onClick={onToggle}
       type="button"
       aria-expanded={isOpen}
       {...props}
     >
-      <span className="pr-4">{children}</span>
+      <span className="flex-1 text-base font-medium">{children}</span>
       <svg
-        className={`w-5 h-5 flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
+        className={`w-4 h-4 ml-3 flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
         fill="none"
         stroke="currentColor"
         viewBox="0 0 24 24"
@@ -77,6 +77,6 @@ export function AccordionContent({
   ...props
 }: React.PropsWithChildren<{ isOpen?: boolean; className?: string }>) {
   return isOpen ? (
-    <div className={`pb-4 pt-2 pr-0 pl-0 bg-white text-gray-700 ${className}`} {...props}>{children}</div>
+    <div className={`pb-4 pt-1 pr-0 pl-0 bg-white text-gray-600 text-sm leading-relaxed ${className}`} {...props}>{children}</div>
   ) : null;
 }
