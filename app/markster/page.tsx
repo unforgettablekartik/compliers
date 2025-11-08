@@ -164,14 +164,14 @@ export default function MarksterLanding() {
       </Section>
 
       {/* Features - What you get from Markster™ - Updated */}
-      <Section>
+      <Section className="bg-gray-50">
         <Container>
           <div className="mb-12 text-center">
             <h2 className="text-2xl font-bold md:text-3xl mb-4">What you get from Markster™</h2>
             <p className="mt-4 text-gray-600 text-center max-w-3xl mx-auto">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
-            <Card className="rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6">
+          <div className="grid gap-8 md:grid-cols-3 lg:grid-cols-3">
+            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
               <div className="flex flex-col items-start">
                 <div className="rounded-2xl bg-gray-100 p-3 mb-4">
                   <Search className="h-6 w-6" aria-hidden />
@@ -181,7 +181,7 @@ export default function MarksterLanding() {
               </div>
             </Card>
 
-            <Card className="rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6">
+            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
               <div className="flex flex-col items-start">
                 <div className="rounded-2xl bg-gray-100 p-3 mb-4">
                   <FileText className="h-6 w-6" aria-hidden />
@@ -191,7 +191,7 @@ export default function MarksterLanding() {
               </div>
             </Card>
 
-            <Card className="rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6">
+            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
               <div className="flex flex-col items-start">
                 <div className="rounded-2xl bg-gray-100 p-3 mb-4">
                   <AlertTriangle className="h-6 w-6" aria-hidden />
@@ -201,7 +201,7 @@ export default function MarksterLanding() {
               </div>
             </Card>
 
-            <Card className="rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6">
+            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
               <div className="flex flex-col items-start">
                 <div className="rounded-2xl bg-gray-100 p-3 mb-4">
                   <Eye className="h-6 w-6" aria-hidden />
@@ -211,7 +211,7 @@ export default function MarksterLanding() {
               </div>
             </Card>
 
-            <Card className="rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6">
+            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
               <div className="flex flex-col items-start">
                 <div className="rounded-2xl bg-gray-100 p-3 mb-4">
                   <ShieldCheck className="h-6 w-6" aria-hidden />
@@ -221,7 +221,7 @@ export default function MarksterLanding() {
               </div>
             </Card>
 
-            <Card className="rounded-2xl border border-gray-200 shadow-md hover:shadow-lg transition-shadow p-6">
+            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
               <div className="flex flex-col items-start">
                 <div className="rounded-2xl bg-gray-100 p-3 mb-4">
                   <Target className="h-6 w-6" aria-hidden />
