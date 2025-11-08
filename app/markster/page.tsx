@@ -265,12 +265,15 @@ export default function MarksterLanding() {
       <Section>
         <Container>
           <div className="mb-16 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl mb-2">What's in, what's out</h2>
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">What's covered, what's not</h2>
             <p className="mt-2 text-gray-600">Clear scope so you know exactly what's covered.</p>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
             <div>
-              <h3 className="mb-4 text-lg font-semibold">Included in all tiers</h3>
+              <h3 className="mb-4 text-lg font-semibold flex items-center gap-2">
+                <CheckCircle2 className="h-5 w-5 text-green-600" />
+                What's Included
+              </h3>
               <ul className="space-y-3 text-sm text-gray-700">
                 <ListItem>Comprehensive trademark search &amp; conflict report</ListItem>
                 <ListItem>TM-A application drafting &amp; filing</ListItem>
@@ -282,7 +285,7 @@ export default function MarksterLanding() {
               </ul>
             </div>
             <div>
-              <h3 className="mb-4 text-lg font-semibold">Not included (quoted separately)</h3>
+              <h3 className="mb-4 text-lg font-semibold">Not Included (available on request)</h3>
               <ul className="space-y-3 text-sm text-gray-700">
                 <CrossItem>Hearing appearance (counsel briefing available)</CrossItem>
                 <CrossItem>Opposition proceedings (defensive or offensive)</CrossItem>
@@ -430,18 +433,6 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Footer */}
-      <footer className="border-t bg-white py-8">
-        <Container>
-          <div className="flex flex-col items-center justify-between gap-4 text-sm text-gray-600 md:flex-row">
-            <div>© 2025 The Compliers. All rights reserved.</div>
-            <div className="flex gap-6">
-              <a href="/privacy" className="underline hover:text-gray-900">Privacy</a>
-              <a href="/terms" className="underline hover:text-gray-900">Terms</a>
-            </div>
-          </div>
-        </Container>
-      </footer>
     </div>
   );
 }
