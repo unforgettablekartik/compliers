@@ -237,8 +237,8 @@ export default function MarksterLanding() {
       {/* Process */}
       <Section className="bg-gray-50">
         <Container>
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">How it works</h2>
+          <div className="mb-16 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">How it works</h2>
             <p className="mt-2 text-gray-600">Three simple steps from kickoff to filing and ongoing watch.</p>
           </div>
           <div className="grid gap-6 md:grid-cols-3">
@@ -264,8 +264,8 @@ export default function MarksterLanding() {
       {/* Inclusions / Exclusions */}
       <Section>
         <Container>
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">What's in, what's out</h2>
+          <div className="mb-16 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">What's in, what's out</h2>
             <p className="mt-2 text-gray-600">Clear scope so you know exactly what's covered.</p>
           </div>
           <div className="grid gap-8 md:grid-cols-2">
