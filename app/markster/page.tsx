@@ -166,11 +166,11 @@ export default function MarksterLanding() {
       {/* Features - What you get from Markster™ - Updated */}
       <Section>
         <Container>
-          <div className="mb-10 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">What you get from Markster™</h2>
-            <p className="mt-2 text-gray-600 text-center">From search to filing to early defence—everything required to launch without brand anxiety.</p>
+          <div className="mb-12 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl mb-4">What you get from Markster™</h2>
+            <p className="mt-4 text-gray-600 text-center max-w-3xl mx-auto">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-3">
             <Card className="rounded-2xl p-6">
               <div className="flex flex-col items-start">
                 <div className="rounded-2xl bg-gray-100 p-3 mb-4">
