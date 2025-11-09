@@ -371,7 +371,7 @@ export default function MarksterLanding() {
           <div className="mb-12 text-center">
             <h2 className="text-2xl font-bold md:text-3xl mb-2">Frequently asked questions (FAQs)</h2>
           </div>
-          <div className="max-w-4xl mx-auto">
+          <div>
             <Accordion type="single" collapsible>
               <AccordionItem value="item-1">
                 <AccordionTrigger>Can I use ™ right after filing?</AccordionTrigger>
