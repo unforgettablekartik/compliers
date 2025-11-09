@@ -20,25 +20,27 @@ const Accordion = ({ children, type = "single", collapsible = false, className =
 };
 
 const AccordionItem = ({ isOpen, onToggle, children, className = "", value }) => (
-    <div className={`border-b border-gray-200 ${className}`}>
+    <div className={`relative ${className}`}>
         {React.Children.map(children, (child) =>
             React.cloneElement(child, {
                 isOpen,
                 onToggle,
             })
         )}
+        <div className="border-b border-gray-200 mt-2" />
     </div>
 );
 
 const AccordionTrigger = ({ isOpen, onToggle, children }) => (
     <button 
-        className="w-full text-left py-4 px-0 bg-transparent flex justify-between items-start border-0 hover:text-gray-700 transition-colors"
+        className="w-full text-left py-6 px-0 bg-transparent flex justify-between items-center hover:text-gray-700 transition-colors"
+        style={{ border: 'none', outline: 'none' }}
         onClick={onToggle}
         type="button"
         aria-expanded={isOpen}
     >
-        <span className="flex-1 pr-8 text-base font-normal text-gray-900">{children}</span>
-        <span className="text-xl font-light text-gray-500 leading-none select-none flex-shrink-0" aria-hidden="true">
+        <span className="flex-1 text-base font-medium text-gray-900 max-w-[85%]">{children}</span>
+        <span className="text-2xl font-light text-gray-400 leading-none select-none flex-shrink-0 absolute right-0" aria-hidden="true" style={{ marginRight: '0' }}>
             {isOpen ? '−' : '+'}
         </span>
     </button>
@@ -46,7 +48,7 @@ const AccordionTrigger = ({ isOpen, onToggle, children }) => (
 
 const AccordionContent = ({ isOpen, children }) => (
     isOpen ? (
-        <div className="pb-4 pt-0 pr-0 pl-0 bg-transparent text-gray-600 text-sm leading-relaxed">
+        <div className="pb-6 pt-2 pr-0 pl-0 bg-transparent text-gray-600 text-base leading-relaxed">
             {children}
         </div>
     ) : null
