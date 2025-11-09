@@ -368,8 +368,8 @@ export default function MarksterLanding() {
       {/* FAQ */}
       <Section>
         <Container>
-          <div className="mb-8 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl">Frequently asked questions</h2>
+          <div className="mb-12 text-center">
+            <h2 className="text-2xl font-bold md:text-3xl">Frequently asked questions (FAQs)</h2>
           </div>
           <Accordion type="single" collapsible className="mx-auto max-w-3xl">
             <AccordionItem value="q1">
@@ -382,11 +382,11 @@ export default function MarksterLanding() {
             </AccordionItem>
             <AccordionItem value="q3">
               <AccordionTrigger>How many classes should I choose?</AccordionTrigger>
-              <AccordionContent>Select classes that reflect actual/near‑term (3–12 months) goods/services. We map this during kickoff to avoid waste.</AccordionContent>
+              <AccordionContent>Select classes that reflect actual/near term (3–12 months) goods/services. We map this during kickoff to avoid waste.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q4">
               <AccordionTrigger>Will you attend hearings?</AccordionTrigger>
-              <AccordionContent>Hearing appearance is an add‑on. We include a hearing brief and can appear/brief counsel upon request.</AccordionContent>
+              <AccordionContent>Hearing appearance is an add on. We include a hearing brief and can appear/brief counsel upon request.</AccordionContent>
             </AccordionItem>
             <AccordionItem value="q5">
               <AccordionTrigger>Can you help with global protection?</AccordionTrigger>
