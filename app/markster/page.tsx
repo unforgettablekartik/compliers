@@ -372,23 +372,23 @@ export default function MarksterLanding() {
             <h2 className="text-2xl font-bold md:text-3xl">Frequently asked questions (FAQs)</h2>
           </div>
           <Accordion type="single" collapsible className="mx-auto max-w-3xl">
-            <AccordionItem value="q1" className="border-b border-gray-200">
+            <AccordionItem value="q1">
               <AccordionTrigger>Can I use ™ right after filing?</AccordionTrigger>
               <AccordionContent>Yes. You may use ™ immediately after filing. Switch to ® only after registration is granted.</AccordionContent>
             </AccordionItem>
-            <AccordionItem value="q2" className="border-b border-gray-200">
+            <AccordionItem value="q2">
               <AccordionTrigger>Do I need use evidence to file?</AccordionTrigger>
               <AccordionContent>Not necessarily. You can file on a "proposed to be used" basis. Use evidence strengthens examination/opposition stages.</AccordionContent>
             </AccordionItem>
-            <AccordionItem value="q3" className="border-b border-gray-200">
+            <AccordionItem value="q3">
               <AccordionTrigger>How many classes should I choose?</AccordionTrigger>
               <AccordionContent>Select classes that reflect actual/near term (3–12 months) goods/services. We map this during kickoff to avoid waste.</AccordionContent>
             </AccordionItem>
-            <AccordionItem value="q4" className="border-b border-gray-200">
+            <AccordionItem value="q4">
               <AccordionTrigger>Will you attend hearings?</AccordionTrigger>
               <AccordionContent>Hearing appearance is an add on. We include a hearing brief and can appear/brief counsel upon request.</AccordionContent>
             </AccordionItem>
-            <AccordionItem value="q5" className="border-b border-gray-200">
+            <AccordionItem value="q5">
               <AccordionTrigger>Can you help with global protection?</AccordionTrigger>
               <AccordionContent>Yes. We coordinate Madrid Protocol and national filings with partner counsel and timeline planning.</AccordionContent>
             </AccordionItem>
