@@ -51,7 +51,8 @@ export function AccordionTrigger({
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
   return (
     <button
-      className={`w-full text-left py-5 px-0 bg-transparent flex justify-between items-start border-0 hover:text-gray-700 transition-colors ${className}`}
+      className={`w-full text-left py-5 px-0 bg-transparent flex justify-between items-start hover:text-gray-700 transition-colors ${className}`}
+      style={{ border: 'none', outline: 'none' }}
       onClick={onToggle}
       type="button"
       aria-expanded={isOpen}
