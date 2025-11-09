@@ -53,16 +53,16 @@ export function AccordionTrigger({
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
   return (
     <button
-      className={`w-full text-left py-6 px-0 pr-12 bg-transparent block hover:text-gray-700 transition-colors ${className}`}
+      className={`w-full text-left py-6 px-0 pr-12 bg-white block cursor-pointer ${className}`}
       style={{ border: 'none', outline: 'none' }}
       onClick={onToggle}
       type="button"
       aria-expanded={isOpen}
       {...props}
     >
-      <span className="text-base font-normal text-gray-900">{children}</span>
+      <span className="text-base font-bold">{children}</span>
       <span 
-        className="text-2xl font-normal text-gray-400 leading-none select-none absolute right-0 top-6" 
+        className="text-2xl font-light leading-none select-none absolute right-0 top-6" 
         aria-hidden="true"
       >
         {isOpen ? '−' : '+'}
@@ -78,6 +78,6 @@ export function AccordionContent({
   ...props
 }: React.PropsWithChildren<{ isOpen?: boolean; className?: string }>) {
   return isOpen ? (
-    <div className={`pb-6 pt-2 pr-0 pl-0 bg-transparent text-gray-900 text-base font-normal leading-relaxed ${className}`} {...props}>{children}</div>
+    <div className={`pb-6 pt-2 pr-0 pl-0 bg-white text-base font-normal leading-relaxed ${className}`} {...props}>{children}</div>
   ) : null;
 }
