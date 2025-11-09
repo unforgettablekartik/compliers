@@ -1,25 +1,25 @@
 import React, { useState } from 'react';
 
 const Accordion = ({ children, type = "single", collapsible = false, className = "" }) => {
-    const [openIndex, setOpenIndex] = useState(null);
+    const [openItem, setOpenItem] = useState(null);
 
-    const toggleAccordion = (index) => {
-        setOpenIndex(openIndex === index ? null : index);
+    const toggleAccordion = (value) => {
+        setOpenItem(openItem === value && collapsible ? null : value);
     };
 
     return (
         <div className={className}>
-            {React.Children.map(children, (child, index) =>
+            {React.Children.map(children, (child) =>
                 React.cloneElement(child, {
-                    isOpen: openIndex === index,
-                    onToggle: () => toggleAccordion(index),
+                    isOpen: openItem === child.props.value,
+                    onToggle: () => toggleAccordion(child.props.value),
                 })
             )}
         </div>
     );
 };
 
-const AccordionItem = ({ isOpen, onToggle, children, className = "" }) => (
+const AccordionItem = ({ isOpen, onToggle, children, className = "", value }) => (
     <div className={className}>
         {React.Children.map(children, (child) =>
             React.cloneElement(child, {
