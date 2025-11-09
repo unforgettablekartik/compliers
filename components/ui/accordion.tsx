@@ -53,7 +53,7 @@ export function AccordionTrigger({
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
   return (
     <button
-      className={`w-full text-left py-6 px-0 pr-12 bg-white block cursor-pointer ${className}`}
+      className={`w-full text-left py-6 px-0 pr-12 bg-white relative cursor-pointer ${className}`}
       style={{ border: 'none', outline: 'none' }}
       onClick={onToggle}
       type="button"
