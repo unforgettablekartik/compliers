@@ -366,7 +366,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* FAQ */}
-      <Section>
+      <Section className="bg-white">
         <Container>
           <div className="mb-12 text-center">
             <h2 className="text-2xl font-bold md:text-3xl">Frequently asked questions (FAQs)</h2>
