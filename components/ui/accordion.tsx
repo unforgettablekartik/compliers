@@ -33,10 +33,11 @@ export function AccordionItem({
   if (!ctx) throw new Error("AccordionItem must be used within Accordion");
   const isOpen = ctx.openItem === value;
   return (
-    <div className={`border-b border-gray-200 ${className}`} {...props}>
+    <div className={`relative ${className}`} {...props}>
       {React.Children.map(children, (child: any) =>
         React.cloneElement(child, { isOpen, onToggle: () => ctx.setOpenItem(isOpen && ctx.collapsible ? null : value) })
       )}
+      <div className="border-b border-gray-200 mt-2" />
     </div>
   );
 }
@@ -50,14 +51,15 @@ export function AccordionTrigger({
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
   return (
     <button
-      className={`w-full text-left py-4 px-0 bg-transparent flex justify-between items-start border-0 hover:text-gray-700 transition-colors ${className}`}
+      className={`w-full text-left py-6 px-0 bg-transparent flex justify-between items-center hover:text-gray-700 transition-colors ${className}`}
+      style={{ border: 'none', outline: 'none' }}
       onClick={onToggle}
       type="button"
       aria-expanded={isOpen}
       {...props}
     >
-      <span className="flex-1 pr-8 text-base font-normal text-gray-900">{children}</span>
-      <span className="text-xl font-light text-gray-500 leading-none select-none flex-shrink-0" aria-hidden="true">
+      <span className="flex-1 text-base font-medium text-gray-900 max-w-[85%]">{children}</span>
+      <span className="text-2xl font-light text-gray-400 leading-none select-none flex-shrink-0 absolute right-0" aria-hidden="true" style={{ marginRight: '0' }}>
         {isOpen ? '−' : '+'}
       </span>
     </button>
@@ -71,6 +73,6 @@ export function AccordionContent({
   ...props
 }: React.PropsWithChildren<{ isOpen?: boolean; className?: string }>) {
   return isOpen ? (
-    <div className={`pb-4 pt-0 pr-0 pl-0 bg-transparent text-gray-600 text-sm leading-relaxed ${className}`} {...props}>{children}</div>
+    <div className={`pb-6 pt-2 pr-0 pl-0 bg-transparent text-gray-600 text-base leading-relaxed ${className}`} {...props}>{children}</div>
   ) : null;
 }
