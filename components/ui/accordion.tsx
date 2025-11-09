@@ -58,8 +58,8 @@ export function AccordionTrigger({
       aria-expanded={isOpen}
       {...props}
     >
-      <span className="flex-1 text-base text-gray-900 max-w-[85%]">{children}</span>
-      <span className="text-2xl font-light text-gray-400 leading-none select-none flex-shrink-0 absolute right-0" aria-hidden="true" style={{ marginRight: '0' }}>
+      <span className="flex-1 text-base text-gray-900 pr-16">{children}</span>
+      <span className="text-2xl font-light text-gray-400 leading-none select-none flex-shrink-0" aria-hidden="true">
         {isOpen ? '−' : '+'}
       </span>
     </button>
