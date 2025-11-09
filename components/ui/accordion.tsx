@@ -50,22 +50,16 @@ export function AccordionTrigger({
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
   return (
     <button
-      className={`w-full text-left py-3 px-0 bg-white flex justify-between items-center hover:text-gray-600 transition-colors ${className}`}
+      className={`w-full text-left py-4 px-0 bg-white flex justify-between items-center gap-4 hover:text-gray-700 transition-colors border-0 ${className}`}
       onClick={onToggle}
       type="button"
       aria-expanded={isOpen}
       {...props}
     >
-      <span className="flex-1 text-base font-medium">{children}</span>
-      <svg
-        className={`w-4 h-4 ml-3 flex-shrink-0 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`}
-        fill="none"
-        stroke="currentColor"
-        viewBox="0 0 24 24"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-      </svg>
+      <span className="flex-1 text-base font-normal text-gray-900">{children}</span>
+      <span className="text-2xl font-light text-gray-500 leading-none select-none" aria-hidden="true">
+        {isOpen ? '−' : '+'}
+      </span>
     </button>
   );
 }
@@ -77,6 +71,6 @@ export function AccordionContent({
   ...props
 }: React.PropsWithChildren<{ isOpen?: boolean; className?: string }>) {
   return isOpen ? (
-    <div className={`pb-4 pt-1 pr-0 pl-0 bg-white text-gray-600 text-sm leading-relaxed ${className}`} {...props}>{children}</div>
+    <div className={`pb-6 pt-2 pr-0 pl-0 bg-white text-gray-600 text-sm leading-relaxed ${className}`} {...props}>{children}</div>
   ) : null;
 }
