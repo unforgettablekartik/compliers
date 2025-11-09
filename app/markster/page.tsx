@@ -367,7 +367,7 @@ export default function MarksterLanding() {
 
       {/* FAQ Section */}
       <Section className="bg-white">
-        <Container>
+        <div className="w-full px-4 md:px-6">
           <div className="mb-12 text-center">
             <h2 className="text-2xl font-bold md:text-3xl mb-2">Frequently asked questions (FAQs)</h2>
           </div>
@@ -409,7 +409,7 @@ export default function MarksterLanding() {
               </AccordionItem>
             </Accordion>
           </div>
-        </Container>
+        </div>
       </Section>
 
       {/* Start / Contact */}
