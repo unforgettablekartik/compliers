@@ -1801,6 +1801,185 @@ section h2 {
   }
 }
 
+/* Markster "How it works" Section Styles */
+
+/* Section wrapper */
+.markster-how-it-works-section {
+  background-color: #f9fafb; /* very light gray tint (gray-50) */
+  padding: 4rem 0; /* 64px top and bottom on mobile */
+}
+
+@media (min-width: 768px) {
+  .markster-how-it-works-section {
+    padding: 5.5rem 0; /* 88px top and bottom on desktop */
+  }
+}
+
+/* Header (centered) */
+.markster-how-it-works-header {
+  text-align: center;
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+@media (min-width: 768px) {
+  .markster-how-it-works-header {
+    margin-bottom: 2rem; /* 32px */
+  }
+}
+
+.markster-how-it-works-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem; /* 24px mobile */
+  font-weight: 800; /* extra-bold */
+  line-height: 1.2;
+  color: #111827; /* ink/dark */
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .markster-how-it-works-title {
+    font-size: 2rem; /* 32px desktop */
+  }
+}
+
+@media (min-width: 1024px) {
+  .markster-how-it-works-title {
+    font-size: 2.25rem; /* 36px on larger screens */
+  }
+}
+
+.markster-how-it-works-subtitle {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem; /* 16px */
+  font-weight: 400; /* regular */
+  line-height: 1.6; /* relaxed */
+  color: #6b7280; /* muted gray */
+  margin-top: 0.5rem; /* 8px */
+  margin-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .markster-how-it-works-subtitle {
+    margin-top: 0.75rem; /* 12px */
+  }
+}
+
+/* Grid layout (cards) */
+.markster-how-it-works-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem; /* 16px vertical gap on mobile */
+}
+
+@media (min-width: 640px) {
+  .markster-how-it-works-grid {
+    gap: 1.25rem; /* 20px on small tablets */
+  }
+}
+
+@media (min-width: 768px) {
+  .markster-how-it-works-grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns on desktop */
+    gap: 1.5rem; /* 24px */
+  }
+}
+
+/* Card container */
+.markster-how-it-works-card {
+  background-color: #ffffff; /* white */
+  border: 1px solid #e5e7eb; /* thin, very light neutral (visible) */
+  border-radius: 1.5rem; /* very large / pill-like (rounded-3xl look) */
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* subtle (shadow-sm) */
+  padding: 1.5rem; /* 24px on all sides */
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .markster-how-it-works-card {
+    padding: 1.75rem; /* 28px on desktop */
+  }
+}
+
+.markster-how-it-works-card:hover {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+/* Step chip (inline, above title) */
+.markster-step-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem; /* 6px */
+  padding: 0.25rem 0.75rem; /* rounded pill */
+  background-color: #f3f4f6; /* muted gray background */
+  border-radius: 9999px; /* pill shape */
+  width: fit-content;
+  margin-bottom: 0.75rem; /* 12px above title */
+}
+
+@media (min-width: 768px) {
+  .markster-step-chip {
+    margin-bottom: 1rem; /* 16px on desktop */
+  }
+}
+
+.markster-step-chip span {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.75rem; /* 12px tiny text */
+  font-weight: 500;
+  color: #6b7280; /* muted gray text */
+  line-height: 1;
+}
+
+/* Icon inside step chip */
+.markster-step-icon {
+  width: 1rem; /* 16px */
+  height: 1rem;
+  color: #475569; /* subtle slate/ink */
+  flex-shrink: 0;
+}
+
+/* Title (bold) */
+.markster-card-title-hiw {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem; /* 16px mobile */
+  font-weight: 700; /* bold */
+  line-height: 1.3;
+  color: #111827; /* ink/dark */
+  margin: 0 0 0.5rem 0; /* 8px below title */
+}
+
+@media (min-width: 768px) {
+  .markster-card-title-hiw {
+    font-size: 1.125rem; /* 18px desktop */
+    margin-bottom: 0.75rem; /* 12px */
+  }
+}
+
+@media (min-width: 1024px) {
+  .markster-card-title-hiw {
+    font-size: 1.25rem; /* 20px on larger screens */
+  }
+}
+
+/* Paragraph (muted) */
+.markster-card-paragraph-hiw {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 400; /* regular */
+  line-height: 1.6;
+  color: #6b7280; /* muted gray */
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .markster-card-paragraph-hiw {
+    font-size: 1rem; /* 16px desktop */
+  }
+}
+
 /* Markster Pricing Section Styles */
 
 /* Apply Times New Roman font to pricing section */

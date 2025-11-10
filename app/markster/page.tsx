@@ -227,29 +227,61 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Process */}
-      <Section className="bg-gray-50">
+      {/* How it works */}
+      <Section className="markster-how-it-works-section">
         <Container>
-          <div className="mb-16 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl mb-2">How it works</h2>
-            <p className="mt-2 text-gray-600">Three simple steps from kickoff to filing and ongoing watch.</p>
+          <div className="markster-how-it-works-header">
+            <h2 className="markster-how-it-works-title">How it works</h2>
+            <p className="markster-how-it-works-subtitle">Clear steps. Clear ownership. Clear outcomes.</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-3xl border bg-white p-6 shadow-sm">
-              <div className="mb-3 text-xs text-gray-600">Step 1</div>
-              <h3 className="text-lg font-semibold">Kickoff &amp; Search</h3>
-              <p className="mt-2 text-sm text-gray-600">We collect applicant details, the mark, classes, and run a comprehensive search. You receive a memo in 48 hours.</p>
-            </div>
-            <div className="rounded-3xl border bg-white p-6 shadow-sm">
-              <div className="mb-3 text-xs text-gray-600">Step 2</div>
-              <h3 className="text-lg font-semibold">Review &amp; File</h3>
-              <p className="mt-2 text-sm text-gray-600">Draft application shared for your approval. Once confirmed, we file the TM-A and share the application number within 72 hours.</p>
-            </div>
-            <div className="rounded-3xl border bg-white p-6 shadow-sm">
-              <div className="mb-3 text-xs text-gray-600">Step 3</div>
-              <h3 className="text-lg font-semibold">Monitor &amp; Defend</h3>
-              <p className="mt-2 text-sm text-gray-600">Journal watch active for 60 or 90 days. We alert you to conflicts and handle the first examination reply.</p>
-            </div>
+          <div className="markster-how-it-works-grid">
+            {/* Card 1 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0 }}
+              className="markster-how-it-works-card"
+            >
+              <div className="markster-step-chip">
+                <ChevronRight className="markster-step-icon" aria-hidden="true" />
+                <span>Step 1</span>
+              </div>
+              <h3 className="markster-card-title-hiw">Kickoff &amp; Brand Audit</h3>
+              <p className="markster-card-paragraph-hiw">30–40 min discovery; map classes, flag risks, documents checklist.</p>
+            </motion.div>
+            
+            {/* Card 2 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.05 }}
+              className="markster-how-it-works-card"
+            >
+              <div className="markster-step-chip">
+                <Search className="markster-step-icon" aria-hidden="true" />
+                <span>Step 2</span>
+              </div>
+              <h3 className="markster-card-title-hiw">Search → Strategy</h3>
+              <p className="markster-card-paragraph-hiw">Deep search across mark variants; availability rating &amp; recommendations.</p>
+            </motion.div>
+            
+            {/* Card 3 */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              whileInView={{ opacity: 1, y: 0 }} 
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="markster-how-it-works-card"
+            >
+              <div className="markster-step-chip">
+                <ShieldCheck className="markster-step-icon" aria-hidden="true" />
+                <span>Step 3</span>
+              </div>
+              <h3 className="markster-card-title-hiw">File &amp; Defend Early</h3>
+              <p className="markster-card-paragraph-hiw">Draft specs, file TM-A, track; one exam reply included; 60-day watch.</p>
+            </motion.div>
           </div>
         </Container>
       </Section>
