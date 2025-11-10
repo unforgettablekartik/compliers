@@ -1667,6 +1667,142 @@ section h2 {
 
 /* Markster Pricing Section Styles */
 
+/* "What's covered, what's not" section styles */
+.markster-included-not-included-section {
+  background-color: #ffffff;
+  padding: 4rem 0; /* 64px on mobile */
+}
+
+@media (min-width: 768px) {
+  .markster-included-not-included-section {
+    padding: 5.5rem 0; /* 88px on desktop */
+  }
+}
+
+/* Container with max-width and centered */
+.markster-included-not-included-section .mx-auto {
+  max-width: 1200px; /* 1152-1200px range */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem; /* 16px */
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .markster-included-not-included-section .mx-auto {
+    padding-left: 1.5rem; /* 24px */
+    padding-right: 1.5rem;
+  }
+}
+
+/* Two-column grid */
+.markster-included-not-included-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem; /* 24px vertical gap on mobile */
+}
+
+@media (min-width: 768px) {
+  .markster-included-not-included-grid {
+    grid-template-columns: 1fr 1fr; /* Equal width columns on desktop */
+    gap: 2rem; /* 32px column gap on desktop */
+  }
+}
+
+/* Column styles */
+.markster-column {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Column headings */
+.markster-column-heading {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.25rem; /* 20px desktop */
+  font-weight: 700;
+  color: #0f172a; /* dark ink */
+  margin-bottom: 1rem; /* 16px */
+  line-height: 1.2;
+}
+
+@media (max-width: 767px) {
+  .markster-column-heading {
+    font-size: 1.125rem; /* 18px mobile */
+    margin-bottom: 0.75rem; /* 12px mobile */
+  }
+}
+
+/* List styles */
+.markster-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem; /* 14px between items */
+}
+
+@media (max-width: 767px) {
+  .markster-list {
+    gap: 0.75rem; /* 12px on mobile */
+  }
+}
+
+/* List item - icon and text in a row */
+.markster-list-item {
+  display: flex;
+  align-items: flex-start; /* Baseline-aligned effect */
+  gap: 0.625rem; /* 10px gap between icon and text */
+}
+
+@media (max-width: 767px) {
+  .markster-list-item {
+    gap: 0.5rem; /* 8px on mobile */
+  }
+}
+
+/* Icon styles */
+.markster-icon {
+  width: 1.375rem; /* 22px */
+  height: 1.375rem;
+  flex-shrink: 0;
+  margin-top: 0.125rem; /* Slight adjustment for baseline alignment */
+}
+
+@media (max-width: 767px) {
+  .markster-icon {
+    width: 1.25rem; /* 20px on mobile */
+    height: 1.25rem;
+  }
+}
+
+/* Check icon color */
+.markster-icon-check {
+  color: #475569; /* slate/ink color, subtle not bright */
+}
+
+/* Cross icon color */
+.markster-icon-cross {
+  color: #475569; /* slate/ink color, subtle not bright */
+}
+
+/* List text */
+.markster-list-text {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem; /* 16px */
+  color: #111827; /* dark neutral */
+  line-height: 1.5;
+  flex: 1;
+}
+
+@media (max-width: 767px) {
+  .markster-list-text {
+    font-size: 0.9375rem; /* 15px mobile */
+  }
+}
+
+/* Markster Pricing Section Styles */
+
 /* Apply Times New Roman font to pricing section */
 #pricing {
   font-family: 'Times New Roman', Times, serif;
