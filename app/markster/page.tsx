@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye } from "lucide-react";
+import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye, CheckCircle, XCircle as XCircleIcon } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -15,14 +15,6 @@ const Section = ({ id, className = "", children }: { id?: string; className?: st
 
 const Container = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <div className={`mx-auto max-w-6xl px-4 md:px-6 ${className}`}>{children}</div>
-);
-
-const ListItem = ({ children }: { children: React.ReactNode }) => (
-  <li className="flex items-start"><span>{children}</span></li>
-);
-
-const CrossItem = ({ children }: { children: React.ReactNode }) => (
-  <li className="flex items-start"><span>{children}</span></li>
 );
 
 // --- Main Page ---
@@ -262,41 +254,69 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Inclusions / Exclusions */}
-      <Section>
+      {/* Inclusions / Exclusions - Rebuilt */}
+      <Section className="markster-included-not-included-section">
         <Container>
-          <div className="mb-16 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl mb-2">What's covered, what's not</h2>
-            <p className="mt-2 text-gray-600">Clear scope so you know exactly what's covered.</p>
-          </div>
-          <div className="grid gap-8 md:grid-cols-2">
-            <div>
-              <h3 className="mb-4 text-lg font-semibold flex items-center gap-4">
-                <CheckCircle2 className="h-5 w-5 text-green-600 mt-1" />
-                What's Included
-              </h3>
-              <ul className="space-y-4 text-sm text-gray-700">
-                <ListItem>Comprehensive trademark search &amp; conflict report</ListItem>
-                <ListItem>TM-A application drafting &amp; filing</ListItem>
-                <ListItem>One examination reply (objection response)</ListItem>
-                <ListItem>Hearing brief (attendance is add-on)</ListItem>
-                <ListItem>60 or 90-day journal watch</ListItem>
-                <ListItem>Status dashboard &amp; dossier access</ListItem>
-                <ListItem>Fixed professional fee + govt fee at cost</ListItem>
+          <div className="markster-included-not-included-grid">
+            {/* Left Column: Included */}
+            <div className="markster-column">
+              <h3 className="markster-column-heading">Included</h3>
+              <ul className="markster-list">
+                <li className="markster-list-item">
+                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
+                  <span className="markster-list-text">Kickoff call &amp; class mapping</span>
+                </li>
+                <li className="markster-list-item">
+                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
+                  <span className="markster-list-text">Identical/phonetic/visual searches with risk memo</span>
+                </li>
+                <li className="markster-list-item">
+                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
+                  <span className="markster-list-text">Specification drafting &amp; TM-A filing (word or device)</span>
+                </li>
+                <li className="markster-list-item">
+                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
+                  <span className="markster-list-text">One examination reply (arguments/evidence)</span>
+                </li>
+                <li className="markster-list-item">
+                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
+                  <span className="markster-list-text">60-day trademark watch &amp; early-warning alerts</span>
+                </li>
+                <li className="markster-list-item">
+                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
+                  <span className="markster-list-text">™/® usage guide, policing SOP, monthly status updates</span>
+                </li>
+                <li className="markster-list-item">
+                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
+                  <span className="markster-list-text">Dossier access &amp; time-stamped filings</span>
+                </li>
               </ul>
             </div>
-            <div>
-              <h3 className="mb-4 text-lg font-semibold flex items-center gap-4">
-                <XCircle className="h-5 w-5 text-red-600 mt-1" />
-                Not Included (available on request)
-              </h3>
-              <ul className="space-y-4 text-sm text-gray-700">
-                <CrossItem>Hearing appearance (counsel briefing available)</CrossItem>
-                <CrossItem>Opposition proceedings (defensive or offensive)</CrossItem>
-                <CrossItem>Madrid Protocol / foreign filings</CrossItem>
-                <CrossItem>Multiple examination replies beyond the first</CrossItem>
-                <CrossItem>Rectification or cancellation actions</CrossItem>
-                <CrossItem>Renewal after 10 years (we'll remind you)</CrossItem>
+
+            {/* Right Column: Not Included */}
+            <div className="markster-column">
+              <h3 className="markster-column-heading">Not Included (add-ons available)</h3>
+              <ul className="markster-list">
+                <li className="markster-list-item">
+                  <XCircleIcon className="markster-icon markster-icon-cross" aria-hidden="true" />
+                  <span className="markster-list-text">Government/statutory fees (charged at cost)</span>
+                </li>
+                <li className="markster-list-item">
+                  <XCircleIcon className="markster-icon markster-icon-cross" aria-hidden="true" />
+                  <span className="markster-list-text">Hearing appearances/arguing before Registry</span>
+                </li>
+                <li className="markster-list-item">
+                  <XCircleIcon className="markster-icon markster-icon-cross" aria-hidden="true" />
+                  <span className="markster-list-text">Oppositions (filing/defence beyond counter-statement)</span>
+                </li>
+                <li className="markster-list-item">
+                  <XCircleIcon className="markster-icon markster-icon-cross" aria-hidden="true" />
+                  <span className="markster-list-text">Multiple examination cycles, affidavits, appeals/rectifications</span>
+                </li>
+                <li className="markster-list-item">
+                  <XCircleIcon className="markster-icon markster-icon-cross" aria-hidden="true" />
+                  <span className="markster-list-text">Foreign/Madrid filings (available separately)</span>
+                </li>
               </ul>
             </div>
           </div>
