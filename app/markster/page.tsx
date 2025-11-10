@@ -326,7 +326,6 @@ export default function MarksterLanding() {
                         <div>Individual/Startup/MSME</div>
                         <div className="markster-govt-fee-value">₹4,500</div>
                       </div>
-                      <div className="markster-govt-fee-divider"></div>
                       <div className="markster-govt-fee-row">
                         <div>Company/LLP/Others</div>
                         <div className="markster-govt-fee-value">₹9,000</div>
@@ -336,7 +335,7 @@ export default function MarksterLanding() {
                 </CardContent>
               </div>
               <div className="markster-pricing-cta">
-                <a href="#start">Choose Plan</a>
+                <a href="#start">Book Now</a>
               </div>
             </Card>
 

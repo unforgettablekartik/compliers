@@ -1451,7 +1451,7 @@ section h2 {
 .markster-govt-fee-slabs {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 0.5rem;
 }
 
 .markster-govt-fee-row {
@@ -1467,25 +1467,19 @@ section h2 {
   color: #111827;
 }
 
-.markster-govt-fee-divider {
-  height: 1px;
-  background: #e5e7eb;
-  margin: 0;
-}
-
-/* Full-width CTA Button - flush to card base */
+/* Full-width CTA Button - pill shape with spacing below */
 .markster-pricing-cta {
-  width: 100%;
+  width: calc(100% - 3rem);
   background: #000000;
-  border-radius: 0 0 24px 24px;
+  border-radius: 9999px;
   padding: 0;
-  margin: 0;
+  margin: 0 1.5rem 1.5rem 1.5rem;
 }
 
 .markster-pricing-cta a {
   display: block;
   width: 100%;
-  padding: 1.25rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   color: #ffffff;
   font-weight: 600;
@@ -1503,10 +1497,10 @@ section h2 {
   text-decoration: none;
 }
 
-/* Outline variant for "Talk to us" */
+/* Outline variant for "Talk to us" - pill shape with spacing */
 .markster-pricing-cta-outline {
   background: #ffffff;
-  border-top: 2px solid #000000;
+  border: 2px solid #000000;
 }
 
 .markster-pricing-cta-outline a {
