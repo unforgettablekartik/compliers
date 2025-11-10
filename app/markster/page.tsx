@@ -384,10 +384,14 @@ export default function MarksterLanding() {
       {/* FAQ Section */}
       <Section className="bg-white">
         <Container>
-          <div className="mb-12 text-center">
+          <div className="text-center" style={{ marginBottom: "24px" }}>
             <h2
-              className="text-2xl font-bold md:text-3xl mb-2"
-              style={{ fontFamily: 'Times New Roman, Times, serif' }}
+              className="font-bold"
+              style={{ 
+                fontFamily: 'Times New Roman, Times, serif',
+                fontSize: "clamp(24px, 5vw, 36px)",
+                fontWeight: "800"
+              }}
             >
               Frequently asked questions (FAQs)
             </h2>
