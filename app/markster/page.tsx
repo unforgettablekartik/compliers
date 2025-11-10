@@ -304,62 +304,74 @@ export default function MarksterLanding() {
 
       {/* Pricing */}
       <Section id="pricing" className="bg-gradient-to-b from-white to-sky-50">
-        <Container>
+        <Container className="max-w-7xl">
           <div className="mb-16 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed‑fee pricing</h2>
-            <p className="mt-2 text-gray-600">Official government fees vary by entity & per class—billed at cost. Professional fees below are for our work.</p>
+            <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed-fee pricing</h2>
+            <p className="mt-2 text-gray-600 max-w-3xl mx-auto">Official government fees vary by entity & per class—billed at cost. Professional fees below are for our work.</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="grid gap-6 md:grid-cols-3 items-stretch">
             {/* Single Class */}
-            <Card className="rounded-3xl border-2">
-              <CardHeader>
-                <CardTitle>Single Class – Word Mark</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-4xl font-extrabold tracking-tight">₹{PRO_SINGLE.toLocaleString("en-IN")}</p>
-                <p className="mt-2 text-gray-600">Professional fee · Search + TM‑A filing + 1 exam reply + 60‑day watch</p>
-                <div className="mt-4 rounded-2xl border bg-white p-3 text-sm">
-                  <div className="mb-1 font-medium">Government fee (per class, at cost)</div>
-                  <div className="grid grid-cols-2 gap-2 text-gray-700">
-                    <div>Individual/Startup/MSME</div>
-                    <div className="text-right">₹4,500</div>
-                    <div>Company/LLP/Others</div>
-                    <div className="text-right">₹9,000</div>
+            <div className="rounded-3xl border-2 border-gray-200 bg-white shadow-md p-6 flex flex-col">
+              <h3 className="text-lg font-bold mb-3">Single Class – Word Mark</h3>
+              <p className="text-4xl font-extrabold tracking-tight mb-3">₹{PRO_SINGLE.toLocaleString("en-IN")}</p>
+              <p className="text-sm text-gray-600 mb-4">Professional fee · Search + TM-A filing + 1 exam reply + 60-day watch</p>
+              <div className="mt-auto mb-6 rounded-2xl border border-gray-200 bg-white p-4 text-sm">
+                <div className="mb-3 font-bold text-gray-900">Government fee (per class, at cost)</div>
+                <div className="space-y-2">
+                  <div className="flex justify-between text-gray-700">
+                    <span>Individual/Startup/MSME</span>
+                    <span className="font-medium">₹4,500</span>
+                  </div>
+                  <div className="flex justify-between text-gray-700">
+                    <span>Company/LLP/Others</span>
+                    <span className="font-medium">₹9,000</span>
                   </div>
                 </div>
-                <div className="mt-6"><Button className="w-full rounded-2xl" asChild><a href="#start">Start now</a></Button></div>
-              </CardContent>
-            </Card>
+              </div>
+              <button className="w-full rounded-full py-3 px-6 bg-gray-900 hover:bg-gray-800 text-white font-semibold transition-all">
+                <a href="#start" className="block">Start now</a>
+              </button>
+            </div>
 
-            {/* Plus (Markster) */}
-            <Card className="rounded-3xl border-2 border-sky-600 shadow-xl">
-              <CardHeader>
-                <div className="inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-xs text-sky-800">Most Popular</div>
-                <CardTitle>Markster™ Plus</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-4xl font-extrabold tracking-tight">₹{PRO_PLUS.toLocaleString("en-IN")}</p>
-                <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  <ListItem>Everything in Single Class</ListItem>
-                  <ListItem>+ One extra class (same mark) <span className="text-gray-500">(govt fee per extra class)</span></ListItem>
-                  <ListItem>+ Device/logo filing (Vienna coding)</ListItem>
-                  <ListItem>+ Extended watch (90 days)</ListItem>
-                </ul>
-                <div className="mt-6"><Button className="w-full rounded-2xl" asChild><a href="#start">Choose Plus</a></Button></div>
-              </CardContent>
-            </Card>
+            {/* Plus (Markster) - Featured */}
+            <div className="rounded-3xl border-2 border-sky-500 bg-white shadow-2xl p-6 flex flex-col relative">
+              <div className="inline-flex items-center self-start rounded-full bg-sky-100 px-3 py-1 text-xs font-semibold text-sky-700 mb-3">Most Popular</div>
+              <h3 className="text-lg font-bold mb-3">Markster™ Plus</h3>
+              <p className="text-4xl font-extrabold tracking-tight mb-4">₹{PRO_PLUS.toLocaleString("en-IN")}</p>
+              <ul className="space-y-2 text-sm text-gray-700 mb-6 flex-grow">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>Everything in Single Class</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>+ One extra class (same mark) <span className="text-gray-500">(govt fee per extra class)</span></span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>+ Device/logo filing</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span>+ Extended watch (90 days)</span>
+                </li>
+              </ul>
+              <button className="w-full rounded-full py-3 px-6 bg-gray-900 hover:bg-gray-800 text-white font-semibold transition-all">
+                <a href="#start" className="block">Choose Plus</a>
+              </button>
+            </div>
 
             {/* Scale/Global */}
-            <Card className="rounded-3xl border-2">
-              <CardHeader>
-                <CardTitle>Scale &amp; Global</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-4xl font-extrabold tracking-tight">From ₹{PRO_SCALE.toLocaleString("en-IN")}</p>
-                <p className="mt-2 text-gray-600">Multi‑class or word + device, priority turnaround, hearing brief. Madrid/foreign filings, oppositions & hearings are quoted separately.</p>
-                <div className="mt-6"><Button variant="outline" className="w-full rounded-2xl" asChild><a href="#contact">Talk to us</a></Button></div>
-              </CardContent>
-            </Card>
+            <div className="rounded-3xl border-2 border-gray-200 bg-white shadow-md p-6 flex flex-col">
+              <h3 className="text-lg font-bold mb-3">Scale & Global</h3>
+              <p className="text-4xl font-extrabold tracking-tight mb-3">
+                <span className="text-xl font-normal">From </span>₹{PRO_SCALE.toLocaleString("en-IN")}
+              </p>
+              <p className="text-sm text-gray-600 mb-6 flex-grow">Multi-class or word + device, priority turnaround, hearing brief. Madrid/foreign filings, oppositions & hearings are quoted separately.</p>
+              <button className="w-full rounded-full py-3 px-6 border-2 border-gray-900 text-gray-900 hover:bg-gray-50 font-semibold transition-all">
+                <a href="#contact" className="block">Talk to us</a>
+              </button>
+            </div>
           </div>
           <p className="mt-6 text-center text-xs text-gray-600">*Official fees per IP India First Schedule. We pass them at actuals. Taxes extra on professional fees.</p>
         </Container>
