@@ -870,6 +870,14 @@ section h2 {
 }
 
 /* Markster Page Styles */
+.markster-page-container {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
+.markster-page-container * {
+  font-family: 'Times New Roman', Times, serif !important;
+}
+
 .markster-hero {
   position: relative;
   overflow: hidden;
@@ -1744,7 +1752,18 @@ section h2 {
 /* Pricing amount - bold and 4pt larger */
 .markster-pricing-amount {
   font-family: 'Times New Roman', Times, serif !important;
-  font-size: 2.75rem;
+  font-size: 2.625rem; /* Reduced by 2pt (from 2.75rem to 2.625rem) */
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #111827;
+  margin-top: 0.5rem;
+}
+
+/* Special class for "From ₹34,900" - reduced by 4pt */
+.markster-pricing-amount-scale {
+  font-family: 'Times New Roman', Times, serif !important;
+  font-size: 2.5rem; /* Reduced by 4pt (from 2.75rem to 2.5rem) */
   font-weight: 700;
   line-height: 1.2;
   letter-spacing: -0.02em;
