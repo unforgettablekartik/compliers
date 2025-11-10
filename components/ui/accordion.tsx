@@ -74,10 +74,9 @@ export function AccordionTrigger({
         fontFamily: "Times New Roman, Times, serif",
         fontSize: "1rem",
         minHeight: "64px",
-        padding: "20px 24px",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between"
+        padding: "20px 56px 20px 24px",
+        display: "block",
+        position: "relative"
       }}
       onClick={onToggle}
       type="button"
@@ -90,23 +89,24 @@ export function AccordionTrigger({
           fontFamily: "Times New Roman, Times, serif",
           fontWeight: "bold",
           fontSize: "1rem",
-          flex: 1,
-          paddingRight: "16px"
+          display: "block"
         }}
       >
         {children}
       </span>
-      {/* Chevron icon with 180° rotation */}
+      {/* Chevron icon with 180° rotation - absolutely positioned for perfect alignment */}
       <span
         aria-hidden="true"
         style={{ 
+          position: "absolute",
+          right: "24px",
+          top: "50%",
           width: '24px', 
           height: '24px', 
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center',
-          flexShrink: 0,
-          transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+          transform: isOpen ? 'translateY(-50%) rotate(180deg)' : 'translateY(-50%) rotate(0deg)',
           transition: 'transform 0.3s ease'
         }}
       >
