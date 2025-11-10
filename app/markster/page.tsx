@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye, CheckCircle, XCircle as XCircleIcon } from "lucide-react";
+import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye, CheckCircle, XCircle as XCircleIcon, Bell, Shield } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -156,73 +156,79 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Features - What you get from Markster™ - Updated */}
-      <Section className="bg-gray-50">
+      {/* Features - What you get from Markster™ */}
+      <Section className="markster-features-section">
         <Container>
-          <div className="mb-16 text-center">
-            <h2 className="text-2xl font-bold md:text-3xl mb-2">What you get from Markster™</h2>
-            <p className="mt-2 text-gray-600">From search to filing to early defence—everything required to launch without brand anxiety.</p>
+          <div className="markster-features-header">
+            <h2 className="markster-features-title">What you get from Markster™</h2>
+            <p className="markster-features-subtitle">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-8">
-            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
-              <div className="flex flex-col items-start">
-                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
-                  <Search className="h-6 w-6" aria-hidden />
+          <div className="markster-features-grid">
+            {/* Card 1: Search & Risk Opinion */}
+            <div className="markster-feature-card">
+              <div className="markster-feature-card-row">
+                <div className="markster-feature-icon-pill">
+                  <Search className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Trademark Search</h3>
-                <p className="text-gray-600">Comprehensive conflict check across identical, similar, and phonetically alike marks in relevant classes.</p>
+                <h3 className="markster-feature-title">Search &amp; Risk Opinion</h3>
               </div>
-            </Card>
+              <p className="markster-feature-description">Identical/phonetic/visual search across target &amp; related classes with a clear availability rating.</p>
+            </div>
 
-            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
-              <div className="flex flex-col items-start">
-                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
-                  <FileText className="h-6 w-6" aria-hidden />
+            {/* Card 2: Filing Strategy & TM-A */}
+            <div className="markster-feature-card">
+              <div className="markster-feature-card-row">
+                <div className="markster-feature-icon-pill">
+                  <FileText className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">TM-A Filing</h3>
-                <p className="text-gray-600">Clean application with correct class mapping, goods/services descriptions, and Vienna codes (for device marks).</p>
+                <h3 className="markster-feature-title">Filing Strategy &amp; TM-A</h3>
               </div>
-            </Card>
+              <p className="markster-feature-description">Class mapping, specification drafting, TM-48, and clean e-filing with stamped acknowledgments.</p>
+            </div>
 
-            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
-              <div className="flex flex-col items-start">
-                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
-                  <AlertTriangle className="h-6 w-6" aria-hidden />
+            {/* Card 3: Examination Reply (1 round) */}
+            <div className="markster-feature-card">
+              <div className="markster-feature-card-row">
+                <div className="markster-feature-icon-pill">
+                  <AlertTriangle className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Examination Reply</h3>
-                <p className="text-gray-600">One comprehensive response to objections raised by the examiner. Hearing brief also provided.</p>
+                <h3 className="markster-feature-title">Examination Reply (1 round)</h3>
               </div>
-            </Card>
+              <p className="markster-feature-description">Substantive reply with case-law where useful; hearing brief if listed.</p>
+            </div>
 
-            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
-              <div className="flex flex-col items-start">
-                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
-                  <Eye className="h-6 w-6" aria-hidden />
+            {/* Card 4: 60-day Watch */}
+            <div className="markster-feature-card">
+              <div className="markster-feature-card-row">
+                <div className="markster-feature-icon-pill">
+                  <Bell className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Journal Watch</h3>
-                <p className="text-gray-600">60 or 90-day monitoring of the TM Journal for conflicting marks filed by third parties.</p>
+                <h3 className="markster-feature-title">60-day Watch</h3>
               </div>
-            </Card>
+              <p className="markster-feature-description">Weekly bulletins scanned for conflicting marks; early-warning alerts.</p>
+            </div>
 
-            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
-              <div className="flex flex-col items-start">
-                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
-                  <ShieldCheck className="h-6 w-6" aria-hidden />
+            {/* Card 5: Use & Policing Kit */}
+            <div className="markster-feature-card">
+              <div className="markster-feature-card-row">
+                <div className="markster-feature-icon-pill">
+                  <Shield className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Status Dashboard</h3>
-                <p className="text-gray-600">Live dashboard with timelines, application status, and any alerts or action items.</p>
+                <h3 className="markster-feature-title">Use &amp; Policing Kit</h3>
               </div>
-            </Card>
+              <p className="markster-feature-description">™/® usage guide, website/footer specimens, brand policing SOP for your team.</p>
+            </div>
 
-            <Card className="rounded-2xl border-2 border-gray-300 shadow-lg hover:shadow-xl hover:border-gray-400 transition-all p-6">
-              <div className="flex flex-col items-start">
-                <div className="rounded-2xl bg-gray-100 p-3 mb-4">
-                  <Target className="h-6 w-6" aria-hidden />
+            {/* Card 6: Scale Options */}
+            <div className="markster-feature-card">
+              <div className="markster-feature-card-row">
+                <div className="markster-feature-icon-pill">
+                  <Globe2 className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="font-semibold text-lg mb-2">Dossier Access</h3>
-                <p className="text-gray-600">All correspondence, forms, and evidence compiled in one place—yours to keep.</p>
+                <h3 className="markster-feature-title">Scale Options</h3>
               </div>
-            </Card>
+              <p className="markster-feature-description">Extra classes, device/logo filing, oppositions, &amp; Madrid coordination as add-ons.</p>
+            </div>
           </div>
         </Container>
       </Section>
