@@ -1364,14 +1364,24 @@ section h2 {
   padding: 1.5rem;
 }
 
+/* Adjust padding for popular card with top badge */
+.markster-pricing-card-popular .markster-pricing-card-content {
+  padding-top: 1.5rem;
+}
+
 @media (min-width: 768px) {
   .markster-pricing-card-content {
     padding: 2rem;
+  }
+  
+  .markster-pricing-card-popular .markster-pricing-card-content {
+    padding-top: 2rem;
   }
 }
 
 /* Pricing amount - bold and 4pt larger */
 .markster-pricing-amount {
+  font-family: 'Times New Roman', Times, serif !important;
   font-size: 2.75rem;
   font-weight: 700;
   line-height: 1.2;
@@ -1380,7 +1390,20 @@ section h2 {
   margin-top: 0.5rem;
 }
 
-/* Most Popular Badge - rectangular light blue */
+/* Most Popular Badge - Top Edge Full Width */
+.markster-popular-badge-top {
+  width: 100%;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 24px 24px 0 0;
+  margin: 0;
+}
+
+/* Most Popular Badge - rectangular light blue (legacy, if needed) */
 .markster-popular-badge {
   display: inline-block;
   background: #e0f2fe;

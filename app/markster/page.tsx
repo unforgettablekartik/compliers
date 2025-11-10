@@ -342,10 +342,10 @@ export default function MarksterLanding() {
 
             {/* Plus (Markster) */}
             <Card className="markster-pricing-card markster-pricing-card-popular">
+              <div className="markster-popular-badge-top">Most Popular</div>
               <div className="markster-pricing-card-content">
                 <CardHeader>
                   <CardTitle>Markster™ Plus</CardTitle>
-                  <div className="markster-popular-badge">Most Popular</div>
                 </CardHeader>
                 <CardContent>
                   <p className="markster-pricing-amount">₹{PRO_PLUS.toLocaleString("en-IN")}</p>
