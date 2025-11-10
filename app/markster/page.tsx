@@ -369,7 +369,7 @@ export default function MarksterLanding() {
                   <CardTitle>Scale &amp; Global</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <p className="markster-pricing-amount">From ₹{PRO_SCALE.toLocaleString("en-IN")}</p>
+                  <p className="markster-pricing-amount-scale">From ₹{PRO_SCALE.toLocaleString("en-IN")}</p>
                   <p className="mt-2 text-gray-600">Multi‑class or word + device, priority turnaround, hearing brief. Madrid/foreign filings, oppositions &amp; hearings are quoted separately.</p>
                 </CardContent>
               </div>
@@ -477,10 +477,7 @@ export default function MarksterLanding() {
               {/* CTA Buttons - pill shaped */}
               <div className="markster-cta-buttons">
                 <a href="/contact" className="markster-cta-btn markster-cta-btn-solid">
-                  Book a FREE consultation
-                </a>
-                <a href="/checkout/markster" className="markster-cta-btn markster-cta-btn-outline">
-                  Start with Markster™
+                  Book a FREE consultation with Trademark Lawyer
                 </a>
               </div>
               
