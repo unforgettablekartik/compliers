@@ -1297,6 +1297,15 @@ section h2 {
 
 /* Markster Pricing Section Styles */
 
+/* Apply Times New Roman font to pricing section */
+#pricing {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#pricing * {
+  font-family: 'Times New Roman', Times, serif;
+}
+
 /* Pricing Grid with adequate spacing */
 .markster-pricing-grid {
   display: grid;
@@ -1369,6 +1378,32 @@ section h2 {
   letter-spacing: -0.02em;
   color: #111827;
   margin-top: 0.5rem;
+}
+
+/* Most Popular Badge - rectangular light blue */
+.markster-popular-badge {
+  display: inline-block;
+  background: #e0f2fe;
+  color: #0369a1;
+  padding: 0.375rem 0.875rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Pricing List - no bullets, keep + signs */
+.markster-pricing-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.markster-pricing-list li {
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+  color: #374151;
+  line-height: 1.5;
 }
 
 /* Government Fee Sub-card */

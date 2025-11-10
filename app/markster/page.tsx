@@ -344,31 +344,17 @@ export default function MarksterLanding() {
             <Card className="markster-pricing-card markster-pricing-card-popular">
               <div className="markster-pricing-card-content">
                 <CardHeader>
-                  <div className="inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-xs text-sky-800">Most Popular</div>
                   <CardTitle>Markster™ Plus</CardTitle>
+                  <div className="markster-popular-badge">Most Popular</div>
                 </CardHeader>
                 <CardContent>
                   <p className="markster-pricing-amount">₹{PRO_PLUS.toLocaleString("en-IN")}</p>
-                  <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                    <ListItem>Everything in Single Class</ListItem>
-                    <ListItem>+ One extra class (same mark) <span className="text-gray-500">(govt fee per extra class)</span></ListItem>
-                    <ListItem>+ Device/logo filing (Vienna coding)</ListItem>
-                    <ListItem>+ Extended watch (90 days)</ListItem>
+                  <ul className="markster-pricing-list">
+                    <li><strong>Everything in Single Class</strong></li>
+                    <li>+ One extra class (same mark) <span className="text-gray-500">(govt fee per extra class)</span></li>
+                    <li>+ Device/logo filing (Vienna coding)</li>
+                    <li>+ Extended watch (90 days)</li>
                   </ul>
-                  <div className="markster-govt-fee-card">
-                    <div className="markster-govt-fee-heading">Government fee (per class, at cost)</div>
-                    <div className="markster-govt-fee-slabs">
-                      <div className="markster-govt-fee-row">
-                        <div>Individual/Startup/MSME</div>
-                        <div className="markster-govt-fee-value">₹4,500</div>
-                      </div>
-                      <div className="markster-govt-fee-divider"></div>
-                      <div className="markster-govt-fee-row">
-                        <div>Company/LLP/Others</div>
-                        <div className="markster-govt-fee-value">₹9,000</div>
-                      </div>
-                    </div>
-                  </div>
                 </CardContent>
               </div>
               <div className="markster-pricing-cta">
@@ -385,10 +371,6 @@ export default function MarksterLanding() {
                 <CardContent>
                   <p className="markster-pricing-amount">From ₹{PRO_SCALE.toLocaleString("en-IN")}</p>
                   <p className="mt-2 text-gray-600">Multi‑class or word + device, priority turnaround, hearing brief. Madrid/foreign filings, oppositions &amp; hearings are quoted separately.</p>
-                  <div className="markster-govt-fee-card">
-                    <div className="markster-govt-fee-heading">Government fee</div>
-                    <div className="mt-2 text-sm text-gray-600">Varies by number of classes and entity type. Quoted separately based on your requirements.</div>
-                  </div>
                 </CardContent>
               </div>
               <div className="markster-pricing-cta markster-pricing-cta-outline">
