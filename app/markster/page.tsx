@@ -2,7 +2,8 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, MessageSquare, Target, Zap, Eye } from "lucide-react";
+import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -506,9 +507,9 @@ export default function MarksterLanding() {
                   </a>
                 </div>
                 <div className="markster-contact-item">
-                  <MessageSquare className="markster-contact-icon" aria-hidden="true" />
+                  <FaWhatsapp className="markster-contact-icon" aria-hidden="true" />
                   <a href="https://wa.me/91XXXXXXXXXXX" className="markster-contact-link">
-                    WhatsApp
+                    Connect on WhatsApp
                   </a>
                 </div>
               </div>

@@ -1299,6 +1299,7 @@ section h2 {
 .markster-cta-section {
   background-color: #f0f9ff; /* sky-50 */
   padding: 4rem 0; /* 64px top and bottom on mobile */
+  font-family: 'Times New Roman', Times, serif; /* Times New Roman for entire section */
 }
 
 @media (min-width: 768px) {
@@ -1331,8 +1332,8 @@ section h2 {
 
 @media (min-width: 768px) {
   .markster-cta-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem;
+    grid-template-columns: 1.1fr 0.9fr; /* Adjusted ratio - left column slightly wider */
+    gap: 2.5rem;
   }
 }
 
@@ -1343,22 +1344,32 @@ section h2 {
 }
 
 .markster-cta-headline {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.5rem; /* 24px mobile */
   font-weight: 700;
-  line-height: 1.2;
-  letter-spacing: -0.01em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
   color: #0f172a; /* dark ink */
   margin-bottom: 0.5rem; /* 8px */
+  text-align: left;
 }
 
 @media (min-width: 768px) {
   .markster-cta-headline {
-    font-size: 2.25rem; /* 36px desktop */
+    font-size: 2rem; /* 32px desktop - adjusted to fit in one line */
     margin-bottom: 0.75rem; /* 12px */
+    white-space: nowrap; /* Keep in one line */
+  }
+}
+
+@media (min-width: 1024px) {
+  .markster-cta-headline {
+    font-size: 2.25rem; /* 36px on larger screens */
   }
 }
 
 .markster-cta-paragraph {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1rem; /* 16px */
   line-height: 1.65;
   color: #6b7280; /* muted gray */
@@ -1374,6 +1385,7 @@ section h2 {
 
 /* Checklist with check icon chips */
 .markster-cta-checklist {
+  font-family: 'Times New Roman', Times, serif;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -1406,6 +1418,7 @@ section h2 {
 }
 
 .markster-checklist-item span {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 0.875rem; /* 14px */
   color: #374151; /* neutral/dark gray */
   line-height: 1.5;
@@ -1419,6 +1432,7 @@ section h2 {
 
 /* Helper line */
 .markster-cta-helper {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 0.875rem;
   color: #6b7280; /* neutral gray */
   margin-top: 0.75rem; /* 12px */
@@ -1448,6 +1462,7 @@ section h2 {
 }
 
 .markster-cta-btn {
+  font-family: 'Times New Roman', Times, serif;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1512,6 +1527,7 @@ section h2 {
 
 /* Ethical note footnote */
 .markster-cta-ethical {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 0.75rem; /* 12px XS */
   color: #6b7280; /* muted gray */
   line-height: 1.5;
@@ -1526,6 +1542,7 @@ section h2 {
 
 /* Right Column: Quick intake card */
 .markster-quick-intake-card {
+  font-family: 'Times New Roman', Times, serif;
   background-color: #ffffff;
   border: 1px solid #e5e7eb; /* thin neutral border */
   border-radius: 1.5rem; /* rounded-3xl */
@@ -1540,6 +1557,7 @@ section h2 {
 }
 
 .markster-intake-title {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 1.125rem; /* 18px */
   font-weight: 700;
   color: #111827;
@@ -1555,6 +1573,7 @@ section h2 {
 
 /* Ordered list */
 .markster-intake-list {
+  font-family: 'Times New Roman', Times, serif;
   list-style-position: inside;
   padding: 0;
   margin: 0;
@@ -1570,7 +1589,8 @@ section h2 {
 }
 
 .markster-intake-list li {
-  font-size: 0.875rem; /* 14px */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.75rem; /* 12px - reduced by 2pt from 14px */
   line-height: 1.6;
   color: #374151; /* neutral/dark gray */
   padding-left: 0.25rem;
@@ -1578,12 +1598,13 @@ section h2 {
 
 @media (min-width: 768px) {
   .markster-intake-list li {
-    font-size: 1rem; /* 16px */
+    font-size: 0.875rem; /* 14px - reduced by 2pt from 16px */
   }
 }
 
 /* Contact row */
 .markster-intake-contact {
+  font-family: 'Times New Roman', Times, serif;
   margin-top: 1.25rem; /* 20px */
   display: flex;
   flex-direction: column;
@@ -1618,6 +1639,7 @@ section h2 {
 }
 
 .markster-contact-link {
+  font-family: 'Times New Roman', Times, serif;
   font-size: 0.875rem;
   color: #0f172a; /* dark ink */
   text-decoration: underline;
