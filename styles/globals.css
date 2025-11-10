@@ -1294,3 +1294,172 @@ section h2 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
+
+/* Markster Pricing Section Styles */
+
+/* Pricing Grid with adequate spacing */
+.markster-pricing-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+@media (min-width: 768px) {
+  .markster-pricing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem 2.5rem;
+  }
+}
+
+/* Pricing Card with 3D Effect */
+.markster-pricing-card {
+  background: #ffffff;
+  border: none;
+  border-radius: 24px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+  /* Strong 3D shadow effect */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15), 
+              0 10px 25px rgba(0, 0, 0, 0.1),
+              0 5px 10px rgba(0, 0, 0, 0.05);
+  /* Upward translate effect */
+  transform: translateY(-8px);
+  transition: all 0.3s ease;
+}
+
+.markster-pricing-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2), 
+              0 15px 30px rgba(0, 0, 0, 0.12),
+              0 8px 15px rgba(0, 0, 0, 0.08);
+}
+
+/* Popular card with enhanced styling */
+.markster-pricing-card-popular {
+  border: 2px solid #0ea5e9;
+  z-index: 15;
+  transform: translateY(-12px);
+}
+
+.markster-pricing-card-popular:hover {
+  transform: translateY(-16px);
+}
+
+/* Card content area (grows to fill space above button) */
+.markster-pricing-card-content {
+  flex: 1;
+  padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .markster-pricing-card-content {
+    padding: 2rem;
+  }
+}
+
+/* Pricing amount - bold and 4pt larger */
+.markster-pricing-amount {
+  font-size: 2.75rem;
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #111827;
+  margin-top: 0.5rem;
+}
+
+/* Government Fee Sub-card */
+.markster-govt-fee-card {
+  margin-top: 1.5rem;
+  background: #ffffff;
+  border: 2px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  /* Elevated appearance */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08),
+              0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.markster-govt-fee-heading {
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: #374151;
+  margin-bottom: 0.75rem;
+}
+
+.markster-govt-fee-slabs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.markster-govt-fee-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+  color: #4b5563;
+}
+
+.markster-govt-fee-value {
+  font-weight: 600;
+  color: #111827;
+}
+
+.markster-govt-fee-divider {
+  height: 1px;
+  background: #e5e7eb;
+  margin: 0;
+}
+
+/* Full-width CTA Button - flush to card base */
+.markster-pricing-cta {
+  width: 100%;
+  background: #000000;
+  border-radius: 0 0 24px 24px;
+  padding: 0;
+  margin: 0;
+}
+
+.markster-pricing-cta a {
+  display: block;
+  width: 100%;
+  padding: 1.25rem;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.markster-pricing-cta:hover {
+  background: #1f2937;
+}
+
+.markster-pricing-cta a:hover {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Outline variant for "Talk to us" */
+.markster-pricing-cta-outline {
+  background: #ffffff;
+  border-top: 2px solid #000000;
+}
+
+.markster-pricing-cta-outline a {
+  color: #000000;
+}
+
+.markster-pricing-cta-outline:hover {
+  background: #f9fafb;
+}
+
+.markster-pricing-cta-outline a:hover {
+  color: #000000;
+}
+

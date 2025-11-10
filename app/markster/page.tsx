@@ -309,56 +309,91 @@ export default function MarksterLanding() {
             <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed‑fee pricing</h2>
             <p className="mt-2 text-gray-600">Official government fees vary by entity & per class—billed at cost. Professional fees below are for our work.</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3">
+          <div className="markster-pricing-grid">
             {/* Single Class */}
-            <Card className="rounded-3xl border-2">
-              <CardHeader>
-                <CardTitle>Single Class – Word Mark</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-4xl font-extrabold tracking-tight">₹{PRO_SINGLE.toLocaleString("en-IN")}</p>
-                <p className="mt-2 text-gray-600">Professional fee · Search + TM‑A filing + 1 exam reply + 60‑day watch</p>
-                <div className="mt-4 rounded-2xl border bg-white p-3 text-sm">
-                  <div className="mb-1 font-medium">Government fee (per class, at cost)</div>
-                  <div className="grid grid-cols-2 gap-2 text-gray-700">
-                    <div>Individual/Startup/MSME</div>
-                    <div className="text-right">₹4,500</div>
-                    <div>Company/LLP/Others</div>
-                    <div className="text-right">₹9,000</div>
+            <Card className="markster-pricing-card">
+              <div className="markster-pricing-card-content">
+                <CardHeader>
+                  <CardTitle>Single Class – Word Mark</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="markster-pricing-amount">₹{PRO_SINGLE.toLocaleString("en-IN")}</p>
+                  <p className="mt-2 text-gray-600">Professional fee · Search + TM‑A filing + 1 exam reply + 60‑day watch</p>
+                  <div className="markster-govt-fee-card">
+                    <div className="markster-govt-fee-heading">Government fee (per class, at cost)</div>
+                    <div className="markster-govt-fee-slabs">
+                      <div className="markster-govt-fee-row">
+                        <div>Individual/Startup/MSME</div>
+                        <div className="markster-govt-fee-value">₹4,500</div>
+                      </div>
+                      <div className="markster-govt-fee-divider"></div>
+                      <div className="markster-govt-fee-row">
+                        <div>Company/LLP/Others</div>
+                        <div className="markster-govt-fee-value">₹9,000</div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div className="mt-6"><Button className="w-full rounded-2xl" asChild><a href="#start">Start now</a></Button></div>
-              </CardContent>
+                </CardContent>
+              </div>
+              <div className="markster-pricing-cta">
+                <a href="#start">Start now</a>
+              </div>
             </Card>
 
             {/* Plus (Markster) */}
-            <Card className="rounded-3xl border-2 border-sky-600 shadow-xl">
-              <CardHeader>
-                <div className="inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-xs text-sky-800">Most Popular</div>
-                <CardTitle>Markster™ Plus</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-4xl font-extrabold tracking-tight">₹{PRO_PLUS.toLocaleString("en-IN")}</p>
-                <ul className="mt-3 space-y-2 text-sm text-gray-700">
-                  <ListItem>Everything in Single Class</ListItem>
-                  <ListItem>+ One extra class (same mark) <span className="text-gray-500">(govt fee per extra class)</span></ListItem>
-                  <ListItem>+ Device/logo filing (Vienna coding)</ListItem>
-                  <ListItem>+ Extended watch (90 days)</ListItem>
-                </ul>
-                <div className="mt-6"><Button className="w-full rounded-2xl" asChild><a href="#start">Choose Plus</a></Button></div>
-              </CardContent>
+            <Card className="markster-pricing-card markster-pricing-card-popular">
+              <div className="markster-pricing-card-content">
+                <CardHeader>
+                  <div className="inline-flex items-center gap-2 rounded-full bg-sky-100 px-3 py-1 text-xs text-sky-800">Most Popular</div>
+                  <CardTitle>Markster™ Plus</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="markster-pricing-amount">₹{PRO_PLUS.toLocaleString("en-IN")}</p>
+                  <ul className="mt-3 space-y-2 text-sm text-gray-700">
+                    <ListItem>Everything in Single Class</ListItem>
+                    <ListItem>+ One extra class (same mark) <span className="text-gray-500">(govt fee per extra class)</span></ListItem>
+                    <ListItem>+ Device/logo filing (Vienna coding)</ListItem>
+                    <ListItem>+ Extended watch (90 days)</ListItem>
+                  </ul>
+                  <div className="markster-govt-fee-card">
+                    <div className="markster-govt-fee-heading">Government fee (per class, at cost)</div>
+                    <div className="markster-govt-fee-slabs">
+                      <div className="markster-govt-fee-row">
+                        <div>Individual/Startup/MSME</div>
+                        <div className="markster-govt-fee-value">₹4,500</div>
+                      </div>
+                      <div className="markster-govt-fee-divider"></div>
+                      <div className="markster-govt-fee-row">
+                        <div>Company/LLP/Others</div>
+                        <div className="markster-govt-fee-value">₹9,000</div>
+                      </div>
+                    </div>
+                  </div>
+                </CardContent>
+              </div>
+              <div className="markster-pricing-cta">
+                <a href="#start">Choose Plus</a>
+              </div>
             </Card>
 
             {/* Scale/Global */}
-            <Card className="rounded-3xl border-2">
-              <CardHeader>
-                <CardTitle>Scale &amp; Global</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-4xl font-extrabold tracking-tight">From ₹{PRO_SCALE.toLocaleString("en-IN")}</p>
-                <p className="mt-2 text-gray-600">Multi‑class or word + device, priority turnaround, hearing brief. Madrid/foreign filings, oppositions & hearings are quoted separately.</p>
-                <div className="mt-6"><Button variant="outline" className="w-full rounded-2xl" asChild><a href="#contact">Talk to us</a></Button></div>
-              </CardContent>
+            <Card className="markster-pricing-card">
+              <div className="markster-pricing-card-content">
+                <CardHeader>
+                  <CardTitle>Scale &amp; Global</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="markster-pricing-amount">From ₹{PRO_SCALE.toLocaleString("en-IN")}</p>
+                  <p className="mt-2 text-gray-600">Multi‑class or word + device, priority turnaround, hearing brief. Madrid/foreign filings, oppositions &amp; hearings are quoted separately.</p>
+                  <div className="markster-govt-fee-card">
+                    <div className="markster-govt-fee-heading">Government fee</div>
+                    <div className="mt-2 text-sm text-gray-600">Varies by number of classes and entity type. Quoted separately based on your requirements.</div>
+                  </div>
+                </CardContent>
+              </div>
+              <div className="markster-pricing-cta markster-pricing-cta-outline">
+                <a href="#contact">Talk to us</a>
+              </div>
             </Card>
           </div>
           <p className="mt-6 text-center text-xs text-gray-600">*Official fees per IP India First Schedule. We pass them at actuals. Taxes extra on professional fees.</p>
