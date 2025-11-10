@@ -309,13 +309,13 @@ export default function MarksterLanding() {
             <h2 className="text-xl font-bold md:text-3xl mb-3">Transparent, fixed-fee pricing</h2>
             <p className="mt-2 text-gray-600 max-w-3xl mx-auto leading-relaxed">Official government fees vary by entity & per class—billed at cost. Professional fees below are for our work.</p>
           </div>
-          <div className="grid gap-6 md:grid-cols-3 items-stretch">
+          <div className="grid gap-6 md:gap-8 md:grid-cols-3 items-stretch">
             {/* Single Class */}
-            <div className="rounded-3xl border-2 border-gray-200 bg-white shadow-sm p-6 md:p-8 flex flex-col">
+            <div className="rounded-3xl border-2 border-gray-300 bg-white shadow-lg hover:shadow-xl transition-shadow p-6 md:p-8 flex flex-col">
               <h3 className="text-lg font-bold mb-2">Single Class – Word Mark</h3>
               <p className="text-4xl font-extrabold tracking-tight mb-2">₹{PRO_SINGLE.toLocaleString("en-IN")}</p>
               <p className="text-sm text-gray-600 mb-4">Professional fee · Search + TM-A filing + 1 exam reply + 60-day watch</p>
-              <div className="mt-auto mb-6 rounded-2xl border border-gray-200 bg-white p-4 text-sm">
+              <div className="mt-auto mb-6 rounded-2xl border border-gray-200 bg-gray-50 p-4 text-sm">
                 <div className="mb-3 font-bold text-gray-900">Government fee (per class, at cost)</div>
                 <div className="space-y-2">
                   <div className="flex justify-between text-gray-700">
@@ -328,13 +328,13 @@ export default function MarksterLanding() {
                   </div>
                 </div>
               </div>
-              <button className="w-full rounded-full py-3.5 px-6 bg-gray-900 hover:bg-gray-800 text-white font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
+              <button className="w-full rounded-full py-3.5 px-6 bg-gray-900 hover:bg-gray-800 text-white font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
                 <a href="#start" className="block">Start now</a>
               </button>
             </div>
 
             {/* Plus (Markster) - Featured */}
-            <div className="rounded-3xl border-2 border-sky-500 bg-white shadow-2xl p-6 md:p-8 flex flex-col relative">
+            <div className="rounded-3xl border-2 border-sky-500 bg-white shadow-2xl hover:shadow-3xl transition-shadow p-6 md:p-8 flex flex-col relative -mt-2 md:scale-105">
               <div className="inline-flex items-center self-start rounded-full bg-sky-100 px-3 py-1.5 text-xs font-semibold text-sky-700 mb-3">Most Popular</div>
               <h3 className="text-lg font-bold mb-2">Markster™ Plus</h3>
               <p className="text-4xl font-extrabold tracking-tight mb-4">₹{PRO_PLUS.toLocaleString("en-IN")}</p>
@@ -356,19 +356,19 @@ export default function MarksterLanding() {
                   <span>+ Extended watch (90 days)</span>
                 </li>
               </ul>
-              <button className="w-full rounded-full py-3.5 px-6 bg-gray-900 hover:bg-gray-800 text-white font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
+              <button className="w-full rounded-full py-3.5 px-6 bg-gray-900 hover:bg-gray-800 text-white font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
                 <a href="#start" className="block">Choose Plus</a>
               </button>
             </div>
 
             {/* Scale/Global */}
-            <div className="rounded-3xl border-2 border-gray-200 bg-white shadow-sm p-6 md:p-8 flex flex-col">
+            <div className="rounded-3xl border-2 border-gray-300 bg-white shadow-lg hover:shadow-xl transition-shadow p-6 md:p-8 flex flex-col">
               <h3 className="text-lg font-bold mb-2">Scale & Global</h3>
               <p className="text-4xl font-extrabold tracking-tight mb-2">
                 <span className="text-xl font-normal">From </span>₹{PRO_SCALE.toLocaleString("en-IN")}
               </p>
               <p className="text-sm text-gray-600 mb-6 flex-grow leading-relaxed">Multi-class or word + device, priority turnaround, hearing brief. Madrid/foreign filings, oppositions & hearings are quoted separately.</p>
-              <button className="w-full rounded-full py-3.5 px-6 border-2 border-gray-900 text-gray-900 hover:bg-gray-50 hover:border-gray-800 font-semibold transition-all hover:shadow-md hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
+              <button className="w-full rounded-full py-3.5 px-6 border-2 border-gray-900 text-gray-900 hover:bg-gray-50 hover:border-gray-800 font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-offset-2">
                 <a href="#contact" className="block">Talk to us</a>
               </button>
             </div>
