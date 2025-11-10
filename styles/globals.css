@@ -1295,6 +1295,368 @@ section h2 {
   }
 }
 
+/* Markster CTA Section - "Ready to file your mark this week?" */
+.markster-cta-section {
+  background-color: #f0f9ff; /* sky-50 */
+  padding: 4rem 0; /* 64px top and bottom on mobile */
+  font-family: 'Times New Roman', Times, serif; /* Times New Roman for entire section */
+}
+
+@media (min-width: 768px) {
+  .markster-cta-section {
+    padding: 5.5rem 0; /* 88px top and bottom on desktop */
+  }
+}
+
+.markster-cta-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@media (min-width: 640px) {
+  .markster-cta-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+/* Two-column grid layout */
+.markster-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+@media (min-width: 768px) {
+  .markster-cta-grid {
+    grid-template-columns: 1.1fr 0.9fr; /* Adjusted ratio - left column slightly wider */
+    gap: 2.5rem;
+  }
+}
+
+/* Left Column Styles */
+.markster-cta-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.markster-cta-headline {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem; /* 24px mobile */
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: #0f172a; /* dark ink */
+  margin-bottom: 0.5rem; /* 8px */
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .markster-cta-headline {
+    font-size: 2rem; /* 32px desktop - adjusted to fit in one line */
+    margin-bottom: 0.75rem; /* 12px */
+    white-space: nowrap; /* Keep in one line */
+  }
+}
+
+@media (min-width: 1024px) {
+  .markster-cta-headline {
+    font-size: 2.25rem; /* 36px on larger screens */
+  }
+}
+
+.markster-cta-paragraph {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1rem; /* 16px */
+  line-height: 1.65;
+  color: #6b7280; /* muted gray */
+  margin-bottom: 1rem; /* 16px */
+}
+
+@media (min-width: 768px) {
+  .markster-cta-paragraph {
+    font-size: 1.125rem; /* 18px desktop */
+    margin-bottom: 1.25rem; /* 20px */
+  }
+}
+
+/* Checklist with check icon chips */
+.markster-cta-checklist {
+  font-family: 'Times New Roman', Times, serif;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.markster-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.markster-check-chip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background-color: #f1f5f9; /* subtle gray/sky tint */
+  flex-shrink: 0;
+}
+
+.markster-check-icon {
+  width: 1.125rem; /* 18px */
+  height: 1.125rem;
+  color: #475569; /* slate/ink color */
+}
+
+.markster-checklist-item span {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.875rem; /* 14px */
+  color: #374151; /* neutral/dark gray */
+  line-height: 1.5;
+}
+
+@media (min-width: 768px) {
+  .markster-checklist-item span {
+    font-size: 1rem; /* 16px desktop */
+  }
+}
+
+/* Helper line */
+.markster-cta-helper {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.875rem;
+  color: #6b7280; /* neutral gray */
+  margin-top: 0.75rem; /* 12px */
+  margin-bottom: 0.75rem; /* 12px before buttons */
+}
+
+@media (min-width: 768px) {
+  .markster-cta-helper {
+    margin-top: 1rem; /* 16px */
+    margin-bottom: 1rem; /* 16px */
+  }
+}
+
+/* CTA Buttons - pill shaped, side by side */
+.markster-cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem; /* 14px between buttons on mobile */
+  margin-top: 0;
+}
+
+@media (min-width: 768px) {
+  .markster-cta-buttons {
+    flex-direction: row;
+    gap: 1rem; /* 16px between buttons on desktop */
+  }
+}
+
+.markster-cta-btn {
+  font-family: 'Times New Roman', Times, serif;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem; /* 16px vertical, prominent width */
+  border-radius: 9999px; /* pill shape */
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.5;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .markster-cta-btn {
+    padding: 1.125rem 2.5rem; /* 18px vertical for more prominence */
+  }
+}
+
+.markster-cta-btn-solid {
+  background-color: #0f172a; /* dark ink/navy */
+  color: #ffffff;
+  border: 2px solid #0f172a;
+}
+
+.markster-cta-btn-solid:hover {
+  background-color: #1e293b;
+  border-color: #1e293b;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.markster-cta-btn-solid:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+.markster-cta-btn-outline {
+  background-color: transparent;
+  color: #0f172a;
+  border: 2px solid #0f172a;
+}
+
+.markster-cta-btn-outline:hover {
+  background-color: #f9fafb;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.markster-cta-btn-outline:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Full width buttons on mobile */
+@media (max-width: 767px) {
+  .markster-cta-btn {
+    width: 100%;
+  }
+}
+
+/* Ethical note footnote */
+.markster-cta-ethical {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.75rem; /* 12px XS */
+  color: #6b7280; /* muted gray */
+  line-height: 1.5;
+  margin-top: 0.875rem; /* 14px */
+}
+
+@media (min-width: 768px) {
+  .markster-cta-ethical {
+    margin-top: 1rem; /* 16px */
+  }
+}
+
+/* Right Column: Quick intake card */
+.markster-quick-intake-card {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb; /* thin neutral border */
+  border-radius: 1.5rem; /* rounded-3xl */
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1), 0 4px 10px rgba(0, 0, 0, 0.06); /* soft elevated shadow */
+}
+
+@media (min-width: 768px) {
+  .markster-quick-intake-card {
+    padding: 1.75rem; /* 28px */
+  }
+}
+
+.markster-intake-title {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.125rem; /* 18px */
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 0.75rem; /* 12px */
+}
+
+@media (min-width: 768px) {
+  .markster-intake-title {
+    font-size: 1.25rem; /* 20px */
+    margin-bottom: 1rem; /* 16px */
+  }
+}
+
+/* Ordered list */
+.markster-intake-list {
+  font-family: 'Times New Roman', Times, serif;
+  list-style-position: inside;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem; /* 8px */
+}
+
+@media (min-width: 768px) {
+  .markster-intake-list {
+    gap: 0.625rem; /* 10px */
+  }
+}
+
+.markster-intake-list li {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.75rem; /* 12px - reduced by 2pt from 14px */
+  line-height: 1.6;
+  color: #374151; /* neutral/dark gray */
+  padding-left: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .markster-intake-list li {
+    font-size: 0.875rem; /* 14px - reduced by 2pt from 16px */
+  }
+}
+
+/* Contact row */
+.markster-intake-contact {
+  font-family: 'Times New Roman', Times, serif;
+  margin-top: 1.25rem; /* 20px */
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem; /* 12px */
+}
+
+@media (min-width: 768px) {
+  .markster-intake-contact {
+    margin-top: 1.5rem; /* 24px */
+    gap: 1rem; /* 16px */
+  }
+}
+
+.markster-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.markster-contact-icon {
+  width: 1rem; /* 16px */
+  height: 1rem;
+  color: #475569; /* slate/ink color */
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .markster-contact-icon {
+    width: 1.125rem; /* 18px */
+    height: 1.125rem;
+  }
+}
+
+.markster-contact-link {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 0.875rem;
+  color: #0f172a; /* dark ink */
+  text-decoration: underline;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .markster-contact-link {
+    font-size: 1rem;
+  }
+}
+
+.markster-contact-link:hover {
+  color: #1e293b; /* slightly darker on hover */
+}
+
 /* Markster Pricing Section Styles */
 
 /* Apply Times New Roman font to pricing section */
