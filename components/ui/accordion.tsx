@@ -1,5 +1,6 @@
 import * as React from "react";
 
+// Accordion context unchanged
 type AccordionContextType = {
   openItem: string | null;
   setOpenItem: (value: string | null) => void;
@@ -18,7 +19,7 @@ export function Accordion({
   const [openItem, setOpenItem] = React.useState<string | null>(null);
   return (
     <AccordionContext.Provider value={{ openItem, setOpenItem, type, collapsible }}>
-      <div className={className} {...props}>{children}</div>
+      <div className={className} {...props} style={{ fontFamily: "Times New Roman, Times, serif" }}>{children}</div>
     </AccordionContext.Provider>
   );
 }
@@ -44,6 +45,7 @@ export function AccordionItem({
   );
 }
 
+// Replace the +/- with SVG up/down arrows, right-justified.
 export function AccordionTrigger({
   isOpen,
   onToggle,
@@ -54,18 +56,44 @@ export function AccordionTrigger({
   return (
     <button
       className={`w-full text-left py-6 px-0 pr-12 bg-white relative cursor-pointer ${className}`}
-      style={{ border: 'none', outline: 'none' }}
+      style={{
+        border: 'none',
+        outline: 'none',
+        background: 'white',
+        boxShadow: 'none',
+        fontFamily: "Times New Roman, Times, serif"
+      }}
       onClick={onToggle}
       type="button"
       aria-expanded={isOpen}
       {...props}
     >
-      <span className="text-base font-bold">{children}</span>
-      <span 
-        className="text-2xl font-light leading-none select-none absolute right-0 top-6" 
-        aria-hidden="true"
+      <span
+        className="text-base font-bold"
+        style={{
+          fontFamily: "Times New Roman, Times, serif",
+          fontWeight: "bold",
+        }}
       >
-        {isOpen ? '−' : '+'}
+        {children}
+      </span>
+      {/* Up/down move icon, SVG, right-aligned absolute */}
+      <span
+        className="absolute right-0 top-1/2 transform -translate-y-1/2"
+        aria-hidden="true"
+        style={{ width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+      >
+        {isOpen ? (
+          // Up arrow (chevron)
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="5 12 10 7 15 12"/>
+          </svg>
+        ) : (
+          // Down arrow (chevron)
+          <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
+            <polyline points="5 8 10 13 15 8"/>
+          </svg>
+        )}
       </span>
     </button>
   );
@@ -78,6 +106,18 @@ export function AccordionContent({
   ...props
 }: React.PropsWithChildren<{ isOpen?: boolean; className?: string }>) {
   return isOpen ? (
-    <div className={`pb-6 pt-2 pr-0 pl-0 bg-white text-base font-normal leading-relaxed ${className}`} {...props}>{children}</div>
+    <div
+      className={`pb-6 pt-2 pr-0 pl-0 bg-white text-base font-normal leading-relaxed ${className}`}
+      style={{
+        fontFamily: "Times New Roman, Times, serif",
+        fontWeight: 400,
+        fontSize: "1rem",
+        background: "white",
+        margin: 0,
+      }}
+      {...props}
+    >
+      {children}
+    </div>
   ) : null;
 }
