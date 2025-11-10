@@ -437,40 +437,80 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Start / Contact */}
-      <Section id="start" className="bg-sky-50">
-        <Container>
-          <div className="grid items-center gap-8 md:grid-cols-2">
-            <div>
-              <h2 className="text-2xl font-bold md:text-3xl">Ready to file your mark this week?</h2>
-              <p className="mt-2 text-gray-700">We'll run the search, map classes, and file cleanly—then watch the journals for conflicts. You get clear timelines and a status dashboard.</p>
-              <ul className="mt-6 space-y-3 text-sm text-gray-700">
-                <ListItem>Search memo in 48 hours</ListItem>
-                <ListItem>Drafts ready in 72 hours post-docs</ListItem>
-                <ListItem>Monthly status updates + early alerts</ListItem>
+      {/* Start / Contact - "Ready to file your mark this week?" */}
+      <Section id="start" className="markster-cta-section">
+        <Container className="markster-cta-container">
+          <div className="markster-cta-grid">
+            {/* Left Column: Copy + Bullets + CTAs */}
+            <div className="markster-cta-left">
+              <h2 className="markster-cta-headline">Ready to file your mark this week?</h2>
+              <p className="markster-cta-paragraph">
+                We'll run the search, map classes, and file cleanly—then watch the journals for conflicts. You get clear timelines and a status dashboard.
+              </p>
+              
+              {/* Checklist with check icon chips */}
+              <ul className="markster-cta-checklist">
+                <li className="markster-checklist-item">
+                  <div className="markster-check-chip">
+                    <CheckCircle2 className="markster-check-icon" aria-hidden="true" />
+                  </div>
+                  <span>Search memo in 48 hours</span>
+                </li>
+                <li className="markster-checklist-item">
+                  <div className="markster-check-chip">
+                    <CheckCircle2 className="markster-check-icon" aria-hidden="true" />
+                  </div>
+                  <span>Drafts ready in 72 hours post-docs</span>
+                </li>
+                <li className="markster-checklist-item">
+                  <div className="markster-check-chip">
+                    <CheckCircle2 className="markster-check-icon" aria-hidden="true" />
+                  </div>
+                  <span>Monthly status updates + early alerts</span>
+                </li>
               </ul>
-              <p className="mt-4 text-sm text-gray-700">Still have a query? Speak to a lawyer over a 20‑min call.</p>
-              <div className="mt-6 flex flex-wrap gap-3">
-                <Button className="rounded-2xl px-6 py-6 text-base" asChild>
-                  <a href="/contact">Book a FREE consultation</a>
-                </Button>
-                <Button variant="outline" className="rounded-2xl px-6 py-6 text-base" asChild>
-                  <a href="/checkout/markster">Start with Markster™</a>
-                </Button>
+              
+              {/* Helper line */}
+              <p className="markster-cta-helper">Still have a query? Speak to a lawyer over a 20‑min call.</p>
+              
+              {/* CTA Buttons - pill shaped */}
+              <div className="markster-cta-buttons">
+                <a href="/contact" className="markster-cta-btn markster-cta-btn-solid">
+                  Book a FREE consultation
+                </a>
+                <a href="/checkout/markster" className="markster-cta-btn markster-cta-btn-outline">
+                  Start with Markster™
+                </a>
               </div>
-              <p className="mt-3 text-xs text-gray-600">Ethical note: We provide factual, educational information and fixed-fee options—no comparative claims or solicitations.</p>
+              
+              {/* Ethical note */}
+              <p className="markster-cta-ethical">
+                Ethical note: We provide factual, educational information and fixed-fee options—no comparative claims or solicitations.
+              </p>
             </div>
-            <div className="rounded-3xl border bg-white p-6 shadow-sm">
-              <h3 className="text-lg font-semibold">Quick intake (what we'll ask)</h3>
-              <ol className="mt-4 list-decimal space-y-2 pl-5 text-sm text-gray-700">
-                <li>Applicant details & fee category (Individual/Startup/MSME/Company)</li>
-                <li>Brand name/logo & high-res asset (for device marks)</li>
-                <li>Goods/services & first-use date (if any)</li>
+            
+            {/* Right Column: Quick intake card */}
+            <div className="markster-quick-intake-card">
+              <h3 className="markster-intake-title">Quick intake (what we'll ask)</h3>
+              <ol className="markster-intake-list">
+                <li>Applicant details &amp; fee category (Individual/Startup/MSME/Company)</li>
+                <li>Brand name/logo &amp; high-res asset (for device marks)</li>
+                <li>Goods/services &amp; first-use date (if any)</li>
                 <li>TM-48 (Authorization) and KYC (as applicable)</li>
               </ol>
-              <div className="mt-6 flex flex-col gap-2 text-sm text-gray-700">
-                <div className="flex items-center gap-2"><Mail className="h-4 w-4" /><a className="underline" href="mailto:markster@thecompliers.info">markster@thecompliers.info</a></div>
-                <div className="flex items-center gap-2"><MessageSquare className="h-4 w-4" /><a className="underline" href="https://wa.me/91XXXXXXXXXXX">WhatsApp</a></div>
+              <div className="markster-intake-contact">
+                <div className="markster-contact-item">
+                  <Mail className="markster-contact-icon" aria-hidden="true" />
+                  <a href="mailto:markster@thecompliers.info" className="markster-contact-link">
+                    markster@thecompliers.info
+                  </a>
+                </div>
+                <div className="markster-contact-item">
+                  <MessageSquare className="markster-contact-icon" aria-hidden="true" />
+                  <a href="https://wa.me/91XXXXXXXXXXX" className="markster-contact-link">
+                    WhatsApp
+                  </a>
+                </div>
               </div>
             </div>
           </div>
