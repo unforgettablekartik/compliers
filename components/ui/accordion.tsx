@@ -45,12 +45,10 @@ export function AccordionItem({
   const isOpen = ctx.openItem === value;
   return (
     <div className={`${className}`} style={{ marginBottom: "16px" }} {...props}>
-      <div className="relative">
-        {React.Children.map(children, (child: any) =>
-          React.cloneElement(child, { isOpen, onToggle: () => ctx.setOpenItem(isOpen && ctx.collapsible ? null : value) })
-        )}
-      </div>
-      <div style={{ borderBottom: "1px solid #e5e7eb", marginTop: isOpen ? "0" : "0" }} />
+      {React.Children.map(children, (child: any) =>
+        React.cloneElement(child, { isOpen, onToggle: () => ctx.setOpenItem(isOpen && ctx.collapsible ? null : value) })
+      )}
+      <div style={{ borderBottom: "1px solid #e5e7eb" }} />
     </div>
   );
 }
@@ -65,7 +63,7 @@ export function AccordionTrigger({
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
   return (
     <button
-      className={`w-full text-left bg-white relative cursor-pointer ${className}`}
+      className={`w-full text-left bg-white cursor-pointer ${className}`}
       style={{
         border: 'none',
         outline: 'none',
@@ -74,7 +72,8 @@ export function AccordionTrigger({
         fontFamily: "Times New Roman, Times, serif",
         fontSize: "1rem",
         minHeight: "64px",
-        padding: "20px 56px 20px 24px",
+        padding: "20px 24px",
+        paddingRight: "64px",
         display: "block",
         position: "relative"
       }}
@@ -89,7 +88,8 @@ export function AccordionTrigger({
           fontFamily: "Times New Roman, Times, serif",
           fontWeight: "bold",
           fontSize: "1rem",
-          display: "block"
+          display: "block",
+          lineHeight: "1.5"
         }}
       >
         {children}
@@ -106,7 +106,9 @@ export function AccordionTrigger({
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center',
-          transform: isOpen ? 'translateY(-50%) rotate(180deg)' : 'translateY(-50%) rotate(0deg)',
+          flexShrink: 0,
+          marginTop: '-12px',
+          transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
           transition: 'transform 0.3s ease'
         }}
       >
