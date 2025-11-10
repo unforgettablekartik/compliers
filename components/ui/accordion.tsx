@@ -55,13 +55,14 @@ export function AccordionTrigger({
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
   return (
     <button
-      className={`w-full text-left py-6 px-0 pr-12 bg-white relative cursor-pointer ${className}`}
+      className={`w-full text-left py-6 px-0 pr-10 bg-white relative cursor-pointer ${className}`}
       style={{
         border: 'none',
         outline: 'none',
         background: 'white',
         boxShadow: 'none',
-        fontFamily: "Times New Roman, Times, serif"
+        fontFamily: "Times New Roman, Times, serif",
+        fontSize: "1rem"
       }}
       onClick={onToggle}
       type="button"
@@ -69,19 +70,20 @@ export function AccordionTrigger({
       {...props}
     >
       <span
-        className="text-base font-bold"
+        className="font-bold"
         style={{
           fontFamily: "Times New Roman, Times, serif",
           fontWeight: "bold",
+          fontSize: "1rem"
         }}
       >
         {children}
       </span>
-      {/* Up/down move icon, SVG, right-aligned absolute */}
+      {/* Up/down move icon, SVG, right-aligned with proper spacing */}
       <span
-        className="absolute right-0 top-1/2 transform -translate-y-1/2"
+        className="absolute top-1/2 transform -translate-y-1/2"
         aria-hidden="true"
-        style={{ width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
+        style={{ right: '0', width: '24px', height: '24px', display: 'flex', alignItems: 'center', justifyContent: 'center' }}
       >
         {isOpen ? (
           // Up arrow (chevron)
@@ -107,7 +109,7 @@ export function AccordionContent({
 }: React.PropsWithChildren<{ isOpen?: boolean; className?: string }>) {
   return isOpen ? (
     <div
-      className={`pb-6 pt-2 pr-0 pl-0 bg-white text-base font-normal leading-relaxed ${className}`}
+      className={`pb-6 pt-2 pr-10 pl-0 bg-white font-normal leading-relaxed ${className}`}
       style={{
         fontFamily: "Times New Roman, Times, serif",
         fontWeight: 400,
