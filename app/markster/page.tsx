@@ -336,7 +336,7 @@ export default function MarksterLanding() {
                 </CardContent>
               </div>
               <div className="markster-pricing-cta">
-                <a href="#start">Start now</a>
+                <a href="#start">Choose Plan</a>
               </div>
             </Card>
 
@@ -378,7 +378,7 @@ export default function MarksterLanding() {
               </div>
             </Card>
           </div>
-          <p className="mt-6 text-center text-xs text-gray-600">*Official fees per IP India First Schedule. We pass them at actuals. Taxes extra on professional fees.</p>
+          <p className="mt-12 text-center text-xs text-gray-600">*Official fees per IP India First Schedule. We pass them at actuals. Taxes extra on professional fees.</p>
         </Container>
       </Section>
 
