@@ -10,6 +10,7 @@
     "test": "node --test"
   },
   "dependencies": {
+    "@calcom/embed-react": "^1.5.3",
     "@emailjs/browser": "^4.4.1",
     "@notionhq/client": "2.2.9",
     "@types/nodemailer": "^7.0.2",
