@@ -6,6 +6,7 @@ export default function SiteFooter() {
     <footer className="site-footer">
       <div className="main-footer">
         <div className="container footer-content">
+          <div className="footer-copy">The Compliers © 2025 | All Rights Reserved</div>
           <ul className="footer-nav">
             <li>
               <Link href="/">Home</Link>
@@ -24,7 +25,6 @@ export default function SiteFooter() {
             </li>
           </ul>
         </div>
-        <div className="footer-copy">The Compliers © 2025 | All Rights Reserved</div>
       </div>
     </footer>
   );

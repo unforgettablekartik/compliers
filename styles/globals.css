@@ -568,10 +568,9 @@ section h2 {
 }
 
 .site-footer .footer-copy {
-  margin-top: 1rem;
-  padding: 0.75rem 0 1.5rem;
   font-weight: 400;
   color: #000;
+  font-size: 0.9rem;
 }
 
 /* Contact split */
@@ -601,9 +600,11 @@ section h2 {
 /* Custom footer navigation */
 .container.footer-content {
   display: flex;
-  justify-content: center;
-  padding: 0;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
   flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .footer-nav {
@@ -611,12 +612,15 @@ section h2 {
   gap: 1.5rem;
   list-style: none;
   flex-wrap: wrap;
+  justify-content: flex-end;
+  flex: 1;
 }
 
 .footer-nav a {
   color: #000;
   text-decoration: none;
   font-weight: 600;
+  font-size: 0.95rem;
 }
 
 .footer-nav a:hover {
@@ -723,10 +727,23 @@ section h2 {
     grid-template-columns: 1fr;
   }
 
+  .container.footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+
   .footer-nav {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 0.5rem;
+    width: 100%;
+    justify-content: flex-start;
+  }
+  
+  .site-footer .footer-copy {
+    font-size: 0.85rem;
   }
 }
 
