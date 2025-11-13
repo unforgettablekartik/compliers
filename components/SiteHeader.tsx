@@ -42,6 +42,9 @@ export default function SiteHeader() {
             <Link href="/blog">Blogs</Link>
           </li>
           <li>
+            <Link href="/book-a-call">Book A Call</Link>
+          </li>
+          <li>
             <Link href="/#contact">Contact</Link>
           </li>
         </ul>
