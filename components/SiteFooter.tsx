@@ -9,11 +9,11 @@ export default function SiteFooter() {
           <div className="footer-section">
             <h3 className="footer-heading">Our Expertise</h3>
             <ul className="footer-links">
-              <li><Link href="/#services">Contracts & Agreements</Link></li>
-              <li><Link href="/#services">Trademarks & IP</Link></li>
-              <li><Link href="/#services">Corporate Laws</Link></li>
-              <li><Link href="/#services">Data Privacy, AI & IT</Link></li>
-              <li><Link href="/#services">General Legal Support</Link></li>
+              <li><span className="footer-text-unclickable">Contracts & Agreements</span></li>
+              <li><Link href="/markster">Trademarks & IP</Link></li>
+              <li><span className="footer-text-unclickable">Corporate Laws</span></li>
+              <li><span className="footer-text-unclickable">Data Privacy, AI & IT</span></li>
+              <li><span className="footer-text-unclickable">General Legal Support</span></li>
             </ul>
           </div>
 
@@ -21,14 +21,14 @@ export default function SiteFooter() {
             <h3 className="footer-heading">Resources</h3>
             <ul className="footer-links">
               <li><Link href="/blog">Articles & Blogs</Link></li>
-              <li><Link href="/#resources">Toolkits & Checklists</Link></li>
+              <li><span className="footer-text-unclickable">Toolkits & Checklists</span></li>
             </ul>
           </div>
 
           <div className="footer-section">
             <h3 className="footer-heading">Contact Us</h3>
             <ul className="footer-links">
-              <li><Link href="/#contact">Book a Call</Link></li>
+              <li><Link href="/book-a-call">Book a Call</Link></li>
               <li><Link href="/#contact">Write to us</Link></li>
               <li><Link href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">WhatsApp</Link></li>
             </ul>

@@ -461,7 +461,7 @@ section h2 {
   color: #333;
   text-decoration: none;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   transition: color 0.3s ease;
 }
 
@@ -470,11 +470,24 @@ section h2 {
   text-decoration: underline;
 }
 
+.footer-text-unclickable {
+  color: #333;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: default;
+}
+
 .footer-bottom {
   background-color: #f9f9f9;
   border-top: 1px solid #e0e0e0;
   padding: 1rem 0;
   text-align: center;
+}
+
+.footer-bottom .container {
+  max-width: fit-content;
+  width: auto;
+  padding: 0.5rem 2rem;
 }
 
 .blogPostShell {
