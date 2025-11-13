@@ -534,7 +534,7 @@ export default function MarksterLanding() {
               
               {/* CTA Buttons - pill shaped */}
               <div className="markster-cta-buttons">
-                <a href="/contact" className="markster-cta-btn markster-cta-btn-solid">
+                <a href="/book-a-call" className="markster-cta-btn markster-cta-btn-solid">
                   Book a FREE consultation with Trademark Lawyer
                 </a>
               </div>
