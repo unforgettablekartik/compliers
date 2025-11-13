@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Compliers – Law & Technology Specialists</title>
+        <title>The Compliers - Contracts, Trademark and Tech-Law Specialists</title>
         <meta
           name="description"
           content="Rendering support on the conventional areas of law as well as the latest legal developments across the industries."
