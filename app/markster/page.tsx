@@ -22,6 +22,7 @@ export default function MarksterLanding() {
   const PRO_SINGLE = 9900;
   const PRO_PLUS = 17900;
   const PRO_SCALE = 34900; // starting
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919540101740';
 
   return (
     <div className="markster-page-container relative min-h-screen bg-white text-gray-900">
@@ -563,7 +564,7 @@ export default function MarksterLanding() {
                 </div>
                 <div className="markster-contact-item">
                   <FaWhatsapp className="markster-contact-icon" aria-hidden="true" />
-                  <a href="https://wa.me/91XXXXXXXXXXX" className="markster-contact-link">
+                  <a href={`https://wa.me/${whatsappNumber}`} className="markster-contact-link">
                     Connect on WhatsApp
                   </a>
                 </div>
