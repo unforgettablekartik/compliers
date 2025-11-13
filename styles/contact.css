@@ -1,13 +1,13 @@
 .contact-placeholder::placeholder {
   color: #bbb;
   opacity: 1;
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
-  font-style: italic;
-  letter-spacing: 0.02em;
+  font-style: normal;
+  letter-spacing: 0;
 }
 .contact-placeholder {
-  font-family: inherit;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   padding: 0.75em;
   border-radius: 4px;

@@ -52,6 +52,16 @@ const CompliersBot: React.FC = () => {
     }
   }, [isOpen, messages]);
 
+  // Listen for custom event to open chatbot
+  useEffect(() => {
+    const handleOpenBot = () => {
+      handleOpen();
+    };
+    
+    window.addEventListener('openCompliersBot', handleOpenBot);
+    return () => window.removeEventListener('openCompliersBot', handleOpenBot);
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
   // Add a message to the chat
   const addMessage = (text: string, sender: 'bot' | 'user') => {
     const newMessage: Message = {
@@ -65,6 +75,10 @@ const CompliersBot: React.FC = () => {
 
   // Handle opening the chatbot
   const handleOpen = () => {
+    // Play pop sound
+    const audio = new Audio('/pop-sound.mp3');
+    audio.play().catch(err => console.log('Audio play failed:', err));
+    
     setIsOpen(true);
     if (conversationStep === 'initial') {
       setInputValue('Hey Compliers!');

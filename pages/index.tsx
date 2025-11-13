@@ -38,6 +38,12 @@ export default function Home() {
     }
   };
 
+  // Handle opening the chatbot
+  const handleOpenChatbot = () => {
+    const event = new CustomEvent('openCompliersBot');
+    window.dispatchEvent(event);
+  };
+
   return (
     <>
       <Head>
@@ -149,10 +155,10 @@ export default function Home() {
         <div className="container">
           <div className="contact-header-row">
             <h2>Contact for Enquiries</h2>
-            <a href="https://wa.me/message/CWIULESUWOHBE1" className="whatsapp-link" target="_blank" rel="noopener noreferrer">
-              <i className="fa-brands fa-whatsapp" aria-hidden="true"></i>
-              <span>Connect on WhatsApp</span>
-            </a>
+            <button onClick={handleOpenChatbot} className="lets-chat-button" type="button">
+              <i className="fa-solid fa-comments" aria-hidden="true"></i>
+              <span>Let&apos;s Chat</span>
+            </button>
           </div>
           <div className="contact-wrapper">
             <div className="contact-form">
