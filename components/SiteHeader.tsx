@@ -14,7 +14,7 @@ export default function SiteHeader() {
     <nav id="navbar">
       <div className="container">
         <div className="logo">
-          <Link href="/" className="logo-link">
+          <Link href="/" className="logo-link" style={{ color: '#0f4662' }}>
             The Compliers
           </Link>
         </div>
@@ -34,9 +34,6 @@ export default function SiteHeader() {
           </li>
           <li>
             <Link href="/#about">About Us</Link>
-          </li>
-          <li>
-            <Link href="/#services">Our Expertise</Link>
           </li>
           <li>
             <Link href="/blog">Blogs</Link>

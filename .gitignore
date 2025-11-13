@@ -24,3 +24,5 @@ yarn-error.log*
 
 # TypeScript build info
 tsconfig.tsbuildinfo
+scroll-and-screenshot.js
+public/pop-sound.mp3.placeholder
