@@ -19,8 +19,8 @@ export default function BookACall() {
       <section className="legal-page">
         <div className="container">
           <h1>Book A Call</h1>
-          <p>Schedule a consultation with our legal experts. Choose a convenient time from the calendar below.</p>
-          <div style={{ width: "100%", height: "600px", marginTop: "2rem" }}>
+          <p style={{ textAlign: "center" }}>Schedule a consultation with our legal experts. Choose a convenient time from the availability calendar below.</p>
+          <div style={{ width: "100%", height: "600px", marginTop: "2rem", border: "2px solid #708090", borderRadius: "8px", overflow: "hidden" }}>
             <Cal 
               namespace="20min"
               calLink="thecompliers/20min"
@@ -28,6 +28,9 @@ export default function BookACall() {
               config={{"layout":"month_view"}}
             />
           </div>
+          <p style={{ textAlign: "center", marginTop: "1.5rem", fontSize: "0.95rem", color: "#555" }}>
+            Share relevant documents & information at <a href="mailto:connect@thecompliers.info" style={{ color: "#0077cc", textDecoration: "underline" }}>connect@thecompliers.info</a>
+          </p>
         </div>
       </section>
     </>
