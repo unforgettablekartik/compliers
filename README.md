@@ -21,6 +21,31 @@ SMTP_FROM=<email address to send from>
 
 Create a `.env.local` file in the project root or set the variables in your deployment environment so they are available at build and runtime.
 
+## Subdomain Configuration
+
+The application supports subdomain routing for the Markster™ service:
+
+- **Main domain**: `thecompliers.info` - Hosts the main website and all standard routes
+- **Markster subdomain**: `markster.thecompliers.info` - Automatically routes to the `/markster` section
+
+### How it works
+
+The middleware in `middleware.ts` detects requests to the `markster` subdomain and rewrites them to the `/markster` path:
+- `markster.thecompliers.info/` → rewrites to `/markster`
+- `markster.thecompliers.info/dashboard` → rewrites to `/markster/dashboard`
+
+### DNS Configuration
+
+To enable the subdomain in production, configure your DNS provider with an A or CNAME record:
+
+```
+Type: CNAME
+Name: markster
+Value: thecompliers.info (or your deployment domain)
+```
+
+For deployment platforms like Vercel, ensure the domain `markster.thecompliers.info` is added to your project's domain configuration.
+
 ## Development
 
 Install dependencies and start the development server:
@@ -29,3 +54,10 @@ Install dependencies and start the development server:
 npm install
 npm run dev
 ```
+
+To test subdomain routing locally, you can:
+1. Add entries to your `/etc/hosts` file:
+   ```
+   127.0.0.1 markster.localhost
+   ```
+2. Access the application at `http://markster.localhost:3000`
