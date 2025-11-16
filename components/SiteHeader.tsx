@@ -1,13 +1,22 @@
 'use client';
 
 import Link from 'next/link';
+import { useRouter, usePathname } from 'next/navigation';
 import React, { useState } from 'react';
+import { handleHashNavigation } from '@/lib/navigation';
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
+  };
+
+  const handleLinkClick = (href: string) => (e: React.MouseEvent) => {
+    handleHashNavigation(href, pathname || '/', router, e);
+    setMenuOpen(false); // Close mobile menu after clicking
   };
 
   return (
@@ -30,19 +39,19 @@ export default function SiteHeader() {
         </button>
         <ul className={menuOpen ? 'nav-links mobile-open' : 'nav-links'}>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/" onClick={handleLinkClick('/')}>Home</Link>
           </li>
           <li>
-            <Link href="/#about">About Us</Link>
+            <Link href="/#about" onClick={handleLinkClick('/#about')}>About Us</Link>
           </li>
           <li>
-            <Link href="/blog">Blogs</Link>
+            <Link href="/blog" onClick={handleLinkClick('/blog')}>Blogs</Link>
           </li>
           <li>
-            <Link href="/book-a-call">Book A Call</Link>
+            <Link href="/book-a-call" onClick={handleLinkClick('/book-a-call')}>Book A Call</Link>
           </li>
           <li>
-            <Link href="/#contact">Contact</Link>
+            <Link href="/#contact" onClick={handleLinkClick('/#contact')}>Contact</Link>
           </li>
         </ul>
       </div>
