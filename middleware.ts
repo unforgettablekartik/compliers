@@ -22,6 +22,21 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  // Redirect /markster requests on main domain to markster subdomain
+  if (!hostname.startsWith('markster.') && url.pathname.startsWith('/markster')) {
+    // Extract the base domain (e.g., thecompliers.info from www.thecompliers.info or thecompliers.info)
+    const baseDomain = hostname.replace(/^www\./, '');
+    const subdomain = `markster.${baseDomain}`;
+    
+    // Build the redirect URL
+    const redirectUrl = new URL(request.url);
+    redirectUrl.hostname = subdomain;
+    // Remove /markster prefix from the path since the subdomain handles this
+    redirectUrl.pathname = url.pathname.replace(/^\/markster/, '') || '/';
+    
+    return NextResponse.redirect(redirectUrl, 301); // 301 permanent redirect
+  }
+
   return NextResponse.next();
 }
 
