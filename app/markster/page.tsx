@@ -146,10 +146,6 @@ export default function MarksterLanding() {
               <span>Fixed‑fee · Transparent timelines</span>
             </div>
             <div className="markster-trust-item-compact">
-              <ShieldCheck className="h-4 w-4 flex-none" aria-hidden />
-              <span>Dossier &amp; status dashboard access</span>
-            </div>
-            <div className="markster-trust-item-compact">
               <Clock className="h-4 w-4 flex-none" aria-hidden />
               <span>Priority turnaround options</span>
             </div>
