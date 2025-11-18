@@ -81,26 +81,37 @@ export default function Home() {
           <p>
             Rendering support on the conventional areas of law as well as the latest legal developments across the industries.
           </p>
-          <span className="highlight">
-            Special assistance for new entrepreneurs and startups in making.
-          </span>
-          <div className="hero-buttons">
-            <a href="/#contact" className="btn">Need Help</a>
-            <a href="/blog" className="btn btn-secondary">Learning Center</a>
-          </div>
         </div>
       </header>
 
-      {/* Markster Button Section */}
-      <section className="markster-banner">
-        <div className="container">
-          <div className="markster-cta">
-            <div className="markster-content">
-              <h3>🛡️ Trademark Filing Made Simple</h3>
-              <p>File your trademark with lawyer-led, fixed-fee package for Indian startups & MSMEs</p>
+      {/* Service Tabs Section */}
+      <section className="service-tabs-section">
+        <div className="service-tabs-container">
+          <h2 className="service-tabs-intro-heading">
+            Explore our unique tools, each dedicated to your customised needs:
+          </h2>
+          <div className="service-tabs-grid">
+            {/* Tab 1: Agreementor - Unclickable */}
+            <div className="service-tab service-tab-agreementor unclickable">
+              <h2 className="service-tab-heading">Agreementor</h2>
+              <p className="service-tab-description">Contracts &amp; Agreements</p>
             </div>
-            <a href="/markster" className="btn btn-markster">
-              Explore Markster™
+
+            {/* Tab 2: Markster - Links to /markster */}
+            <a href="/markster" className="service-tab-link">
+              <div className="service-tab service-tab-markster">
+                <h2 className="service-tab-heading">Markster</h2>
+                <p className="service-tab-description">Securing Trademarks</p>
+              </div>
+            </a>
+
+            {/* Tab 3: Creator In Law - Links to /creator-in-law */}
+            <a href="/creator-in-law" className="service-tab-link">
+              <div className="service-tab service-tab-creator">
+                <span className="service-tab-badge">New</span>
+                <h2 className="service-tab-heading">Creator In Law</h2>
+                <p className="service-tab-description">Creators&apos; Legal Support</p>
+              </div>
             </a>
           </div>
         </div>
@@ -146,6 +157,21 @@ export default function Home() {
               <h3>IT &amp; Data Privacy</h3>
               <p>Advisory on technology law, cybersecurity obligations and global privacy frameworks to keep digital operations resilient and compliant.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Markster Button Section */}
+      <section className="markster-banner">
+        <div className="container">
+          <div className="markster-cta">
+            <div className="markster-content">
+              <h3>🛡️ Trademark Filing Made Simple</h3>
+              <p>File your trademark with lawyer-led, fixed-fee package for Indian startups & MSMEs</p>
+            </div>
+            <a href="/markster" className="btn btn-markster">
+              Explore Markster™
+            </a>
           </div>
         </div>
       </section>

@@ -232,13 +232,13 @@ nav .nav-links a:hover {
 
 /* Hero */
 #hero {
-  min-height: 100vh;
+  min-height: 60vh;
   background: linear-gradient(120deg, #e0e7ff 0%, #f5f5f5 100%);
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 8rem 1rem 4rem;
+  padding: 7.2rem 1rem 2.7rem;
 }
 
 #hero .hero-content h1 {
@@ -864,6 +864,195 @@ section h2 {
 @media (min-width: 769px) and (max-width: 1024px) {
   .articles-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Service Tabs Section */
+.service-tabs-section {
+  background: #ffffff;
+  padding: 2rem 0 0 0;
+  margin-top: -1px;
+}
+
+.service-tabs-container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.service-tabs-intro-heading {
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 1.6rem 0;
+  padding: 0 1rem;
+  line-height: 1.4;
+}
+
+.service-tabs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  box-shadow: none;
+}
+
+.service-tab {
+  padding: 1.5rem 2rem;
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.service-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  transition: height 0.3s ease;
+}
+
+.service-tab:hover::before {
+  height: 6px;
+}
+
+.service-tab-agreementor {
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%);
+}
+
+.service-tab-agreementor::before {
+  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+}
+
+.service-tab-markster {
+  background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 50%, #60a5fa 100%);
+  cursor: pointer;
+}
+
+.service-tab-markster::before {
+  background: linear-gradient(90deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.service-tab-markster:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+}
+
+.service-tab-creator {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #d8b4fe 100%);
+  cursor: pointer;
+}
+
+.service-tab-creator::before {
+  background: linear-gradient(90deg, #B94AF3 0%, #a855f7 100%);
+}
+
+.service-tab-creator:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(185, 74, 243, 0.15);
+}
+
+.service-tab.unclickable {
+  cursor: default;
+  opacity: 0.85;
+}
+
+.service-tab-heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.1),
+    1px 1px 2px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #111827 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.service-tab-description {
+  font-size: 1rem;
+  color: #374151;
+  margin: 0;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Badge for New tab */
+.service-tab-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  z-index: 10;
+}
+
+/* Link wrapper for clickable tabs */
+.service-tab-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Responsive design for service tabs */
+@media (max-width: 768px) {
+  .service-tabs-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .service-tab {
+    padding: 1.5rem 1.5rem;
+    min-height: auto;
+  }
+
+  .service-tab-heading {
+    font-size: 1.5rem;
+  }
+
+  .service-tab-description {
+    font-size: 0.95rem;
+  }
+
+  .service-tab:hover {
+    transform: none;
+  }
+
+  .service-tab-markster:hover,
+  .service-tab-creator:hover {
+    transform: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .service-tab {
+    padding: 2.5rem 1.75rem;
+  }
+
+  .service-tab-heading {
+    font-size: 1.6rem;
   }
 }
 
