@@ -2680,17 +2680,31 @@ section h2 {
 
 .creator-in-law-page-container {
   font-family: 'Montserrat', sans-serif !important;
+  padding-top: 48px;      /* 0.5 inches at 96 DPI */
 }
 
 .creator-in-law-page-container * {
   font-family: 'Montserrat', sans-serif !important;
 }
 
+/* Add content margins to containers */
+.creator-in-law-page-container .mx-auto {
+  margin-left: 96px !important;     /* 1 inch at 96 DPI */
+  margin-right: 96px !important;    /* 1 inch at 96 DPI */
+}
+
+@media (max-width: 768px) {
+  .creator-in-law-page-container .mx-auto {
+    margin-left: 24px !important;   /* Reduced margin for mobile devices */
+    margin-right: 24px !important;  /* Reduced margin for mobile devices */
+  }
+}
+
 /* Hero Section */
 .creator-hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom, #020617 0%, #0f172a 100%);
+  background: linear-gradient(to bottom, #D9A3A5 0%, #C48B8E 100%);
   padding: 4rem 0;
 }
 
@@ -2725,11 +2739,11 @@ section h2 {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(99, 102, 241, 0.1);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: rgba(217, 163, 165, 0.15);
+  border: 1px solid rgba(217, 163, 165, 0.4);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
-  color: #c7d2fe;
+  color: #FFFFFF;
   font-size: 0.875rem;
   font-weight: 500;
   width: fit-content;
@@ -2737,39 +2751,42 @@ section h2 {
 
 .creator-brand-name {
   font-weight: 700;
-  color: #a5b4fc;
+  color: #FFFFFF;
 }
 
 .creator-hero-title {
   font-size: 2rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #ffffff;
-  margin: 0;
+  margin: 0 0 1rem 0;
 }
 
 @media (min-width: 768px) {
   .creator-hero-title {
     font-size: 2.5rem;
+    line-height: 1.25;
   }
 }
 
 @media (min-width: 1024px) {
   .creator-hero-title {
     font-size: 3rem;
+    line-height: 1.2;
   }
 }
 
 .creator-hero-description {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #cbd5e1;
-  margin: 0;
+  line-height: 1.7;
+  color: #FFFFFF;
+  margin: 0 0 1.25rem 0;
 }
 
 @media (min-width: 768px) {
   .creator-hero-description {
     font-size: 1.125rem;
+    line-height: 1.75;
   }
 }
 
@@ -2786,13 +2803,16 @@ section h2 {
   display: flex;
   align-items: flex-start;
   gap: 0.75rem;
-  color: #e2e8f0;
+  color: #FFFFFF;
   font-size: 0.875rem;
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
 }
 
 @media (min-width: 768px) {
   .creator-benefit-item {
     font-size: 1rem;
+    line-height: 1.7;
   }
 }
 
@@ -2819,12 +2839,32 @@ section h2 {
   transition: all 0.3s ease !important;
   box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4) !important;
   border: none !important;
+  text-decoration: none !important;
 }
 
 .creator-btn-primary:hover {
   background-color: #4f46e5 !important;
   box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6) !important;
   transform: translateY(-2px) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.creator-btn-primary:visited,
+.creator-btn-primary:link,
+.creator-btn-primary:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+/* Anchor tags inside buttons */
+.creator-btn-primary a,
+.creator-btn-primary a:hover,
+.creator-btn-primary a:visited,
+.creator-btn-primary a:link,
+.creator-btn-primary a:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 .creator-btn-secondary {
@@ -2835,11 +2875,30 @@ section h2 {
   border-radius: 9999px !important;
   font-weight: 600 !important;
   transition: all 0.3s ease !important;
+  text-decoration: none !important;
 }
 
 .creator-btn-secondary:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
   border-color: rgba(255, 255, 255, 0.5) !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.creator-btn-secondary:visited,
+.creator-btn-secondary:link,
+.creator-btn-secondary:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
+}
+
+.creator-btn-secondary a,
+.creator-btn-secondary a:hover,
+.creator-btn-secondary a:visited,
+.creator-btn-secondary a:link,
+.creator-btn-secondary a:active {
+  color: #ffffff !important;
+  text-decoration: none !important;
 }
 
 .creator-hero-caption {
@@ -2881,18 +2940,18 @@ section h2 {
 }
 
 .creator-card-icon.indigo {
-  background: rgba(99, 102, 241, 0.2);
-  color: #a5b4fc;
+  background: rgba(217, 163, 165, 0.25);
+  color: #FFFFFF;
 }
 
 .creator-card-icon.emerald {
-  background: rgba(34, 197, 94, 0.2);
-  color: #86efac;
+  background: rgba(217, 163, 165, 0.25);
+  color: #FFFFFF;
 }
 
 .creator-card-icon.pink {
-  background: rgba(236, 72, 153, 0.2);
-  color: #f9a8d4;
+  background: rgba(217, 163, 165, 0.25);
+  color: #FFFFFF;
 }
 
 .creator-card-title {
@@ -2919,33 +2978,41 @@ section h2 {
 .creator-section-heading {
   font-size: 1.75rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #111827;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
   .creator-section-heading {
     font-size: 2rem;
+    line-height: 1.25;
+    margin-bottom: 1.25rem;
   }
 }
 
 @media (min-width: 1024px) {
   .creator-section-heading {
     font-size: 2.25rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
   }
 }
 
 .creator-section-paragraph {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.7;
   color: #6b7280;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 @media (min-width: 768px) {
   .creator-section-paragraph {
     font-size: 1.125rem;
+    line-height: 1.75;
+    margin-bottom: 1.25rem;
   }
 }
 
@@ -3046,14 +3113,15 @@ section h2 {
   font-size: 1rem;
   font-weight: 600;
   color: #111827;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
 }
 
 .creator-problem-description {
   font-size: 0.875rem;
   color: #6b7280;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Services Grid */
@@ -3101,19 +3169,21 @@ section h2 {
   font-size: 1.125rem;
   font-weight: 600;
   color: #111827;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
+  line-height: 1.4;
 }
 
 .creator-service-description {
   font-size: 0.875rem;
   color: #6b7280;
   margin: 0;
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
 @media (min-width: 768px) {
   .creator-service-description {
     font-size: 1rem;
+    line-height: 1.7;
   }
 }
 
@@ -3147,7 +3217,7 @@ section h2 {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #6366f1 0%, #ec4899 100%);
+  background: linear-gradient(135deg, #D9A3A5 0%, #C48B8E 100%);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -3155,7 +3225,7 @@ section h2 {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0 auto;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 14px rgba(217, 163, 165, 0.4);
 }
 
 .creator-step-title {
@@ -3163,13 +3233,14 @@ section h2 {
   font-weight: 600;
   color: #111827;
   margin: 0;
+  line-height: 1.4;
 }
 
 .creator-step-description {
   font-size: 0.875rem;
   color: #6b7280;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 @media (min-width: 768px) {
@@ -3238,7 +3309,7 @@ section h2 {
 
 /* Trust Section */
 .creator-trust-section {
-  background: linear-gradient(to bottom, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(to bottom, #D9A3A5 0%, #C48B8E 100%);
 }
 
 .creator-trust-grid {
@@ -3281,7 +3352,7 @@ section h2 {
 .creator-trust-icon {
   width: 2.5rem;
   height: 2.5rem;
-  color: #6366f1;
+  color: #FFFFFF;
   margin: 0 auto;
 }
 
@@ -3290,13 +3361,14 @@ section h2 {
   font-weight: 600;
   color: #ffffff;
   margin: 0;
+  line-height: 1.4;
 }
 
 .creator-trust-description {
   font-size: 0.875rem;
-  color: #cbd5e1;
+  color: #FFFFFF;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 /* Testimonials */
@@ -3366,13 +3438,13 @@ section h2 {
 
 /* Final CTA Section */
 .creator-final-cta {
-  background: linear-gradient(to bottom, #020617 0%, #0f172a 100%);
+  background: linear-gradient(to bottom, #D9A3A5 0%, #C48B8E 100%);
 }
 
 .creator-final-cta-heading {
   font-size: 1.875rem;
   font-weight: 700;
-  line-height: 1.2;
+  line-height: 1.3;
   color: #ffffff;
   margin: 0 0 1rem 0;
 }
@@ -3380,14 +3452,22 @@ section h2 {
 @media (min-width: 768px) {
   .creator-final-cta-heading {
     font-size: 2.25rem;
+    line-height: 1.25;
   }
 }
 
 .creator-final-cta-subheading {
   font-size: 1rem;
-  line-height: 1.6;
-  color: #cbd5e1;
+  line-height: 1.7;
+  color: #FFFFFF;
   margin: 0 0 2rem 0;
+}
+
+@media (min-width: 768px) {
+  .creator-final-cta-subheading {
+    font-size: 1.125rem;
+    line-height: 1.75;
+  }
 }
 
 @media (min-width: 768px) {
@@ -3403,9 +3483,10 @@ section h2 {
 
 .creator-final-cta-caption {
   text-align: center;
-  color: #94a3b8;
+  color: #FFFFFF;
   font-size: 0.875rem;
   margin: 1rem 0 2rem 0;
+  line-height: 1.5;
 }
 
 .creator-contact-methods {
@@ -3428,7 +3509,7 @@ section h2 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #cbd5e1;
+  color: #FFFFFF;
   font-size: 0.875rem;
 }
 
@@ -3442,17 +3523,17 @@ section h2 {
   width: 1.25rem;
   height: 1.25rem;
   flex-shrink: 0;
-  color: #6366f1;
+  color: #FFFFFF;
 }
 
 .creator-contact-link {
-  color: #cbd5e1;
+  color: #FFFFFF;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .creator-contact-link:hover {
-  color: #ffffff;
+  color: #f0f0f0;
 }
 
 

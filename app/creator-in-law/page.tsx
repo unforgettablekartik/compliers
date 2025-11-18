@@ -438,40 +438,7 @@ export default function CreatorInLawLanding() {
         </Container>
       </Section>
 
-      {/* 8. SOCIAL PROOF / TESTIMONIALS */}
-      <Section className="bg-white">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="creator-section-heading">What creators say</h2>
-          </div>
-          
-          <div className="creator-testimonials-grid">
-            <div className="creator-testimonial-card">
-              <div className="creator-testimonial-avatar">FC</div>
-              <p className="creator-testimonial-quote">
-                "I used to sign whatever the brand sent. The Compliers helped me renegotiate usage rights and payment terms I didn't even realise were negotiable."
-              </p>
-              <p className="creator-testimonial-author">Finance creator (India)</p>
-            </div>
 
-            <div className="creator-testimonial-card">
-              <div className="creator-testimonial-avatar">FT</div>
-              <p className="creator-testimonial-quote">
-                "Having a retainership means I don't panic when a new contract comes in — I just forward it to them."
-              </p>
-              <p className="creator-testimonial-author">Fitness creator</p>
-            </div>
-
-            <div className="creator-testimonial-card">
-              <div className="creator-testimonial-avatar">TA</div>
-              <p className="creator-testimonial-quote">
-                "They helped us build a compliance checklist for our entire roster. Now our creators know exactly how to do disclosures right."
-              </p>
-              <p className="creator-testimonial-author">Talent agency manager</p>
-            </div>
-          </div>
-        </Container>
-      </Section>
 
       {/* 9. FAQ SECTION */}
       <Section className="bg-gray-50">
