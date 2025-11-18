@@ -108,6 +108,7 @@ export default function Home() {
             {/* Tab 3: Creator In Law - Links to /creator-in-law */}
             <a href="/creator-in-law" className="service-tab-link">
               <div className="service-tab service-tab-creator">
+                <span className="service-tab-badge">New</span>
                 <h2 className="service-tab-heading">Creator In Law</h2>
                 <p className="service-tab-description">Creators&apos; Legal Support</p>
               </div>
