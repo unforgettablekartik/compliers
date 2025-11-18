@@ -81,13 +81,6 @@ export default function Home() {
           <p>
             Rendering support on the conventional areas of law as well as the latest legal developments across the industries.
           </p>
-          <span className="highlight">
-            Special assistance for new entrepreneurs and startups in making.
-          </span>
-          <div className="hero-buttons">
-            <a href="/#contact" className="btn">Need Help</a>
-            <a href="/blog" className="btn btn-secondary">Learning Center</a>
-          </div>
         </div>
       </header>
 
@@ -115,21 +108,6 @@ export default function Home() {
                 <h2 className="service-tab-heading">Creator In Law</h2>
                 <p className="service-tab-description">Creators&apos; Legal Support</p>
               </div>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Markster Button Section */}
-      <section className="markster-banner">
-        <div className="container">
-          <div className="markster-cta">
-            <div className="markster-content">
-              <h3>🛡️ Trademark Filing Made Simple</h3>
-              <p>File your trademark with lawyer-led, fixed-fee package for Indian startups & MSMEs</p>
-            </div>
-            <a href="/markster" className="btn btn-markster">
-              Explore Markster™
             </a>
           </div>
         </div>
@@ -175,6 +153,21 @@ export default function Home() {
               <h3>IT &amp; Data Privacy</h3>
               <p>Advisory on technology law, cybersecurity obligations and global privacy frameworks to keep digital operations resilient and compliant.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Markster Button Section */}
+      <section className="markster-banner">
+        <div className="container">
+          <div className="markster-cta">
+            <div className="markster-content">
+              <h3>🛡️ Trademark Filing Made Simple</h3>
+              <p>File your trademark with lawyer-led, fixed-fee package for Indian startups & MSMEs</p>
+            </div>
+            <a href="/markster" className="btn btn-markster">
+              Explore Markster™
+            </a>
           </div>
         </div>
       </section>
