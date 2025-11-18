@@ -87,6 +87,9 @@ export default function Home() {
       {/* Service Tabs Section */}
       <section className="service-tabs-section">
         <div className="service-tabs-container">
+          <h2 className="service-tabs-intro-heading">
+            Explore our unique tools, each dedicated to your customised needs:
+          </h2>
           <div className="service-tabs-grid">
             {/* Tab 1: Agreementor - Unclickable */}
             <div className="service-tab service-tab-agreementor unclickable">

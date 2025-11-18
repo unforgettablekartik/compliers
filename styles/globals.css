@@ -870,7 +870,7 @@ section h2 {
 /* Service Tabs Section */
 .service-tabs-section {
   background: #ffffff;
-  padding: 0;
+  padding: 2rem 0 0 0;
   margin-top: -1px;
 }
 
@@ -878,6 +878,16 @@ section h2 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0;
+}
+
+.service-tabs-intro-heading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin: 0 0 2rem 0;
+  padding: 0 1rem;
+  line-height: 1.4;
 }
 
 .service-tabs-grid {
@@ -916,7 +926,7 @@ section h2 {
 }
 
 .service-tab-agreementor {
-  background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%);
 }
 
 .service-tab-agreementor::before {
@@ -924,7 +934,7 @@ section h2 {
 }
 
 .service-tab-markster {
-  background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+  background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 50%, #60a5fa 100%);
   cursor: pointer;
 }
 
@@ -938,17 +948,17 @@ section h2 {
 }
 
 .service-tab-creator {
-  background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%);
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 50%, #d8b4fe 100%);
   cursor: pointer;
 }
 
 .service-tab-creator::before {
-  background: linear-gradient(90deg, #d946ef 0%, #c026d3 100%);
+  background: linear-gradient(90deg, #B94AF3 0%, #a855f7 100%);
 }
 
 .service-tab-creator:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(217, 70, 239, 0.15);
+  box-shadow: 0 8px 24px rgba(185, 74, 243, 0.15);
 }
 
 .service-tab.unclickable {
@@ -960,8 +970,14 @@ section h2 {
   font-size: 1.75rem;
   font-weight: 700;
   margin: 0 0 0.75rem 0;
-  color: #000000;
   line-height: 1.2;
+  text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.1),
+    1px 1px 2px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #111827 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .service-tab-description {
