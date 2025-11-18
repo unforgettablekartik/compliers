@@ -91,6 +91,35 @@ export default function Home() {
         </div>
       </header>
 
+      {/* Service Tabs Section */}
+      <section className="service-tabs-section">
+        <div className="service-tabs-container">
+          <div className="service-tabs-grid">
+            {/* Tab 1: Agreementor - Unclickable */}
+            <div className="service-tab service-tab-agreementor unclickable">
+              <h2 className="service-tab-heading">Agreementor</h2>
+              <p className="service-tab-description">Contracts &amp; Agreements</p>
+            </div>
+
+            {/* Tab 2: Markster - Links to /markster */}
+            <a href="/markster" className="service-tab-link">
+              <div className="service-tab service-tab-markster">
+                <h2 className="service-tab-heading">Markster</h2>
+                <p className="service-tab-description">Securing Trademarks</p>
+              </div>
+            </a>
+
+            {/* Tab 3: Creator In Law - Links to /creator-in-law */}
+            <a href="/creator-in-law" className="service-tab-link">
+              <div className="service-tab service-tab-creator">
+                <h2 className="service-tab-heading">Creator In Law</h2>
+                <p className="service-tab-description">Creators&apos; Legal Support</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Markster Button Section */}
       <section className="markster-banner">
         <div className="container">
