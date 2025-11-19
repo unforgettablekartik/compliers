@@ -16,7 +16,8 @@ import {
   ChevronRight,
   Mail
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -66,7 +67,7 @@ export default function CreatorInLawLanding() {
                 <span><span className="creator-brand-name">Creator In Law</span> by The Compliers</span>
               </div>
               <h1 className="creator-hero-title">
-                Legal armour for influencers &amp; creators.
+                Legal armour for content creators &amp; influencers.
               </h1>
               <p className="creator-hero-description">
                 The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.
@@ -125,27 +126,7 @@ export default function CreatorInLawLanding() {
         </Container>
       </Section>
 
-      {/* 2. WHO WE HELP STRIP */}
-      <Section className="bg-white">
-        <Container>
-          <div className="text-center mb-8">
-            <h2 className="creator-section-heading">
-              Built for serious creators, not just celebrities.
-            </h2>
-          </div>
-          <div className="creator-pills-container">
-            <div className="creator-pill">YouTube creators &amp; streamers</div>
-            <div className="creator-pill">Instagram &amp; Reels creators</div>
-            <div className="creator-pill">LinkedIn, X &amp; newsletter creators</div>
-            <div className="creator-pill">Influencer agencies &amp; talent managers</div>
-          </div>
-          <p className="creator-support-text">
-            Whether you're at 50k or 5M followers, your contracts and compliance need to evolve with your growth.
-          </p>
-        </Container>
-      </Section>
-
-      {/* 3. PROBLEM / PAIN POINTS SECTION */}
+      {/* 2. PROBLEM / PAIN POINTS SECTION */}
       <Section className="bg-gray-50">
         <Container>
           <div className="creator-problem-grid">
@@ -155,6 +136,18 @@ export default function CreatorInLawLanding() {
               </h2>
               <p className="creator-section-paragraph">
                 Influencer marketing is booming — and so are complex contracts, disclosure rules, and platform policies. Most creators still sign whatever is sent to them. That's where we come in.
+              </p>
+              
+              {/* Social Media Icons */}
+              <div className="flex justify-center gap-6 my-6">
+                <FaYoutube className="w-8 h-8 text-red-600" aria-label="YouTube" />
+                <FaInstagram className="w-8 h-8 text-pink-600" aria-label="Instagram" />
+                <FaLinkedin className="w-8 h-8 text-blue-600" aria-label="LinkedIn" />
+                <Video className="w-8 h-8 text-purple-600" aria-label="Video" />
+              </div>
+              
+              <p className="creator-support-text text-center">
+                Whether you're at 50k or 5M followers, your contracts and compliance need to evolve with your growth.
               </p>
             </div>
             
