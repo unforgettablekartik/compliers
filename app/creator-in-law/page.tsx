@@ -141,11 +141,11 @@ export default function CreatorInLawLanding() {
               </p>
               
               {/* Social Media Icons */}
-              <div className="flex justify-center gap-12 my-8">
-                <FaYoutube className="w-32 h-32" aria-label="YouTube" style={{ color: '#FF0000' }} />
-                <FaInstagram className="w-32 h-32" aria-label="Instagram" style={{ background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} />
-                <FaLinkedin className="w-32 h-32" aria-label="LinkedIn" style={{ color: '#0077B5' }} />
-                <Video className="w-32 h-32" aria-label="Video" style={{ color: '#9333EA' }} />
+              <div className="flex justify-center gap-6 my-8">
+                <FaYoutube className="w-16 h-16" aria-label="YouTube" style={{ color: '#FF0000' }} />
+                <FaInstagram className="w-16 h-16" aria-label="Instagram" style={{ background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} />
+                <FaLinkedin className="w-16 h-16" aria-label="LinkedIn" style={{ color: '#0077B5' }} />
+                <Video className="w-16 h-16" aria-label="Video" style={{ color: '#9333EA' }} />
               </div>
               
               <p className="creator-support-text text-center">
