@@ -69,7 +69,7 @@ export default function CreatorInLawLanding() {
                 Legal armour for influencers &amp; creators.
               </h1>
               <p className="creator-hero-description">
-                The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on creating, not contracts.
+                The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.
               </p>
               
               <ul className="creator-hero-benefits">
@@ -79,7 +79,7 @@ export default function CreatorInLawLanding() {
                 </li>
                 <li className="creator-benefit-item">
                   <CheckCircle2 className="h-5 w-5" aria-hidden />
-                  <span>Risk &amp; compliance guidance for ASCI, endorsements &amp; disclosures</span>
+                  <span>Option to add IP &amp; dispute support as you scale</span>
                 </li>
                 <li className="creator-benefit-item">
                   <CheckCircle2 className="h-5 w-5" aria-hidden />
