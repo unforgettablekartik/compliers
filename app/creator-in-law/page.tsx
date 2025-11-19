@@ -16,7 +16,8 @@ import {
   ChevronRight,
   Mail
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Video } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -66,33 +67,15 @@ export default function CreatorInLawLanding() {
                 <span><span className="creator-brand-name">Creator In Law</span> by The Compliers</span>
               </div>
               <h1 className="creator-hero-title">
-                Legal armour for influencers &amp; creators.
+                Legal armour for content creators &amp; influencers.
               </h1>
               <p className="creator-hero-description">
                 The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.
               </p>
-              
-              <ul className="creator-hero-benefits">
-                <li className="creator-benefit-item">
-                  <CheckCircle2 className="h-5 w-5" aria-hidden />
-                  <span>Clear, creator-friendly contract reviews</span>
-                </li>
-                <li className="creator-benefit-item">
-                  <CheckCircle2 className="h-5 w-5" aria-hidden />
-                  <span>Option to add IP &amp; dispute support as you scale</span>
-                </li>
-                <li className="creator-benefit-item">
-                  <CheckCircle2 className="h-5 w-5" aria-hidden />
-                  <span>Ongoing legal support on a flexible retainership model</span>
-                </li>
-              </ul>
 
               <div className="creator-hero-buttons">
                 <Button className="creator-btn-primary" asChild>
                   <a href="#contact">Book A Call</a>
-                </Button>
-                <Button variant="outline" className="creator-btn-secondary" asChild>
-                  <a href="#contact">Download Influencer Legal Checklist</a>
                 </Button>
               </div>
               
@@ -113,18 +96,8 @@ export default function CreatorInLawLanding() {
                     <FileText className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="creator-card-title">Contract Review Dashboard</h3>
-                    <p className="creator-card-text">Plain-English summaries · Red flags highlighted · Ready-to-send edits</p>
-                  </div>
-                </div>
-                <div className="creator-card-divider" />
-                <div className="creator-card-item">
-                  <div className="creator-card-icon emerald">
-                    <Shield className="h-6 w-6" aria-hidden />
-                  </div>
-                  <div>
-                    <h3 className="creator-card-title">Compliance Protection</h3>
-                    <p className="creator-card-text">ASCI guidelines · Disclosure checklists · Safe endorsement practices</p>
+                    <h3 className="creator-card-title">Minimize legal risks</h3>
+                    <p className="creator-card-text">Riskproof contracts · Easy interpretations · Red flags highlighted</p>
                   </div>
                 </div>
                 <div className="creator-card-divider" />
@@ -137,33 +110,23 @@ export default function CreatorInLawLanding() {
                     <p className="creator-card-text">Fixed monthly fees · Priority turnaround · No surprise invoices</p>
                   </div>
                 </div>
+                <div className="creator-card-divider" />
+                <div className="creator-card-item">
+                  <div className="creator-card-icon emerald">
+                    <Shield className="h-6 w-6" aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="creator-card-title">IP Support</h3>
+                    <p className="creator-card-text">Trademark & Copyright · IP infringement protection · Defence on disputes</p>
+                  </div>
+                </div>
               </div>
             </motion.div>
           </div>
         </Container>
       </Section>
 
-      {/* 2. WHO WE HELP STRIP */}
-      <Section className="bg-white">
-        <Container>
-          <div className="text-center mb-8">
-            <h2 className="creator-section-heading">
-              Built for serious creators, not just celebrities.
-            </h2>
-          </div>
-          <div className="creator-pills-container">
-            <div className="creator-pill">YouTube creators &amp; streamers</div>
-            <div className="creator-pill">Instagram &amp; Reels creators</div>
-            <div className="creator-pill">LinkedIn, X &amp; newsletter creators</div>
-            <div className="creator-pill">Influencer agencies &amp; talent managers</div>
-          </div>
-          <p className="creator-support-text">
-            Whether you're at 50k or 5M followers, your contracts and compliance need to evolve with your growth.
-          </p>
-        </Container>
-      </Section>
-
-      {/* 3. PROBLEM / PAIN POINTS SECTION */}
+      {/* 2. PROBLEM / PAIN POINTS SECTION */}
       <Section className="bg-gray-50">
         <Container>
           <div className="creator-problem-grid">
@@ -172,7 +135,21 @@ export default function CreatorInLawLanding() {
                 Brand deals are getting bigger. So are the risks.
               </h2>
               <p className="creator-section-paragraph">
-                Influencer marketing is booming — and so are complex contracts, disclosure rules, and platform policies. Most creators still sign whatever is sent to them. That's where we come in.
+                <span style={{ color: '#D9A3A5', fontWeight: 'bold' }}>To act is your expertise! Contract is ours.</span>
+                <br />
+                Let us handle complex contracts, disclosure rules, and content policies. Most creators still sign whatever is sent to them. That's where we come in.
+              </p>
+              
+              {/* Social Media Icons */}
+              <div className="flex justify-center gap-12 my-8">
+                <FaYoutube className="w-32 h-32" aria-label="YouTube" style={{ color: '#FF0000' }} />
+                <FaInstagram className="w-32 h-32" aria-label="Instagram" style={{ background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} />
+                <FaLinkedin className="w-32 h-32" aria-label="LinkedIn" style={{ color: '#0077B5' }} />
+                <Video className="w-32 h-32" aria-label="Video" style={{ color: '#9333EA' }} />
+              </div>
+              
+              <p className="creator-support-text text-center">
+                Whether you're at 50k or 5M followers, your contracts and compliance need to evolve with your growth.
               </p>
             </div>
             
@@ -337,12 +314,11 @@ export default function CreatorInLawLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <Button className="creator-btn-primary" asChild>
-              <a href="#contact">Book A Call</a>
-            </Button>
-            <p className="creator-cta-subtext">
-              Talk through your current contracts and see if a retainership makes sense for you.
-            </p>
+            <div style={{ backgroundColor: '#D9A3A5', padding: '1.5rem 2rem', borderRadius: '0.5rem' }}>
+              <p style={{ color: 'white', fontWeight: 'bold', fontSize: '1.125rem', margin: 0 }}>
+                Talk through your current contracts and see if a retainership makes sense for you.
+              </p>
+            </div>
           </div>
         </Container>
       </Section>
@@ -381,14 +357,8 @@ export default function CreatorInLawLanding() {
             </ul>
             
             <p className="creator-retainer-note">
-              We'll walk you through options on our first call and suggest a retainership model that actually fits your workflow.
+              Let's have a word about what you need and what we offer.
             </p>
-
-            <div className="text-center mt-6">
-              <Button className="creator-btn-primary" asChild>
-                <a href="#contact">Book A Call to Discuss Retainership</a>
-              </Button>
-            </div>
           </div>
         </Container>
       </Section>

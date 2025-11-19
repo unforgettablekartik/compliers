@@ -2735,6 +2735,12 @@ section h2 {
   flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .creator-hero-right {
+    margin-top: 4rem;
+  }
+}
+
 .creator-brand-chip {
   display: inline-flex;
   align-items: center;
@@ -2782,7 +2788,7 @@ section h2 {
 }
 
 .creator-hero-description {
-  font-size: 1rem;
+  font-size: 0.8rem;
   line-height: 1.7;
   color: #374151;
   margin: 0 0 1.25rem 0;
@@ -2790,7 +2796,7 @@ section h2 {
 
 @media (min-width: 768px) {
   .creator-hero-description {
-    font-size: 1.125rem;
+    font-size: 0.9rem;
     line-height: 1.75;
   }
 }
@@ -2976,7 +2982,7 @@ section h2 {
 
 .creator-card-divider {
   height: 1px;
-  background: rgba(0, 0, 0, 0.1);
+  background: #D9A3A5;
   margin: 0.5rem 0;
 }
 
