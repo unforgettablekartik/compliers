@@ -139,11 +139,11 @@ export default function CreatorInLawLanding() {
               </p>
               
               {/* Social Media Icons */}
-              <div className="flex justify-center gap-6 my-6">
-                <FaYoutube className="w-8 h-8 text-red-600" aria-label="YouTube" />
-                <FaInstagram className="w-8 h-8 text-pink-600" aria-label="Instagram" />
-                <FaLinkedin className="w-8 h-8 text-blue-600" aria-label="LinkedIn" />
-                <Video className="w-8 h-8 text-purple-600" aria-label="Video" />
+              <div className="flex justify-center gap-8 my-6">
+                <FaYoutube className="w-24 h-24 text-red-600" aria-label="YouTube" style={{ color: '#FF0000' }} />
+                <FaInstagram className="w-24 h-24" aria-label="Instagram" style={{ background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} />
+                <FaLinkedin className="w-24 h-24 text-blue-700" aria-label="LinkedIn" style={{ color: '#0077B5' }} />
+                <Video className="w-24 h-24 text-purple-600" aria-label="Video" style={{ color: '#9333EA' }} />
               </div>
               
               <p className="creator-support-text text-center">
@@ -312,11 +312,8 @@ export default function CreatorInLawLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <Button className="creator-btn-primary" asChild>
-              <a href="#contact">Book A Call</a>
-            </Button>
             <p className="creator-cta-subtext">
-              Talk through your current contracts and see if a retainership makes sense for you.
+              Talk through your current agreements and share your troubles. We guard your rights with the legal shield.
             </p>
           </div>
         </Container>
@@ -358,12 +355,6 @@ export default function CreatorInLawLanding() {
             <p className="creator-retainer-note">
               We'll walk you through options on our first call and suggest a retainership model that actually fits your workflow.
             </p>
-
-            <div className="text-center mt-6">
-              <Button className="creator-btn-primary" asChild>
-                <a href="#contact">Book A Call to Discuss Retainership</a>
-              </Button>
-            </div>
           </div>
         </Container>
       </Section>
