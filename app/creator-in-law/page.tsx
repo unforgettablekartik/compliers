@@ -71,28 +71,10 @@ export default function CreatorInLawLanding() {
               <p className="creator-hero-description">
                 The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.
               </p>
-              
-              <ul className="creator-hero-benefits">
-                <li className="creator-benefit-item">
-                  <CheckCircle2 className="h-5 w-5" aria-hidden />
-                  <span>Clear, creator-friendly contract reviews</span>
-                </li>
-                <li className="creator-benefit-item">
-                  <CheckCircle2 className="h-5 w-5" aria-hidden />
-                  <span>Option to add IP &amp; dispute support as you scale</span>
-                </li>
-                <li className="creator-benefit-item">
-                  <CheckCircle2 className="h-5 w-5" aria-hidden />
-                  <span>Ongoing legal support on a flexible retainership model</span>
-                </li>
-              </ul>
 
               <div className="creator-hero-buttons">
                 <Button className="creator-btn-primary" asChild>
                   <a href="#contact">Book A Call</a>
-                </Button>
-                <Button variant="outline" className="creator-btn-secondary" asChild>
-                  <a href="#contact">Download Influencer Legal Checklist</a>
                 </Button>
               </div>
               
@@ -113,8 +95,8 @@ export default function CreatorInLawLanding() {
                     <FileText className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
-                    <h3 className="creator-card-title">Contract Review Dashboard</h3>
-                    <p className="creator-card-text">Plain-English summaries · Red flags highlighted · Ready-to-send edits</p>
+                    <h3 className="creator-card-title">Minimize legal risks</h3>
+                    <p className="creator-card-text">Riskproof contracts · Easy interpretations · Red flags highlighted</p>
                   </div>
                 </div>
                 <div className="creator-card-divider" />
