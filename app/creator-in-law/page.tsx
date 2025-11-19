@@ -135,15 +135,17 @@ export default function CreatorInLawLanding() {
                 Brand deals are getting bigger. So are the risks.
               </h2>
               <p className="creator-section-paragraph">
-                Influencer marketing is booming — and so are complex contracts, disclosure rules, and platform policies. Most creators still sign whatever is sent to them. That's where we come in.
+                <span style={{ color: '#D9A3A5', fontWeight: 'bold' }}>To act is your expertise! Contract is ours.</span>
+                <br />
+                Let us handle complex contracts, disclosure rules, and content policies. Most creators still sign whatever is sent to them. That's where we come in.
               </p>
               
               {/* Social Media Icons */}
-              <div className="flex justify-center gap-8 my-6">
-                <FaYoutube className="w-24 h-24 text-red-600" aria-label="YouTube" style={{ color: '#FF0000' }} />
-                <FaInstagram className="w-24 h-24" aria-label="Instagram" style={{ background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} />
-                <FaLinkedin className="w-24 h-24 text-blue-700" aria-label="LinkedIn" style={{ color: '#0077B5' }} />
-                <Video className="w-24 h-24 text-purple-600" aria-label="Video" style={{ color: '#9333EA' }} />
+              <div className="flex justify-center gap-12 my-8">
+                <FaYoutube className="w-32 h-32" aria-label="YouTube" style={{ color: '#FF0000' }} />
+                <FaInstagram className="w-32 h-32" aria-label="Instagram" style={{ background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} />
+                <FaLinkedin className="w-32 h-32" aria-label="LinkedIn" style={{ color: '#0077B5' }} />
+                <Video className="w-32 h-32" aria-label="Video" style={{ color: '#9333EA' }} />
               </div>
               
               <p className="creator-support-text text-center">
@@ -312,9 +314,11 @@ export default function CreatorInLawLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <p className="creator-cta-subtext">
-              Talk through your current agreements and share your troubles. We guard your rights with the legal shield.
-            </p>
+            <div style={{ backgroundColor: '#D9A3A5', padding: '1.5rem 2rem', borderRadius: '0.5rem' }}>
+              <p style={{ color: 'white', fontWeight: 'bold', fontSize: '1.125rem', margin: 0 }}>
+                Talk through your current contracts and see if a retainership makes sense for you.
+              </p>
+            </div>
           </div>
         </Container>
       </Section>
@@ -353,7 +357,7 @@ export default function CreatorInLawLanding() {
             </ul>
             
             <p className="creator-retainer-note">
-              We'll walk you through options on our first call and suggest a retainership model that actually fits your workflow.
+              Let's have a word about what you need and what we offer.
             </p>
           </div>
         </Container>
