@@ -119,22 +119,22 @@ export default function CreatorInLawLanding() {
                 </div>
                 <div className="creator-card-divider" />
                 <div className="creator-card-item">
-                  <div className="creator-card-icon emerald">
-                    <Shield className="h-6 w-6" aria-hidden />
-                  </div>
-                  <div>
-                    <h3 className="creator-card-title">Compliance Protection</h3>
-                    <p className="creator-card-text">ASCI guidelines · Disclosure checklists · Safe endorsement practices</p>
-                  </div>
-                </div>
-                <div className="creator-card-divider" />
-                <div className="creator-card-item">
                   <div className="creator-card-icon pink">
                     <Scale className="h-6 w-6" aria-hidden />
                   </div>
                   <div>
                     <h3 className="creator-card-title">Flexible Retainership</h3>
                     <p className="creator-card-text">Fixed monthly fees · Priority turnaround · No surprise invoices</p>
+                  </div>
+                </div>
+                <div className="creator-card-divider" />
+                <div className="creator-card-item">
+                  <div className="creator-card-icon emerald">
+                    <Shield className="h-6 w-6" aria-hidden />
+                  </div>
+                  <div>
+                    <h3 className="creator-card-title">IP Support</h3>
+                    <p className="creator-card-text">Trademark & Copyright · IP infringement protection · Defence on disputes</p>
                   </div>
                 </div>
               </div>

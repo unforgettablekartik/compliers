@@ -2735,6 +2735,12 @@ section h2 {
   flex-direction: column;
 }
 
+@media (min-width: 768px) {
+  .creator-hero-right {
+    margin-top: 4rem;
+  }
+}
+
 .creator-brand-chip {
   display: inline-flex;
   align-items: center;
@@ -2976,7 +2982,7 @@ section h2 {
 
 .creator-card-divider {
   height: 1px;
-  background: rgba(0, 0, 0, 0.1);
+  background: #D9A3A5;
   margin: 0.5rem 0;
 }
 
