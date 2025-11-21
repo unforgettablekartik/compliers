@@ -898,7 +898,7 @@ section h2 {
 }
 
 .service-tab {
-  padding: 1.5rem 2rem;
+  padding: 1.2rem 2rem;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -1024,7 +1024,7 @@ section h2 {
   }
 
   .service-tab {
-    padding: 1.5rem 1.5rem;
+    padding: 1.2rem 1.5rem;
     min-height: auto;
   }
 
@@ -1048,7 +1048,7 @@ section h2 {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .service-tab {
-    padding: 2.5rem 1.75rem;
+    padding: 2rem 1.75rem;
   }
 
   .service-tab-heading {
