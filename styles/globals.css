@@ -898,7 +898,7 @@ section h2 {
 }
 
 .service-tab {
-  padding: 1.2rem 2rem;
+  padding: 0.96rem 2rem;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -990,21 +990,53 @@ section h2 {
   font-weight: 400;
 }
 
-/* Badge for New tab */
+/* Badge for New tab - Star-shaped flag */
 .service-tab-badge {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
-  color: #ffffff;
-  font-size: 0.75rem;
+  top: 8px;
+  right: 8px;
+  background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
+  color: #000000;
+  font-size: 0.7rem;
   font-weight: 700;
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
+  padding: 0.35rem 0.65rem;
+  border-radius: 4px;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
   z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  clip-path: polygon(
+    50% 0%,
+    61% 35%,
+    98% 35%,
+    68% 57%,
+    79% 91%,
+    50% 70%,
+    21% 91%,
+    32% 57%,
+    2% 35%,
+    39% 35%
+  );
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.service-tab-badge::before {
+  content: '✨';
+  font-size: 0.75rem;
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
 }
 
 /* Link wrapper for clickable tabs */
@@ -1024,7 +1056,7 @@ section h2 {
   }
 
   .service-tab {
-    padding: 1.2rem 1.5rem;
+    padding: 0.96rem 1.5rem;
     min-height: auto;
   }
 
@@ -1048,7 +1080,7 @@ section h2 {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .service-tab {
-    padding: 2rem 1.75rem;
+    padding: 1.6rem 1.75rem;
   }
 
   .service-tab-heading {
