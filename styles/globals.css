@@ -898,7 +898,7 @@ section h2 {
 }
 
 .service-tab {
-  padding: 1.5rem 2rem;
+  padding: 0.96rem 2rem;
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
@@ -990,21 +990,22 @@ section h2 {
   font-weight: 400;
 }
 
-/* Badge for New tab */
+/* Badge for New tab - Red badge at top-right edge */
 .service-tab-badge {
   position: absolute;
-  top: -8px;
-  right: -8px;
-  background: linear-gradient(135deg, #ff6b6b 0%, #ff4757 100%);
+  top: 0;
+  right: 0;
+  background: linear-gradient(135deg, #ff4757 0%, #ff3838 100%);
   color: #ffffff;
-  font-size: 0.75rem;
-  font-weight: 700;
-  padding: 0.25rem 0.6rem;
-  border-radius: 12px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.35rem 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.4);
+  box-shadow: 0 2px 8px rgba(255, 71, 87, 0.5);
   z-index: 10;
+  border-radius: 0 8px 0 8px;
+  border: none;
 }
 
 /* Link wrapper for clickable tabs */
@@ -1024,7 +1025,7 @@ section h2 {
   }
 
   .service-tab {
-    padding: 1.5rem 1.5rem;
+    padding: 0.96rem 1.5rem;
     min-height: auto;
   }
 
@@ -1048,7 +1049,7 @@ section h2 {
 
 @media (min-width: 769px) and (max-width: 1024px) {
   .service-tab {
-    padding: 2.5rem 1.75rem;
+    padding: 1.6rem 1.75rem;
   }
 
   .service-tab-heading {
