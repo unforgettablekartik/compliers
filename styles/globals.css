@@ -997,45 +997,53 @@ section h2 {
   right: 8px;
   background: linear-gradient(135deg, #ffd700 0%, #ffed4e 50%, #ffd700 100%);
   color: #000000;
-  font-size: 0.7rem;
-  font-weight: 700;
-  padding: 0.35rem 0.65rem;
-  border-radius: 4px;
+  font-size: 0.65rem;
+  font-weight: 800;
+  padding: 0.4rem 0.7rem 0.4rem 0.5rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
-  box-shadow: 0 3px 10px rgba(255, 215, 0, 0.5);
+  box-shadow: 0 3px 12px rgba(255, 215, 0, 0.6), 0 1px 4px rgba(255, 215, 0, 0.4);
   z-index: 10;
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.3rem;
   clip-path: polygon(
-    50% 0%,
-    61% 35%,
-    98% 35%,
-    68% 57%,
-    79% 91%,
-    50% 70%,
-    21% 91%,
-    32% 57%,
-    2% 35%,
+    50% 0%, 
+    61% 35%, 
+    98% 35%, 
+    68% 57%, 
+    79% 91%, 
+    50% 70%, 
+    21% 91%, 
+    32% 57%, 
+    2% 35%, 
     39% 35%
   );
-  animation: sparkle 2s ease-in-out infinite;
+  animation: sparkle 2.5s ease-in-out infinite;
+  border: 1px solid rgba(255, 200, 0, 0.3);
 }
 
 .service-tab-badge::before {
   content: '✨';
-  font-size: 0.75rem;
+  font-size: 0.8rem;
+  line-height: 1;
 }
 
 @keyframes sparkle {
   0%, 100% {
-    transform: scale(1);
-    opacity: 1;
+    transform: scale(1) rotate(0deg);
+    filter: brightness(1);
   }
   50% {
-    transform: scale(1.05);
-    opacity: 0.9;
+    transform: scale(1.08) rotate(2deg);
+    filter: brightness(1.15);
+  }
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .service-tab-badge {
+    animation: none;
   }
 }
 
