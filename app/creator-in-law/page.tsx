@@ -16,8 +16,7 @@ import {
   ChevronRight,
   Mail
 } from "lucide-react";
-import { FaWhatsapp, FaYoutube, FaInstagram, FaLinkedin } from "react-icons/fa";
-import { Video } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -139,14 +138,6 @@ export default function CreatorInLawLanding() {
                 <br />
                 Let us handle complex contracts, disclosure rules, and content policies. Most creators still sign whatever is sent to them. That's where we come in.
               </p>
-              
-              {/* Social Media Icons */}
-              <div className="flex justify-center gap-12 my-8">
-                <FaYoutube className="w-32 h-32" aria-label="YouTube" style={{ color: '#FF0000' }} />
-                <FaInstagram className="w-32 h-32" aria-label="Instagram" style={{ background: 'linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text' }} />
-                <FaLinkedin className="w-32 h-32" aria-label="LinkedIn" style={{ color: '#0077B5' }} />
-                <Video className="w-32 h-32" aria-label="Video" style={{ color: '#9333EA' }} />
-              </div>
               
               <p className="creator-support-text text-center">
                 Whether you're at 50k or 5M followers, your contracts and compliance need to evolve with your growth.
