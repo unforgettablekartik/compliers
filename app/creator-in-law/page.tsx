@@ -16,7 +16,8 @@ import {
   ChevronRight,
   Mail
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaYoutube, FaInstagram, FaLinkedin, FaTiktok, FaFacebook } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -68,13 +69,14 @@ export default function CreatorInLawLanding() {
               <h1 className="creator-hero-title">
                 Legal armour for content creators &amp; influencers.
               </h1>
+
               <p className="creator-hero-description">
                 The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.
               </p>
 
               <div className="creator-hero-buttons">
                 <Button className="creator-btn-primary" asChild>
-                  <a href="#contact">Book A Call</a>
+                  <a href="#contact">Connect Now</a>
                 </Button>
               </div>
               
@@ -139,6 +141,15 @@ export default function CreatorInLawLanding() {
                 Let us handle complex contracts, disclosure rules, and content policies. Most creators still sign whatever is sent to them. That's where we come in.
               </p>
               
+              <div className="creator-social-icons">
+                <FaYoutube size={24} role="img" aria-label="YouTube" />
+                <FaInstagram size={24} role="img" aria-label="Instagram" />
+                <FaLinkedin size={24} role="img" aria-label="LinkedIn" />
+                <FaTiktok size={24} role="img" aria-label="TikTok" />
+                <FaFacebook size={24} role="img" aria-label="Facebook" />
+                <FaXTwitter size={24} role="img" aria-label="X (Twitter)" />
+              </div>
+              
               <p className="creator-support-text text-center">
                 Whether you're at 50k or 5M followers, your contracts and compliance need to evolve with your growth.
               </p>
@@ -187,7 +198,7 @@ export default function CreatorInLawLanding() {
           
           <div className="creator-services-grid">
             <div className="creator-service-card">
-              <FileText className="creator-service-icon text-indigo-500" aria-hidden />
+              <FileText className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
               <h3 className="creator-service-title">Brand Deal Contract Review</h3>
               <p className="creator-service-description">
                 We review your collaboration and campaign agreements, highlight red flags in plain English, and suggest edits you can use directly with brands or agencies.
@@ -195,7 +206,7 @@ export default function CreatorInLawLanding() {
             </div>
 
             <div className="creator-service-card">
-              <HandshakeIcon className="creator-service-icon text-pink-500" aria-hidden />
+              <HandshakeIcon className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
               <h3 className="creator-service-title">Negotiation Support</h3>
               <p className="creator-service-description">
                 Don't want to sound "difficult"? We help you push back smartly on usage rights, exclusivity, payment terms, and penalties — without burning relationships.
@@ -203,7 +214,7 @@ export default function CreatorInLawLanding() {
             </div>
 
             <div className="creator-service-card">
-              <Shield className="creator-service-icon text-emerald-500" aria-hidden />
+              <Shield className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
               <h3 className="creator-service-title">Risk &amp; Compliance for Influencers</h3>
               <p className="creator-service-description">
                 Guidance on disclosures, endorsements, and advertising rules so you don't accidentally violate ASCI or consumer guidelines while promoting products.
@@ -211,7 +222,7 @@ export default function CreatorInLawLanding() {
             </div>
 
             <div className="creator-service-card">
-              <Scale className="creator-service-icon text-blue-500" aria-hidden />
+              <Scale className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
               <h3 className="creator-service-title">IP &amp; Content Ownership</h3>
               <p className="creator-service-description">
                 Clarify who owns your videos, photos, scripts, and likeness. Protect your creator name and ensure brands don't overreach on perpetual or global rights.
@@ -219,7 +230,7 @@ export default function CreatorInLawLanding() {
             </div>
 
             <div className="creator-service-card">
-              <AlertTriangle className="creator-service-icon text-orange-500" aria-hidden />
+              <AlertTriangle className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
               <h3 className="creator-service-title">Disputes &amp; Non-Payment Support</h3>
               <p className="creator-service-description">
                 From strongly worded legal notices to strategy on resolving non-payment, misrepresentation, or breach issues — we help you respond with confidence.
@@ -227,7 +238,7 @@ export default function CreatorInLawLanding() {
             </div>
 
             <div className="creator-service-card">
-              <TrendingUp className="creator-service-icon text-purple-500" aria-hidden />
+              <TrendingUp className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
               <h3 className="creator-service-title">Creator Business Structuring Advice</h3>
               <p className="creator-service-description">
                 Light-touch guidance on when and how to formalise your creator business so you're set up for long-term growth.
@@ -305,8 +316,8 @@ export default function CreatorInLawLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <div style={{ backgroundColor: '#D9A3A5', padding: '1.5rem 2rem', borderRadius: '0.5rem' }}>
-              <p style={{ color: 'white', fontWeight: 'bold', fontSize: '1.125rem', margin: 0 }}>
+            <div className="creator-colorful-box">
+              <p className="creator-colorful-text">
                 Talk through your current contracts and see if a retainership makes sense for you.
               </p>
             </div>
@@ -452,19 +463,23 @@ export default function CreatorInLawLanding() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="creator-final-cta-heading">
-              Protect your content. Protect your future deals.
+              Protect your content. Protect your deals.
             </h2>
             <p className="creator-final-cta-subheading">
               One confusing contract or risky endorsement can undo months of hard work. Let's make sure your next deal moves you forward — safely.
             </p>
             
-            <Button className="creator-btn-primary creator-btn-large" asChild>
-              <a href="/book-a-call">Book A Call</a>
-            </Button>
-            
-            <p className="creator-final-cta-caption">
-              Share where you are in your creator journey and we'll map out how legal support on a retainership can fit in.
-            </p>
+            <div className="creator-final-cta-buttons">
+              <Button className="creator-btn-primary creator-btn-large" asChild>
+                <a href="/book-a-call">Book A Call</a>
+              </Button>
+              <Button 
+                className="creator-btn-primary creator-btn-large" 
+                onClick={() => window.dispatchEvent(new Event('openCompliersBot'))}
+              >
+                Let's Chat
+              </Button>
+            </div>
 
             <div className="creator-contact-methods">
               <div className="creator-contact-item">
