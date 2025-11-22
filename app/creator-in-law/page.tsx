@@ -139,9 +139,9 @@ export default function CreatorInLawLanding() {
                 Let us handle complex contracts, disclosure rules, and content policies. Most creators still sign whatever is sent to them. That's where we come in.
               </p>
               
-              <div className="creator-social-icons" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', margin: '1.5rem 0' }}>
-                <FaYoutube size={16} style={{ color: '#FF0000' }} aria-hidden />
-                <FaInstagram size={16} style={{ color: '#E4405F' }} aria-hidden />
+              <div className="creator-social-icons">
+                <FaYoutube size={16} style={{ color: '#FF0000' }} role="img" aria-label="YouTube" />
+                <FaInstagram size={16} style={{ color: '#E4405F' }} role="img" aria-label="Instagram" />
               </div>
               
               <p className="creator-support-text text-center">
@@ -463,7 +463,7 @@ export default function CreatorInLawLanding() {
               One confusing contract or risky endorsement can undo months of hard work. Let's make sure your next deal moves you forward — safely.
             </p>
             
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+            <div className="creator-final-cta-buttons">
               <Button className="creator-btn-primary creator-btn-large" asChild>
                 <a href="/book-a-call">Book A Call</a>
               </Button>

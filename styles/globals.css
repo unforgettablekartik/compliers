@@ -3494,6 +3494,20 @@ section h2 {
   font-size: 1.125rem !important;
 }
 
+.creator-final-cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.creator-social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
 .creator-final-cta-caption {
   text-align: center;
   color: #FFFFFF;
