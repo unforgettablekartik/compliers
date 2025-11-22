@@ -16,7 +16,7 @@ import {
   ChevronRight,
   Mail
 } from "lucide-react";
-import { FaWhatsapp } from "react-icons/fa";
+import { FaWhatsapp, FaYoutube, FaInstagram } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
@@ -74,7 +74,7 @@ export default function CreatorInLawLanding() {
 
               <div className="creator-hero-buttons">
                 <Button className="creator-btn-primary" asChild>
-                  <a href="#contact">Book A Call</a>
+                  <a href="#contact">Connect Now</a>
                 </Button>
               </div>
               
@@ -138,6 +138,11 @@ export default function CreatorInLawLanding() {
                 <br />
                 Let us handle complex contracts, disclosure rules, and content policies. Most creators still sign whatever is sent to them. That's where we come in.
               </p>
+              
+              <div className="creator-social-icons" style={{ display: 'flex', justifyContent: 'center', gap: '1rem', margin: '1.5rem 0' }}>
+                <FaYoutube size={16} style={{ color: '#FF0000' }} aria-hidden />
+                <FaInstagram size={16} style={{ color: '#E4405F' }} aria-hidden />
+              </div>
               
               <p className="creator-support-text text-center">
                 Whether you're at 50k or 5M followers, your contracts and compliance need to evolve with your growth.
@@ -452,19 +457,20 @@ export default function CreatorInLawLanding() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="creator-final-cta-heading">
-              Protect your content. Protect your future deals.
+              Protect your content. Protect your deals.
             </h2>
             <p className="creator-final-cta-subheading">
               One confusing contract or risky endorsement can undo months of hard work. Let's make sure your next deal moves you forward — safely.
             </p>
             
-            <Button className="creator-btn-primary creator-btn-large" asChild>
-              <a href="/book-a-call">Book A Call</a>
-            </Button>
-            
-            <p className="creator-final-cta-caption">
-              Share where you are in your creator journey and we'll map out how legal support on a retainership can fit in.
-            </p>
+            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <Button className="creator-btn-primary creator-btn-large" asChild>
+                <a href="/book-a-call">Book A Call</a>
+              </Button>
+              <Button className="creator-btn-primary creator-btn-large" asChild>
+                <a href={`https://wa.me/${whatsappNumber}`}>Let's Chat</a>
+              </Button>
+            </div>
 
             <div className="creator-contact-methods">
               <div className="creator-contact-item">
