@@ -140,8 +140,8 @@ export default function CreatorInLawLanding() {
               </p>
               
               <div className="creator-social-icons">
-                <FaYoutube size={16} style={{ color: '#FF0000' }} role="img" aria-label="YouTube" />
-                <FaInstagram size={16} style={{ color: '#E4405F' }} role="img" aria-label="Instagram" />
+                <FaYoutube size={16} role="img" aria-label="YouTube" />
+                <FaInstagram size={16} role="img" aria-label="Instagram" />
               </div>
               
               <p className="creator-support-text text-center">

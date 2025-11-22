@@ -3508,12 +3508,12 @@ section h2 {
   margin: 1.5rem 0;
 }
 
-.creator-final-cta-caption {
-  text-align: center;
-  color: #FFFFFF;
-  font-size: 0.875rem;
-  margin: 1rem 0 2rem 0;
-  line-height: 1.5;
+.creator-social-icons svg:first-child {
+  color: #FF0000; /* YouTube red */
+}
+
+.creator-social-icons svg:last-child {
+  color: #E4405F; /* Instagram pink */
 }
 
 .creator-contact-methods {
