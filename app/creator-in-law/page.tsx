@@ -68,9 +68,6 @@ export default function CreatorInLawLanding() {
               <h1 className="creator-hero-title">
                 Legal armour for content creators &amp; influencers.
               </h1>
-              <p className="creator-hero-description">
-                The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.
-              </p>
 
               <div className="creator-hero-buttons">
                 <Button className="creator-btn-primary" asChild>
@@ -80,6 +77,10 @@ export default function CreatorInLawLanding() {
               
               <p className="creator-hero-caption">
                 Free 20-minute discovery call. No obligations, just clarity.
+              </p>
+
+              <p className="creator-hero-description">
+                The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.
               </p>
             </motion.div>
 
@@ -140,8 +141,8 @@ export default function CreatorInLawLanding() {
               </p>
               
               <div className="creator-social-icons">
-                <FaYoutube size={16} role="img" aria-label="YouTube" />
-                <FaInstagram size={16} role="img" aria-label="Instagram" />
+                <FaYoutube size={24} role="img" aria-label="YouTube" />
+                <FaInstagram size={24} role="img" aria-label="Instagram" />
               </div>
               
               <p className="creator-support-text text-center">
@@ -310,7 +311,7 @@ export default function CreatorInLawLanding() {
           </div>
 
           <div className="text-center mt-12">
-            <div style={{ backgroundColor: '#D9A3A5', padding: '1.5rem 2rem', borderRadius: '0.5rem' }}>
+            <div style={{ backgroundColor: '#D9A3A5', padding: '1.5rem 2rem', borderRadius: '0.5rem', display: 'inline-block', maxWidth: '100%' }}>
               <p style={{ color: 'white', fontWeight: 'bold', fontSize: '1.125rem', margin: 0 }}>
                 Talk through your current contracts and see if a retainership makes sense for you.
               </p>
@@ -467,8 +468,11 @@ export default function CreatorInLawLanding() {
               <Button className="creator-btn-primary creator-btn-large" asChild>
                 <a href="/book-a-call">Book A Call</a>
               </Button>
-              <Button className="creator-btn-primary creator-btn-large" asChild>
-                <a href={`https://wa.me/${whatsappNumber}`}>Let's Chat</a>
+              <Button 
+                className="creator-btn-primary creator-btn-large" 
+                onClick={() => window.dispatchEvent(new Event('openCompliersBot'))}
+              >
+                Let's Chat
               </Button>
             </div>
 
