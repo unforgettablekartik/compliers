@@ -56,10 +56,7 @@ export default function MarksterLanding() {
               </p>
               <div className="markster-hero-buttons">
                 <Button className="markster-btn-primary" asChild>
-                  <a href="#start">Get started</a>
-                </Button>
-                <Button variant="outline" className="markster-btn-secondary" asChild>
-                  <a href="#start">Contact us</a>
+                  <a href="#start">Book FREE consultation</a>
                 </Button>
               </div>
               <div className="markster-hero-benefits">
@@ -449,8 +446,14 @@ export default function MarksterLanding() {
               {/* CTA Buttons - pill shaped */}
               <div className="markster-cta-buttons">
                 <a href="/book-a-call" className="markster-cta-btn markster-cta-btn-solid">
-                  Book a FREE consultation with Trademark Lawyer
+                  Book A Call
                 </a>
+                <button 
+                  onClick={() => window.dispatchEvent(new Event('openCompliersBot'))}
+                  className="markster-cta-btn markster-cta-btn-solid"
+                >
+                  Let's Chat
+                </button>
               </div>
               
               {/* Ethical note */}
