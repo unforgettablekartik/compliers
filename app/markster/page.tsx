@@ -283,7 +283,7 @@ export default function MarksterLanding() {
         <Container>
           <div className="mb-16 text-center">
             <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed‑fee pricing</h2>
-            <p className="mt-2 text-gray-600">Official government fees vary by entity & class, billed at actual rates. Our professional fee starts from Rs. 6,999/- only with a whole lot of offerings.</p>
+            <p className="mt-2 text-gray-600">Official government fees vary by entity & class, billed at actual rates. We charge a fixed professional fee with committed offerings.</p>
           </div>
           <div className="markster-included-not-included-grid">
             {/* Left Column: Included */}
@@ -460,7 +460,7 @@ export default function MarksterLanding() {
               
               {/* Ethical note */}
               <p className="markster-cta-ethical">
-                Ethical note: We provide factual, educational information and fixed-fee options—no comparative claims or solicitations.
+                Ethical Note: We provide factual educational information — no comparative claims or solicitations.
               </p>
             </div>
             
