@@ -449,8 +449,10 @@ export default function MarksterLanding() {
                   Book A Call
                 </a>
                 <button 
+                  type="button"
                   onClick={() => window.dispatchEvent(new Event('openCompliersBot'))}
                   className="markster-cta-btn markster-cta-btn-solid"
+                  aria-label="Open chat to speak with a trademark lawyer"
                 >
                   Let's Chat
                 </button>
