@@ -3631,22 +3631,14 @@ section h2 {
    MARKSTER SNAP SCROLL & NEW FEATURES
    ========================================== */
 
-/* Snap scroll container */
+/* Snap scroll container - removed height and overflow to prevent double scrollbars */
 .markster-snap-container {
   scroll-behavior: smooth;
-  scroll-snap-type: y proximity;
-  overflow-y: auto;
-  height: 100vh;
 }
 
 /* Snap section - Full viewport sections */
 .markster-snap-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  min-height: auto;
 }
 
 /* How it works - Features below cards */
