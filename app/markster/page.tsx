@@ -22,7 +22,7 @@ export default function MarksterLanding() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919540101740';
 
   return (
-    <div className="markster-page-container relative min-h-screen bg-white text-gray-900">
+    <div className="markster-page-container relative min-h-screen bg-white text-gray-900 markster-snap-container">
       {/* SEO JSON-LD */}
       <script
         type="application/ld+json"
@@ -38,7 +38,7 @@ export default function MarksterLanding() {
         }}
       />
       {/* Hero and other sections ... */}
-      <Section className="markster-hero">
+      <Section className="markster-hero markster-snap-section">
         <Container>
           <div className="markster-hero-grid">
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="markster-hero-left">
@@ -52,26 +52,13 @@ export default function MarksterLanding() {
                 <span className="markster-title-line3">Own your brand.</span>
               </h1>
               <p className="markster-hero-description">
-                Lawyer‑led, fixed‑fee trademark package for Indian startups &amp; MSMEs: deep search &amp; risk opinion, smart class specs, filing (TM‑A), one examination reply, and 60‑day watch—wrapped in clear timelines and a status dashboard.
+                Lawyer‑led, specialized trademark package for Indian startups &amp; MSMEs: with deep search &amp; risk opinion, form filing, examination reply, and 60‑day watch—wrapped with transparency.
               </p>
               <div className="markster-hero-buttons">
                 <Button className="markster-btn-primary" asChild>
-                  <a href="#start">Book FREE consultation</a>
+                  <a href="#start">Connect Now</a>
                 </Button>
-              </div>
-              <div className="markster-hero-benefits">
-                <div className="markster-benefit-item">
-                  <Search className="h-4 w-4" aria-hidden />
-                  <span>Search memo in 48 hours</span>
-                </div>
-                <div className="markster-benefit-item">
-                  <FileText className="h-4 w-4" aria-hidden />
-                  <span>TM-A filing in 72 hours</span>
-                </div>
-                <div className="markster-benefit-item">
-                  <BellRing className="h-4 w-4" aria-hidden />
-                  <span>Monthly status updates</span>
-                </div>
+                <p className="markster-hero-consult-note">Have questions? Let's connect over a FREE call.</p>
               </div>
             </motion.div>
 
@@ -122,65 +109,45 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Trust Bar - Single Line */}
-      <Section className="py-8 md:py-12">
-        <Container>
-          <div className="markster-trust-bar-single-line">
-            <div className="markster-trust-item-compact">
-              <Scale className="h-4 w-4 flex-none" aria-hidden />
-              <span>Services by Licensed Lawyers</span>
-            </div>
-            <div className="markster-trust-item-compact">
-              <Globe2 className="h-4 w-4 flex-none" aria-hidden />
-              <span>Fixed‑fee · Transparent timelines</span>
-            </div>
-            <div className="markster-trust-item-compact">
-              <Clock className="h-4 w-4 flex-none" aria-hidden />
-              <span>Priority turnaround options</span>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
       {/* Features - What you get from Markster™ */}
-      <Section className="markster-features-section">
+      <Section className="markster-features-section markster-snap-section">
         <Container>
           <div className="markster-features-header">
             <h2 className="markster-features-title">What you get from Markster™</h2>
             <p className="markster-features-subtitle">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
           <div className="markster-features-grid">
-            {/* Card 1: Search & Risk Opinion */}
+            {/* Card 1: Search & Analysis */}
             <div className="markster-feature-card">
               <div className="markster-feature-card-row">
                 <div className="markster-feature-icon-pill">
                   <Search className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="markster-feature-title">Search &amp; Risk Opinion</h3>
+                <h3 className="markster-feature-title">Search &amp; Analysis</h3>
               </div>
               <p className="markster-feature-description">Identical/phonetic/visual search across target &amp; related classes with a clear availability rating.</p>
             </div>
 
-            {/* Card 2: Filing Strategy & TM-A */}
+            {/* Card 2: Strategic Filing */}
             <div className="markster-feature-card">
               <div className="markster-feature-card-row">
                 <div className="markster-feature-icon-pill">
                   <FileText className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="markster-feature-title">Filing Strategy &amp; TM-A</h3>
+                <h3 className="markster-feature-title">Strategic Filing</h3>
               </div>
-              <p className="markster-feature-description">Class mapping, specification drafting, TM-48, and clean e-filing with stamped acknowledgments.</p>
+              <p className="markster-feature-description">Class mapping, specification drafting, TM-48, and e-filing with stamped acknowledgments.</p>
             </div>
 
-            {/* Card 3: Examination Reply (1 round) */}
+            {/* Card 3: Drafting Reply */}
             <div className="markster-feature-card">
               <div className="markster-feature-card-row">
                 <div className="markster-feature-icon-pill">
                   <AlertTriangle className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="markster-feature-title">Examination Reply (1 round)</h3>
+                <h3 className="markster-feature-title">Drafting Reply</h3>
               </div>
-              <p className="markster-feature-description">Substantive reply with case-law where useful; hearing brief if listed.</p>
+              <p className="markster-feature-description">Substantive reply on Examination Report. Winnable inputs. Assistance for hearings.</p>
             </div>
 
             {/* Card 4: 60-day Watch */}
@@ -220,7 +187,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* How it works */}
-      <Section className="markster-how-it-works-section">
+      <Section className="markster-how-it-works-section markster-snap-section">
         <Container>
           <div className="markster-how-it-works-header">
             <h2 className="markster-how-it-works-title">How it works</h2>
@@ -275,15 +242,43 @@ export default function MarksterLanding() {
               <p className="markster-card-paragraph-hiw">Draft specs, file TM-A, track; one exam reply included; 60-day watch.</p>
             </motion.div>
           </div>
+          
+          {/* Six feature icons below the cards */}
+          <div className="markster-how-it-works-features">
+            <div className="markster-hiw-feature-item">
+              <Scale aria-hidden />
+              <span>Services by Licensed Lawyers</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <Globe2 aria-hidden />
+              <span>Fixed‑fee · Transparent timelines</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <Clock aria-hidden />
+              <span>Priority turnaround options</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <Search aria-hidden />
+              <span>Search memo in 48 hours</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <FileText aria-hidden />
+              <span>TM-A filing in 72 hours</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <BellRing aria-hidden />
+              <span>Monthly status updates</span>
+            </div>
+          </div>
         </Container>
       </Section>
 
       {/* Inclusions / Exclusions - Rebuilt */}
-      <Section className="markster-included-not-included-section">
+      <Section className="markster-included-not-included-section markster-snap-section">
         <Container>
           <div className="mb-16 text-center">
             <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed‑fee pricing</h2>
-            <p className="mt-2 text-gray-600">Official government fees vary by entity & class, billed at actual rates. We charge a fixed professional fee with committed offerings.</p>
+            <p className="mt-2 text-gray-600">Official government fees vary by entity & class, billed at actual rates. We offer committed expertise for a fixed professional fee.</p>
           </div>
           <div className="markster-included-not-included-grid">
             {/* Left Column: Included */}
@@ -352,7 +347,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* FAQ Section */}
-      <Section className="bg-white">
+      <Section className="bg-white markster-snap-section">
         <Container>
           <div className="text-center" style={{ marginBottom: "24px" }}>
             <h2
@@ -408,7 +403,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* Start / Contact - "Ready to file your mark this week?" */}
-      <Section id="start" className="markster-cta-section">
+      <Section id="start" className="markster-cta-section markster-snap-section">
         <Container className="markster-cta-container">
           <div className="markster-cta-grid">
             {/* Left Column: Copy + Bullets + CTAs */}
