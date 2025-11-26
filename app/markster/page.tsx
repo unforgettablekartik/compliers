@@ -109,40 +109,6 @@ export default function MarksterLanding() {
         </Container>
       </Section>
 
-      {/* Trust Bar - Single Line */}
-      <Section className="py-8 md:py-12 markster-snap-section">
-        <Container>
-          <div className="markster-trust-bar-single-line">
-            <div className="markster-trust-item-compact">
-              <Scale className="h-4 w-4 flex-none" aria-hidden />
-              <span>Services by Licensed Lawyers</span>
-            </div>
-            <div className="markster-trust-item-compact">
-              <Globe2 className="h-4 w-4 flex-none" aria-hidden />
-              <span>Fixed‑fee · Transparent timelines</span>
-            </div>
-            <div className="markster-trust-item-compact">
-              <Clock className="h-4 w-4 flex-none" aria-hidden />
-              <span>Priority turnaround options</span>
-            </div>
-          </div>
-          <div className="markster-hero-benefits">
-            <div className="markster-benefit-item">
-              <Search className="h-4 w-4" aria-hidden />
-              <span>Search memo in 48 hours</span>
-            </div>
-            <div className="markster-benefit-item">
-              <FileText className="h-4 w-4" aria-hidden />
-              <span>TM-A filing in 72 hours</span>
-            </div>
-            <div className="markster-benefit-item">
-              <BellRing className="h-4 w-4" aria-hidden />
-              <span>Monthly status updates</span>
-            </div>
-          </div>
-        </Container>
-      </Section>
-
       {/* Features - What you get from Markster™ */}
       <Section className="markster-features-section markster-snap-section">
         <Container>
@@ -280,28 +246,28 @@ export default function MarksterLanding() {
           {/* Six feature icons below the cards */}
           <div className="markster-how-it-works-features">
             <div className="markster-hiw-feature-item">
-              <Search aria-hidden />
-              <span>Search &amp; Analysis</span>
-            </div>
-            <div className="markster-hiw-feature-item">
-              <FileText aria-hidden />
-              <span>Strategic Filing</span>
-            </div>
-            <div className="markster-hiw-feature-item">
-              <AlertTriangle aria-hidden />
-              <span>Drafting Reply</span>
-            </div>
-            <div className="markster-hiw-feature-item">
-              <Bell aria-hidden />
-              <span>60-day Watch</span>
-            </div>
-            <div className="markster-hiw-feature-item">
-              <Shield aria-hidden />
-              <span>Use &amp; Policing Kit</span>
+              <Scale aria-hidden />
+              <span>Services by Licensed Lawyers</span>
             </div>
             <div className="markster-hiw-feature-item">
               <Globe2 aria-hidden />
-              <span>Scale Options</span>
+              <span>Fixed‑fee · Transparent timelines</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <Clock aria-hidden />
+              <span>Priority turnaround options</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <Search aria-hidden />
+              <span>Search memo in 48 hours</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <FileText aria-hidden />
+              <span>TM-A filing in 72 hours</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <BellRing aria-hidden />
+              <span>Monthly status updates</span>
             </div>
           </div>
         </Container>
