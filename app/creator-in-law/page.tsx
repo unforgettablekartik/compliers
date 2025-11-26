@@ -157,12 +157,18 @@ export default function CreatorInLawLanding() {
             
             <div className="creator-problem-cards">
               <div className="creator-problem-card">
-                <h3 className="creator-problem-title">Unclear contracts</h3>
-                <p className="creator-problem-description">Dense legalese, no idea what you're really giving away.</p>
+                <h3 className="creator-problem-title creator-problem-title-with-icon">
+                  <span className="creator-problem-emoji">🤔</span>
+                  <span>Unclear contracts</span>
+                </h3>
+                <p className="creator-problem-description">Complex legalese. Vague terms. Safety compromised. No idea what you are signing up for.</p>
               </div>
               
               <div className="creator-problem-card creator-legal-counsel-card">
-                <h3 className="creator-problem-title">Legal Counsel for:</h3>
+                <h3 className="creator-problem-title creator-problem-title-with-icon">
+                  <HandshakeIcon className="creator-counsel-icon" aria-hidden />
+                  <span>Legal Counsel for:</span>
+                </h3>
                 <ul className="creator-legal-counsel-list">
                   <li>Content Creators</li>
                   <li>Influencers</li>
@@ -170,12 +176,17 @@ export default function CreatorInLawLanding() {
                   <li>YouTubers</li>
                   <li>Artists</li>
                   <li>Celebrities</li>
+                  <li>Gamers</li>
+                  <li>Podcasters</li>
                 </ul>
               </div>
               
               <div className="creator-problem-card">
-                <h3 className="creator-problem-title">Compliance anxiety</h3>
-                <p className="creator-problem-description">Worried if your #ad disclosures, endorsements, or claims are "safe enough".</p>
+                <h3 className="creator-problem-title creator-problem-title-with-icon">
+                  <span className="creator-problem-emoji">🤔</span>
+                  <span>Compliance anxiety</span>
+                </h3>
+                <p className="creator-problem-description">Worried over content censorship, disclosures, guidelines, regulations, and legal provisions.</p>
               </div>
             </div>
           </div>

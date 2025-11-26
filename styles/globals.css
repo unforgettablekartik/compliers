@@ -3175,6 +3175,25 @@ section h2 {
   line-height: 1.5;
 }
 
+/* Problem title with icon */
+.creator-problem-title-with-icon {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.creator-problem-emoji {
+  font-size: 1.25rem;
+  line-height: 1;
+}
+
+.creator-counsel-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #d9a3a5;
+  flex-shrink: 0;
+}
+
 /* Services Grid */
 .creator-services-grid {
   display: grid;
