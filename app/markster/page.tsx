@@ -22,7 +22,7 @@ export default function MarksterLanding() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919540101740';
 
   return (
-    <div className="markster-page-container relative min-h-screen bg-white text-gray-900">
+    <div className="markster-page-container relative min-h-screen bg-white text-gray-900 markster-snap-container">
       {/* SEO JSON-LD */}
       <script
         type="application/ld+json"
@@ -38,7 +38,7 @@ export default function MarksterLanding() {
         }}
       />
       {/* Hero and other sections ... */}
-      <Section className="markster-hero">
+      <Section className="markster-hero markster-snap-section">
         <Container>
           <div className="markster-hero-grid">
             <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }} className="markster-hero-left">
@@ -52,7 +52,7 @@ export default function MarksterLanding() {
                 <span className="markster-title-line3">Own your brand.</span>
               </h1>
               <p className="markster-hero-description">
-                Lawyer‑led, fixed‑fee trademark package for Indian startups &amp; MSMEs: deep search &amp; risk opinion, smart class specs, filing (TM‑A), one examination reply, and 60‑day watch—wrapped in clear timelines and a status dashboard.
+                Lawyer‑led, specialized trademark package for Indian startups &amp; MSMEs: with deep search &amp; risk opinion, form filing, examination reply, and 60‑day watch—wrapped with transparency.
               </p>
               <div className="markster-hero-buttons">
                 <Button className="markster-btn-primary" asChild>
@@ -110,7 +110,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* Trust Bar - Single Line */}
-      <Section className="py-8 md:py-12">
+      <Section className="py-8 md:py-12 markster-snap-section">
         <Container>
           <div className="markster-trust-bar-single-line">
             <div className="markster-trust-item-compact">
@@ -144,7 +144,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* Features - What you get from Markster™ */}
-      <Section className="markster-features-section">
+      <Section className="markster-features-section markster-snap-section">
         <Container>
           <div className="markster-features-header">
             <h2 className="markster-features-title">What you get from Markster™</h2>
@@ -181,7 +181,7 @@ export default function MarksterLanding() {
                 </div>
                 <h3 className="markster-feature-title">Drafting Reply</h3>
               </div>
-              <p className="markster-feature-description">Substantive reply on Examination Report with case-law, if useful. Assistance for hearings.</p>
+              <p className="markster-feature-description">Substantive reply on Examination Report. Winnable inputs. Assistance for hearings.</p>
             </div>
 
             {/* Card 4: 60-day Watch */}
@@ -221,7 +221,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* How it works */}
-      <Section className="markster-how-it-works-section">
+      <Section className="markster-how-it-works-section markster-snap-section">
         <Container>
           <div className="markster-how-it-works-header">
             <h2 className="markster-how-it-works-title">How it works</h2>
@@ -276,11 +276,39 @@ export default function MarksterLanding() {
               <p className="markster-card-paragraph-hiw">Draft specs, file TM-A, track; one exam reply included; 60-day watch.</p>
             </motion.div>
           </div>
+          
+          {/* Six feature icons below the cards */}
+          <div className="markster-how-it-works-features">
+            <div className="markster-hiw-feature-item">
+              <Search className="h-5 w-5" aria-hidden />
+              <span>Search &amp; Analysis</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <FileText className="h-5 w-5" aria-hidden />
+              <span>Strategic Filing</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <AlertTriangle className="h-5 w-5" aria-hidden />
+              <span>Drafting Reply</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <Bell className="h-5 w-5" aria-hidden />
+              <span>60-day Watch</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <Shield className="h-5 w-5" aria-hidden />
+              <span>Use &amp; Policing Kit</span>
+            </div>
+            <div className="markster-hiw-feature-item">
+              <Globe2 className="h-5 w-5" aria-hidden />
+              <span>Scale Options</span>
+            </div>
+          </div>
         </Container>
       </Section>
 
       {/* Inclusions / Exclusions - Rebuilt */}
-      <Section className="markster-included-not-included-section">
+      <Section className="markster-included-not-included-section markster-snap-section">
         <Container>
           <div className="mb-16 text-center">
             <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed‑fee pricing</h2>
@@ -353,7 +381,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* FAQ Section */}
-      <Section className="bg-white">
+      <Section className="bg-white markster-snap-section">
         <Container>
           <div className="text-center" style={{ marginBottom: "24px" }}>
             <h2
@@ -409,7 +437,7 @@ export default function MarksterLanding() {
       </Section>
 
       {/* Start / Contact - "Ready to file your mark this week?" */}
-      <Section id="start" className="markster-cta-section">
+      <Section id="start" className="markster-cta-section markster-snap-section">
         <Container className="markster-cta-container">
           <div className="markster-cta-grid">
             {/* Left Column: Copy + Bullets + CTAs */}
