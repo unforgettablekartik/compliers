@@ -1240,7 +1240,8 @@ section h2 {
 }
 
 .markster-hero-description {
-  margin-top: 1.5rem;
+  margin-top: 0.75rem;
+  margin-bottom: 0.75rem;
   font-size: 0.81rem;  /* Reduced by 10% from 0.9rem (total 19% reduction from 1rem) */
   line-height: 1.6;  /* Tighter line height to fit in 3 lines */
   color: #374151;
@@ -1258,7 +1259,7 @@ section h2 {
   flex-direction: column;
   align-items: flex-start;
   gap: 0.75rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .markster-hero-consult-note {
@@ -1344,10 +1345,17 @@ section h2 {
 .markster-hero-benefits {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem;
-  margin-top: 2rem;
-  font-size: 0.875rem;
-  color: #374151;
+  justify-content: center;
+  gap: 1.5rem 2.5rem;
+  margin-top: 1.5rem;
+  font-size: 0.8125rem;
+  color: #6b7280;
+}
+
+@media (min-width: 768px) {
+  .markster-hero-benefits {
+    gap: 2rem 3rem;
+  }
 }
 
 .markster-benefit-item {

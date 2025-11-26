@@ -60,20 +60,6 @@ export default function MarksterLanding() {
                 </Button>
                 <p className="markster-hero-consult-note">Have questions? Let's connect over a FREE call.</p>
               </div>
-              <div className="markster-hero-benefits">
-                <div className="markster-benefit-item">
-                  <Search className="h-4 w-4" aria-hidden />
-                  <span>Search memo in 48 hours</span>
-                </div>
-                <div className="markster-benefit-item">
-                  <FileText className="h-4 w-4" aria-hidden />
-                  <span>TM-A filing in 72 hours</span>
-                </div>
-                <div className="markster-benefit-item">
-                  <BellRing className="h-4 w-4" aria-hidden />
-                  <span>Monthly status updates</span>
-                </div>
-              </div>
             </motion.div>
 
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.1 }} className="markster-hero-right">
@@ -140,6 +126,20 @@ export default function MarksterLanding() {
               <span>Priority turnaround options</span>
             </div>
           </div>
+          <div className="markster-hero-benefits">
+            <div className="markster-benefit-item">
+              <Search className="h-4 w-4" aria-hidden />
+              <span>Search memo in 48 hours</span>
+            </div>
+            <div className="markster-benefit-item">
+              <FileText className="h-4 w-4" aria-hidden />
+              <span>TM-A filing in 72 hours</span>
+            </div>
+            <div className="markster-benefit-item">
+              <BellRing className="h-4 w-4" aria-hidden />
+              <span>Monthly status updates</span>
+            </div>
+          </div>
         </Container>
       </Section>
 
@@ -151,37 +151,37 @@ export default function MarksterLanding() {
             <p className="markster-features-subtitle">From search to filing to early defence—everything required to launch without brand anxiety.</p>
           </div>
           <div className="markster-features-grid">
-            {/* Card 1: Search & Risk Opinion */}
+            {/* Card 1: Search & Analysis */}
             <div className="markster-feature-card">
               <div className="markster-feature-card-row">
                 <div className="markster-feature-icon-pill">
                   <Search className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="markster-feature-title">Search &amp; Risk Opinion</h3>
+                <h3 className="markster-feature-title">Search &amp; Analysis</h3>
               </div>
               <p className="markster-feature-description">Identical/phonetic/visual search across target &amp; related classes with a clear availability rating.</p>
             </div>
 
-            {/* Card 2: Filing Strategy & TM-A */}
+            {/* Card 2: Strategic Filing */}
             <div className="markster-feature-card">
               <div className="markster-feature-card-row">
                 <div className="markster-feature-icon-pill">
                   <FileText className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="markster-feature-title">Filing Strategy &amp; TM-A</h3>
+                <h3 className="markster-feature-title">Strategic Filing</h3>
               </div>
-              <p className="markster-feature-description">Class mapping, specification drafting, TM-48, and clean e-filing with stamped acknowledgments.</p>
+              <p className="markster-feature-description">Class mapping, specification drafting, TM-48, and e-filing with stamped acknowledgments.</p>
             </div>
 
-            {/* Card 3: Examination Reply (1 round) */}
+            {/* Card 3: Drafting Reply */}
             <div className="markster-feature-card">
               <div className="markster-feature-card-row">
                 <div className="markster-feature-icon-pill">
                   <AlertTriangle className="markster-feature-icon" aria-hidden="true" />
                 </div>
-                <h3 className="markster-feature-title">Examination Reply (1 round)</h3>
+                <h3 className="markster-feature-title">Drafting Reply</h3>
               </div>
-              <p className="markster-feature-description">Substantive reply with case-law where useful; hearing brief if listed.</p>
+              <p className="markster-feature-description">Substantive reply on Examination Report with case-law, if useful. Assistance for hearings.</p>
             </div>
 
             {/* Card 4: 60-day Watch */}
