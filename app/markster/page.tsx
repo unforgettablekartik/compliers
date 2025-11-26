@@ -56,8 +56,9 @@ export default function MarksterLanding() {
               </p>
               <div className="markster-hero-buttons">
                 <Button className="markster-btn-primary" asChild>
-                  <a href="#start">Book FREE consultation</a>
+                  <a href="#start">Connect Now</a>
                 </Button>
+                <p className="markster-hero-consult-note">Have questions? Let's connect over a FREE call.</p>
               </div>
               <div className="markster-hero-benefits">
                 <div className="markster-benefit-item">
@@ -283,7 +284,7 @@ export default function MarksterLanding() {
         <Container>
           <div className="mb-16 text-center">
             <h2 className="text-2xl font-bold md:text-3xl mb-2">Transparent, fixed‑fee pricing</h2>
-            <p className="mt-2 text-gray-600">Official government fees vary by entity & class, billed at actual rates. We charge a fixed professional fee with committed offerings.</p>
+            <p className="mt-2 text-gray-600">Official government fees vary by entity & class, billed at actual rates. We offer committed expertise for a fixed professional fee.</p>
           </div>
           <div className="markster-included-not-included-grid">
             {/* Left Column: Included */}
