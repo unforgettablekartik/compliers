@@ -280,27 +280,27 @@ export default function MarksterLanding() {
           {/* Six feature icons below the cards */}
           <div className="markster-how-it-works-features">
             <div className="markster-hiw-feature-item">
-              <Search className="h-5 w-5" aria-hidden />
+              <Search aria-hidden />
               <span>Search &amp; Analysis</span>
             </div>
             <div className="markster-hiw-feature-item">
-              <FileText className="h-5 w-5" aria-hidden />
+              <FileText aria-hidden />
               <span>Strategic Filing</span>
             </div>
             <div className="markster-hiw-feature-item">
-              <AlertTriangle className="h-5 w-5" aria-hidden />
+              <AlertTriangle aria-hidden />
               <span>Drafting Reply</span>
             </div>
             <div className="markster-hiw-feature-item">
-              <Bell className="h-5 w-5" aria-hidden />
+              <Bell aria-hidden />
               <span>60-day Watch</span>
             </div>
             <div className="markster-hiw-feature-item">
-              <Shield className="h-5 w-5" aria-hidden />
+              <Shield aria-hidden />
               <span>Use &amp; Policing Kit</span>
             </div>
             <div className="markster-hiw-feature-item">
-              <Globe2 className="h-5 w-5" aria-hidden />
+              <Globe2 aria-hidden />
               <span>Scale Options</span>
             </div>
           </div>

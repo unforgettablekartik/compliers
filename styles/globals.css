@@ -3634,6 +3634,9 @@ section h2 {
 /* Snap scroll container */
 .markster-snap-container {
   scroll-behavior: smooth;
+  scroll-snap-type: y proximity;
+  overflow-y: auto;
+  height: 100vh;
 }
 
 /* Snap section - Full viewport sections */
