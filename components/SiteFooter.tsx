@@ -22,9 +22,9 @@ export default function SiteFooter() {
             <ul className="footer-links">
               <li><span className="footer-text-unclickable">Contracts & Agreements</span></li>
               <li><Link href="/markster" onClick={handleLinkClick('/markster')}>Trademarks & IP</Link></li>
-              <li><span className="footer-text-unclickable">Corporate Laws</span></li>
-              <li><span className="footer-text-unclickable">Data Privacy, AI & IT</span></li>
-              <li><span className="footer-text-unclickable">General Legal Support</span></li>
+              <li><Link href="/creator-in-law" onClick={handleLinkClick('/creator-in-law')}>Creators' Legal Counsel</Link></li>
+              <li><span className="footer-text-unclickable">StartUp Lawyer</span></li>
+              <li><span className="footer-text-unclickable">Fractional General Counsel</span></li>
             </ul>
           </div>
 
