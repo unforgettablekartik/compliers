@@ -44,7 +44,7 @@ export default function CreatorInLawLanding() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Creator In Law — Legal Support for Influencers & Creators",
+            name: "Creator in Law — Legal Support for Influencers & Creators",
             provider: { "@type": "LegalService", name: "The Compliers" },
             areaServed: "IN",
             serviceType: "Contract reviews, compliance guidance, IP protection for creators",
@@ -64,7 +64,7 @@ export default function CreatorInLawLanding() {
             >
               <div className="creator-brand-chip">
                 <Shield className="h-4 w-4" aria-hidden />
-                <span><span className="creator-brand-name">Creator In Law</span> by The Compliers</span>
+                <span><span className="creator-brand-name">Creator in Law</span> by The Compliers</span>
               </div>
               <h1 className="creator-hero-title">
                 Legal armour for content creators &amp; influencers.
@@ -157,27 +157,25 @@ export default function CreatorInLawLanding() {
             
             <div className="creator-problem-cards">
               <div className="creator-problem-card">
-                <AlertTriangle className="creator-problem-icon text-red-500" aria-hidden />
                 <h3 className="creator-problem-title">Unclear contracts</h3>
                 <p className="creator-problem-description">Dense legalese, no idea what you're really giving away.</p>
               </div>
               
-              <div className="creator-problem-card">
-                <AlertTriangle className="creator-problem-icon text-orange-500" aria-hidden />
-                <h3 className="creator-problem-title">Unlimited usage rights</h3>
-                <p className="creator-problem-description">Your face in ads for years, in countries you've never heard of, for the same one-time fee.</p>
+              <div className="creator-problem-card creator-legal-counsel-card">
+                <h3 className="creator-problem-title">Legal Counsel for:</h3>
+                <ul className="creator-legal-counsel-list">
+                  <li>Content Creators</li>
+                  <li>Influencers</li>
+                  <li>Managers and Agencies</li>
+                  <li>YouTubers</li>
+                  <li>Artists</li>
+                  <li>Celebrities</li>
+                </ul>
               </div>
               
               <div className="creator-problem-card">
-                <AlertTriangle className="creator-problem-icon text-yellow-500" aria-hidden />
                 <h3 className="creator-problem-title">Compliance anxiety</h3>
                 <p className="creator-problem-description">Worried if your #ad disclosures, endorsements, or claims are "safe enough".</p>
-              </div>
-              
-              <div className="creator-problem-card">
-                <AlertTriangle className="creator-problem-icon text-purple-500" aria-hidden />
-                <h3 className="creator-problem-title">Payment &amp; dispute headaches</h3>
-                <p className="creator-problem-description">Delayed payments, unfair penalties, and zero clarity on what happens if a campaign goes wrong.</p>
               </div>
             </div>
           </div>
