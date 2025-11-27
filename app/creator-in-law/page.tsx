@@ -14,7 +14,8 @@ import {
   MessageSquare,
   TrendingUp,
   ChevronRight,
-  Mail
+  Mail,
+  CircleHelp
 } from "lucide-react";
 import { FaWhatsapp, FaYoutube, FaInstagram, FaLinkedin, FaTiktok, FaFacebook } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -158,7 +159,7 @@ export default function CreatorInLawLanding() {
             <div className="creator-problem-cards">
               <div className="creator-problem-card">
                 <h3 className="creator-problem-title creator-problem-title-with-icon">
-                  <span className="creator-problem-emoji">🤔</span>
+                  <CircleHelp className="creator-problem-icon-glyph" aria-hidden />
                   <span>Unclear contracts</span>
                 </h3>
                 <p className="creator-problem-description">Complex legalese. Vague terms. Safety compromised. No idea what you are signing up for.</p>
@@ -178,12 +179,15 @@ export default function CreatorInLawLanding() {
                   <li>Celebrities</li>
                   <li>Gamers</li>
                   <li>Podcasters</li>
+                  <li>Freelancers</li>
+                  <li>Media Intermediaries</li>
+                  <li>Anchors or Collaborators</li>
                 </ul>
               </div>
               
               <div className="creator-problem-card">
                 <h3 className="creator-problem-title creator-problem-title-with-icon">
-                  <span className="creator-problem-emoji">🤔</span>
+                  <CircleHelp className="creator-problem-icon-glyph" aria-hidden />
                   <span>Compliance anxiety</span>
                 </h3>
                 <p className="creator-problem-description">Worried over content censorship, disclosures, guidelines, regulations, and legal provisions.</p>
