@@ -77,7 +77,7 @@ export default function CreatorInLawLanding() {
 
               <div className="creator-hero-buttons">
                 <Button className="creator-btn-primary" asChild>
-                  <a href="#contact">Connect Now</a>
+                  <a href="/book-a-call">Connect Now</a>
                 </Button>
               </div>
               
@@ -319,7 +319,7 @@ export default function CreatorInLawLanding() {
         <Container>
           <div className="text-center mb-12">
             <h2 className="creator-section-heading mb-3">
-              Simple, streamlined, and built around your content schedule.
+              Legal Support designed for the creator's economy
             </h2>
           </div>
           
@@ -387,12 +387,14 @@ export default function CreatorInLawLanding() {
                 Talk through your current contracts and see if a retainership makes sense for you.
               </p>
             </div>
-            <p className="creator-requirements-text">
-              Let's have a word about what you need and what we offer.
-            </p>
-            <Button className="creator-btn-primary" asChild>
-              <a href="https://forms.gle/ZFwD1sQJyCRGmnfP6" target="_blank" rel="noopener noreferrer">Share your requirements</a>
-            </Button>
+            <div className="creator-requirements-box">
+              <p className="creator-requirements-text">
+                Let's have a word about what you need and what we offer.
+              </p>
+              <Button className="creator-btn-primary" asChild>
+                <a href="/book-a-call">Share your requirements</a>
+              </Button>
+            </div>
           </div>
         </Container>
       </Section>
