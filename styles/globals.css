@@ -3238,9 +3238,15 @@ section h2 {
   transform: translateY(-4px);
 }
 
+.creator-service-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .creator-service-icon {
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   flex-shrink: 0;
 }
 

@@ -177,7 +177,6 @@ export default function CreatorInLawLanding() {
                   <li>YouTubers</li>
                   <li>Artists</li>
                   <li>Celebrities</li>
-                  <li>Gamers</li>
                   <li>Podcasters</li>
                   <li>Freelancers</li>
                   <li>Media Intermediaries</li>
@@ -197,6 +196,51 @@ export default function CreatorInLawLanding() {
         </Container>
       </Section>
 
+      {/* 3. WHY THE COMPLIERS – TRUST & DIFFERENTIATION */}
+      <Section className="creator-trust-section">
+        <Container>
+          <div className="text-center mb-12">
+            <h2 className="creator-section-heading text-white mb-8">
+              Why creators choose The Compliers
+            </h2>
+          </div>
+          
+          <div className="creator-trust-grid">
+            <div className="creator-trust-card">
+              <Users className="creator-trust-icon" aria-hidden />
+              <h3 className="creator-trust-title">Creator-first, not brand-first</h3>
+              <p className="creator-trust-description">
+                Our job is to protect your interests — your content, your time, your reputation.
+              </p>
+            </div>
+
+            <div className="creator-trust-card">
+              <Shield className="creator-trust-icon" aria-hidden />
+              <h3 className="creator-trust-title">Deep focus on influencer &amp; digital law</h3>
+              <p className="creator-trust-description">
+                We live in the world of brand deals, endorsements, platform policies and evolving regulations.
+              </p>
+            </div>
+
+            <div className="creator-trust-card">
+              <Lightbulb className="creator-trust-icon" aria-hidden />
+              <h3 className="creator-trust-title">Plain-language, actionable advice</h3>
+              <p className="creator-trust-description">
+                No 20-page memos. You get clear summaries, redlined contracts, and ready-to-send responses.
+              </p>
+            </div>
+
+            <div className="creator-trust-card">
+              <HandshakeIcon className="creator-trust-icon" aria-hidden />
+              <h3 className="creator-trust-title">Reliable, long-term partnership</h3>
+              <p className="creator-trust-description">
+                Think of us as your external legal desk — on your side as you grow from your first deal to your fiftieth.
+              </p>
+            </div>
+          </div>
+        </Container>
+      </Section>
+
       {/* 4. SERVICES OVERVIEW – CARDS GRID */}
       <Section className="bg-white">
         <Container>
@@ -204,55 +248,64 @@ export default function CreatorInLawLanding() {
             <h2 className="creator-section-heading mb-3">
               What we do for influencers &amp; creators
             </h2>
-            <p className="creator-section-paragraph">
-              End-to-end legal support designed specifically for the creator economy.
-            </p>
           </div>
           
           <div className="creator-services-grid">
             <div className="creator-service-card">
-              <FileText className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-              <h3 className="creator-service-title">Brand Deal Contract Review</h3>
+              <div className="creator-service-header">
+                <FileText className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
+                <h3 className="creator-service-title">Brand Deal Contract Review</h3>
+              </div>
               <p className="creator-service-description">
                 We review your collaboration and campaign agreements, highlight red flags in plain English, and suggest edits you can use directly with brands or agencies.
               </p>
             </div>
 
             <div className="creator-service-card">
-              <HandshakeIcon className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-              <h3 className="creator-service-title">Negotiation Support</h3>
+              <div className="creator-service-header">
+                <HandshakeIcon className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
+                <h3 className="creator-service-title">Negotiation Support</h3>
+              </div>
               <p className="creator-service-description">
                 Don't want to sound "difficult"? We help you push back smartly on usage rights, exclusivity, payment terms, and penalties — without burning relationships.
               </p>
             </div>
 
             <div className="creator-service-card">
-              <Shield className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-              <h3 className="creator-service-title">Risk &amp; Compliance for Influencers</h3>
+              <div className="creator-service-header">
+                <Shield className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
+                <h3 className="creator-service-title">Risk &amp; Compliance</h3>
+              </div>
               <p className="creator-service-description">
                 Guidance on disclosures, endorsements, and advertising rules so you don't accidentally violate ASCI or consumer guidelines while promoting products.
               </p>
             </div>
 
             <div className="creator-service-card">
-              <Scale className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-              <h3 className="creator-service-title">IP &amp; Content Ownership</h3>
+              <div className="creator-service-header">
+                <Scale className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
+                <h3 className="creator-service-title">IP &amp; Content Ownership</h3>
+              </div>
               <p className="creator-service-description">
                 Clarify who owns your videos, photos, scripts, and likeness. Protect your creator name and ensure brands don't overreach on perpetual or global rights.
               </p>
             </div>
 
             <div className="creator-service-card">
-              <AlertTriangle className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-              <h3 className="creator-service-title">Disputes &amp; Non-Payment Support</h3>
+              <div className="creator-service-header">
+                <AlertTriangle className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
+                <h3 className="creator-service-title">Disputes &amp; Claims Support</h3>
+              </div>
               <p className="creator-service-description">
                 From strongly worded legal notices to strategy on resolving non-payment, misrepresentation, or breach issues — we help you respond with confidence.
               </p>
             </div>
 
             <div className="creator-service-card">
-              <TrendingUp className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-              <h3 className="creator-service-title">Creator Business Structuring Advice</h3>
+              <div className="creator-service-header">
+                <TrendingUp className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
+                <h3 className="creator-service-title">Business Structuring Advice</h3>
+              </div>
               <p className="creator-service-description">
                 Light-touch guidance on when and how to formalise your creator business so you're set up for long-term growth.
               </p>
@@ -374,51 +427,6 @@ export default function CreatorInLawLanding() {
             <p className="creator-retainer-note">
               Let's have a word about what you need and what we offer.
             </p>
-          </div>
-        </Container>
-      </Section>
-
-      {/* 7. WHY THE COMPLIERS – TRUST & DIFFERENTIATION */}
-      <Section className="creator-trust-section">
-        <Container>
-          <div className="text-center mb-12">
-            <h2 className="creator-section-heading text-white mb-8">
-              Why creators choose The Compliers
-            </h2>
-          </div>
-          
-          <div className="creator-trust-grid">
-            <div className="creator-trust-card">
-              <Users className="creator-trust-icon" aria-hidden />
-              <h3 className="creator-trust-title">Creator-first, not brand-first</h3>
-              <p className="creator-trust-description">
-                Our job is to protect your interests — your content, your time, your reputation.
-              </p>
-            </div>
-
-            <div className="creator-trust-card">
-              <Shield className="creator-trust-icon" aria-hidden />
-              <h3 className="creator-trust-title">Deep focus on influencer &amp; digital law</h3>
-              <p className="creator-trust-description">
-                We live in the world of brand deals, endorsements, platform policies and evolving regulations.
-              </p>
-            </div>
-
-            <div className="creator-trust-card">
-              <Lightbulb className="creator-trust-icon" aria-hidden />
-              <h3 className="creator-trust-title">Plain-language, actionable advice</h3>
-              <p className="creator-trust-description">
-                No 20-page memos. You get clear summaries, redlined contracts, and ready-to-send responses.
-              </p>
-            </div>
-
-            <div className="creator-trust-card">
-              <HandshakeIcon className="creator-trust-icon" aria-hidden />
-              <h3 className="creator-trust-title">Reliable, long-term partnership</h3>
-              <p className="creator-trust-description">
-                Think of us as your external legal desk — on your side as you grow from your first deal to your fiftieth.
-              </p>
-            </div>
           </div>
         </Container>
       </Section>
