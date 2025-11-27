@@ -47,10 +47,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>The Compliers - Contracts, Trademark and Tech-Law Specialists</title>
+        <title>The Compliers - Best Legal Counsel for Contracts, Trademarks & Corporate Compliance</title>
         <meta
           name="description"
-          content="Rendering support on the conventional areas of law as well as the latest legal developments across the industries."
+          content="Founders' favorite General Counsel, The Compliers offers affordable legal solution for contracts, trademark registration, and corporate matters. Serving businesses, startups, content creators, agencies and professionals as specialized legal counsel. Project-based and retainer services available with reasonable fixed fee options."
         />
         {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
