@@ -261,10 +261,11 @@ nav .nav-links a:hover {
   font-size: 1.05rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
-  max-width: 650px;
+  max-width: 100%;
   margin-left: auto;
   margin-right: auto;
   color: #3a3a3a;
+  white-space: nowrap;
 }
 
 #hero .hero-content .hero-description-line2 {
