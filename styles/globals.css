@@ -3259,7 +3259,7 @@ section h2 {
 }
 
 .creator-service-description {
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   color: #6b7280;
   margin: 0;
   line-height: 1.6;
@@ -3267,7 +3267,7 @@ section h2 {
 
 @media (min-width: 768px) {
   .creator-service-description {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     line-height: 1.7;
   }
 }
@@ -3630,6 +3630,13 @@ section h2 {
   font-weight: bold;
   font-size: 1.125rem;
   margin: 0;
+  line-height: 1.5;
+}
+
+.creator-requirements-text {
+  font-size: 1rem;
+  color: #4b5563;
+  margin: 1.5rem 0 1rem 0;
   line-height: 1.5;
 }
 

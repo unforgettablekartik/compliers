@@ -387,6 +387,12 @@ export default function CreatorInLawLanding() {
                 Talk through your current contracts and see if a retainership makes sense for you.
               </p>
             </div>
+            <p className="creator-requirements-text">
+              Let's have a word about what you need and what we offer.
+            </p>
+            <Button className="creator-btn-primary" asChild>
+              <a href="https://forms.gle/ZFwD1sQJyCRGmnfP6" target="_blank" rel="noopener noreferrer">Share your requirements</a>
+            </Button>
           </div>
         </Container>
       </Section>
@@ -423,10 +429,6 @@ export default function CreatorInLawLanding() {
                 <span>Option to add IP &amp; dispute support as you scale</span>
               </li>
             </ul>
-            
-            <p className="creator-retainer-note">
-              Let's have a word about what you need and what we offer.
-            </p>
           </div>
         </Container>
       </Section>
