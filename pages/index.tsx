@@ -78,9 +78,15 @@ export default function Home() {
             <span className="hero-line1">Contracts &amp; Risk Mitigation | Intellectual Property</span>
             <span className="hero-line2">Corporate Law | Legal aspects of AI, IT &amp; Data Privacy</span>
           </h1>
-          <p>
-            Rendering support on the conventional areas of law as well as the latest legal developments across the industries.
+          <p className="hero-description-line1">
+            Legal Protection for Growing Businesses and Entrepreneurs.
           </p>
+          <p className="hero-description-line2">
+            No Big Bulky Bills. No Complex Legalese.
+          </p>
+          <div className="hero-buttons">
+            <a href="/book-a-call" className="btn">Connect Now</a>
+          </div>
         </div>
       </header>
 
