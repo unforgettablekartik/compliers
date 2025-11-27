@@ -257,7 +257,7 @@ export default function CreatorInLawLanding() {
                 <h3 className="creator-service-title">Brand Deal Contract Review</h3>
               </div>
               <p className="creator-service-description">
-                We review your collaboration and campaign agreements, highlight red flags in plain English, and suggest edits you can use directly with brands or agencies.
+                We review your collaboration and campaign agreements, highlight red flags, and suggest edits to protect your rights &amp; interests.
               </p>
             </div>
 
@@ -267,7 +267,7 @@ export default function CreatorInLawLanding() {
                 <h3 className="creator-service-title">Negotiation Support</h3>
               </div>
               <p className="creator-service-description">
-                Don't want to sound "difficult"? We help you push back smartly on usage rights, exclusivity, payment terms, and penalties — without burning relationships.
+                Don't want to sound "tough"? We help you push back smartly on usage rights, exclusivity, payment terms, and penalties — carefully.
               </p>
             </div>
 
@@ -387,10 +387,7 @@ export default function CreatorInLawLanding() {
                 Talk through your current contracts and see if a retainership makes sense for you.
               </p>
             </div>
-            <div className="creator-requirements-box">
-              <p className="creator-requirements-text">
-                Let's have a word about what you need and what we offer.
-              </p>
+            <div className="creator-share-btn-container">
               <Button className="creator-btn-primary" asChild>
                 <a href="/book-a-call">Share your requirements</a>
               </Button>
