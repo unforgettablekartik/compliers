@@ -530,14 +530,14 @@ section h2 {
 .footer-bottom {
   background-color: #000000;
   border-top: 1px solid #e0e0e0;
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   text-align: center;
 }
 
 .footer-bottom .container {
   max-width: fit-content;
   width: auto;
-  padding: 0.5rem 2rem;
+  padding: 0.25rem 2rem;
 }
 
 .site-footer .footer-copy {
