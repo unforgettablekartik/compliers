@@ -79,13 +79,14 @@ export default function Home() {
             <span className="hero-line2">Corporate Law | Legal aspects of AI, IT &amp; Data Privacy</span>
           </h1>
           <p className="hero-description-line1">
-            Legal Protection for Growing Businesses and Entrepreneurs.
+            Specialized legal support for Businesses, Entrepreneurs, Creators, and Agencies.
           </p>
           <p className="hero-description-line2">
-            No Big Bulky Bills. No Complex Legalese.
+            Founder&apos;s favorite Legal Counsel. No Big Bulky Bills. No Complex Legalese.
           </p>
           <div className="hero-buttons">
             <a href="/book-a-call" className="btn">Connect Now</a>
+            <a href="/#services" className="btn btn-secondary">Our Services</a>
           </div>
         </div>
       </header>

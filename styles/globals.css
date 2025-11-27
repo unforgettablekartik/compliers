@@ -260,8 +260,8 @@ nav .nav-links a:hover {
 #hero .hero-content .hero-description-line1 {
   font-size: 1.05rem;
   font-weight: 600;
-  margin-bottom: 0.25rem;
-  max-width: 600px;
+  margin-bottom: 0.5rem;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   color: #3a3a3a;
@@ -269,8 +269,8 @@ nav .nav-links a:hover {
 
 #hero .hero-content .hero-description-line2 {
   font-size: 1rem;
-  margin-bottom: 0.8rem;
-  max-width: 600px;
+  margin-bottom: 1rem;
+  max-width: 650px;
   margin-left: auto;
   margin-right: auto;
   color: #555;
@@ -278,6 +278,10 @@ nav .nav-links a:hover {
 
 #hero .hero-buttons {
   margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
 .btn {
