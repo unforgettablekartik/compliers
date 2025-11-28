@@ -15,7 +15,7 @@ export default function Privacy() {
           <p>This Privacy Policy explains how <strong>The Compliers</strong> (&quot;<strong>The Compliers</strong>&quot;, &quot;<strong>we</strong>&quot;, &quot;<strong>us</strong>&quot;, or &quot;<strong>our</strong>&quot;) collects, uses, shares and protects your digital personal data when you:</p>
           <ul>
             <li>visit our website <a href="https://www.thecompliers.info">https://www.thecompliers.info</a> (the &quot;<strong>Website</strong>&quot;);</li>
-            <li>interact with our service sections, including pages &quot;<strong>Agreementor</strong>&quot;, &quot;<strong>Creator&apos;s in Law</strong>&quot;, and &quot;<strong>Markster</strong>&quot;; and</li>
+            <li>interact with our service sections, including pages &quot;<strong>Agreementor</strong>&quot;, &quot;<strong><a href="/creator-in-law">Creator&apos;s in Law</a></strong>&quot;, and &quot;<strong><a href="/markster">Markster</a></strong>&quot;; and</li>
             <li>contact us through our contact form, chat box, WhatsApp, or the &quot;Book A Call&quot; button.</li>
           </ul>
           
