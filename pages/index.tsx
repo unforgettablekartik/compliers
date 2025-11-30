@@ -75,8 +75,8 @@ export default function Home() {
       <header id="hero">
         <div className="hero-content">
           <h1>
-            <span className="hero-line1">Contracts &amp; Risk Mitigation | Intellectual Property</span>
-            <span className="hero-line2">Corporate Law | Legal aspects of AI, IT &amp; Data Privacy</span>
+            <span className="hero-line1">Fear of legal complexity? Compromising contracts? Forced litigations?</span>
+            <span className="hero-line2">We provide affordable specialized solutions.</span>
           </h1>
           <p className="hero-description-line1">
             Specialized legal support for Businesses, Entrepreneurs, Creators, and Agencies.
