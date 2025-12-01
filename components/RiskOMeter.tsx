@@ -313,7 +313,10 @@ export default function RiskOMeter() {
                 Drag & drop your contract here
               </p>
               <p className="riskmeter-upload-subtext">
-                or click to browse (PDF/DOCX)
+                or click to browse
+              </p>
+              <p className="riskmeter-upload-subtext">
+                (best file types: doc/docx)
               </p>
             </div>
           </motion.div>
