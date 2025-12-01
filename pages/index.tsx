@@ -75,8 +75,9 @@ export default function Home() {
       <header id="hero">
         <div className="hero-content">
           <h1>
-            <span className="hero-line1">Fear of legal complexity? Compromising contracts? Forced litigations?</span>
-            <span className="hero-line2">We provide affordable specialized solutions.</span>
+            <span className="hero-line1">Fear of legal complexity? Compromising contracts?</span>
+            <span className="hero-line2">Forced litigations? Big Bills of Big Firms?</span>
+            <span className="hero-line3">We provide affordable, specialized solutions.</span>
           </h1>
           <p className="hero-description-line1">
             Specialized legal support for Businesses, Entrepreneurs, Creators, and Agencies.

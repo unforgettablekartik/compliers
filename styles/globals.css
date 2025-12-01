@@ -238,19 +238,27 @@ nav .nav-links a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 7.2rem 1rem 2.7rem;
+  padding: 6rem 1rem 2rem;
 }
 
 #hero .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.375rem;
   font-weight: 700;
-  margin-bottom: 1rem;
+  margin-bottom: 0.75rem;
   color: #3a3a3a;
+  line-height: 1.3;
+}
+
+#hero .hero-content .hero-line3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1a5276;
+  margin-top: 0.5rem;
 }
 
 #hero .hero-content p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
+  font-size: 0.975rem;
+  margin-bottom: 1.25rem;
   max-width: 600px;
   margin-left: auto;
   margin-right: auto;
@@ -258,9 +266,9 @@ nav .nav-links a:hover {
 }
 
 #hero .hero-content .hero-description-line1 {
-  font-size: 1.05rem;
+  font-size: 0.925rem;
   font-weight: 600;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   max-width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -269,8 +277,8 @@ nav .nav-links a:hover {
 }
 
 #hero .hero-content .hero-description-line2 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  margin-bottom: 0.75rem;
   max-width: 650px;
   margin-left: auto;
   margin-right: auto;
@@ -717,7 +725,8 @@ section h2 {
 
 /* Hero line styling and highlight box */
 .hero-line1,
-.hero-line2 {
+.hero-line2,
+.hero-line3 {
   display: block;
 }
 
