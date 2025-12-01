@@ -233,6 +233,7 @@ export default function RiskOMeter() {
   const [showGatekeeperModal, setShowGatekeeperModal] = useState(false);
   const [showUpsellModal, setShowUpsellModal] = useState(false);
   const [isDragOver, setIsDragOver] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   // Simulate API call for gatekeeper check
@@ -267,10 +268,12 @@ export default function RiskOMeter() {
     // Validate file type
     const validTypes = ['application/pdf', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
     if (!validTypes.includes(selectedFile.type)) {
-      alert('Please upload a PDF or DOCX file.');
+      setErrorMessage('Please upload a PDF or DOCX file.');
+      setUploadStatus('error');
       return;
     }
 
+    setErrorMessage(null);
     setFile(selectedFile);
     setUploadStatus('analyzing_gatekeeper');
     
@@ -286,7 +289,9 @@ export default function RiskOMeter() {
         setResult(riskResult);
         setUploadStatus('complete');
       }
-    } catch {
+    } catch (error) {
+      console.error('Error analyzing document:', error);
+      setErrorMessage('Failed to analyze document. Please try again.');
       setUploadStatus('error');
     }
   }, []);
@@ -328,7 +333,9 @@ export default function RiskOMeter() {
         setResult(riskResult);
         setUploadStatus('complete');
       }
-    } catch {
+    } catch (error) {
+      console.error('Error during risk analysis:', error);
+      setErrorMessage('Failed to complete risk analysis. Please try again.');
       setUploadStatus('error');
     }
   };
@@ -342,6 +349,7 @@ export default function RiskOMeter() {
     setUploadStatus('idle');
     setFile(null);
     setResult(null);
+    setErrorMessage(null);
     if (fileInputRef.current) {
       fileInputRef.current.value = '';
     }
@@ -466,7 +474,7 @@ export default function RiskOMeter() {
           >
             <AlertTriangle className="riskmeter-error-icon" />
             <p className="riskmeter-error-text">
-              Something went wrong. Please try again.
+              {errorMessage || 'Something went wrong. Please try again.'}
             </p>
             <Button 
               className="riskmeter-btn-primary" 
