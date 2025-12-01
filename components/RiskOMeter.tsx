@@ -17,8 +17,11 @@ import { Button } from "@/components/ui/button";
 type UploadStatus = 'idle' | 'analyzing_gatekeeper' | 'waiting_user_confirmation' | 'analyzing_risk' | 'complete' | 'error';
 
 interface RiskResult {
-  score: number;
   is_contract: boolean;
+  risk_score: number;
+  interpretation: string;
+  risk_summary: string;
+  key_risks: string[];
 }
 
 // Helper function to get interpretation text based on score
@@ -236,32 +239,25 @@ export default function RiskOMeter() {
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  // Simulate API call for gatekeeper check
-  const analyzeGatekeeper = async (uploadedFile: File, skipCheck = false): Promise<RiskResult> => {
-    // Simulating API delay
-    await new Promise(resolve => setTimeout(resolve, 1500));
-    
-    // For demo purposes, simulate different responses
-    // In production, this would be an actual API call
-    if (skipCheck) {
-      return { is_contract: true, score: Math.floor(Math.random() * 10) + 1 };
+  // API call to analyze contract
+  const analyzeContract = async (uploadedFile: File, skipGatekeeper = false): Promise<RiskResult> => {
+    const formData = new FormData();
+    formData.append('file', uploadedFile);
+    if (skipGatekeeper) {
+      formData.append('skip_gatekeeper', 'true');
     }
-    
-    // Simulate: 30% chance it's not recognized as a contract
-    const isContract = Math.random() > 0.3;
-    return { 
-      is_contract: isContract, 
-      score: isContract ? Math.floor(Math.random() * 10) + 1 : 0 
-    };
-  };
 
-  // Simulate API call for risk analysis
-  const analyzeRisk = async (): Promise<RiskResult> => {
-    // Simulating API delay
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    // Return random score for demo
-    return { is_contract: true, score: Math.floor(Math.random() * 10) + 1 };
+    const response = await fetch('/api/analyze-contract', {
+      method: 'POST',
+      body: formData,
+    });
+
+    if (!response.ok) {
+      const errorData = await response.json();
+      throw new Error(errorData.error || 'Failed to analyze contract');
+    }
+
+    return response.json();
   };
 
   const handleFileSelect = useCallback(async (selectedFile: File) => {
@@ -278,20 +274,18 @@ export default function RiskOMeter() {
     setUploadStatus('analyzing_gatekeeper');
     
     try {
-      const gatekeeperResult = await analyzeGatekeeper(selectedFile);
+      const apiResult = await analyzeContract(selectedFile, false);
       
-      if (!gatekeeperResult.is_contract) {
+      if (!apiResult.is_contract) {
         setUploadStatus('waiting_user_confirmation');
         setShowGatekeeperModal(true);
       } else {
-        setUploadStatus('analyzing_risk');
-        const riskResult = await analyzeRisk();
-        setResult(riskResult);
+        setResult(apiResult);
         setUploadStatus('complete');
       }
     } catch (error) {
       console.error('Error analyzing document:', error);
-      setErrorMessage('Failed to analyze document. Please try again.');
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to analyze document. Please try again.');
       setUploadStatus('error');
     }
   }, []);
@@ -329,13 +323,13 @@ export default function RiskOMeter() {
     
     try {
       if (file) {
-        const riskResult = await analyzeGatekeeper(file, true);
-        setResult(riskResult);
+        const apiResult = await analyzeContract(file, true);
+        setResult(apiResult);
         setUploadStatus('complete');
       }
     } catch (error) {
       console.error('Error during risk analysis:', error);
-      setErrorMessage('Failed to complete risk analysis. Please try again.');
+      setErrorMessage(error instanceof Error ? error.message : 'Failed to complete risk analysis. Please try again.');
       setUploadStatus('error');
     }
   };
@@ -439,7 +433,22 @@ export default function RiskOMeter() {
             transition={{ duration: 0.3 }}
             className="riskmeter-results"
           >
-            <SpeedometerGauge score={result.score} />
+            <SpeedometerGauge score={result.risk_score} />
+            
+            {result.risk_summary && (
+              <p className="riskmeter-risk-summary">{result.risk_summary}</p>
+            )}
+            
+            {result.key_risks && result.key_risks.length > 0 && (
+              <div className="riskmeter-key-risks">
+                <p className="riskmeter-key-risks-title">Key Risks:</p>
+                <ul className="riskmeter-key-risks-list">
+                  {result.key_risks.slice(0, 3).map((risk, index) => (
+                    <li key={index}>{risk}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
             
             <div className="riskmeter-cta-box">
               <p className="riskmeter-cta-text">
