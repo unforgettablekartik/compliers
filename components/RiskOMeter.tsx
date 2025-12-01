@@ -1,13 +1,14 @@
 "use client";
 
 import React, { useState, useCallback, useRef } from "react";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Upload, 
   FileText, 
   AlertTriangle, 
   X, 
-  CheckCircle,
   Gauge,
   Loader2
 } from "lucide-react";
@@ -117,12 +118,10 @@ const SpeedometerGauge = ({ score }: { score: number }) => {
 // Gatekeeper Modal Component
 const GatekeeperModal = ({ 
   isOpen, 
-  onClose, 
-  onContinue 
+  onClose 
 }: { 
   isOpen: boolean; 
   onClose: () => void; 
-  onContinue: () => void; 
 }) => {
   return (
     <AnimatePresence>
@@ -153,16 +152,10 @@ const GatekeeperModal = ({
             </p>
             <div className="riskmeter-modal-buttons">
               <Button 
-                className="riskmeter-btn-secondary" 
+                className="riskmeter-btn-primary" 
                 onClick={onClose}
               >
-                Cancel Upload
-              </Button>
-              <Button 
-                className="riskmeter-btn-primary" 
-                onClick={onContinue}
-              >
-                Continue Anyways
+                Analyze another document
               </Button>
             </div>
           </motion.div>
@@ -172,69 +165,15 @@ const GatekeeperModal = ({
   );
 };
 
-// Upsell Modal Component
-const UpsellModal = ({ 
-  isOpen, 
-  onClose 
-}: { 
-  isOpen: boolean; 
-  onClose: () => void; 
-}) => {
-  return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          className="riskmeter-modal-overlay"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={onClose}
-        >
-          <motion.div
-            className="riskmeter-modal riskmeter-upsell-modal"
-            initial={{ opacity: 0, scale: 0.9, y: 20 }}
-            animate={{ opacity: 1, scale: 1, y: 0 }}
-            exit={{ opacity: 0, scale: 0.9, y: 20 }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="riskmeter-modal-header">
-              <CheckCircle className="riskmeter-modal-icon-success" />
-              <button onClick={onClose} className="riskmeter-modal-close">
-                <X size={20} />
-              </button>
-            </div>
-            <h3 className="riskmeter-modal-title">Get Expert Legal Support</h3>
-            <p className="riskmeter-modal-text">
-              Choose how you'd like our legal experts to help you.
-            </p>
-            <div className="riskmeter-upsell-buttons">
-              <Button 
-                className="riskmeter-upsell-btn" 
-                asChild
-              >
-                <a href="/payment">I want redrafting from scratch</a>
-              </Button>
-              <Button 
-                className="riskmeter-upsell-btn" 
-                asChild
-              >
-                <a href="/payment">I need a contract review report</a>
-              </Button>
-            </div>
-          </motion.div>
-        </motion.div>
-      )}
-    </AnimatePresence>
-  );
-};
+
 
 // Main RiskOMeter Component
 export default function RiskOMeter() {
+  const router = useRouter();
   const [uploadStatus, setUploadStatus] = useState<UploadStatus>('idle');
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<RiskResult | null>(null);
   const [showGatekeeperModal, setShowGatekeeperModal] = useState(false);
-  const [showUpsellModal, setShowUpsellModal] = useState(false);
   const [isDragOver, setIsDragOver] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -317,23 +256,6 @@ export default function RiskOMeter() {
     }
   }, [handleFileSelect]);
 
-  const handleGatekeeperContinue = async () => {
-    setShowGatekeeperModal(false);
-    setUploadStatus('analyzing_risk');
-    
-    try {
-      if (file) {
-        const apiResult = await analyzeContract(file, true);
-        setResult(apiResult);
-        setUploadStatus('complete');
-      }
-    } catch (error) {
-      console.error('Error during risk analysis:', error);
-      setErrorMessage(error instanceof Error ? error.message : 'Failed to complete risk analysis. Please try again.');
-      setUploadStatus('error');
-    }
-  };
-
   const handleGatekeeperCancel = () => {
     setShowGatekeeperModal(false);
     resetUpload();
@@ -350,7 +272,7 @@ export default function RiskOMeter() {
   };
 
   const handleIAmIn = () => {
-    setShowUpsellModal(true);
+    router.push('/book-a-call');
   };
 
   return (
@@ -392,7 +314,10 @@ export default function RiskOMeter() {
                 Drag & drop your contract here
               </p>
               <p className="riskmeter-upload-subtext">
-                or click to browse (PDF/DOCX)
+                or click to browse
+              </p>
+              <p className="riskmeter-upload-subtext">
+                (best file types: doc/docx)
               </p>
             </div>
           </motion.div>
@@ -447,6 +372,9 @@ export default function RiskOMeter() {
                     <li key={index}>{risk}</li>
                   ))}
                 </ul>
+                <Link href="/book-a-call" className="riskmeter-detailed-report-link">
+                  Connect to get a detailed risk assessment report
+                </Link>
               </div>
             )}
             
@@ -499,12 +427,6 @@ export default function RiskOMeter() {
       <GatekeeperModal 
         isOpen={showGatekeeperModal}
         onClose={handleGatekeeperCancel}
-        onContinue={handleGatekeeperContinue}
-      />
-      
-      <UpsellModal 
-        isOpen={showUpsellModal}
-        onClose={() => setShowUpsellModal(false)}
       />
     </div>
   );

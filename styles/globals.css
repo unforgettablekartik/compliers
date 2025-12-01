@@ -4223,6 +4223,19 @@ section h2 {
   color: #ef4444;
 }
 
+.riskmeter-detailed-report-link {
+  display: block;
+  font-size: 0.75rem;
+  color: #0077cc;
+  text-decoration: underline;
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.riskmeter-detailed-report-link:hover {
+  color: #005fa3;
+}
+
 /* CTA Box */
 .riskmeter-cta-box {
   background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
