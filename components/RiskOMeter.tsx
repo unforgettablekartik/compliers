@@ -2,6 +2,7 @@
 
 import React, { useState, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Upload, 
@@ -371,6 +372,9 @@ export default function RiskOMeter() {
                     <li key={index}>{risk}</li>
                   ))}
                 </ul>
+                <Link href="/book-a-call" className="riskmeter-detailed-report-link">
+                  Connect to get a detailed risk assessment report
+                </Link>
               </div>
             )}
             
