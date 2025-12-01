@@ -11,7 +11,8 @@ async function parsePDF(buffer: Buffer): Promise<string> {
     return data.text;
   } catch (error) {
     console.error("Error parsing PDF:", error);
-    throw new Error("Failed to parse PDF file");
+    // Provide a more user-friendly error message
+    throw new Error("Unable to parse PDF file. Please ensure the file is not corrupted or password-protected, and try again.");
   }
 }
 
