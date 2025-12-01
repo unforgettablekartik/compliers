@@ -22,6 +22,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import RiskOMeter from "@/components/RiskOMeter";
 
 // --- Utility components ---
 const Section = ({ id, className = "", children }: { id?: string; className?: string; children: React.ReactNode }) => (
@@ -92,37 +93,7 @@ export default function CreatorInLawLanding() {
               transition={{ duration: 0.6, delay: 0.1 }} 
               className="creator-hero-right"
             >
-              <div className="creator-hero-card">
-                <div className="creator-card-item">
-                  <div className="creator-card-icon indigo">
-                    <FileText className="h-6 w-6" aria-hidden />
-                  </div>
-                  <div>
-                    <h3 className="creator-card-title">Minimize legal risks</h3>
-                    <p className="creator-card-text">Riskproof contracts · Easy interpretations · Red flags highlighted</p>
-                  </div>
-                </div>
-                <div className="creator-card-divider" />
-                <div className="creator-card-item">
-                  <div className="creator-card-icon pink">
-                    <Scale className="h-6 w-6" aria-hidden />
-                  </div>
-                  <div>
-                    <h3 className="creator-card-title">Flexible Retainership</h3>
-                    <p className="creator-card-text">Fixed monthly fees · Priority turnaround · No surprise invoices</p>
-                  </div>
-                </div>
-                <div className="creator-card-divider" />
-                <div className="creator-card-item">
-                  <div className="creator-card-icon emerald">
-                    <Shield className="h-6 w-6" aria-hidden />
-                  </div>
-                  <div>
-                    <h3 className="creator-card-title">IP Support</h3>
-                    <p className="creator-card-text">Trademark & Copyright · IP infringement protection · Defence on disputes</p>
-                  </div>
-                </div>
-              </div>
+              <RiskOMeter />
             </motion.div>
           </div>
         </Container>
