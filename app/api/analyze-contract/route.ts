@@ -5,14 +5,14 @@ import { analyzeContractWithGPT4 } from "@/lib/openai";
 // Parse PDF file and extract text using dynamic import
 async function parsePDF(buffer: Buffer): Promise<string> {
   try {
-    // Dynamic import to avoid build-time issues with pdf-parse
-    const pdfParse = (await import("pdf-parse")).default;
+    // Dynamic import the core pdf-parse library directly to avoid debug code in index.js
+    // The main pdf-parse/index.js has a quirk that runs test code when module.parent is undefined
+    const pdfParse = (await import("pdf-parse/lib/pdf-parse.js")).default;
     const data = await pdfParse(buffer);
     return data.text;
   } catch (error) {
     console.error("Error parsing PDF:", error);
-    // Provide a more user-friendly error message
-    throw new Error("Unable to parse PDF file. Please ensure the file is not corrupted or password-protected, and try again.");
+    throw new Error("Failed to parse PDF file. Please try again.");
   }
 }
 
