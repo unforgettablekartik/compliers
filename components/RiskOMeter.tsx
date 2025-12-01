@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useCallback, useRef } from "react";
+import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { 
   Upload, 
@@ -167,6 +168,7 @@ const GatekeeperModal = ({
 
 // Main RiskOMeter Component
 export default function RiskOMeter() {
+  const router = useRouter();
   const [uploadStatus, setUploadStatus] = useState<UploadStatus>('idle');
   const [file, setFile] = useState<File | null>(null);
   const [result, setResult] = useState<RiskResult | null>(null);
@@ -269,7 +271,7 @@ export default function RiskOMeter() {
   };
 
   const handleIAmIn = () => {
-    window.location.href = '/book-a-call';
+    router.push('/book-a-call');
   };
 
   return (
