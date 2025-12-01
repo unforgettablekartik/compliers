@@ -238,47 +238,32 @@ nav .nav-links a:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 7.2rem 1rem 2.7rem;
+  padding: 6rem 5% 2rem;
+}
+
+#hero .hero-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 #hero .hero-content h1 {
-  font-size: 2.5rem;
+  font-size: 2.375rem;
   font-weight: 700;
-  margin-bottom: 1rem;
-  color: #3a3a3a;
-}
-
-#hero .hero-content p {
-  font-size: 1.1rem;
   margin-bottom: 1.5rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #555;
-}
-
-#hero .hero-content .hero-description-line1 {
-  font-size: 1.05rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto;
   color: #3a3a3a;
-  white-space: nowrap;
+  line-height: 1.3;
 }
 
-#hero .hero-content .hero-description-line2 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  color: #555;
+#hero .hero-content .hero-line3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1a5276;
+  margin-top: 0.5rem;
 }
 
 #hero .hero-buttons {
-  margin-top: 0.5rem;
+  margin-top: 1.5rem;
   display: flex;
   justify-content: center;
   gap: 1rem;
@@ -717,7 +702,8 @@ section h2 {
 
 /* Hero line styling and highlight box */
 .hero-line1,
-.hero-line2 {
+.hero-line2,
+.hero-line3 {
   display: block;
 }
 
@@ -1231,11 +1217,23 @@ section h2 {
   padding: 4rem 0;
 }
 
+@media (max-width: 767px) {
+  .markster-hero {
+    padding: 2.5rem 0 3rem;
+  }
+}
+
 .markster-hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: start;
+}
+
+@media (max-width: 767px) {
+  .markster-hero-grid {
+    gap: 1.5rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -1293,16 +1291,24 @@ section h2 {
 }
 
 .markster-hero-title {
-  font-size: 2.25rem;  /* Reduced by 10% from 2.5rem */
+  font-size: 1.75rem;  /* Mobile first - reduced for better mobile display */
   font-weight: 800;
-  line-height: 1.1;
+  line-height: 1.15;
   letter-spacing: -0.025em;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 480px) {
+  .markster-hero-title {
+    font-size: 2rem;
+    margin-bottom: 1.25rem;
+  }
 }
 
 @media (min-width: 768px) {
   .markster-hero-title {
-    font-size: 3.375rem;  /* Reduced by 10% from 3.75rem */
+    font-size: 3.375rem;  /* Desktop size */
+    margin-bottom: 1.5rem;
   }
 }
 
@@ -1461,29 +1467,50 @@ section h2 {
 .markster-hero-card-new {
   background: #fafafa;  /* Off-white background for overlapped appearance */
   border: 1px solid #e5e7eb;
-  border-radius: 24px;
-  padding: 1.5rem;
+  border-radius: 16px;
+  padding: 1rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);  /* Enhanced shadow for elevated overlapped look */
   position: relative;
   z-index: 10;
 }
 
+@media (min-width: 480px) {
+  .markster-hero-card-new {
+    padding: 1.25rem;
+    border-radius: 20px;
+  }
+}
+
 @media (min-width: 768px) {
   .markster-hero-card-new {
     padding: 2rem;
+    border-radius: 24px;
   }
 }
 
 .markster-card-item {
   display: flex;
   align-items: start;
-  gap: 1rem;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .markster-card-item {
+    gap: 1rem;
+  }
 }
 
 .markster-card-icon {
-  border-radius: 12px;
-  padding: 0.75rem;
+  border-radius: 10px;
+  padding: 0.5rem;
   flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .markster-card-icon {
+    border-radius: 12px;
+    padding: 0.75rem;
+  }
 }
 
 .markster-card-icon.indigo {
@@ -1508,21 +1535,40 @@ section h2 {
 
 .markster-card-title {
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.875rem;
   margin: 0 0 0.25rem 0;
 }
 
+@media (min-width: 768px) {
+  .markster-card-title {
+    font-size: 1rem;
+  }
+}
+
 .markster-card-text {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: #6b7280;
   margin: 0;
-  line-height: 1.5;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .markster-card-text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
 }
 
 .markster-card-divider {
   height: 1px;
   background: #f3f4f6;
-  margin: 1rem 0;
+  margin: 0.75rem 0;
+}
+
+@media (min-width: 768px) {
+  .markster-card-divider {
+    margin: 1rem 0;
+  }
 }
 
 /* Trust Bar - Single Line Below Hero */
@@ -1591,16 +1637,24 @@ section h2 {
   padding-top: 48px;      /* 0.5 inches at 96 DPI */
 }
 
-/* Add content margins to containers */
+/* Add content margins to containers - matching homepage symmetry */
 .markster-page-container .mx-auto {
-  margin-left: 96px !important;     /* 1 inch at 96 DPI */
-  margin-right: 96px !important;    /* 1 inch at 96 DPI */
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  max-width: 1100px;
 }
 
 @media (max-width: 768px) {
   .markster-page-container .mx-auto {
-    margin-left: 24px !important;   /* Reduced margin for mobile devices */
-    margin-right: 24px !important;  /* Reduced margin for mobile devices */
+    margin-left: 4% !important;
+    margin-right: 4% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .markster-page-container .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
@@ -2787,16 +2841,24 @@ section h2 {
   font-family: 'Montserrat', sans-serif !important;
 }
 
-/* Add content margins to containers */
+/* Add content margins to containers - matching homepage symmetry */
 .creator-in-law-page-container .mx-auto {
-  margin-left: 96px !important;     /* 1 inch at 96 DPI */
-  margin-right: 96px !important;    /* 1 inch at 96 DPI */
+  margin-left: 5% !important;
+  margin-right: 5% !important;
+  max-width: 1100px;
 }
 
 @media (max-width: 768px) {
   .creator-in-law-page-container .mx-auto {
-    margin-left: 24px !important;   /* Reduced margin for mobile devices */
-    margin-right: 24px !important;  /* Reduced margin for mobile devices */
+    margin-left: 4% !important;
+    margin-right: 4% !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .creator-in-law-page-container .mx-auto {
+    margin-left: auto !important;
+    margin-right: auto !important;
   }
 }
 
