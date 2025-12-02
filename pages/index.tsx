@@ -72,16 +72,47 @@ export default function Home() {
       </Head>
 
       {/* Hero section */}
-      <header id="hero">
-        <div className="hero-content">
-          <h1>
-            <span className="hero-line1">Fear of legal complexity? Compromising contracts?</span>
-            <span className="hero-line2">Forced litigations? Big Bills of Big Firms?</span>
-            <span className="hero-line3">We provide specialized legal solutions.</span>
-          </h1>
-          <div className="hero-buttons">
-            <a href="/book-a-call" className="btn">Connect Now</a>
-            <a href="/#services" className="btn btn-secondary">Our Services</a>
+      <header id="hero" className="homepage-hero">
+        <div className="homepage-hero-container">
+          <div className="homepage-hero-grid">
+            <div className="homepage-hero-left">
+              <div className="homepage-brand-chip">
+                <span className="homepage-brand-name">The Compliers</span>
+                <span>Your Legal Partner</span>
+              </div>
+              <h1 className="homepage-hero-title">
+                Specialized legal solutions for modern businesses.
+              </h1>
+              <p className="homepage-hero-description">
+                Fear of legal complexity? Compromising contracts? Forced litigations? Big Bills of Big Firms? We bring expertise without overhead with fixed fees, fast turnaround, and deep specialization.
+              </p>
+              <div className="homepage-hero-buttons">
+                <a href="/book-a-call" className="btn homepage-btn-primary">Free Consultation</a>
+                <a href="/markster/dashboard" className="btn homepage-btn-secondary">Free Risk Assessment</a>
+              </div>
+              <p className="homepage-hero-caption">
+                Need more clarity, contact for FREE 20-minute consultation.
+              </p>
+            </div>
+            <div className="homepage-hero-right">
+              <div className="homepage-hero-card">
+                <h3 className="homepage-hero-card-heading">Explore our unique tools</h3>
+                <div className="homepage-hero-card-buttons">
+                  <a href="/markster" className="homepage-service-btn homepage-service-btn-markster">
+                    <span className="homepage-service-btn-name">Markster</span>
+                    <span className="homepage-service-btn-desc">Securing Trademarks</span>
+                  </a>
+                  <a href="/book-a-call" className="homepage-service-btn homepage-service-btn-agreementor">
+                    <span className="homepage-service-btn-name">Agreementor</span>
+                    <span className="homepage-service-btn-desc">Contracts &amp; Agreements</span>
+                  </a>
+                  <a href="/creator-in-law" className="homepage-service-btn homepage-service-btn-creator">
+                    <span className="homepage-service-btn-name">Creator in Law</span>
+                    <span className="homepage-service-btn-desc">Creators&apos; Legal Support</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </header>
@@ -122,12 +153,14 @@ export default function Home() {
       {/* Problem Statement section */}
       <section id="problem-statement" className="problem-statement-section">
         <div className="container">
-          <h2 className="problem-statement-headline">Most Entrepreneurs &amp; Businesses Face These Legal Headaches</h2>
+          <h2 className="problem-statement-headline">Facing These Legal Headaches Like Most Businesses?</h2>
           <div className="problem-cards-grid">
             {/* Card 1: Big Bills */}
             <div className="problem-card">
-              <span className="problem-card-icon">💸</span>
-              <h3 className="problem-card-title">Big Firm = Big Bills</h3>
+              <div className="problem-card-header">
+                <span className="problem-card-icon">💸</span>
+                <h3 className="problem-card-title">Big Firm = Big Bills</h3>
+              </div>
               <p className="problem-card-text">
                 Tier-1 firms charge massive retainers and hourly rates you can&apos;t predict. You need expertise, not overhead.
               </p>
@@ -135,19 +168,64 @@ export default function Home() {
 
             {/* Card 2: Slow Response Times */}
             <div className="problem-card">
-              <span className="problem-card-icon">⏰</span>
-              <h3 className="problem-card-title">Slow Response Times</h3>
+              <div className="problem-card-header">
+                <span className="problem-card-icon">⏰</span>
+                <h3 className="problem-card-title">Slow Response Times</h3>
+              </div>
               <p className="problem-card-text">
-                Your business moves fast. Waiting 5 days for contract review kills deals. You need speed. You need specialization.
+                Your business moves fast. Waiting 5 days for contract review kills deals. You need speed with specialization.
               </p>
             </div>
 
             {/* Card 3: Generic Templates */}
             <div className="problem-card">
-              <span className="problem-card-icon">📄</span>
-              <h3 className="problem-card-title">Generic Templates</h3>
+              <div className="problem-card-header">
+                <span className="problem-card-icon">📄</span>
+                <h3 className="problem-card-title">Generic Templates</h3>
+              </div>
               <p className="problem-card-text">
-                Downloaded contracts from Google? They don&apos;t protect your specific situation. You need customization.
+                Businesses lose lakhs due to readymade samples and AI-made templates. You need customization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Statement section */}
+      <section id="solution-statement" className="solution-statement-section">
+        <div className="container">
+          <h2 className="solution-statement-headline">We Become Your Strategic Legal Support</h2>
+          <div className="solution-cards-grid">
+            {/* Prop 1: Fixed Fees */}
+            <div className="solution-card">
+              <div className="solution-card-header">
+                <span className="solution-card-icon">💰</span>
+                <h3 className="solution-card-title">Fixed Fees Options, No Surprises</h3>
+              </div>
+              <p className="solution-card-text">
+                Retainership package. One-time project. You know the cost before we start.
+              </p>
+            </div>
+
+            {/* Prop 2: Fast Turnaround */}
+            <div className="solution-card">
+              <div className="solution-card-header">
+                <span className="solution-card-icon">⚡</span>
+                <h3 className="solution-card-title">Quick 24 Hour Turnaround</h3>
+              </div>
+              <p className="solution-card-text">
+                Get your queries answered in hours. For faster contract reviews, we prioritise.
+              </p>
+            </div>
+
+            {/* Prop 3: Specialization */}
+            <div className="solution-card">
+              <div className="solution-card-header">
+                <span className="solution-card-icon">🎯</span>
+                <h3 className="solution-card-title">Specialized in What You Need</h3>
+              </div>
+              <p className="solution-card-text">
+                Agreements. Trademark. Advisory. We speak your language, with no complexity.
               </p>
             </div>
           </div>
@@ -180,7 +258,7 @@ export default function Home() {
                   <strong>Timeline:</strong> Search in 48 hours | Filing in 3 days
                 </p>
                 <p className="featured-service-perfect">
-                  <strong>Perfect for:</strong> Businesses protecting names, brands to be launched, creators building IP
+                  <strong>Perfect for:</strong> Businesses protecting names, brands to be launched, creators building IP.
                 </p>
               </div>
               <div className="featured-service-buttons">
@@ -207,7 +285,7 @@ export default function Home() {
                   <li>✓ NDAs and Employment Agreements</li>
                 </ul>
                 <p className="featured-service-timeline">
-                  <strong>Timeline:</strong> Same day response | Delivery in 3-7 days
+                  <strong>Timeline:</strong> 3 days average delivery time
                 </p>
                 <p className="featured-service-perfect">
                   <strong>Best:</strong> Fixed retainerships for the dedicated support from a fractional legal counsel.
@@ -216,41 +294,6 @@ export default function Home() {
               <div className="featured-service-buttons">
                 <a href="/book-a-call" className="btn featured-btn-primary featured-btn-full">Connect Now</a>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Solution Statement section */}
-      <section id="solution-statement" className="solution-statement-section">
-        <div className="container">
-          <h2 className="solution-statement-headline">We Become Your Strategic Legal Support</h2>
-          <div className="solution-cards-grid">
-            {/* Prop 1: Fixed Fees */}
-            <div className="solution-card">
-              <span className="solution-card-icon">💰</span>
-              <h3 className="solution-card-title">Fixed Fees Options, No Surprises</h3>
-              <p className="solution-card-text">
-                Retainership package. One-time project. You know the cost before we start.
-              </p>
-            </div>
-
-            {/* Prop 2: Fast Turnaround */}
-            <div className="solution-card">
-              <span className="solution-card-icon">⚡</span>
-              <h3 className="solution-card-title">24-48 Hour Turnaround</h3>
-              <p className="solution-card-text">
-                Get your queries answered in hours. For faster contract reviews, we prioritise.
-              </p>
-            </div>
-
-            {/* Prop 3: Specialization */}
-            <div className="solution-card">
-              <span className="solution-card-icon">🎯</span>
-              <h3 className="solution-card-title">Specialized in What You Need</h3>
-              <p className="solution-card-text">
-                Agreements. Trademark. Advisory. We speak your language, with no complexity.
-              </p>
             </div>
           </div>
         </div>
