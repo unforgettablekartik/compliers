@@ -77,7 +77,7 @@ export default function Home() {
           <h1>
             <span className="hero-line1">Fear of legal complexity? Compromising contracts?</span>
             <span className="hero-line2">Forced litigations? Big Bills of Big Firms?</span>
-            <span className="hero-line3">We provide affordable, specialized solutions.</span>
+            <span className="hero-line3">We provide specialized legal solutions.</span>
           </h1>
           <div className="hero-buttons">
             <a href="/book-a-call" className="btn">Connect Now</a>
@@ -119,19 +119,140 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About section */}
-      <section id="about" className="about-section no-bg">
-        <div className="container about-container">
-          <h2>About Us</h2>
-          <p>
-            At The Compliers, we unite deep expertise in law, technology, and policy to deliver tailored solutions for ambitious entrepreneurs and modern businesses. We go beyond traditional legal services, leveraging technology and data-driven strategies to help you minimize risks and maximize opportunities.
-          </p>
-          <p>
-            Our services cover the entire spectrum, from safeguarding your Intellectual Property to drafting robust Commercial Contracts, and from pioneering Data Privacy strategies to integrating the latest in Legal-Tech. We thrive at the intersection of innovation and compliance, providing advanced alternatives to conventional legal services.
-          </p>
-          <p>
-            With us, you don’t just solve legal challenges—you gain a proactive partner committed to your long-term success. Join us as we reimagine what legal support can mean for tomorrow’s leaders.
-          </p>
+      {/* Problem Statement section */}
+      <section id="problem-statement" className="problem-statement-section">
+        <div className="container">
+          <h2 className="problem-statement-headline">Most Entrepreneurs &amp; Businesses Face These Legal Headaches</h2>
+          <div className="problem-cards-grid">
+            {/* Card 1: Big Bills */}
+            <div className="problem-card">
+              <span className="problem-card-icon">💸</span>
+              <h3 className="problem-card-title">Big Firm = Big Bills</h3>
+              <p className="problem-card-text">
+                Tier-1 firms charge massive retainers and hourly rates you can&apos;t predict. You need expertise, not overhead.
+              </p>
+            </div>
+
+            {/* Card 2: Slow Response Times */}
+            <div className="problem-card">
+              <span className="problem-card-icon">⏰</span>
+              <h3 className="problem-card-title">Slow Response Times</h3>
+              <p className="problem-card-text">
+                Your business moves fast. Waiting 5 days for contract review kills deals. You need speed. You need specialization.
+              </p>
+            </div>
+
+            {/* Card 3: Generic Templates */}
+            <div className="problem-card">
+              <span className="problem-card-icon">📄</span>
+              <h3 className="problem-card-title">Generic Templates</h3>
+              <p className="problem-card-text">
+                Downloaded contracts from Google? They don&apos;t protect your specific situation. You need customization.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Featured Services section */}
+      <section id="featured-services" className="featured-services-section">
+        <div className="container">
+          <div className="featured-services-grid">
+            {/* MARKSTER Card */}
+            <div className="featured-service-card markster-card">
+              <div className="featured-service-header">
+                <span className="featured-service-brand">MARKSTER™</span>
+                <h3 className="featured-service-title">Complete Trademark Registration</h3>
+                <p className="featured-service-tagline">File your trademark with maximum brand protection.</p>
+              </div>
+              <div className="featured-service-content">
+                <h4 className="featured-service-label">What&apos;s included:</h4>
+                <ul className="featured-service-list">
+                  <li>✓ Comprehensive search</li>
+                  <li>✓ Checks: identical/phonetic/visual</li>
+                  <li>✓ Strategic class mapping</li>
+                  <li>✓ TM-A application filing</li>
+                  <li>✓ One examination reply</li>
+                  <li>✓ 60-day conflict watch</li>
+                  <li>✓ Usage guidelines (™ vs ®)</li>
+                </ul>
+                <p className="featured-service-timeline">
+                  <strong>Timeline:</strong> Search in 48 hours | Filing in 3 days
+                </p>
+                <p className="featured-service-perfect">
+                  <strong>Perfect for:</strong> Businesses protecting names, brands to be launched, creators building IP
+                </p>
+              </div>
+              <div className="featured-service-buttons">
+                <a href="/markster" className="btn featured-btn-primary featured-btn-full">Protect Your Brand</a>
+              </div>
+            </div>
+
+            {/* AGREEMENTOR Card */}
+            <div className="featured-service-card agreementor-card">
+              <div className="featured-service-header">
+                <span className="featured-service-brand">AGREEMENTOR™</span>
+                <h3 className="featured-service-title">Your Contract Specialist</h3>
+                <p className="featured-service-tagline">Keeps you risk-free while signing an agreement.</p>
+              </div>
+              <div className="featured-service-content">
+                <h4 className="featured-service-label">What&apos;s offered:</h4>
+                <ul className="featured-service-list">
+                  <li>✓ Comprehensive Risk Report</li>
+                  <li>✓ Drafting of contracts &amp; Agreements</li>
+                  <li>✓ Document review and redlining</li>
+                  <li>✓ Business risk analysis &amp; advisory</li>
+                  <li>✓ Roadmap for legal compliance</li>
+                  <li>✓ Complex laws simplified</li>
+                  <li>✓ NDAs and Employment Agreements</li>
+                </ul>
+                <p className="featured-service-timeline">
+                  <strong>Timeline:</strong> Same day response | Delivery in 3-7 days
+                </p>
+                <p className="featured-service-perfect">
+                  <strong>Best:</strong> Fixed retainerships for the dedicated support from a fractional legal counsel.
+                </p>
+              </div>
+              <div className="featured-service-buttons">
+                <a href="/book-a-call" className="btn featured-btn-primary featured-btn-full">Connect Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Solution Statement section */}
+      <section id="solution-statement" className="solution-statement-section">
+        <div className="container">
+          <h2 className="solution-statement-headline">We Become Your Strategic Legal Support</h2>
+          <div className="solution-cards-grid">
+            {/* Prop 1: Fixed Fees */}
+            <div className="solution-card">
+              <span className="solution-card-icon">💰</span>
+              <h3 className="solution-card-title">Fixed Fees Options, No Surprises</h3>
+              <p className="solution-card-text">
+                Retainership package. One-time project. You know the cost before we start.
+              </p>
+            </div>
+
+            {/* Prop 2: Fast Turnaround */}
+            <div className="solution-card">
+              <span className="solution-card-icon">⚡</span>
+              <h3 className="solution-card-title">24-48 Hour Turnaround</h3>
+              <p className="solution-card-text">
+                Get your queries answered in hours. For faster contract reviews, we prioritise.
+              </p>
+            </div>
+
+            {/* Prop 3: Specialization */}
+            <div className="solution-card">
+              <span className="solution-card-icon">🎯</span>
+              <h3 className="solution-card-title">Specialized in What You Need</h3>
+              <p className="solution-card-text">
+                Agreements. Trademark. Advisory. We speak your language, with no complexity.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
