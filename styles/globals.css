@@ -441,6 +441,13 @@
 .featured-btn-full:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
+.featured-service-explore-text {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+  width: 100%;
+}
 @media (max-width: 900px) {
   .featured-services-grid {
     grid-template-columns: 1fr;
