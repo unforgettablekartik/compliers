@@ -5188,3 +5188,24 @@ section h2 {
   color: #ffffff !important;
   text-decoration: none !important;
 }
+
+
+/* Logo / header helpers */
+.site-logo img,
+.site-logo :global(img) {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.site-header {
+  align-items: center;
+  display: flex;
+}
+
+@media (max-width: 480px) {
+  .site-logo {
+    width: 44px !important;
+    height: 44px !important;
+  }
+}

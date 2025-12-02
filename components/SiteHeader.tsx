@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation';
 import React, { useState } from 'react';
 import { handleHashNavigation } from '@/lib/navigation';
+import Logo from './Logo';
 
 export default function SiteHeader() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,10 +21,11 @@ export default function SiteHeader() {
   };
 
   return (
-    <nav id="navbar">
+    <nav id="navbar" className="site-header">
       <div className="container">
         <div className="logo">
-          <Link href="/" className="logo-link" style={{ color: '#0f4662' }}>
+          <Link href="/" className="logo-link" style={{ color: '#0f4662', display: 'flex', alignItems: 'center', gap: '8px' }}>
+            <Logo size="small" />
             The Compliers
           </Link>
         </div>
