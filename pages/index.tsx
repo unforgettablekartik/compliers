@@ -96,52 +96,40 @@ export default function Home() {
               </p>
             </div>
             <div className="homepage-hero-right">
-              <div className="expertise-section">
-                <div className="expertise-header">
-                  <h3 className="expertise-heading">Our Expertise</h3>
-                </div>
-                <div className="expertise-cards">
-                  <div className="expertise-card expertise-card-left">
-                    <div className="expertise-card-icon">
+              <div className="areas-expertise-card">
+                <h3 className="areas-expertise-heading">Areas of Expertise</h3>
+                <ul className="areas-expertise-list">
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-blue">
                       <i className="fa-solid fa-shield-halved" aria-hidden="true"></i>
-                    </div>
-                    <div className="expertise-card-content">
-                      <span className="expertise-card-title">Trademark Filing &amp; Protection</span>
-                    </div>
-                  </div>
-                  <div className="expertise-card expertise-card-right">
-                    <div className="expertise-card-icon">
+                    </span>
+                    <span className="areas-expertise-text">Trademark Filing &amp; Protection</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-green">
                       <i className="fa-solid fa-file-signature" aria-hidden="true"></i>
-                    </div>
-                    <div className="expertise-card-content">
-                      <span className="expertise-card-title">Contract Drafting &amp; Review</span>
-                    </div>
-                  </div>
-                  <div className="expertise-card expertise-card-left">
-                    <div className="expertise-card-icon">
+                    </span>
+                    <span className="areas-expertise-text">Contract Drafting &amp; Review</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-purple">
                       <i className="fa-solid fa-lock" aria-hidden="true"></i>
-                    </div>
-                    <div className="expertise-card-content">
-                      <span className="expertise-card-title">Data Privacy &amp; Responsible AI</span>
-                    </div>
-                  </div>
-                  <div className="expertise-card expertise-card-right">
-                    <div className="expertise-card-icon">
+                    </span>
+                    <span className="areas-expertise-text">Data Privacy &amp; Responsible AI</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-orange">
                       <i className="fa-solid fa-clipboard-check" aria-hidden="true"></i>
-                    </div>
-                    <div className="expertise-card-content">
-                      <span className="expertise-card-title">Compliance Advisory</span>
-                    </div>
-                  </div>
-                  <div className="expertise-card expertise-card-left">
-                    <div className="expertise-card-icon">
+                    </span>
+                    <span className="areas-expertise-text">Compliance Advisory</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-teal">
                       <i className="fa-solid fa-scale-balanced" aria-hidden="true"></i>
-                    </div>
-                    <div className="expertise-card-content">
-                      <span className="expertise-card-title">Legal Counselling</span>
-                    </div>
-                  </div>
-                </div>
+                    </span>
+                    <span className="areas-expertise-text">Legal Counselling</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
