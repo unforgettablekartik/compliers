@@ -84,38 +84,32 @@ export default function Home() {
                 Specialized legal solutions for modern businesses.
               </h1>
               <p className="homepage-hero-description">
-                Legal complexity? Compromising contracts? Big bills from big firms? We bring expertise without overhead — with fixed fees, fast turnaround, and deep specialization.
+                Fear of legal complexity? Compromising contracts? Forced litigations? Big Bills of Big Firms? We bring expertise without overhead with fixed fees, fast turnaround, and deep specialization.
               </p>
               <div className="homepage-hero-buttons">
-                <a href="/book-a-call" className="btn homepage-btn-primary">Connect Now</a>
-                <a href="/#services" className="btn homepage-btn-secondary">Our Services</a>
+                <a href="/book-a-call" className="btn homepage-btn-primary">Free Consultation</a>
+                <a href="/markster/dashboard" className="btn homepage-btn-secondary">Free Risk Assessment</a>
               </div>
               <p className="homepage-hero-caption">
-                Free 20-minute discovery call. No obligations, just clarity.
+                Need more clarity, contact for FREE 20-minute consultation.
               </p>
             </div>
             <div className="homepage-hero-right">
-              <div className="homepage-hero-highlights">
-                <div className="homepage-highlight-item">
-                  <span className="homepage-highlight-icon">⚡</span>
-                  <div>
-                    <h3>Fast Turnaround</h3>
-                    <p>24-48 hour responses</p>
-                  </div>
-                </div>
-                <div className="homepage-highlight-item">
-                  <span className="homepage-highlight-icon">💰</span>
-                  <div>
-                    <h3>Fixed Fees</h3>
-                    <p>No surprise bills</p>
-                  </div>
-                </div>
-                <div className="homepage-highlight-item">
-                  <span className="homepage-highlight-icon">🎯</span>
-                  <div>
-                    <h3>Specialized</h3>
-                    <p>Contracts &amp; Trademarks</p>
-                  </div>
+              <div className="homepage-hero-card">
+                <h3 className="homepage-hero-card-heading">Explore our unique tools</h3>
+                <div className="homepage-hero-card-buttons">
+                  <a href="/markster" className="homepage-service-btn homepage-service-btn-markster">
+                    <span className="homepage-service-btn-name">Markster</span>
+                    <span className="homepage-service-btn-desc">Securing Trademarks</span>
+                  </a>
+                  <a href="/book-a-call" className="homepage-service-btn homepage-service-btn-agreementor">
+                    <span className="homepage-service-btn-name">Agreementor</span>
+                    <span className="homepage-service-btn-desc">Contracts &amp; Agreements</span>
+                  </a>
+                  <a href="/creator-in-law" className="homepage-service-btn homepage-service-btn-creator">
+                    <span className="homepage-service-btn-name">Creator in Law</span>
+                    <span className="homepage-service-btn-desc">Creators&apos; Legal Support</span>
+                  </a>
                 </div>
               </div>
             </div>
@@ -217,7 +211,7 @@ export default function Home() {
             <div className="solution-card">
               <div className="solution-card-header">
                 <span className="solution-card-icon">⚡</span>
-                <h3 className="solution-card-title">24-48 Hour Turnaround</h3>
+                <h3 className="solution-card-title">Quick 24 Hour Turnaround</h3>
               </div>
               <p className="solution-card-text">
                 Get your queries answered in hours. For faster contract reviews, we prioritise.
