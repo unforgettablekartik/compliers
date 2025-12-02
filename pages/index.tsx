@@ -154,6 +154,75 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Featured Services section */}
+      <section id="featured-services" className="featured-services-section">
+        <div className="container">
+          <div className="featured-services-grid">
+            {/* MARKSTER Card */}
+            <div className="featured-service-card markster-card">
+              <div className="featured-service-header">
+                <span className="featured-service-brand">MARKSTER™</span>
+                <h3 className="featured-service-title">Complete Trademark Registration</h3>
+                <p className="featured-service-tagline">File your trademark right the first time.</p>
+              </div>
+              <div className="featured-service-content">
+                <h4 className="featured-service-label">What&apos;s included:</h4>
+                <ul className="featured-service-list">
+                  <li>✓ Comprehensive search</li>
+                  <li>✓ Checks: identical/phonetic/visual</li>
+                  <li>✓ Strategic class mapping</li>
+                  <li>✓ TM-A application filing</li>
+                  <li>✓ One examination reply</li>
+                  <li>✓ 60-day conflict watch</li>
+                  <li>✓ Usage guidelines (™ vs ®)</li>
+                </ul>
+                <p className="featured-service-timeline">
+                  <strong>Timeline:</strong> Search in 48 hours | Filing in 3 days
+                </p>
+                <p className="featured-service-perfect">
+                  <strong>Perfect for:</strong> businesses protecting names, brands to be launched, creators building IP
+                </p>
+              </div>
+              <div className="featured-service-buttons">
+                <a href="/markster" className="btn featured-btn-primary">Protect Your Brand</a>
+                <a href="/book-a-call" className="btn featured-btn-secondary">Get Your Mark</a>
+              </div>
+            </div>
+
+            {/* AGREEMENTOR Card */}
+            <div className="featured-service-card agreementor-card">
+              <div className="featured-service-header">
+                <span className="featured-service-brand">AGREEMENTOR™</span>
+                <h3 className="featured-service-title">Your Contract Specialist</h3>
+                <p className="featured-service-tagline">Keeps you risk-free while signing an agreement.</p>
+              </div>
+              <div className="featured-service-content">
+                <h4 className="featured-service-label">What&apos;s offered:</h4>
+                <ul className="featured-service-list">
+                  <li>✓ Comprehensive Risk Report</li>
+                  <li>✓ Drafting of contracts &amp; Agreements</li>
+                  <li>✓ Document review and redlining</li>
+                  <li>✓ Business risk analysis &amp; advisory</li>
+                  <li>✓ Roadmap for legal compliance</li>
+                  <li>✓ Complex laws simplified</li>
+                  <li>✓ NDAs and Employment Agreements</li>
+                </ul>
+                <p className="featured-service-timeline">
+                  <strong>Timeline:</strong> Connect within 24 hours | Delivery in 3-7 days
+                </p>
+                <p className="featured-service-perfect">
+                  <strong>Best:</strong> Fixed retainerships for the dedicated support from a fractional legal counsel.
+                </p>
+              </div>
+              <div className="featured-service-buttons">
+                <span className="btn featured-btn-primary featured-btn-disabled">Explore Agreementor</span>
+                <a href="/book-a-call" className="btn featured-btn-secondary">Connect Now</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Solution Statement section */}
       <section id="solution-statement" className="solution-statement-section">
         <div className="container">
