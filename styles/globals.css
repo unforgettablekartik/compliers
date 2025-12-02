@@ -1025,7 +1025,7 @@ nav .nav-links a:hover {
   font-weight: 700;
   color: #1a1a1a;
   margin: 0 0 1.25rem 0;
-  text-align: center;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -1054,62 +1054,41 @@ nav .nav-links a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
+  width: 24px;
+  height: 24px;
   flex-shrink: 0;
 }
 
 .areas-expertise-icon i {
-  font-size: 0.875rem;
+  font-size: 1.125rem;
 }
 
 @media (min-width: 768px) {
   .areas-expertise-icon {
-    width: 36px;
-    height: 36px;
+    width: 28px;
+    height: 28px;
   }
   
   .areas-expertise-icon i {
-    font-size: 1rem;
+    font-size: 1.25rem;
   }
 }
 
-/* Colorful icon backgrounds */
-.areas-expertise-icon-blue {
-  background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
-}
-
+/* Colorful icons */
 .areas-expertise-icon-blue i {
   color: #2563eb;
-}
-
-.areas-expertise-icon-green {
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
 }
 
 .areas-expertise-icon-green i {
   color: #059669;
 }
 
-.areas-expertise-icon-purple {
-  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-}
-
 .areas-expertise-icon-purple i {
   color: #7c3aed;
 }
 
-.areas-expertise-icon-orange {
-  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
-}
-
 .areas-expertise-icon-orange i {
   color: #ea580c;
-}
-
-.areas-expertise-icon-teal {
-  background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
 }
 
 .areas-expertise-icon-teal i {
