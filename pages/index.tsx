@@ -77,7 +77,7 @@ export default function Home() {
           <h1>
             <span className="hero-line1">Fear of legal complexity? Compromising contracts?</span>
             <span className="hero-line2">Forced litigations? Big Bills of Big Firms?</span>
-            <span className="hero-line3">We provide affordable, specialized solutions.</span>
+            <span className="hero-line3">We provide specialized legal solutions.</span>
           </h1>
           <div className="hero-buttons">
             <a href="/book-a-call" className="btn">Connect Now</a>
@@ -122,7 +122,7 @@ export default function Home() {
       {/* Problem Statement section */}
       <section id="problem-statement" className="problem-statement-section">
         <div className="container">
-          <h2 className="problem-statement-headline">Most Small Businesses Face These Legal Headaches</h2>
+          <h2 className="problem-statement-headline">Most Entrepreneurs &amp; Businesses Face These Legal Headaches</h2>
           <div className="problem-cards-grid">
             {/* Card 1: Big Bills */}
             <div className="problem-card">
@@ -163,7 +163,7 @@ export default function Home() {
               <div className="featured-service-header">
                 <span className="featured-service-brand">MARKSTER™</span>
                 <h3 className="featured-service-title">Complete Trademark Registration</h3>
-                <p className="featured-service-tagline">File your trademark right the first time.</p>
+                <p className="featured-service-tagline">File your trademark with maximum brand protection.</p>
               </div>
               <div className="featured-service-content">
                 <h4 className="featured-service-label">What&apos;s included:</h4>
@@ -180,12 +180,11 @@ export default function Home() {
                   <strong>Timeline:</strong> Search in 48 hours | Filing in 3 days
                 </p>
                 <p className="featured-service-perfect">
-                  <strong>Perfect for:</strong> businesses protecting names, brands to be launched, creators building IP
+                  <strong>Perfect for:</strong> Businesses protecting names, brands to be launched, creators building IP
                 </p>
               </div>
               <div className="featured-service-buttons">
-                <a href="/markster" className="btn featured-btn-primary">Protect Your Brand</a>
-                <a href="/book-a-call" className="btn featured-btn-secondary">Get Your Mark</a>
+                <a href="/markster" className="btn featured-btn-primary featured-btn-full">Protect Your Brand</a>
               </div>
             </div>
 
@@ -208,15 +207,14 @@ export default function Home() {
                   <li>✓ NDAs and Employment Agreements</li>
                 </ul>
                 <p className="featured-service-timeline">
-                  <strong>Timeline:</strong> Connect within 24 hours | Delivery in 3-7 days
+                  <strong>Timeline:</strong> Same day response | Delivery in 3-7 days
                 </p>
                 <p className="featured-service-perfect">
                   <strong>Best:</strong> Fixed retainerships for the dedicated support from a fractional legal counsel.
                 </p>
               </div>
               <div className="featured-service-buttons">
-                <span className="btn featured-btn-primary featured-btn-disabled">Explore Agreementor</span>
-                <a href="/book-a-call" className="btn featured-btn-secondary">Connect Now</a>
+                <a href="/book-a-call" className="btn featured-btn-primary featured-btn-full">Connect Now</a>
               </div>
             </div>
           </div>
