@@ -154,6 +154,41 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Solution Statement section */}
+      <section id="solution-statement" className="solution-statement-section">
+        <div className="container">
+          <h2 className="solution-statement-headline">We Become Your Strategic Legal Support</h2>
+          <div className="solution-cards-grid">
+            {/* Prop 1: Fixed Fees */}
+            <div className="solution-card">
+              <span className="solution-card-icon">💰</span>
+              <h3 className="solution-card-title">Fixed Fees Options, No Surprises</h3>
+              <p className="solution-card-text">
+                Retainership package. One-time project. You know the cost before we start.
+              </p>
+            </div>
+
+            {/* Prop 2: Fast Turnaround */}
+            <div className="solution-card">
+              <span className="solution-card-icon">⚡</span>
+              <h3 className="solution-card-title">24-48 Hour Turnaround</h3>
+              <p className="solution-card-text">
+                Get your queries answered in hours. For faster contract reviews, we prioritise.
+              </p>
+            </div>
+
+            {/* Prop 3: Specialization */}
+            <div className="solution-card">
+              <span className="solution-card-icon">🎯</span>
+              <h3 className="solution-card-title">Specialized in What You Need</h3>
+              <p className="solution-card-text">
+                Agreements. Trademark. Advisory. We speak your language, with no complexity.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Our Expertise section */}
       <section id="services">
         <div className="container">
