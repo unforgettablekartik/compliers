@@ -24,9 +24,8 @@ export default function SiteHeader() {
     <nav id="navbar" className="site-header">
       <div className="container">
         <div className="logo">
-          <Link href="/" className="logo-link" style={{ color: '#0f4662', display: 'flex', alignItems: 'center', gap: '8px' }}>
+          <Link href="/" className="logo-link" style={{ display: 'flex', alignItems: 'center' }}>
             <Logo size="small" />
-            The Compliers
           </Link>
         </div>
         <button
