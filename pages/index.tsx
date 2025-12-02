@@ -129,7 +129,7 @@ export default function Home() {
               <span className="problem-card-icon">💸</span>
               <h3 className="problem-card-title">Big Firm = Big Bills</h3>
               <p className="problem-card-text">
-                Tier-1 firms charge ₹50,000+ retainers and hourly rates you can&apos;t predict. You need expertise, not overhead.
+                Tier-1 firms charge massive retainers and hourly rates you can&apos;t predict. You need expertise, not overhead.
               </p>
             </div>
 
@@ -138,7 +138,7 @@ export default function Home() {
               <span className="problem-card-icon">⏰</span>
               <h3 className="problem-card-title">Slow Response Times</h3>
               <p className="problem-card-text">
-                Your business moves fast. Waiting 5 days for contract review kills deals. You need speed.
+                Your business moves fast. Waiting 5 days for contract review kills deals. You need speed. You need specialization.
               </p>
             </div>
 
@@ -148,15 +148,6 @@ export default function Home() {
               <h3 className="problem-card-title">Generic Templates</h3>
               <p className="problem-card-text">
                 Downloaded contracts from Google? They don&apos;t protect your specific situation. You need customization.
-              </p>
-            </div>
-
-            {/* Card 4: Generalist Lawyers */}
-            <div className="problem-card">
-              <span className="problem-card-icon">🤷</span>
-              <h3 className="problem-card-title">Generalist Lawyers</h3>
-              <p className="problem-card-text">
-                Your SaaS startup needs someone who understands tech contracts, not someone who &quot;does everything.&quot; You need specialization.
               </p>
             </div>
           </div>
