@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import { Shield, FileText, Lock, ClipboardCheck, Scale } from 'lucide-react';
 
 export default function Home() {
   // Handle form submission by calling the contact API
@@ -101,31 +102,31 @@ export default function Home() {
                 <ul className="areas-expertise-list">
                   <li className="areas-expertise-item">
                     <span className="areas-expertise-icon areas-expertise-icon-blue">
-                      <i className="fa-solid fa-shield-halved" aria-hidden="true"></i>
+                      <Shield size={20} />
                     </span>
                     <span className="areas-expertise-text">Trademark Filing &amp; Protection</span>
                   </li>
                   <li className="areas-expertise-item">
                     <span className="areas-expertise-icon areas-expertise-icon-green">
-                      <i className="fa-solid fa-file-signature" aria-hidden="true"></i>
+                      <FileText size={20} />
                     </span>
                     <span className="areas-expertise-text">Contract Drafting &amp; Review</span>
                   </li>
                   <li className="areas-expertise-item">
                     <span className="areas-expertise-icon areas-expertise-icon-purple">
-                      <i className="fa-solid fa-lock" aria-hidden="true"></i>
+                      <Lock size={20} />
                     </span>
                     <span className="areas-expertise-text">Data Privacy &amp; Responsible AI</span>
                   </li>
                   <li className="areas-expertise-item">
                     <span className="areas-expertise-icon areas-expertise-icon-orange">
-                      <i className="fa-solid fa-clipboard-check" aria-hidden="true"></i>
+                      <ClipboardCheck size={20} />
                     </span>
                     <span className="areas-expertise-text">Compliance Advisory</span>
                   </li>
                   <li className="areas-expertise-item">
                     <span className="areas-expertise-icon areas-expertise-icon-teal">
-                      <i className="fa-solid fa-scale-balanced" aria-hidden="true"></i>
+                      <Scale size={20} />
                     </span>
                     <span className="areas-expertise-text">Legal Counselling</span>
                   </li>
