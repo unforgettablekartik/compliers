@@ -42,7 +42,7 @@ export default function SiteHeader() {
             <Link href="/" onClick={handleLinkClick('/')}>Home</Link>
           </li>
           <li>
-            <Link href="/#about" onClick={handleLinkClick('/#about')}>About Us</Link>
+            <Link href="/about" onClick={handleLinkClick('/about')}>About Us</Link>
           </li>
           <li>
             <Link href="/blog" onClick={handleLinkClick('/blog')}>Blogs</Link>

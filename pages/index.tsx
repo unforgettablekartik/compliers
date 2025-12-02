@@ -119,19 +119,47 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About section */}
-      <section id="about" className="about-section no-bg">
-        <div className="container about-container">
-          <h2>About Us</h2>
-          <p>
-            At The Compliers, we unite deep expertise in law, technology, and policy to deliver tailored solutions for ambitious entrepreneurs and modern businesses. We go beyond traditional legal services, leveraging technology and data-driven strategies to help you minimize risks and maximize opportunities.
-          </p>
-          <p>
-            Our services cover the entire spectrum, from safeguarding your Intellectual Property to drafting robust Commercial Contracts, and from pioneering Data Privacy strategies to integrating the latest in Legal-Tech. We thrive at the intersection of innovation and compliance, providing advanced alternatives to conventional legal services.
-          </p>
-          <p>
-            With us, you don’t just solve legal challenges—you gain a proactive partner committed to your long-term success. Join us as we reimagine what legal support can mean for tomorrow’s leaders.
-          </p>
+      {/* Problem Statement section */}
+      <section id="problem-statement" className="problem-statement-section">
+        <div className="container">
+          <h2 className="problem-statement-headline">Most Small Businesses Face These Legal Headaches</h2>
+          <div className="problem-cards-grid">
+            {/* Card 1: Big Bills */}
+            <div className="problem-card">
+              <span className="problem-card-icon">💸</span>
+              <h3 className="problem-card-title">Big Firm = Big Bills</h3>
+              <p className="problem-card-text">
+                Tier-1 firms charge ₹50,000+ retainers and hourly rates you can&apos;t predict. You need expertise, not overhead.
+              </p>
+            </div>
+
+            {/* Card 2: Slow Response Times */}
+            <div className="problem-card">
+              <span className="problem-card-icon">⏰</span>
+              <h3 className="problem-card-title">Slow Response Times</h3>
+              <p className="problem-card-text">
+                Your business moves fast. Waiting 5 days for contract review kills deals. You need speed.
+              </p>
+            </div>
+
+            {/* Card 3: Generic Templates */}
+            <div className="problem-card">
+              <span className="problem-card-icon">📄</span>
+              <h3 className="problem-card-title">Generic Templates</h3>
+              <p className="problem-card-text">
+                Downloaded contracts from Google? They don&apos;t protect your specific situation. You need customization.
+              </p>
+            </div>
+
+            {/* Card 4: Generalist Lawyers */}
+            <div className="problem-card">
+              <span className="problem-card-icon">🤷</span>
+              <h3 className="problem-card-title">Generalist Lawyers</h3>
+              <p className="problem-card-text">
+                Your SaaS startup needs someone who understands tech contracts, not someone who &quot;does everything.&quot; You need specialization.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
