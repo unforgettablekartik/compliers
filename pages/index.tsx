@@ -85,12 +85,14 @@ export default function Home() {
                 Specialized Legal Protection for Modern Businesses.
               </h1>
               <p className="homepage-hero-description">
-                Fear of legal complexity? Compromising contracts? Risk of forced litigations? Big Bills of Big Firms?<br />
-                We bring expertise without overhead, with fixed fees, fast turnaround, and deep specialization.
+                Fear of legal complexity? Compromising contracts?<br />
+                Risk of forced litigations? Big Bills of Big Firms?<br />
+                We bring expertise with determined attention.<br />
+                Fixed fees. Fast turnaround. Deep specialization.
               </p>
               <div className="homepage-hero-buttons">
-                <a href="/book-a-call" className="btn homepage-btn-primary">Consult Now</a>
-                <a href="/markster/dashboard" className="btn homepage-btn-secondary">Free Risk Assessment</a>
+                <a href="/book-a-call" className="btn homepage-btn-primary">Connect Now</a>
+                <a href="#featured-services" className="btn homepage-btn-secondary">Explore Services</a>
               </div>
               <p className="homepage-hero-caption">
                 FREE 20-minute call to answer all your queries.
@@ -130,6 +132,44 @@ export default function Home() {
                     <span className="areas-expertise-text">Legal Counselling</span>
                   </li>
                 </ul>
+              </div>
+              <div className="hero-trust-bar">
+                <span className="hero-trust-item">
+                  <span className="trust-check-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" fill="#0f4562"/>
+                      <path d="M4.5 8L7 10.5L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  300+ Contracts Handled
+                </span>
+                <span className="hero-trust-item">
+                  <span className="trust-check-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" fill="#0f4562"/>
+                      <path d="M4.5 8L7 10.5L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  40+ Trademarks Filed
+                </span>
+                <span className="hero-trust-item">
+                  <span className="trust-check-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" fill="#0f4562"/>
+                      <path d="M4.5 8L7 10.5L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  24 Hour Turnaround
+                </span>
+                <span className="hero-trust-item">
+                  <span className="trust-check-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" fill="#0f4562"/>
+                      <path d="M4.5 8L7 10.5L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  20 Minute Free Call
+                </span>
               </div>
             </div>
           </div>

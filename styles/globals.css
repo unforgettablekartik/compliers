@@ -742,7 +742,7 @@ nav .nav-links a:hover {
 }
 
 .homepage-brand-name {
-  background: #0077cc;
+  background: #0f4562;
   color: #fff;
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
@@ -1013,13 +1013,15 @@ nav .nav-links a:hover {
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  width: fit-content;
+  width: 100%;
+  max-width: 400px;
   margin-left: auto;
 }
 
 @media (min-width: 768px) {
   .areas-expertise-card {
     padding: 1.75rem 2rem;
+    max-width: 420px;
   }
 }
 
@@ -1095,6 +1097,58 @@ nav .nav-links a:hover {
 @media (min-width: 768px) {
   .areas-expertise-text {
     font-size: 1rem;
+  }
+}
+
+/* Hero Trust Bar - Stats below white card */
+.hero-trust-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.4rem 0.8rem;
+  margin-top: 1rem;
+  padding: 0;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+}
+
+.hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #0f4562;
+  white-space: nowrap;
+}
+
+.trust-check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-check-icon svg {
+  width: 14px;
+  height: 14px;
+}
+
+@media (min-width: 768px) {
+  .hero-trust-bar {
+    gap: 0.4rem 0.6rem;
+    margin-top: 1rem;
+    max-width: 420px;
+  }
+
+  .hero-trust-item {
+    font-size: 0.75rem;
+  }
+
+  .trust-check-icon svg {
+    width: 16px;
+    height: 16px;
   }
 }
 
