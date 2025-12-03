@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
-import { Shield, FileText, Lock, ClipboardCheck, Scale } from 'lucide-react';
+import { Shield, FileText, Lock, ClipboardCheck, Scale, Building } from 'lucide-react';
 
 export default function Home() {
   // Handle form submission by calling the contact API
@@ -128,6 +128,12 @@ export default function Home() {
                       <Scale size={20} />
                     </span>
                     <span className="areas-expertise-text">Legal Counselling</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-brown">
+                      <Building size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Real Estate &amp; Property</span>
                   </li>
                 </ul>
               </div>

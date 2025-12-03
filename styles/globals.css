@@ -1085,6 +1085,10 @@ nav .nav-links a:hover {
   color: #0d9488;
 }
 
+.areas-expertise-icon-brown svg {
+  color: #92400e;
+}
+
 .areas-expertise-text {
   font-size: 0.9rem;
   font-weight: 500;
