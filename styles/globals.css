@@ -710,7 +710,7 @@ nav .nav-links a:hover {
 .homepage-hero-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: 2.5rem;
   align-items: center;
 }
 
@@ -784,89 +784,11 @@ nav .nav-links a:hover {
   }
 }
 
-/* Hero Expertise List - Categories shown above buttons */
-.hero-expertise-list {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0 0.75rem 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem 1rem;
-}
-
-.hero-expertise-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.hero-expertise-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-.hero-expertise-icon svg {
-  width: 18px;
-  height: 18px;
-}
-
-/* Colorful icons for hero expertise */
-.hero-expertise-icon-blue svg {
-  color: #2563eb;
-}
-
-.hero-expertise-icon-green svg {
-  color: #059669;
-}
-
-.hero-expertise-icon-purple svg {
-  color: #7c3aed;
-}
-
-.hero-expertise-icon-orange svg {
-  color: #ea580c;
-}
-
-.hero-expertise-icon-teal svg {
-  color: #0d9488;
-}
-
-.hero-expertise-text {
-  font-size: 0.8rem;
-  font-weight: 500;
-  color: #374151;
-  line-height: 1.4;
-}
-
-@media (min-width: 768px) {
-  .hero-expertise-list {
-    gap: 0.625rem 1.25rem;
-    margin: 0.75rem 0 1rem 0;
-  }
-
-  .hero-expertise-icon svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .hero-expertise-text {
-    font-size: 0.875rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .hero-expertise-list {
-    justify-content: center;
-  }
-}
-
 .homepage-hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
-  margin-top: 0.75rem;
+  gap: 3rem;
+  margin-top: 0.5rem;
 }
 
 .homepage-btn-primary {
@@ -911,66 +833,6 @@ nav .nav-links a:hover {
 .homepage-hero-right {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-}
-
-/* Hero Value Card - White card with pain points and solution */
-.hero-value-card {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 1rem;
-  padding: 1.75rem 2rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-}
-
-.hero-value-card-problems {
-  margin-bottom: 1.25rem;
-}
-
-.hero-value-card-problems p {
-  font-size: 1rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0 0 0.375rem 0;
-  line-height: 1.5;
-}
-
-.hero-value-card-problems p:last-child {
-  margin-bottom: 0;
-}
-
-.hero-value-card-solution p {
-  font-size: 0.95rem;
-  font-weight: 400;
-  color: #374151;
-  margin: 0 0 0.25rem 0;
-  line-height: 1.6;
-}
-
-.hero-value-card-solution p:last-child {
-  margin-bottom: 0;
-}
-
-@media (min-width: 768px) {
-  .hero-value-card {
-    padding: 2rem 2.5rem;
-  }
-
-  .hero-value-card-problems p {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
-  }
-
-  .hero-value-card-solution p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .homepage-hero-right {
-    margin-top: 0.5rem;
-  }
 }
 
 .homepage-hero-highlights {

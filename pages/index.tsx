@@ -84,38 +84,10 @@ export default function Home() {
               <h1 className="homepage-hero-title">
                 Specialized Legal Protection for Modern Businesses.
               </h1>
-              <ul className="hero-expertise-list">
-                <li className="hero-expertise-item">
-                  <span className="hero-expertise-icon hero-expertise-icon-blue">
-                    <Shield size={18} />
-                  </span>
-                  <span className="hero-expertise-text">Trademark Filing &amp; Protection</span>
-                </li>
-                <li className="hero-expertise-item">
-                  <span className="hero-expertise-icon hero-expertise-icon-green">
-                    <FileText size={18} />
-                  </span>
-                  <span className="hero-expertise-text">Contract Drafting &amp; Review</span>
-                </li>
-                <li className="hero-expertise-item">
-                  <span className="hero-expertise-icon hero-expertise-icon-purple">
-                    <Lock size={18} />
-                  </span>
-                  <span className="hero-expertise-text">Data Privacy &amp; Responsible AI</span>
-                </li>
-                <li className="hero-expertise-item">
-                  <span className="hero-expertise-icon hero-expertise-icon-orange">
-                    <ClipboardCheck size={18} />
-                  </span>
-                  <span className="hero-expertise-text">Compliance Advisory</span>
-                </li>
-                <li className="hero-expertise-item">
-                  <span className="hero-expertise-icon hero-expertise-icon-teal">
-                    <Scale size={18} />
-                  </span>
-                  <span className="hero-expertise-text">Legal Counselling</span>
-                </li>
-              </ul>
+              <p className="homepage-hero-description">
+                Fear of legal complexity? Compromising contracts? Risk of forced litigations? Big Bills of Big Firms?<br />
+                We bring expertise without overhead, with fixed fees, fast turnaround, and deep specialization.
+              </p>
               <div className="homepage-hero-buttons">
                 <a href="/book-a-call" className="btn homepage-btn-primary">Consult Now</a>
                 <a href="/markster/dashboard" className="btn homepage-btn-secondary">Free Risk Assessment</a>
@@ -125,18 +97,39 @@ export default function Home() {
               </p>
             </div>
             <div className="homepage-hero-right">
-              <div className="hero-value-card">
-                <div className="hero-value-card-problems">
-                  <p>Fear of legal complexity?</p>
-                  <p>Compromising contracts?</p>
-                  <p>Risk of forced litigations?</p>
-                  <p>Hourly billing of big firms?</p>
-                </div>
-                <div className="hero-value-card-solution">
-                  <p>We bring expertise without overhead.</p>
-                  <p>Offering fixed fees, fast turnaround,</p>
-                  <p>and deep specialization.</p>
-                </div>
+              <div className="areas-expertise-card">
+                <ul className="areas-expertise-list">
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-blue">
+                      <Shield size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Trademark Filing &amp; Protection</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-green">
+                      <FileText size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Contract Drafting &amp; Review</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-purple">
+                      <Lock size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Data Privacy &amp; Responsible AI</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-orange">
+                      <ClipboardCheck size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Compliance Advisory</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-teal">
+                      <Scale size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Legal Counselling</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
