@@ -84,10 +84,6 @@ export default function Home() {
               <h1 className="homepage-hero-title">
                 Specialized Legal Protection for Modern Businesses.
               </h1>
-              <p className="homepage-hero-description">
-                Fear of legal complexity? Compromising contracts? Risk of forced litigations? Big Bills of Big Firms?<br />
-                We bring expertise without overhead, with fixed fees, fast turnaround, and deep specialization.
-              </p>
               <ul className="hero-expertise-list">
                 <li className="hero-expertise-item">
                   <span className="hero-expertise-icon hero-expertise-icon-blue">
@@ -127,6 +123,21 @@ export default function Home() {
               <p className="homepage-hero-caption">
                 FREE 20-minute call to answer all your queries.
               </p>
+            </div>
+            <div className="homepage-hero-right">
+              <div className="hero-value-card">
+                <div className="hero-value-card-problems">
+                  <p>Fear of legal complexity?</p>
+                  <p>Compromising contracts?</p>
+                  <p>Risk of forced litigations?</p>
+                  <p>Hourly billing of big firms?</p>
+                </div>
+                <div className="hero-value-card-solution">
+                  <p>We bring expertise without overhead.</p>
+                  <p>Offering fixed fees, fast turnaround,</p>
+                  <p>and deep specialization.</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
