@@ -1,50 +1,8 @@
 import Head from 'next/head';
-import React from 'react';
-import { Shield, FileText, Lock, ClipboardCheck, Scale } from 'lucide-react';
+import React, { useState } from 'react';
+import { Shield, FileText, Lock, ClipboardCheck, Scale, ChevronDown } from 'lucide-react';
 
 export default function Home() {
-  // Handle form submission by calling the contact API
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    
-    const data = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      message: formData.get('message') as string,
-    };
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        alert('Thank you for reaching out! We will get back to you soon.');
-        form.reset();
-      } else {
-        alert(`Error: ${result.message || 'Failed to send message. Please try again.'}`);
-      }
-    } catch (error) {
-      alert('Failed to send message. Please try again later.');
-      console.error('Error submitting form:', error);
-    }
-  };
-
-  // Handle opening the chatbot
-  const handleOpenChatbot = () => {
-    const event = new CustomEvent('openCompliersBot');
-    window.dispatchEvent(event);
-  };
-
   return (
     <>
       <Head>
@@ -483,52 +441,145 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Markster Button Section */}
-      <section className="markster-banner">
-        <div className="container">
-          <div className="markster-cta">
-            <div className="markster-content">
-              <h3>🛡️ Trademark Filing Made Simple</h3>
-              <p>File your trademark with lawyer-led, fixed-fee package for Indian startups & MSMEs</p>
-            </div>
-            <a href="/markster" className="btn btn-markster">
-              Explore Markster™
-            </a>
-          </div>
-        </div>
-      </section>
+      {/* FAQ Section */}
+      <FAQSection />
 
-      {/* Contact section */}
-      <section id="contact">
+      {/* Final CTA Section */}
+      <section id="final-cta" className="final-cta-section">
         <div className="container">
-          <div className="contact-header-row">
-            <h2>Contact for Enquiries</h2>
-            <button onClick={handleOpenChatbot} className="lets-chat-button" type="button">
-              <i className="fa-solid fa-comments" aria-hidden="true"></i>
-              <span>Let&apos;s Chat</span>
-            </button>
+          <h2 className="final-cta-headline">Ready to Get Legal Protection Without the Headache?</h2>
+          <p className="final-cta-description">
+            Book a FREE 20-minute consultation. No service obligations.<br />
+            You just get the idea of what you need and who we are.
+          </p>
+          <div className="final-cta-buttons">
+            <a href="/book-a-call" className="btn homepage-btn-primary">Book Free Consultation</a>
+            <a href="/about#contact" className="btn homepage-btn-secondary">Contact for Enquiries</a>
           </div>
-          <div className="contact-wrapper">
-            <div className="contact-form">
-              <form id="contact-form" onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Name" required className="contact-placeholder" />
-                <input type="email" name="email" placeholder="Email" required className="contact-placeholder" />
-                <textarea name="message" placeholder="Message" required className="contact-placeholder"></textarea>
-                <button type="submit" className="btn">Send Message</button>
-              </form>
-            </div>
-            <div className="contact-info">
-              <h3>Why Choose The Compliers?</h3>
-              <p>We bridge the gap between cutting-edge technology and legal compliance, ensuring your business stays ahead while remaining compliant.</p>
-              <ul>
-                <li><strong>Specialized Expertise</strong><br />Deep understanding of emerging technologies and their legal implications</li>
-                <li><strong>Industry Experience</strong><br />Proven track record across multiple industries and regulatory environments</li>
-                <li><strong>Future-Ready Solutions</strong><br />Stay ahead of regulatory changes and emerging legal challenges</li>
-              </ul>
-            </div>
-          </div>
+          <p className="final-cta-response-time">Response time: 4 hours during business days</p>
+          <p className="final-cta-email-text"><strong>You may email your queries with relevant documents to : connect@thecompliers.info</strong></p>
         </div>
       </section>
     </>
+  );
+}
+
+// FAQ Accordion Item Component
+function FAQItem({ question, answer, isOpen, onClick }: { 
+  question: string; 
+  answer: React.ReactNode; 
+  isOpen: boolean; 
+  onClick: () => void;
+}) {
+  return (
+    <div className={`faq-item ${isOpen ? 'faq-item-open' : ''}`}>
+      <button className="faq-question" onClick={onClick} type="button" aria-expanded={isOpen}>
+        <span className="faq-question-text">{question}</span>
+        <ChevronDown className={`faq-chevron ${isOpen ? 'faq-chevron-open' : ''}`} size={20} />
+      </button>
+      <div className={`faq-answer ${isOpen ? 'faq-answer-open' : ''}`}>
+        <div className="faq-answer-content">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// FAQ Section Component
+function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "How is your pricing lower than big law firms?",
+      answer: "No fancy office overhead, no unnecessary hourly billing, no bureaucracy. We focus on efficiency and technology. We're also selective about the work we take. Most of our clients opt for retainership packages, being cost efficient. This specialization makes us faster."
+    },
+    {
+      question: "Can you handle urgent requests?",
+      answer: "Yes. Standard turnaround is 24 hours. For urgent matters (same-day or next-day), we charge around 50% rush fee. Most clients find our standard turnaround fast enough."
+    },
+    {
+      question: "Do you work remotely across India?",
+      answer: (
+        <>
+          Yes. While our teams are physically present at Delhi NCR, we work with clients across India for contracts, trademarks, compliance and corporate matters. Everything is handled via email, WhatsApp, and video calls.
+          <br /><br />
+          Real estate and property law services are primarily Delhi-NCR focused.
+        </>
+      )
+    },
+    {
+      question: "What if my contract is more complex or voluminous?",
+      answer: (
+        <>
+          During initial consultation, we assess scope. If it&apos;s more complex or voluminous, we quote accordingly before starting. We always discuss additional scope and cost before proceeding.
+          <br /><br />
+          <strong>Full Transparency. No surprise bills.</strong>
+        </>
+      )
+    },
+    {
+      question: "Do you handle litigation or court cases?",
+      answer: "No. We focus on preventive legal work, to protect you from unnecessary court proceedings. If you need litigation support, we can refer you to the trusted litigation specialists."
+    },
+    {
+      question: "How do I know if I need a lawyer or can use a template?",
+      answer: (
+        <>
+          Templates work for very standard, low-risk situations. You need a specialised lawyer when: (1) money involved is significant, (2) relationship is complex, (3) IP or sensitive data involved, (4) your position is at risk or may be exploited, as the other party is a large organization, (5) terms are non-standard or one-sided.
+          <br /><br />
+          Book a free consultation — we&apos;ll honestly tell you if you can try DIY.
+        </>
+      )
+    },
+    {
+      question: "What's included in the Free consultation?",
+      answer: (
+        <>
+          FREE 20-minute video or audio call where we:
+          <ul className="faq-answer-list">
+            <li>Understand your situation</li>
+            <li>Assess risk and contingencies</li>
+            <li>Identify legal requirements</li>
+            <li>Recommend appropriate service/ strategy</li>
+            <li>Quote fixed fee if you want to proceed</li>
+            <li>Delivery and answer to your questions</li>
+          </ul>
+          No obligation to hire us. You just get the idea of what you need and who we are.
+        </>
+      )
+    },
+    {
+      question: "How long does trademark registration take?",
+      answer: (
+        <>
+          In India: 18-24 months from filing to registration (if no objections). We complete search and filing within 7 days. Then you wait for government examination (3-6 months). If objections raised, we respond. Timeline is mostly government-dependent. For more details, check dedicated Trademark Service- <a href="/markster" className="faq-link">Markster</a>.
+        </>
+      )
+    }
+  ];
+
+  return (
+    <section id="faq" className="faq-section">
+      <div className="container">
+        <h2 className="faq-headline">Common Frequently Asked Questions</h2>
+        <div className="faq-container">
+          {faqData.map((faq, index) => (
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openIndex === index}
+              onClick={() => toggleFAQ(index)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }

@@ -23,7 +23,6 @@ export default function SiteFooter() {
               <li><span className="footer-text-unclickable">Contracts & Agreements</span></li>
               <li><Link href="/markster" onClick={handleLinkClick('/markster')}>Trademarks & IP</Link></li>
               <li><Link href="/creator-in-law" onClick={handleLinkClick('/creator-in-law')}>Creators' Legal Counsel</Link></li>
-              <li><span className="footer-text-unclickable">StartUp Lawyer</span></li>
               <li><span className="footer-text-unclickable">Fractional General Counsel</span></li>
             </ul>
           </div>
@@ -40,8 +39,9 @@ export default function SiteFooter() {
             <h3 className="footer-heading">Contact Us</h3>
             <ul className="footer-links">
               <li><Link href="/book-a-call" onClick={handleLinkClick('/book-a-call')}>Book a Call</Link></li>
-              <li><Link href="/#contact" onClick={handleLinkClick('/#contact')}>Write to us</Link></li>
+              <li><Link href="/about#contact" onClick={handleLinkClick('/about#contact')}>Write to us</Link></li>
               <li><Link href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">WhatsApp</Link></li>
+              <li><button type="button" className="footer-chat-button" onClick={() => window.dispatchEvent(new CustomEvent('openCompliersBot'))}>Let&apos;s Chat</button></li>
             </ul>
           </div>
 
