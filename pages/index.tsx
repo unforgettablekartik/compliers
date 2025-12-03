@@ -336,9 +336,9 @@ export default function Home() {
             <div className="how-it-works-step">
               <div className="how-it-works-step-number">1</div>
               <div className="how-it-works-step-content">
-                <h3 className="how-it-works-step-title">TELL US WHAT YOU NEED</h3>
+                <h3 className="how-it-works-step-title">YOUR REQUIREMENTS?</h3>
                 <p className="how-it-works-step-text">
-                  Book a free 20-minute consultation or describe your requirement via email. Just tell us what you&apos;re trying to accomplish. Be ready with your queries and problems.
+                  Book a free 20-minute consultation or describe your requirement via email. Just tell us what you&apos;re trying to accomplish. Be ready with your queries.
                 </p>
               </div>
               <div className="how-it-works-connector">
@@ -352,7 +352,7 @@ export default function Home() {
               <div className="how-it-works-step-content">
                 <h3 className="how-it-works-step-title">GET CLEAR PRICING</h3>
                 <p className="how-it-works-step-text">
-                  We send you a detailed proposal with:
+                  We share a proposal:
                 </p>
                 <ul className="how-it-works-step-list">
                   <li>Exactly what we&apos;ll deliver</li>
