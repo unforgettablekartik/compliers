@@ -91,8 +91,8 @@ export default function Home() {
                 Fixed fees. Fast turnaround. Deep specialization.
               </p>
               <div className="homepage-hero-buttons">
-                <a href="/book-a-call" className="btn homepage-btn-primary">Consult Now</a>
-                <a href="/markster/dashboard" className="btn homepage-btn-secondary">Free Risk Assessment</a>
+                <a href="/book-a-call" className="btn homepage-btn-primary">Connect Now</a>
+                <a href="#featured-services" className="btn homepage-btn-secondary">Explore Services</a>
               </div>
               <p className="homepage-hero-caption">
                 FREE 20-minute call to answer all your queries.
