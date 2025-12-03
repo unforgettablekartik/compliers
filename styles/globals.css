@@ -787,7 +787,7 @@ nav .nav-links a:hover {
 .homepage-hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
   margin-top: 0.5rem;
 }
 
