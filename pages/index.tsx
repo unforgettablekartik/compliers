@@ -85,8 +85,10 @@ export default function Home() {
                 Specialized Legal Protection for Modern Businesses.
               </h1>
               <p className="homepage-hero-description">
-                Fear of legal complexity? Compromising contracts? Risk of forced litigations? Big Bills of Big Firms?<br />
-                We bring expertise without overhead, with fixed fees, fast turnaround, and deep specialization.
+                Fear of legal complexity? Compromising contracts?<br />
+                Risk of forced litigations? Big Bills of Big Firms?<br />
+                We bring expertise with determined attention.<br />
+                Fixed fees. Fast turnaround. Deep specialization.
               </p>
               <div className="homepage-hero-buttons">
                 <a href="/book-a-call" className="btn homepage-btn-primary">Consult Now</a>
@@ -132,9 +134,10 @@ export default function Home() {
                 </ul>
               </div>
               <div className="hero-trust-bar">
-                <span className="hero-trust-item">✓ 300+ Contracts Drafted</span>
+                <span className="hero-trust-item">✓ 300+ Contracts Handled</span>
                 <span className="hero-trust-item">✓ 40+ Trademarks Filed</span>
                 <span className="hero-trust-item">✓ 24 Hour Turnaround</span>
+                <span className="hero-trust-item">✓ 20 mins Free Call</span>
               </div>
             </div>
           </div>
