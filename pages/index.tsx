@@ -137,7 +137,7 @@ export default function Home() {
                 <span className="hero-trust-item">✓ 300+ Contracts Handled</span>
                 <span className="hero-trust-item">✓ 40+ Trademarks Filed</span>
                 <span className="hero-trust-item">✓ 24 Hour Turnaround</span>
-                <span className="hero-trust-item">✓ 20 mins Free Call</span>
+                <span className="hero-trust-item">✓ 20-minute Free Call</span>
               </div>
             </div>
           </div>
