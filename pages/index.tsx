@@ -327,6 +327,81 @@ export default function Home() {
         </div>
       </section>
 
+      {/* How It Works section */}
+      <section id="how-it-works" className="how-it-works-section">
+        <div className="container">
+          <h2 className="how-it-works-headline">Simple Process. Clear Communication. Fast Results.</h2>
+          <div className="how-it-works-timeline">
+            {/* Step 1 */}
+            <div className="how-it-works-step">
+              <div className="how-it-works-step-number">1</div>
+              <div className="how-it-works-step-content">
+                <h3 className="how-it-works-step-title">YOUR REQUIREMENTS?</h3>
+                <p className="how-it-works-step-text">
+                  Book a free 20-minute consultation or describe your requirement via email. Just tell us what you&apos;re trying to accomplish. Be ready with your queries.
+                </p>
+              </div>
+              <div className="how-it-works-connector">
+                <span className="how-it-works-arrow">↓</span>
+              </div>
+            </div>
+
+            {/* Step 2 */}
+            <div className="how-it-works-step">
+              <div className="how-it-works-step-number">2</div>
+              <div className="how-it-works-step-content">
+                <h3 className="how-it-works-step-title">GET CLEAR PRICING</h3>
+                <p className="how-it-works-step-text">
+                  We share a proposal:
+                </p>
+                <ul className="how-it-works-step-list">
+                  <li>Exactly what we&apos;ll deliver</li>
+                  <li>Fixed fee (no surprises)</li>
+                  <li>Timeline commitments</li>
+                  <li>What we need from you</li>
+                </ul>
+              </div>
+              <div className="how-it-works-connector">
+                <span className="how-it-works-arrow">↓</span>
+              </div>
+            </div>
+
+            {/* Step 3 */}
+            <div className="how-it-works-step">
+              <div className="how-it-works-step-number">3</div>
+              <div className="how-it-works-step-content">
+                <h3 className="how-it-works-step-title">WE GET TO WORK</h3>
+                <p className="how-it-works-step-text">
+                  Share documents via secure upload. We complete the work within the agreed timeline. Get updates via email/WhatsApp.
+                </p>
+              </div>
+              <div className="how-it-works-connector">
+                <span className="how-it-works-arrow">↓</span>
+              </div>
+            </div>
+
+            {/* Step 4 */}
+            <div className="how-it-works-step">
+              <div className="how-it-works-step-number">4</div>
+              <div className="how-it-works-step-content">
+                <h3 className="how-it-works-step-title">RECEIVE &amp; IMPLEMENT</h3>
+                <p className="how-it-works-step-text">
+                  Get your queries answered, trademarks filed, contracts drafted, and documents reviewed with plain-English explanations.
+                </p>
+              </div>
+              <div className="how-it-works-connector how-it-works-final">
+                <span className="how-it-works-check">✓</span>
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="how-it-works-cta">
+            <a href="/book-a-call" className="btn homepage-btn-primary">Start With Free Consultation</a>
+          </div>
+        </div>
+      </section>
+
       {/* Markster Button Section */}
       <section className="markster-banner">
         <div className="container">
