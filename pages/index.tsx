@@ -131,6 +131,11 @@ export default function Home() {
                   </li>
                 </ul>
               </div>
+              <div className="hero-trust-bar">
+                <span className="hero-trust-item">✓ 300+ Contracts Drafted</span>
+                <span className="hero-trust-item">✓ 40+ Trademarks Filed</span>
+                <span className="hero-trust-item">✓ 24 Hour Turnaround</span>
+              </div>
             </div>
           </div>
         </div>
