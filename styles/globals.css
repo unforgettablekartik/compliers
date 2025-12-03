@@ -566,7 +566,7 @@
 }
 
 .how-it-works-step-list li::before {
-  content: "–";
+  content: "•";
   position: absolute;
   left: 0;
   color: #0077cc;
@@ -606,13 +606,22 @@
 
 .how-it-works-cta {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: 1.25rem;
+}
+
+.how-it-works-cta-subtext {
+  font-size: 0.85rem;
+  color: #6b7280;
+  margin-top: 0.5rem;
+  text-align: center;
 }
 
 .how-it-works-cta .btn {
   padding: 0.875rem 2rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
 }
 
 @media (min-width: 900px) {
@@ -625,13 +634,13 @@
   }
 
   .how-it-works-step::after {
-    content: '';
+    content: '→';
     position: absolute;
-    top: 1.75rem;
-    right: -0.75rem;
-    width: 1.5rem;
-    height: 2px;
-    background: linear-gradient(90deg, #0077cc 0%, #60a5fa 100%);
+    top: 1.5rem;
+    right: -0.5rem;
+    font-size: 1.25rem;
+    color: #0077cc;
+    font-weight: 600;
   }
 
   .how-it-works-step:last-child::after {
@@ -688,7 +697,114 @@
   }
 
   .how-it-works-cta {
-    margin-top: 1.5rem;
+    margin-top: 0.75rem;
+  }
+}
+
+/* Why Choose Us section styling */
+.why-choose-us-section {
+  background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 50%, #f0fdf4 100%);
+  padding: 5rem 0;
+  margin-top: 0;
+}
+
+.why-choose-us-headline {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #0b3a7a;
+  margin-bottom: 3.5rem;
+  line-height: 1.3;
+}
+
+.why-choose-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.why-choose-us-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 1.75rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e8e8e8;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-us-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 119, 204, 0.15);
+}
+
+.why-choose-us-card-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.why-choose-us-card-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  line-height: 1;
+}
+
+.why-choose-us-card-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #0b3a7a;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.why-choose-us-card-text {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #4a4a4a;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .why-choose-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-us-section {
+    padding: 3.5rem 0;
+  }
+
+  .why-choose-us-headline {
+    font-size: 1.6rem;
+    margin-bottom: 2.5rem;
+    padding: 0 1rem;
+  }
+
+  .why-choose-us-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .why-choose-us-card {
+    padding: 1.5rem;
+  }
+
+  .why-choose-us-card-icon {
+    font-size: 1.25rem;
+  }
+
+  .why-choose-us-card-title {
+    font-size: 1rem;
+  }
+
+  .why-choose-us-card-text {
+    font-size: 0.95rem;
   }
 }
 

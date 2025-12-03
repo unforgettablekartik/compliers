@@ -397,7 +397,88 @@ export default function Home() {
 
           {/* CTA Button */}
           <div className="how-it-works-cta">
-            <a href="/book-a-call" className="btn homepage-btn-primary">Start With Free Consultation</a>
+            <a href="/book-a-call" className="btn homepage-btn-primary">Start With FREE Consultation</a>
+            <p className="how-it-works-cta-subtext">Don&apos;t worry. You may choose not to continue further. No charges imposed.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Choose Us section */}
+      <section id="why-choose-us" className="why-choose-us-section">
+        <div className="container">
+          <h2 className="why-choose-us-headline">Why Businesses Choose The Compliers?</h2>
+          <div className="why-choose-us-grid">
+            {/* Reason 1: Niche Expertise */}
+            <div className="why-choose-us-card">
+              <div className="why-choose-us-card-header">
+                <span className="why-choose-us-card-icon">🎯</span>
+                <h3 className="why-choose-us-card-title">Niche Expertise</h3>
+              </div>
+              <p className="why-choose-us-card-text">
+                Not generalists. Deep focus on saving you from court cases.<br />
+                Simplified solutions of the complex legal problems.
+              </p>
+            </div>
+
+            {/* Reason 2: Speed Matters */}
+            <div className="why-choose-us-card">
+              <div className="why-choose-us-card-header">
+                <span className="why-choose-us-card-icon">⚡</span>
+                <h3 className="why-choose-us-card-title">Speed Matters</h3>
+              </div>
+              <p className="why-choose-us-card-text">
+                24-hour standard turnaround. Priority service available.<br />
+                Your deal won&apos;t die waiting for legal review.
+              </p>
+            </div>
+
+            {/* Reason 3: Transparent Pricing */}
+            <div className="why-choose-us-card">
+              <div className="why-choose-us-card-header">
+                <span className="why-choose-us-card-icon">💰</span>
+                <h3 className="why-choose-us-card-title">Transparent Pricing</h3>
+              </div>
+              <p className="why-choose-us-card-text">
+                Fixed fees before we start. No surprise invoices.<br />
+                You know exactly what you&apos;re paying.
+              </p>
+            </div>
+
+            {/* Reason 4: Modern Communication */}
+            <div className="why-choose-us-card">
+              <div className="why-choose-us-card-header">
+                <span className="why-choose-us-card-icon">📱</span>
+                <h3 className="why-choose-us-card-title">Modern Communication</h3>
+              </div>
+              <p className="why-choose-us-card-text">
+                WhatsApp updates. Email responses within 4 hours.<br />
+                Safe document upload. Privacy protected.
+              </p>
+            </div>
+
+            {/* Reason 5: Simplified Interpretation */}
+            <div className="why-choose-us-card">
+              <div className="why-choose-us-card-header">
+                <span className="why-choose-us-card-icon">🎓</span>
+                <h3 className="why-choose-us-card-title">Simplified Interpretation</h3>
+              </div>
+              <p className="why-choose-us-card-text">
+                Complex laws explained to your level of understanding.<br />
+                No AI generated response. Clear, actionable advice.
+              </p>
+            </div>
+
+            {/* Reason 6: Aligned Incentives */}
+            <div className="why-choose-us-card">
+              <div className="why-choose-us-card-header">
+                <span className="why-choose-us-card-icon">🤝</span>
+                <h3 className="why-choose-us-card-title">Aligned Incentives</h3>
+              </div>
+              <p className="why-choose-us-card-text">
+                Fixed fees mean we&apos;re incentivized to be efficient.<br />
+                Not to rack up billable hours. Your success = Our success.
+              </p>
+            </div>
           </div>
         </div>
       </section>
