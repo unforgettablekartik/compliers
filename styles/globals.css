@@ -1031,8 +1031,8 @@
 
 .final-cta-email-text {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
-  margin: 0.75rem 0 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 1.5rem 0 0 0;
 }
 
 @media (max-width: 768px) {
