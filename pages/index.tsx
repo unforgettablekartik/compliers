@@ -98,7 +98,6 @@ export default function Home() {
             </div>
             <div className="homepage-hero-right">
               <div className="areas-expertise-card">
-                <h3 className="areas-expertise-heading">Areas of Expertise</h3>
                 <ul className="areas-expertise-list">
                   <li className="areas-expertise-item">
                     <span className="areas-expertise-icon areas-expertise-icon-blue">

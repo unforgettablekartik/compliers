@@ -1012,26 +1012,13 @@ nav .nav-links a:hover {
   border-radius: 1rem;
   padding: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+  margin-left: auto;
 }
 
 @media (min-width: 768px) {
   .areas-expertise-card {
-    padding: 2rem;
-  }
-}
-
-.areas-expertise-heading {
-  font-size: 1.125rem;
-  font-weight: 700;
-  color: #1a1a1a;
-  margin: 0 0 1.25rem 0;
-  text-align: left;
-}
-
-@media (min-width: 768px) {
-  .areas-expertise-heading {
-    font-size: 1.25rem;
-    margin-bottom: 1.5rem;
+    padding: 1.75rem 2rem;
   }
 }
 
