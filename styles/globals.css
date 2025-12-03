@@ -1114,10 +1114,25 @@ nav .nav-links a:hover {
 }
 
 .hero-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
   font-size: 0.7rem;
   font-weight: 500;
   color: #4b5563;
   white-space: nowrap;
+}
+
+.trust-check-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.trust-check-icon svg {
+  width: 14px;
+  height: 14px;
 }
 
 @media (min-width: 768px) {
@@ -1129,6 +1144,11 @@ nav .nav-links a:hover {
 
   .hero-trust-item {
     font-size: 0.75rem;
+  }
+
+  .trust-check-icon svg {
+    width: 16px;
+    height: 16px;
   }
 }
 

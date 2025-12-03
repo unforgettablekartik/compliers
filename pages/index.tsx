@@ -134,10 +134,42 @@ export default function Home() {
                 </ul>
               </div>
               <div className="hero-trust-bar">
-                <span className="hero-trust-item">✓ 300+ Contracts Handled</span>
-                <span className="hero-trust-item">✓ 40+ Trademarks Filed</span>
-                <span className="hero-trust-item">✓ 24 Hour Turnaround</span>
-                <span className="hero-trust-item">✓ 20-minute Free Call</span>
+                <span className="hero-trust-item">
+                  <span className="trust-check-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" fill="#0f4562"/>
+                      <path d="M4.5 8L7 10.5L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  300+ Contracts Handled
+                </span>
+                <span className="hero-trust-item">
+                  <span className="trust-check-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" fill="#0f4562"/>
+                      <path d="M4.5 8L7 10.5L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  40+ Trademarks Filed
+                </span>
+                <span className="hero-trust-item">
+                  <span className="trust-check-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" fill="#0f4562"/>
+                      <path d="M4.5 8L7 10.5L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  24 Hour Turnaround
+                </span>
+                <span className="hero-trust-item">
+                  <span className="trust-check-icon">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle cx="8" cy="8" r="7" fill="#0f4562"/>
+                      <path d="M4.5 8L7 10.5L12 5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
+                  </span>
+                  20 Minute Free Call
+                </span>
               </div>
             </div>
           </div>
