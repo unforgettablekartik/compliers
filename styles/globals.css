@@ -1029,6 +1029,12 @@
   margin: 0;
 }
 
+.final-cta-email-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0.75rem 0 0 0;
+}
+
 @media (max-width: 768px) {
   .final-cta-section {
     padding: 3rem 1rem;
@@ -1052,6 +1058,10 @@
 
   .final-cta-response-time {
     font-size: 0.85rem;
+  }
+
+  .final-cta-email-text {
+    font-size: 0.8rem;
   }
 }
 
@@ -1999,6 +2009,23 @@ section h2 {
   font-weight: 500;
   font-size: 0.85rem;
   cursor: default;
+}
+
+.footer-chat-button {
+  background: none;
+  border: none;
+  padding: 0;
+  color: #333;
+  font-weight: 500;
+  font-size: 0.85rem;
+  cursor: pointer;
+  font-family: inherit;
+  transition: color 0.3s ease;
+}
+
+.footer-chat-button:hover {
+  color: #0077cc;
+  text-decoration: underline;
 }
 
 .footer-bottom {
