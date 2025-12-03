@@ -712,11 +712,12 @@ nav .nav-links a:hover {
   grid-template-columns: 1fr;
   gap: 2.5rem;
   align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 @media (min-width: 768px) {
   .homepage-hero-grid {
-    grid-template-columns: 1fr 1fr;
     gap: 3rem;
   }
 }
@@ -781,6 +782,84 @@ nav .nav-links a:hover {
   .homepage-hero-description {
     font-size: 1.125rem;
     line-height: 1.75;
+  }
+}
+
+/* Hero Expertise List - Categories shown above buttons */
+.hero-expertise-list {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0.75rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+}
+
+.hero-expertise-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hero-expertise-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.hero-expertise-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* Colorful icons for hero expertise */
+.hero-expertise-icon-blue svg {
+  color: #2563eb;
+}
+
+.hero-expertise-icon-green svg {
+  color: #059669;
+}
+
+.hero-expertise-icon-purple svg {
+  color: #7c3aed;
+}
+
+.hero-expertise-icon-orange svg {
+  color: #ea580c;
+}
+
+.hero-expertise-icon-teal svg {
+  color: #0d9488;
+}
+
+.hero-expertise-text {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .hero-expertise-list {
+    gap: 0.625rem 1.25rem;
+    margin: 0.75rem 0 1rem 0;
+  }
+
+  .hero-expertise-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hero-expertise-text {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .hero-expertise-list {
+    justify-content: center;
   }
 }
 

@@ -88,6 +88,38 @@ export default function Home() {
                 Fear of legal complexity? Compromising contracts? Risk of forced litigations? Big Bills of Big Firms?<br />
                 We bring expertise without overhead, with fixed fees, fast turnaround, and deep specialization.
               </p>
+              <ul className="hero-expertise-list">
+                <li className="hero-expertise-item">
+                  <span className="hero-expertise-icon hero-expertise-icon-blue">
+                    <Shield size={18} />
+                  </span>
+                  <span className="hero-expertise-text">Trademark Filing &amp; Protection</span>
+                </li>
+                <li className="hero-expertise-item">
+                  <span className="hero-expertise-icon hero-expertise-icon-green">
+                    <FileText size={18} />
+                  </span>
+                  <span className="hero-expertise-text">Contract Drafting &amp; Review</span>
+                </li>
+                <li className="hero-expertise-item">
+                  <span className="hero-expertise-icon hero-expertise-icon-purple">
+                    <Lock size={18} />
+                  </span>
+                  <span className="hero-expertise-text">Data Privacy &amp; Responsible AI</span>
+                </li>
+                <li className="hero-expertise-item">
+                  <span className="hero-expertise-icon hero-expertise-icon-orange">
+                    <ClipboardCheck size={18} />
+                  </span>
+                  <span className="hero-expertise-text">Compliance Advisory</span>
+                </li>
+                <li className="hero-expertise-item">
+                  <span className="hero-expertise-icon hero-expertise-icon-teal">
+                    <Scale size={18} />
+                  </span>
+                  <span className="hero-expertise-text">Legal Counselling</span>
+                </li>
+              </ul>
               <div className="homepage-hero-buttons">
                 <a href="/book-a-call" className="btn homepage-btn-primary">Consult Now</a>
                 <a href="/markster/dashboard" className="btn homepage-btn-secondary">Free Risk Assessment</a>
@@ -95,42 +127,6 @@ export default function Home() {
               <p className="homepage-hero-caption">
                 FREE 20-minute call to answer all your queries.
               </p>
-            </div>
-            <div className="homepage-hero-right">
-              <div className="areas-expertise-card">
-                <ul className="areas-expertise-list">
-                  <li className="areas-expertise-item">
-                    <span className="areas-expertise-icon areas-expertise-icon-blue">
-                      <Shield size={20} />
-                    </span>
-                    <span className="areas-expertise-text">Trademark Filing &amp; Protection</span>
-                  </li>
-                  <li className="areas-expertise-item">
-                    <span className="areas-expertise-icon areas-expertise-icon-green">
-                      <FileText size={20} />
-                    </span>
-                    <span className="areas-expertise-text">Contract Drafting &amp; Review</span>
-                  </li>
-                  <li className="areas-expertise-item">
-                    <span className="areas-expertise-icon areas-expertise-icon-purple">
-                      <Lock size={20} />
-                    </span>
-                    <span className="areas-expertise-text">Data Privacy &amp; Responsible AI</span>
-                  </li>
-                  <li className="areas-expertise-item">
-                    <span className="areas-expertise-icon areas-expertise-icon-orange">
-                      <ClipboardCheck size={20} />
-                    </span>
-                    <span className="areas-expertise-text">Compliance Advisory</span>
-                  </li>
-                  <li className="areas-expertise-item">
-                    <span className="areas-expertise-icon areas-expertise-icon-teal">
-                      <Scale size={20} />
-                    </span>
-                    <span className="areas-expertise-text">Legal Counselling</span>
-                  </li>
-                </ul>
-              </div>
             </div>
           </div>
         </div>
