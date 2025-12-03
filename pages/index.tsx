@@ -3,48 +3,6 @@ import React, { useState } from 'react';
 import { Shield, FileText, Lock, ClipboardCheck, Scale, ChevronDown } from 'lucide-react';
 
 export default function Home() {
-  // Handle form submission by calling the contact API
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    
-    const form = e.target as HTMLFormElement;
-    const formData = new FormData(form);
-    
-    const data = {
-      name: formData.get('name') as string,
-      email: formData.get('email') as string,
-      message: formData.get('message') as string,
-    };
-
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data),
-      });
-
-      const result = await response.json();
-
-      if (result.success) {
-        alert('Thank you for reaching out! We will get back to you soon.');
-        form.reset();
-      } else {
-        alert(`Error: ${result.message || 'Failed to send message. Please try again.'}`);
-      }
-    } catch (error) {
-      alert('Failed to send message. Please try again later.');
-      console.error('Error submitting form:', error);
-    }
-  };
-
-  // Handle opening the chatbot
-  const handleOpenChatbot = () => {
-    const event = new CustomEvent('openCompliersBot');
-    window.dispatchEvent(event);
-  };
-
   return (
     <>
       <Head>
@@ -486,50 +444,19 @@ export default function Home() {
       {/* FAQ Section */}
       <FAQSection />
 
-      {/* Markster Button Section */}
-      <section className="markster-banner">
+      {/* Final CTA Section */}
+      <section id="final-cta" className="final-cta-section">
         <div className="container">
-          <div className="markster-cta">
-            <div className="markster-content">
-              <h3>🛡️ Trademark Filing Made Simple</h3>
-              <p>File your trademark with lawyer-led, fixed-fee package for Indian startups & MSMEs</p>
-            </div>
-            <a href="/markster" className="btn btn-markster">
-              Explore Markster™
-            </a>
+          <h2 className="final-cta-headline">Ready to Get Legal Protection Without the Headache?</h2>
+          <p className="final-cta-description">
+            Book a FREE 20-minute consultation. No service obligations.<br />
+            You just get the idea of what you need and who we are.
+          </p>
+          <div className="final-cta-buttons">
+            <a href="/book-a-call" className="btn homepage-btn-primary">Book Free Consultation</a>
+            <a href="/about#contact" className="btn homepage-btn-secondary">Contact for Enquiries</a>
           </div>
-        </div>
-      </section>
-
-      {/* Contact section */}
-      <section id="contact">
-        <div className="container">
-          <div className="contact-header-row">
-            <h2>Contact for Enquiries</h2>
-            <button onClick={handleOpenChatbot} className="lets-chat-button" type="button">
-              <i className="fa-solid fa-comments" aria-hidden="true"></i>
-              <span>Let&apos;s Chat</span>
-            </button>
-          </div>
-          <div className="contact-wrapper">
-            <div className="contact-form">
-              <form id="contact-form" onSubmit={handleSubmit}>
-                <input type="text" name="name" placeholder="Name" required className="contact-placeholder" />
-                <input type="email" name="email" placeholder="Email" required className="contact-placeholder" />
-                <textarea name="message" placeholder="Message" required className="contact-placeholder"></textarea>
-                <button type="submit" className="btn">Send Message</button>
-              </form>
-            </div>
-            <div className="contact-info">
-              <h3>Why Choose The Compliers?</h3>
-              <p>We bridge the gap between cutting-edge technology and legal compliance, ensuring your business stays ahead while remaining compliant.</p>
-              <ul>
-                <li><strong>Specialized Expertise</strong><br />Deep understanding of emerging technologies and their legal implications</li>
-                <li><strong>Industry Experience</strong><br />Proven track record across multiple industries and regulatory environments</li>
-                <li><strong>Future-Ready Solutions</strong><br />Stay ahead of regulatory changes and emerging legal challenges</li>
-              </ul>
-            </div>
-          </div>
+          <p className="final-cta-response-time">Response time: 4 hours during business days</p>
         </div>
       </section>
     </>
