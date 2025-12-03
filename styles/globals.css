@@ -794,10 +794,10 @@ nav .nav-links a:hover {
 .homepage-btn-primary {
   background-color: #0077cc !important;
   color: #ffffff !important;
-  padding: 0.875rem 2rem !important;
+  padding: 0.625rem 1.25rem !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 4px 14px rgba(0, 119, 204, 0.4) !important;
 }
@@ -812,9 +812,10 @@ nav .nav-links a:hover {
   background-color: transparent !important;
   color: #0077cc !important;
   border: 2px solid #e0e7ff !important;
-  padding: 0.875rem 2rem !important;
+  padding: 0.625rem 1.25rem !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
+  font-size: 0.9rem !important;
   transition: all 0.3s ease !important;
 }
 
