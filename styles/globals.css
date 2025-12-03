@@ -441,6 +441,13 @@
 .featured-btn-full:hover {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
+.featured-service-explore-text {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+  margin: 0.5rem 0 0 0;
+  width: 100%;
+}
 @media (max-width: 900px) {
   .featured-services-grid {
     grid-template-columns: 1fr;
@@ -780,17 +787,17 @@ nav .nav-links a:hover {
 .homepage-hero-buttons {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 3rem;
   margin-top: 0.5rem;
 }
 
 .homepage-btn-primary {
   background-color: #0077cc !important;
   color: #ffffff !important;
-  padding: 0.875rem 2rem !important;
+  padding: 0.625rem 1.25rem !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
-  font-size: 1rem !important;
+  font-size: 0.9rem !important;
   transition: all 0.3s ease !important;
   box-shadow: 0 4px 14px rgba(0, 119, 204, 0.4) !important;
 }
@@ -805,9 +812,10 @@ nav .nav-links a:hover {
   background-color: transparent !important;
   color: #0077cc !important;
   border: 2px solid #e0e7ff !important;
-  padding: 0.875rem 2rem !important;
+  padding: 0.625rem 1.25rem !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
+  font-size: 0.9rem !important;
   transition: all 0.3s ease !important;
 }
 
@@ -995,6 +1003,99 @@ nav .nav-links a:hover {
 
 .homepage-service-btn-creator:hover {
   background: linear-gradient(135deg, #e9d5ff 0%, #d8b4fe 50%, #c084fc 100%);
+}
+
+/* Areas of Expertise Card in Hero */
+.areas-expertise-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  width: fit-content;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .areas-expertise-card {
+    padding: 1.75rem 2rem;
+  }
+}
+
+.areas-expertise-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.areas-expertise-item {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.areas-expertise-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.areas-expertise-icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media (min-width: 768px) {
+  .areas-expertise-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .areas-expertise-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/* Colorful icons */
+.areas-expertise-icon-blue svg {
+  color: #2563eb;
+}
+
+.areas-expertise-icon-green svg {
+  color: #059669;
+}
+
+.areas-expertise-icon-purple svg {
+  color: #7c3aed;
+}
+
+.areas-expertise-icon-orange svg {
+  color: #ea580c;
+}
+
+.areas-expertise-icon-teal svg {
+  color: #0d9488;
+}
+
+.areas-expertise-text {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1a1a;
+  line-height: 1.4;
+}
+
+@media (min-width: 768px) {
+  .areas-expertise-text {
+    font-size: 1rem;
+  }
 }
 
 .btn {

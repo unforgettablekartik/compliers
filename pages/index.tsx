@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import React from 'react';
+import { Shield, FileText, Lock, ClipboardCheck, Scale } from 'lucide-react';
 
 export default function Home() {
   // Handle form submission by calling the contact API
@@ -81,74 +82,59 @@ export default function Home() {
                 <span>Your Legal Partner</span>
               </div>
               <h1 className="homepage-hero-title">
-                Specialized legal solutions for modern businesses.
+                Specialized Legal Protection for Modern Businesses.
               </h1>
               <p className="homepage-hero-description">
-                Fear of legal complexity? Compromising contracts? Forced litigations? Big Bills of Big Firms? We bring expertise without overhead with fixed fees, fast turnaround, and deep specialization.
+                Fear of legal complexity? Compromising contracts? Risk of forced litigations? Big Bills of Big Firms?<br />
+                We bring expertise without overhead, with fixed fees, fast turnaround, and deep specialization.
               </p>
               <div className="homepage-hero-buttons">
-                <a href="/book-a-call" className="btn homepage-btn-primary">Free Consultation</a>
+                <a href="/book-a-call" className="btn homepage-btn-primary">Consult Now</a>
                 <a href="/markster/dashboard" className="btn homepage-btn-secondary">Free Risk Assessment</a>
               </div>
               <p className="homepage-hero-caption">
-                Need more clarity, contact for FREE 20-minute consultation.
+                FREE 20-minute call to answer all your queries.
               </p>
             </div>
             <div className="homepage-hero-right">
-              <div className="homepage-hero-card">
-                <h3 className="homepage-hero-card-heading">Explore our unique tools</h3>
-                <div className="homepage-hero-card-buttons">
-                  <a href="/markster" className="homepage-service-btn homepage-service-btn-markster">
-                    <span className="homepage-service-btn-name">Markster</span>
-                    <span className="homepage-service-btn-desc">Securing Trademarks</span>
-                  </a>
-                  <a href="/book-a-call" className="homepage-service-btn homepage-service-btn-agreementor">
-                    <span className="homepage-service-btn-name">Agreementor</span>
-                    <span className="homepage-service-btn-desc">Contracts &amp; Agreements</span>
-                  </a>
-                  <a href="/creator-in-law" className="homepage-service-btn homepage-service-btn-creator">
-                    <span className="homepage-service-btn-name">Creator in Law</span>
-                    <span className="homepage-service-btn-desc">Creators&apos; Legal Support</span>
-                  </a>
-                </div>
+              <div className="areas-expertise-card">
+                <ul className="areas-expertise-list">
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-blue">
+                      <Shield size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Trademark Filing &amp; Protection</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-green">
+                      <FileText size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Contract Drafting &amp; Review</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-purple">
+                      <Lock size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Data Privacy &amp; Responsible AI</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-orange">
+                      <ClipboardCheck size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Compliance Advisory</span>
+                  </li>
+                  <li className="areas-expertise-item">
+                    <span className="areas-expertise-icon areas-expertise-icon-teal">
+                      <Scale size={20} />
+                    </span>
+                    <span className="areas-expertise-text">Legal Counselling</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
       </header>
-
-      {/* Service Tabs Section */}
-      <section className="service-tabs-section">
-        <div className="service-tabs-container">
-          <h2 className="service-tabs-intro-heading">
-            Explore our unique tools, each dedicated to your customised needs:
-          </h2>
-          <div className="service-tabs-grid">
-            {/* Tab 1: Agreementor - Unclickable */}
-            <div className="service-tab service-tab-agreementor unclickable">
-              <h2 className="service-tab-heading">Agreementor</h2>
-              <p className="service-tab-description">Contracts &amp; Agreements</p>
-            </div>
-
-            {/* Tab 2: Markster - Links to /markster */}
-            <a href="/markster" className="service-tab-link">
-              <div className="service-tab service-tab-markster">
-                <h2 className="service-tab-heading">Markster</h2>
-                <p className="service-tab-description">Securing Trademarks</p>
-              </div>
-            </a>
-
-            {/* Tab 3: Creator in Law - Links to /creator-in-law */}
-            <a href="/creator-in-law" className="service-tab-link">
-              <div className="service-tab service-tab-creator">
-                <span className="service-tab-badge">New</span>
-                <h2 className="service-tab-heading">Creator in Law</h2>
-                <p className="service-tab-description">Creators&apos; Legal Support</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
 
       {/* Problem Statement section */}
       <section id="problem-statement" className="problem-statement-section">
@@ -240,7 +226,7 @@ export default function Home() {
             <div className="featured-service-card markster-card">
               <div className="featured-service-header">
                 <span className="featured-service-brand">MARKSTER™</span>
-                <h3 className="featured-service-title">Complete Trademark Registration</h3>
+                <h3 className="featured-service-title">Protecting Your Brand</h3>
                 <p className="featured-service-tagline">File your trademark with maximum brand protection.</p>
               </div>
               <div className="featured-service-content">
@@ -263,6 +249,7 @@ export default function Home() {
               </div>
               <div className="featured-service-buttons">
                 <a href="/markster" className="btn featured-btn-primary featured-btn-full">Protect Your Brand</a>
+                <p className="featured-service-explore-text">Explore Markster™</p>
               </div>
             </div>
 
@@ -293,35 +280,8 @@ export default function Home() {
               </div>
               <div className="featured-service-buttons">
                 <a href="/book-a-call" className="btn featured-btn-primary featured-btn-full">Connect Now</a>
+                <p className="featured-service-explore-text">Explore Agreementor™</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Our Expertise section */}
-      <section id="services">
-        <div className="container">
-          <h2>Our Expertise</h2>
-          <p className="services-description">Comprehensive legal solutions for the digital age</p>
-          <div className="services-grid">
-            {/* Commercial Contracts block */}
-            <div className="service">
-              <i className="fa-solid fa-file-signature service-icon" aria-hidden="true"></i>
-              <h3>Commercial Contracts</h3>
-              <p>Drafting, negotiating and reviewing vendor, client and partnership agreements that balance commercial outcomes with regulatory compliance.</p>
-            </div>
-            {/* Intellectual Property block */}
-            <div className="service">
-              <i className="fa-solid fa-lightbulb service-icon" aria-hidden="true"></i>
-              <h3>Intellectual Property</h3>
-              <p>Protection strategies for patents, trademarks, copyrights and trade secrets, including licensing support and portfolio management.</p>
-            </div>
-            {/* IT &amp; Data Privacy block */}
-            <div className="service">
-              <i className="fa-solid fa-shield-halved service-icon" aria-hidden="true"></i>
-              <h3>IT &amp; Data Privacy</h3>
-              <p>Advisory on technology law, cybersecurity obligations and global privacy frameworks to keep digital operations resilient and compliant.</p>
             </div>
           </div>
         </div>
