@@ -398,6 +398,7 @@ export default function Home() {
           {/* CTA Button */}
           <div className="how-it-works-cta">
             <a href="/book-a-call" className="btn homepage-btn-primary">Start With Free Consultation</a>
+            <p className="how-it-works-cta-subtext">No obligation to take our services</p>
           </div>
         </div>
       </section>
