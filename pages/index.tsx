@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import React from 'react';
-import { Shield, FileText, Lock, ClipboardCheck, Scale } from 'lucide-react';
+import React, { useState } from 'react';
+import { Shield, FileText, Lock, ClipboardCheck, Scale, ChevronDown } from 'lucide-react';
 
 export default function Home() {
   // Handle form submission by calling the contact API
@@ -483,6 +483,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <FAQSection />
+
       {/* Markster Button Section */}
       <section className="markster-banner">
         <div className="container">
@@ -530,5 +533,125 @@ export default function Home() {
         </div>
       </section>
     </>
+  );
+}
+
+// FAQ Accordion Item Component
+function FAQItem({ question, answer, isOpen, onClick }: { 
+  question: string; 
+  answer: React.ReactNode; 
+  isOpen: boolean; 
+  onClick: () => void;
+}) {
+  return (
+    <div className={`faq-item ${isOpen ? 'faq-item-open' : ''}`}>
+      <button className="faq-question" onClick={onClick} type="button" aria-expanded={isOpen}>
+        <span className="faq-question-text">{question}</span>
+        <ChevronDown className={`faq-chevron ${isOpen ? 'faq-chevron-open' : ''}`} size={20} />
+      </button>
+      <div className={`faq-answer ${isOpen ? 'faq-answer-open' : ''}`}>
+        <div className="faq-answer-content">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// FAQ Section Component
+function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "How is your pricing lower than big law firms?",
+      answer: "No fancy office overhead, no unnecessary hourly billing, no bureaucracy. We focus on efficiency and technology. We're also selective about the work we take. Most of our clients opt for retainership packages, being cost efficient. This specialization makes us faster."
+    },
+    {
+      question: "Can you handle urgent requests?",
+      answer: "Yes. Standard turnaround is 24 hours. For urgent matters (same-day or next-day), we charge around 50% rush fee. Most clients find our standard turnaround fast enough."
+    },
+    {
+      question: "Do you work remotely across India?",
+      answer: (
+        <>
+          Yes. While our teams are physically present at Delhi NCR, we work with clients across India for contracts, trademarks, compliance and corporate matters. Everything is handled via email, WhatsApp, and video calls.
+          <br /><br />
+          Real estate and property law services are primarily Delhi-NCR focused.
+        </>
+      )
+    },
+    {
+      question: "What if my contract is more complex or voluminous?",
+      answer: (
+        <>
+          During initial consultation, we assess scope. If it&apos;s more complex or voluminous, we quote accordingly before starting. We always discuss additional scope and cost before proceeding.
+          <br /><br />
+          <strong>Full Transparency. No surprise bills.</strong>
+        </>
+      )
+    },
+    {
+      question: "Do you handle litigation or court cases?",
+      answer: "No. We focus on preventive legal work, to protect you from unnecessary court proceedings. If you need litigation support, we can refer you to the trusted litigation specialists."
+    },
+    {
+      question: "How do I know if I need a lawyer or can use a template?",
+      answer: (
+        <>
+          Templates work for very standard, low-risk situations. You need a specialised lawyer when: (1) money involved is significant, (2) relationship is complex, (3) IP or sensitive data involved, (4) your position is at risk or may be exploited, as the other party is a large organization, (5) terms are non-standard or one-sided.
+          <br /><br />
+          Book a free consultation — we&apos;ll honestly tell you if you can try DIY.
+        </>
+      )
+    },
+    {
+      question: "What's included in the Free consultation?",
+      answer: (
+        <>
+          FREE 20-minute video or audio call where we:
+          <ul className="faq-answer-list">
+            <li>Understand your situation</li>
+            <li>Assess risk and contingencies</li>
+            <li>Identify legal requirements</li>
+            <li>Recommend appropriate service/ strategy</li>
+            <li>Quote fixed fee if you want to proceed</li>
+            <li>Delivery and answer to your questions</li>
+          </ul>
+          No obligation to hire us. You just get the idea of what you need and who we are.
+        </>
+      )
+    },
+    {
+      question: "How long does trademark registration take?",
+      answer: (
+        <>
+          In India: 18-24 months from filing to registration (if no objections). We complete search and filing within 7 days. Then you wait for government examination (3-6 months). If objections raised, we respond. Timeline is mostly government-dependent. For more details, check dedicated Trademark Service- <a href="/markster" className="faq-link">Markster</a>.
+        </>
+      )
+    }
+  ];
+
+  return (
+    <section id="faq" className="faq-section">
+      <div className="container">
+        <h2 className="faq-headline">Common Frequently Asked Questions</h2>
+        <div className="faq-container">
+          {faqData.map((faq, index) => (
+            <FAQItem
+              key={index}
+              question={faq.question}
+              answer={faq.answer}
+              isOpen={openIndex === index}
+              onClick={() => toggleFAQ(index)}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
