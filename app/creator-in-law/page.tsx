@@ -3,7 +3,7 @@ import CreatorInLawLanding from './CreatorInLawClient';
 
 export const metadata: Metadata = {
   title: 'The Compliers - Legal Support for Creators & Influencers',
-  description: 'The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.',
+  description: 'The Compliers review agency contracts, sponsorship deals, and IP rights for Indian content creators. Creators focus on content creation with no headache about contracts and legal risks.',
 };
 
 export default function CreatorInLawPage() {
