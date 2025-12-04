@@ -331,7 +331,8 @@
   font-style: italic;
   font-weight: 500;
 }
-.markster-tagline {
+.markster-tagline,
+.agreementor-tagline {
   font-size: 0.9rem;
 }
 .featured-service-content {

@@ -251,17 +251,13 @@ export default function Home() {
               <div className="featured-service-header">
                 <span className="featured-service-brand">AGREEMENTOR™</span>
                 <h3 className="featured-service-title">Your Contract Specialist</h3>
-                <p className="featured-service-tagline">Keeps you risk-free while signing an agreement.</p>
+                <p className="featured-service-tagline agreementor-tagline">Keeps you risk-free while signing an agreement.</p>
               </div>
               <div className="featured-service-content">
-                <h4 className="featured-service-label">What&apos;s offered:</h4>
                 <ul className="featured-service-list">
                   <li>✓ Comprehensive Risk Report</li>
-                  <li>✓ Drafting of contracts &amp; Agreements</li>
+                  <li>✓ Drafting Contracts &amp; Agreements</li>
                   <li>✓ Document review and redlining</li>
-                  <li>✓ Business risk analysis &amp; advisory</li>
-                  <li>✓ Roadmap for legal compliance</li>
-                  <li>✓ Complex laws simplified</li>
                   <li>✓ NDAs and Employment Agreements</li>
                 </ul>
                 <p className="featured-service-timeline">
@@ -273,7 +269,6 @@ export default function Home() {
               </div>
               <div className="featured-service-buttons">
                 <a href="/book-a-call" className="btn featured-btn-primary featured-btn-full">Connect Now</a>
-                <p className="featured-service-explore-text">Explore Agreementor™</p>
               </div>
             </div>
           </div>
