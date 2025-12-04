@@ -3,7 +3,7 @@ import MarksterLanding from './MarksterClient';
 
 export const metadata: Metadata = {
   title: 'The Compliers - Experts for Trademark filing, search & advisory',
-  description: 'Lawyer-led, specialized trademark package for Indian startups & MSMEs: with deep search & risk opinion, form filing, examination reply, and 60-day watch—wrapped with transparency.',
+  description: 'Secure your brand identity in 3 days. Online Trademark search and filing service for Indian businesses. Fast, digital, and rejection-proof.',
 };
 
 export default function MarksterPage() {
