@@ -253,22 +253,19 @@
   background: #ffffff;
   border-radius: 24px;
   padding: 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
   border: 2px solid transparent;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.3s ease;
   display: flex;
   flex-direction: column;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
+  margin-top: 1.5rem;
 }
 .featured-service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: 24px 24px 0 0;
+  display: none;
 }
 .markster-card::before {
   background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
@@ -296,7 +293,7 @@
 }
 .featured-service-header {
   margin-bottom: 1.75rem;
-  padding-bottom: 1.75rem;
+  padding-bottom: 0.45rem;
   border-bottom: 2px solid #e5e7eb;
 }
 .featured-service-brand {
@@ -304,10 +301,13 @@
   font-size: 0.9rem;
   font-weight: 800;
   letter-spacing: 0.15em;
-  padding: 0.5rem 1.25rem;
+  padding: 0.6rem 1.5rem;
   border-radius: 25px;
-  margin-bottom: 1.25rem;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0.3rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  transform: translateY(-0.75rem);
+  z-index: 10;
 }
 .markster-card .featured-service-brand {
   background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
@@ -331,9 +331,13 @@
   font-style: italic;
   font-weight: 500;
 }
+.markster-tagline,
+.agreementor-tagline {
+  font-size: 0.9rem;
+}
 .featured-service-content {
   flex: 1;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 .featured-service-label {
   font-size: 1rem;
@@ -344,13 +348,13 @@
 .featured-service-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 1.75rem 0;
+  margin: 0 0 1.25rem 0;
 }
 .featured-service-list li {
   font-size: 0.95rem;
   color: #374151;
-  padding: 0.5rem 0;
-  line-height: 1.6;
+  padding: 0.25rem 0;
+  line-height: 1.4;
   display: flex;
   align-items: flex-start;
 }
@@ -358,9 +362,9 @@
   font-size: 1rem;
   color: #1f2937;
   margin: 0 0 1rem 0;
-  padding: 1rem 1.25rem;
+  padding: 0.5rem 1rem;
   background: linear-gradient(135deg, #f3f4f6 0%, #e5e7eb 100%);
-  border-radius: 12px;
+  border-radius: 8px;
   font-weight: 500;
   border-left: 4px solid;
 }
