@@ -228,7 +228,6 @@ export default function Home() {
                 <p className="featured-service-tagline markster-tagline">Filing your trademark early for maximum brand protection.</p>
               </div>
               <div className="featured-service-content">
-                <h4 className="featured-service-label">What&apos;s included:</h4>
                 <ul className="featured-service-list">
                   <li>✓ Comprehensive search</li>
                   <li>✓ TM-A application filing</li>
@@ -258,7 +257,6 @@ export default function Home() {
                   <li>✓ Comprehensive Risk Report</li>
                   <li>✓ Drafting Contracts &amp; Agreements</li>
                   <li>✓ Document review and redlining</li>
-                  <li>✓ NDAs and Employment Agreements</li>
                 </ul>
                 <p className="featured-service-timeline">
                   <strong>Timeline:</strong> 3 days average delivery time
