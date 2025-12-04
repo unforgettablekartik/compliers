@@ -264,13 +264,7 @@
   margin-top: 1.5rem;
 }
 .featured-service-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 4px;
-  border-radius: 24px 24px 0 0;
+  display: none;
 }
 .markster-card::before {
   background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
@@ -298,7 +292,7 @@
 }
 .featured-service-header {
   margin-bottom: 1.75rem;
-  padding-bottom: 1.75rem;
+  padding-bottom: 0.45rem;
   border-bottom: 2px solid #e5e7eb;
 }
 .featured-service-brand {
@@ -308,7 +302,7 @@
   letter-spacing: 0.15em;
   padding: 0.6rem 1.5rem;
   border-radius: 25px;
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.3rem;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   transform: translateY(-0.75rem);
