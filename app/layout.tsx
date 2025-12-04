@@ -22,14 +22,14 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
           rel="stylesheet"
         />
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H5KRRLXQGL"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-7BRF35JH6P"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-H5KRRLXQGL');
+              gtag('config', 'G-7BRF35JH6P');
             `,
           }}
         />
