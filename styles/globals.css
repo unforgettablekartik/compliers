@@ -331,6 +331,9 @@
   font-style: italic;
   font-weight: 500;
 }
+.markster-tagline {
+  font-size: 0.9rem;
+}
 .featured-service-content {
   flex: 1;
   margin-bottom: 1.5rem;
