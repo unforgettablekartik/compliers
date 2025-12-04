@@ -2,15 +2,15 @@ import Head from 'next/head';
 import React, { useState } from 'react';
 import { Shield, FileText, Lock, ClipboardCheck, Scale, ChevronDown } from 'lucide-react';
 
+export const metadata = {
+  title: 'Best Legal Counsel for Growing Businesses, Creators & Agencies | The Compliers',
+  description: 'As your legal partner, we handle contracts, agreements, trademarks & specialized advisory, with quick connect and transparent fee structure. No surprise billing. No headaches.',
+}
+
 export default function Home() {
   return (
     <>
       <Head>
-        <title>The Compliers - Best Legal Counsel for Contracts, Trademarks & Corporate Compliance</title>
-        <meta
-          name="description"
-          content="Founders' favorite General Counsel, The Compliers offers affordable legal solution for contracts, trademark registration, and corporate matters. Serving businesses, startups, content creators, agencies and professionals as specialized legal counsel. Project-based and retainer services available with reasonable fixed fee options."
-        />
         {/* Favicons */}
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
