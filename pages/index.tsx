@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import { Shield, FileText, Lock, ClipboardCheck, Scale, ChevronDown } from 'lucide-react';
 
 export const metadata = {
-  title: 'The Compliers | Legal Protection for Startups & Creators',
-  description: 'Fixed-fee corporate legal services in Delhi. We handle Trademarks, Contracts, and Compliance for Startups and Influencers. No hourly billing.',
+  title: 'Best Legal Counsel for Growing Businesses, Creators & Agencies | The Compliers',
+  description: 'As your legal partner, we handle contracts, agreements, trademarks & specialized advisory, with quick connect and transparent fee structure. No surprise billing. No headaches.',
 }
 
 export default function Home() {
