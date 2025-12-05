@@ -139,7 +139,7 @@ export default async function handler(
     // Email content
     const mailOptions = {
       from: process.env.SMTP_FROM,
-      to: 'contact@thecompliers.info',
+      to: 'contact@thecompliers.com',
       subject: `New Contact Form Submission from ${name}`,
       text: `
 You have received a new message from the contact form:

@@ -14,7 +14,7 @@ export default function Privacy() {
           
           <p>This Privacy Policy explains how <strong>The Compliers</strong> (&quot;<strong>The Compliers</strong>&quot;, &quot;<strong>we</strong>&quot;, &quot;<strong>us</strong>&quot;, or &quot;<strong>our</strong>&quot;) collects, uses, shares and protects your digital personal data when you:</p>
           <ul>
-            <li>visit our website <a href="https://www.thecompliers.info">https://www.thecompliers.info</a> (the &quot;<strong>Website</strong>&quot;);</li>
+            <li>visit our website <a href="https://www.thecompliers.com">https://www.thecompliers.com</a> (the &quot;<strong>Website</strong>&quot;);</li>
             <li>interact with our service sections, including pages &quot;<strong>Agreementor</strong>&quot;, &quot;<strong><a href="/creator-in-law">Creator&apos;s in Law</a></strong>&quot;, and &quot;<strong><a href="/markster">Markster</a></strong>&quot;; and</li>
             <li>contact us through our contact form, chat box, WhatsApp, or the &quot;Book A Call&quot; button.</li>
           </ul>
@@ -32,12 +32,12 @@ export default function Privacy() {
           <p><strong>Data Fiduciary / Operator:</strong><br />
           The Compliers<br />
           Address: A-41, S/F, South Ex-II, Delhi- 110049, India<br />
-          Email: <a href="mailto:connect@thecompliers.info">connect@thecompliers.info</a><br />
-          Website: <a href="https://www.thecompliers.info">https://www.thecompliers.info</a></p>
+          Email: <a href="mailto:connect@thecompliers.com">connect@thecompliers.com</a><br />
+          Website: <a href="https://www.thecompliers.com">https://www.thecompliers.com</a></p>
           
           <p><strong>Grievance Officer / Data Protection Contact:</strong><br />
           Name: Kartikeya Pachauri<br />
-          Email: <a href="mailto:enquiry@thecompliers.info">enquiry@thecompliers.info</a><br />
+          Email: <a href="mailto:enquiry@thecompliers.com">enquiry@thecompliers.com</a><br />
           Contact address: A-41, S/F, South Ex-II, Delhi- 110049, India</p>
           
           <hr />
@@ -171,7 +171,7 @@ export default function Privacy() {
             <li><strong>Right to Grievance Redressal:</strong> Lodge a complaint with us or with the Data Protection Board of India if you believe your data has been mishandled.</li>
           </ul>
           
-          <p>To exercise any of these rights, please contact our Grievance Officer at <a href="mailto:enquiry@thecompliers.info">enquiry@thecompliers.info</a>.</p>
+          <p>To exercise any of these rights, please contact our Grievance Officer at <a href="mailto:enquiry@thecompliers.com">enquiry@thecompliers.com</a>.</p>
           
           <hr />
           
@@ -217,7 +217,7 @@ export default function Privacy() {
           
           <p><strong>Grievance Officer:</strong><br />
           Name: Kartikeya Pachauri<br />
-          Email: <a href="mailto:enquiry@thecompliers.info">enquiry@thecompliers.info</a><br />
+          Email: <a href="mailto:enquiry@thecompliers.com">enquiry@thecompliers.com</a><br />
           Address: A-41, S/F, South Ex-II, Delhi- 110049, India</p>
           
           <p>We aim to respond to all grievances within 30 days of receipt.</p>

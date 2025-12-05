@@ -29,7 +29,7 @@ export default function BookACall() {
             />
           </div>
           <p style={{ textAlign: "center", marginTop: "1.5rem", fontSize: "0.95rem", color: "#555" }}>
-            Share relevant documents & information at <a href="mailto:connect@thecompliers.info" style={{ color: "#0077cc", textDecoration: "underline" }}>connect@thecompliers.info</a>
+            Share relevant documents & information at <a href="mailto:connect@thecompliers.com" style={{ color: "#0077cc", textDecoration: "underline" }}>connect@thecompliers.com</a>
           </p>
         </div>
       </section>

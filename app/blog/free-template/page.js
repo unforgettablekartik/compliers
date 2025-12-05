@@ -63,7 +63,7 @@ export default function FreeTemplateTrap() {
             At <strong>The Compliers</strong>, we don't just draft documents; we build shields. Our <strong>Startup Protection Package</strong> is designed specifically for Delhi/NCR founders to close these loopholes.
           </p>
           <a 
-            href="mailto:contact@thecompliers.info?subject=I need the Startup Shield" 
+            href="mailto:contact@thecompliers.com?subject=I need the Startup Shield" 
             className="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded hover:bg-blue-700 transition"
           >
             Get Protected Now

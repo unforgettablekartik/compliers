@@ -477,8 +477,8 @@ export default function CreatorInLawLanding() {
             <div className="creator-contact-methods">
               <div className="creator-contact-item">
                 <Mail className="creator-contact-icon" aria-hidden />
-                <a href="mailto:connect@thecompliers.info" className="creator-contact-link">
-                  connect@thecompliers.info
+                <a href="mailto:connect@thecompliers.com" className="creator-contact-link">
+                  connect@thecompliers.com
                 </a>
               </div>
               <div className="creator-contact-item">
