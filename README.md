@@ -25,14 +25,14 @@ Create a `.env.local` file in the project root or set the variables in your depl
 
 The application supports subdomain routing for the Markster™ service:
 
-- **Main domain**: `thecompliers.info` - Hosts the main website and all standard routes
-- **Markster subdomain**: `markster.thecompliers.info` - Automatically routes to the `/markster` section
+- **Main domain**: `thecompliers.com` - Hosts the main website and all standard routes
+- **Markster subdomain**: `markster.thecompliers.com` - Automatically routes to the `/markster` section
 
 ### How it works
 
 The middleware in `middleware.ts` detects requests to the `markster` subdomain and rewrites them to the `/markster` path:
-- `markster.thecompliers.info/` → rewrites to `/markster`
-- `markster.thecompliers.info/dashboard` → rewrites to `/markster/dashboard`
+- `markster.thecompliers.com/` → rewrites to `/markster`
+- `markster.thecompliers.com/dashboard` → rewrites to `/markster/dashboard`
 
 ### DNS Configuration
 
@@ -41,10 +41,10 @@ To enable the subdomain in production, configure your DNS provider with an A or 
 ```
 Type: CNAME
 Name: markster
-Value: thecompliers.info (or your deployment domain)
+Value: thecompliers.com (or your deployment domain)
 ```
 
-For deployment platforms like Vercel, ensure the domain `markster.thecompliers.info` is added to your project's domain configuration.
+For deployment platforms like Vercel, ensure the domain `markster.thecompliers.com` is added to your project's domain configuration.
 
 ## Development
 

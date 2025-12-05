@@ -471,8 +471,8 @@ export default function MarksterLanding() {
               <div className="markster-intake-contact">
                 <div className="markster-contact-item">
                   <Mail className="markster-contact-icon" aria-hidden="true" />
-                  <a href="mailto:markster@thecompliers.info" className="markster-contact-link">
-                    markster@thecompliers.info
+                  <a href="mailto:markster@thecompliers.com" className="markster-contact-link">
+                    markster@thecompliers.com
                   </a>
                 </div>
                 <div className="markster-contact-item">

@@ -14,7 +14,7 @@ export default function Terms() {
           
           <p>Welcome to <strong>The Compliers</strong> (the &quot;<strong>Website</strong>&quot;). These Terms of Use (&quot;<strong>Terms</strong>&quot;) govern your access to and use of:</p>
           <ul>
-            <li>our website <a href="https://www.thecompliers.info">www.thecompliers.info</a> (including all sub-pages and tools),</li>
+            <li>our website <a href="https://www.thecompliers.com">www.thecompliers.com</a> (including all sub-pages and tools),</li>
             <li>our branded service pages and tools, including <strong>&quot;Agreementor&quot;</strong>, <strong><a href="/creator-in-law">&quot;Creator&apos;s in Law&quot;</a></strong>, and <strong><a href="/markster">&quot;Markster&quot;</a></strong>, and</li>
             <li>any associated contact forms, chat features, and third-party booking tools (collectively, the &quot;<strong>Services</strong>&quot;).</li>
           </ul>
@@ -162,7 +162,7 @@ export default function Terms() {
           Any disputes arising out of or relating to these Terms or your use of the Website shall be subject to the exclusive jurisdiction of the courts located in New Delhi, India.</p>
           
           <p><strong>13.3 Informal Resolution</strong><br />
-          Before initiating any formal legal action, you agree to contact us at <a href="mailto:connect@thecompliers.info">connect@thecompliers.info</a> to attempt to resolve the dispute informally within 30 days.</p>
+          Before initiating any formal legal action, you agree to contact us at <a href="mailto:connect@thecompliers.com">connect@thecompliers.com</a> to attempt to resolve the dispute informally within 30 days.</p>
           
           <hr />
           
@@ -180,8 +180,8 @@ export default function Terms() {
           <p>If you have any questions about these Terms, please contact us at:</p>
           <p>
             <strong>The Compliers</strong><br />
-            Email: <a href="mailto:enquiry@thecompliers.info">enquiry@thecompliers.info</a><br />
-            Website: <a href="https://www.thecompliers.info">www.thecompliers.info</a>
+            Email: <a href="mailto:enquiry@thecompliers.com">enquiry@thecompliers.com</a><br />
+            Website: <a href="https://www.thecompliers.com">www.thecompliers.com</a>
           </p>
         </div>
       </section>

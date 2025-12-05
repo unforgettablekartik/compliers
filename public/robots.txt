@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.thecompliers.info/sitemap.xml
+Sitemap: https://www.thecompliers.com/sitemap.xml

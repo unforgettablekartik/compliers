@@ -445,7 +445,7 @@ export default function Home() {
             <a href="/about#contact" className="btn homepage-btn-secondary">Contact for Enquiries</a>
           </div>
           <p className="final-cta-response-time">Response time: 4 hours during business days</p>
-          <p className="final-cta-email-text"><strong>You may email your queries with relevant documents to : connect@thecompliers.info</strong></p>
+          <p className="final-cta-email-text"><strong>You may email your queries with relevant documents to : connect@thecompliers.com</strong></p>
         </div>
       </section>
     </>
