@@ -20,7 +20,7 @@ export default function SiteFooter() {
           <div className="footer-section">
             <h3 className="footer-heading">Our Expertise</h3>
             <ul className="footer-links">
-              <li><span className="footer-text-unclickable">Contracts & Agreements</span></li>
+              <li><Link href="/agreementor" onClick={handleLinkClick('/agreementor')}>Contracts & Agreements</Link></li>
               <li><Link href="/markster" onClick={handleLinkClick('/markster')}>Trademarks & IP</Link></li>
               <li><Link href="/creator-in-law" onClick={handleLinkClick('/creator-in-law')}>Creators' Legal Counsel</Link></li>
               <li><span className="footer-text-unclickable">Fractional General Counsel</span></li>
