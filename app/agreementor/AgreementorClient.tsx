@@ -214,7 +214,7 @@ export default function AgreementorClient() {
                 Contracts can make or break your business.
               </h2>
               <p className="agreementor-section-paragraph">
-                <span style={{ color: '#10b981', fontWeight: 'bold' }}>Your growth is your expertise! Contracts are ours.</span>
+                <span className="agreementor-highlight-text">Your growth is your expertise! Contracts are ours.</span>
                 <br />
                 Most businesses sign agreements without understanding the risks. Poor contracts lead to disputes, financial losses, and missed opportunities. We help you navigate the legal complexities.
               </p>
@@ -592,7 +592,7 @@ export default function AgreementorClient() {
               </Button>
               <Button 
                 className="agreementor-btn-primary agreementor-btn-large" 
-                onClick={() => window.dispatchEvent(new Event('openCompliersBot'))}
+                onClick={() => window.dispatchEvent(new CustomEvent('openCompliersBot'))}
               >
                 Let's Chat
               </Button>

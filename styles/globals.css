@@ -6331,6 +6331,11 @@ section h2 {
   flex-shrink: 0;
 }
 
+.agreementor-highlight-text {
+  color: #10b981;
+  font-weight: bold;
+}
+
 .agreementor-support-text {
   text-align: center;
   color: #6b7280;
