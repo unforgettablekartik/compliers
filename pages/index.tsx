@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Shield, FileText, Lock, ClipboardCheck, Scale, ChevronDown } from 'lucide-react';
 
 export const metadata = {
-  title: 'Best Legal Counsel for Growing Businesses, Creators & Agencies | The Compliers',
+  title: 'Best Legal Counsel for Growing Businesses | Contracts, Trademarks, Privacy | The Compliers',
   description: 'As your legal partner, we handle contracts, agreements, trademarks & specialized advisory, with quick connect and transparent fee structure. No surprise billing. No headaches.',
 }
 
