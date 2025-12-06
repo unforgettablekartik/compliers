@@ -266,7 +266,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="featured-service-buttons">
-                <a href="/book-a-call" className="btn featured-btn-primary featured-btn-full">Connect Now</a>
+                <a href="/agreementor" className="btn featured-btn-primary featured-btn-full">Explore Agreementor™</a>
               </div>
             </div>
           </div>
