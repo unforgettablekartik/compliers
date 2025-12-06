@@ -85,8 +85,7 @@ export default function AgreementorClient() {
         "Cross-border Deals",
         "Shareholders' Agreement",
         "NDA & Confidentiality",
-        "MSA & SOW",
-        "Joint Venture Contracts",
+        "JV, MSA & SOW",
         "Vendor Contracts"
       ],
       colorClass: "agreementor-card-business"
@@ -162,22 +161,12 @@ export default function AgreementorClient() {
       <Section className="agreementor-hero">
         <Container>
           <div className="agreementor-hero-grid">
-            {/* RiskOMeter on Left */}
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }} 
-              animate={{ opacity: 1, y: 0 }} 
-              transition={{ duration: 0.6, delay: 0.1 }} 
-              className="agreementor-hero-left"
-            >
-              <RiskOMeter />
-            </motion.div>
-
-            {/* Content on Right */}
+            {/* Content on Left */}
             <motion.div 
               initial={{ opacity: 0, y: 10 }} 
               animate={{ opacity: 1, y: 0 }} 
               transition={{ duration: 0.6 }} 
-              className="agreementor-hero-right"
+              className="agreementor-hero-left"
             >
               <div className="agreementor-brand-chip">
                 <FileText className="h-4 w-4" aria-hidden />
@@ -200,6 +189,16 @@ export default function AgreementorClient() {
               <p className="agreementor-hero-caption">
                 Free 20-minute discovery call. No obligations, just clarity.
               </p>
+            </motion.div>
+
+            {/* RiskOMeter on Right */}
+            <motion.div 
+              initial={{ opacity: 0, y: 20 }} 
+              animate={{ opacity: 1, y: 0 }} 
+              transition={{ duration: 0.6, delay: 0.1 }} 
+              className="agreementor-hero-right"
+            >
+              <RiskOMeter />
             </motion.div>
           </div>
         </Container>

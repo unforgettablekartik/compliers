@@ -6056,21 +6056,21 @@ section h2 {
 }
 
 .agreementor-hero-left {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.agreementor-hero-right {
   display: flex;
   flex-direction: column;
 }
 
 @media (min-width: 768px) {
-  .agreementor-hero-left {
+  .agreementor-hero-right {
     margin-top: 4rem;
   }
-}
-
-.agreementor-hero-right {
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
 }
 
 .agreementor-brand-chip {
@@ -6098,7 +6098,7 @@ section h2 {
 }
 
 .agreementor-hero-title {
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.3;
   color: #111827;
@@ -6107,14 +6107,14 @@ section h2 {
 
 @media (min-width: 768px) {
   .agreementor-hero-title {
-    font-size: 2.5rem;
+    font-size: 2.375rem;
     line-height: 1.25;
   }
 }
 
 @media (min-width: 1024px) {
   .agreementor-hero-title {
-    font-size: 3rem;
+    font-size: 2.875rem;
     line-height: 1.2;
   }
 }
