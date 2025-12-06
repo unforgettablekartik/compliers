@@ -6,8 +6,17 @@ import SiteHeader from '@/components/SiteHeader';
 import CompliersBot from '@/components/CompliersBot';
 
 export const metadata: Metadata = {
-  title: 'The Compliers Blog',
-  description: 'Insights on law and technology.',
+  title: {
+    default: 'The Compliers - Legal Counsel for Growing Businesses, Creators & Agencies',
+    template: '%s | The Compliers',
+  },
+  description: 'Expert legal support for contracts, trademarks, compliance, and specialized advisory. Fixed fees, fast turnaround, transparent pricing. Your trusted legal partner.',
+  keywords: 'legal counsel, contracts, trademarks, compliance, legal advisory, business law, IP protection, NDA, agreements, legal services India',
+  openGraph: {
+    type: 'website',
+    locale: 'en_IN',
+    siteName: 'The Compliers',
+  },
 };
 
 export default function RootLayout({

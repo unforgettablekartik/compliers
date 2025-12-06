@@ -173,7 +173,7 @@ export default function AgreementorClient() {
                 <span><span className="agreementor-brand-name">Agreementor™</span> by The Compliers</span>
               </div>
               <h1 className="agreementor-hero-title">
-                Your Contract Specialist for Risk-Free Business Growth.
+                A Contract Specialist for Risk-Free Business Growth.
               </h1>
 
               <p className="agreementor-hero-description">
