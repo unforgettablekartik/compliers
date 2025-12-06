@@ -6400,7 +6400,6 @@ section h2 {
   gap: 1rem;
   transition: all 0.3s ease;
   height: auto;
-  min-height: auto;
 }
 
 .agreementor-coverage-card:hover {

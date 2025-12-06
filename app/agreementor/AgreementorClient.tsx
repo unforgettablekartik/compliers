@@ -217,7 +217,7 @@ export default function AgreementorClient() {
               <p className="agreementor-section-paragraph">
                 <span className="agreementor-highlight-text">Your growth is your expertise! Contracts are ours.</span>
                 <br />
-                Most businesses execute deals without assessing the legal risks. Poor contracts lead to disputes, financial losses, and missed opportunities. We navigate, analyse, and suggest on the legal complexities.
+                Most businesses execute deals without assessing the legal risks. Poor contracts lead to disputes, financial losses, and missed opportunities. We navigate, analyze, and suggest on the legal complexities.
               </p>
             </div>
             
