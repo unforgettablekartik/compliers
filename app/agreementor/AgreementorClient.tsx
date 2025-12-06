@@ -212,16 +212,12 @@ export default function AgreementorClient() {
           <div className="agreementor-problem-grid">
             <div className="agreementor-problem-left">
               <h2 className="agreementor-section-heading mb-4">
-                Contracts can make or break your business.
+                A document can make or break your business.
               </h2>
               <p className="agreementor-section-paragraph">
                 <span className="agreementor-highlight-text">Your growth is your expertise! Contracts are ours.</span>
                 <br />
-                Most businesses sign agreements without understanding the risks. Poor contracts lead to disputes, financial losses, and missed opportunities. We help you navigate the legal complexities.
-              </p>
-              
-              <p className="agreementor-support-text text-center">
-                Whether you're a startup founder, established business, or a creator — your contracts need to protect your interests at every stage.
+                Most businesses execute deals without assessing the legal risks. Poor contracts lead to disputes, financial losses, and missed opportunities. We navigate, analyse, and suggest on the legal complexities.
               </p>
             </div>
             
@@ -266,10 +262,10 @@ export default function AgreementorClient() {
       <Section className="bg-white">
         <Container>
           <div className="text-center mb-12">
-            <h2 className="agreementor-section-heading mb-3">
+            <h2 className="agreementor-section-heading agreementor-coverage-section-heading">
               Comprehensive Contract Coverage for Every Need
             </h2>
-            <p className="agreementor-section-paragraph max-w-3xl mx-auto">
+            <p className="agreementor-section-paragraph agreementor-coverage-section-paragraph max-w-3xl mx-auto">
               Whatever your industry or stage of growth, we have the expertise to protect your interests with tailored solutions.
             </p>
           </div>

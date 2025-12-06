@@ -6210,6 +6210,27 @@ section h2 {
   }
 }
 
+/* Specific styles for coverage section with reduced spacing */
+.agreementor-coverage-section-heading {
+  margin-bottom: 0.25rem;
+}
+
+@media (min-width: 768px) {
+  .agreementor-coverage-section-heading {
+    margin-bottom: 0.3125rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .agreementor-coverage-section-heading {
+    margin-bottom: 0.375rem;
+  }
+}
+
+.agreementor-coverage-section-paragraph {
+  margin-top: 0;
+}
+
 .agreementor-section-paragraph {
   font-size: 1rem;
   line-height: 1.7;
@@ -6378,7 +6399,8 @@ section h2 {
   flex-direction: column;
   gap: 1rem;
   transition: all 0.3s ease;
-  height: 100%;
+  height: auto;
+  min-height: auto;
 }
 
 .agreementor-coverage-card:hover {
