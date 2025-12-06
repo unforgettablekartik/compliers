@@ -6090,7 +6090,7 @@ section h2 {
 }
 
 .agreementor-brand-name {
-  background: #786F80;
+  background: #723D84;
   color: #fff;
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
@@ -6142,21 +6142,21 @@ section h2 {
 }
 
 .agreementor-btn-primary {
-  background-color: #786F80 !important;
+  background-color: #723D84 !important;
   color: #ffffff !important;
   padding: 0.875rem 2rem !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
   font-size: 1rem !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 4px 14px rgba(120, 111, 128, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(114, 61, 132, 0.4) !important;
   border: none !important;
   text-decoration: none !important;
 }
 
 .agreementor-btn-primary:hover {
-  background-color: #5a5163 !important;
-  box-shadow: 0 6px 20px rgba(120, 111, 128, 0.6) !important;
+  background-color: #5a2f68 !important;
+  box-shadow: 0 6px 20px rgba(114, 61, 132, 0.6) !important;
   transform: translateY(-2px) !important;
   color: #ffffff !important;
   text-decoration: none !important;
@@ -6353,7 +6353,7 @@ section h2 {
 }
 
 .agreementor-highlight-text {
-  color: #786F80;
+  color: rgba(114, 61, 132, 0.8);
   font-weight: bold;
 }
 
@@ -6525,7 +6525,7 @@ section h2 {
 
 /* Trust Section */
 .agreementor-trust-section {
-  background: linear-gradient(to bottom, #786F80 0%, #5a5163 100%);
+  background: linear-gradient(to bottom, rgba(114, 61, 132, 0.15) 0%, rgba(114, 61, 132, 0.25) 100%);
 }
 
 .agreementor-trust-grid {
@@ -6547,9 +6547,9 @@ section h2 {
 }
 
 .agreementor-trust-card {
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(114, 61, 132, 0.2);
   border-radius: 0.75rem;
   padding: 1.5rem;
   display: flex;
@@ -6560,29 +6560,29 @@ section h2 {
 }
 
 .agreementor-trust-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.9);
+  border-color: rgba(114, 61, 132, 0.3);
   transform: translateY(-4px);
 }
 
 .agreementor-trust-icon {
   width: 2.5rem;
   height: 2.5rem;
-  color: #FFFFFF;
+  color: #723D84;
   margin: 0 auto;
 }
 
 .agreementor-trust-title {
   font-size: 1rem;
   font-weight: 600;
-  color: #ffffff;
+  color: #1f2937;
   margin: 0;
   line-height: 1.4;
 }
 
 .agreementor-trust-description {
   font-size: 0.875rem;
-  color: #FFFFFF;
+  color: #4b5563;
   margin: 0;
   line-height: 1.6;
 }
@@ -6688,15 +6688,15 @@ section h2 {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #786F80 0%, #5a5163 100%);
-  color: #ffffff;
+  background: rgba(114, 61, 132, 0.2);
+  color: #723D84;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0 auto;
-  box-shadow: 0 4px 14px rgba(120, 111, 128, 0.4);
+  box-shadow: 0 4px 14px rgba(114, 61, 132, 0.2);
 }
 
 .agreementor-step-title {
@@ -6721,7 +6721,7 @@ section h2 {
 }
 
 .agreementor-colorful-box {
-  background-color: #786F80;
+  background-color: rgba(114, 61, 132, 0.2);
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   margin: 0 auto;
@@ -6737,7 +6737,7 @@ section h2 {
 }
 
 .agreementor-colorful-text {
-  color: white;
+  color: #723D84;
   font-weight: bold;
   font-size: 1.125rem;
   margin: 0;
@@ -6791,7 +6791,7 @@ section h2 {
 
 /* Final CTA Section */
 .agreementor-final-cta {
-  background: linear-gradient(to bottom, #786F80 0%, #5a5163 100%);
+  background: linear-gradient(to bottom, rgba(114, 61, 132, 0.15) 0%, rgba(114, 61, 132, 0.25) 100%);
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
 }
@@ -6807,7 +6807,7 @@ section h2 {
   font-size: 1.875rem;
   font-weight: 700;
   line-height: 1.3;
-  color: #ffffff;
+  color: #1f2937;
   margin: 0 0 1rem 0;
 }
 
@@ -6821,7 +6821,7 @@ section h2 {
 .agreementor-final-cta-subheading {
   font-size: 1rem;
   line-height: 1.7;
-  color: #FFFFFF;
+  color: #4b5563;
   margin: 0 0 1.25rem 0;
 }
 
@@ -6864,7 +6864,7 @@ section h2 {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #FFFFFF;
+  color: #4b5563;
   font-size: 0.875rem;
 }
 
@@ -6878,15 +6878,15 @@ section h2 {
   width: 1.25rem;
   height: 1.25rem;
   flex-shrink: 0;
-  color: #FFFFFF;
+  color: #723D84;
 }
 
 .agreementor-contact-link {
-  color: #FFFFFF;
+  color: #4b5563;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .agreementor-contact-link:hover {
-  color: #f0f0f0;
+  color: #723D84;
 }
