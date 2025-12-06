@@ -341,7 +341,7 @@ export default function AgreementorClient() {
           <div className="agreementor-services-grid">
             <div className="agreementor-service-card">
               <div className="agreementor-service-header">
-                <FileText className="agreementor-service-icon" style={{ color: '#10b981' }} aria-hidden />
+                <FileText className="agreementor-service-icon" style={{ color: '#786F80' }} aria-hidden />
                 <h3 className="agreementor-service-title">Contract Drafting</h3>
               </div>
               <p className="agreementor-service-description">
@@ -351,7 +351,7 @@ export default function AgreementorClient() {
 
             <div className="agreementor-service-card">
               <div className="agreementor-service-header">
-                <AlertTriangle className="agreementor-service-icon" style={{ color: '#10b981' }} aria-hidden />
+                <AlertTriangle className="agreementor-service-icon" style={{ color: '#786F80' }} aria-hidden />
                 <h3 className="agreementor-service-title">Risk Assessment & Review</h3>
               </div>
               <p className="agreementor-service-description">
@@ -361,7 +361,7 @@ export default function AgreementorClient() {
 
             <div className="agreementor-service-card">
               <div className="agreementor-service-header">
-                <HandshakeIcon className="agreementor-service-icon" style={{ color: '#10b981' }} aria-hidden />
+                <HandshakeIcon className="agreementor-service-icon" style={{ color: '#786F80' }} aria-hidden />
                 <h3 className="agreementor-service-title">Negotiation Support</h3>
               </div>
               <p className="agreementor-service-description">
@@ -371,7 +371,7 @@ export default function AgreementorClient() {
 
             <div className="agreementor-service-card">
               <div className="agreementor-service-header">
-                <Shield className="agreementor-service-icon" style={{ color: '#10b981' }} aria-hidden />
+                <Shield className="agreementor-service-icon" style={{ color: '#786F80' }} aria-hidden />
                 <h3 className="agreementor-service-title">Compliance Advisory</h3>
               </div>
               <p className="agreementor-service-description">
@@ -381,7 +381,7 @@ export default function AgreementorClient() {
 
             <div className="agreementor-service-card">
               <div className="agreementor-service-header">
-                <Scale className="agreementor-service-icon" style={{ color: '#10b981' }} aria-hidden />
+                <Scale className="agreementor-service-icon" style={{ color: '#786F80' }} aria-hidden />
                 <h3 className="agreementor-service-title">Legal Documentation</h3>
               </div>
               <p className="agreementor-service-description">
@@ -391,7 +391,7 @@ export default function AgreementorClient() {
 
             <div className="agreementor-service-card">
               <div className="agreementor-service-header">
-                <TrendingUp className="agreementor-service-icon" style={{ color: '#10b981' }} aria-hidden />
+                <TrendingUp className="agreementor-service-icon" style={{ color: '#786F80' }} aria-hidden />
                 <h3 className="agreementor-service-title">Retainership Packages</h3>
               </div>
               <p className="agreementor-service-description">

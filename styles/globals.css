@@ -6036,7 +6036,7 @@ section h2 {
 .agreementor-hero {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(to bottom, rgba(16, 185, 129, 0.15) 0%, rgba(255, 255, 255, 1) 100%);
+  background: linear-gradient(to bottom, #D8CFD0 0%, rgba(255, 255, 255, 1) 100%);
   padding: 4rem 0;
 }
 
@@ -6090,7 +6090,7 @@ section h2 {
 }
 
 .agreementor-brand-name {
-  background: #10b981;
+  background: #786F80;
   color: #fff;
   padding: 0.25rem 0.5rem;
   border-radius: 6px;
@@ -6142,21 +6142,21 @@ section h2 {
 }
 
 .agreementor-btn-primary {
-  background-color: #10b981 !important;
+  background-color: #786F80 !important;
   color: #ffffff !important;
   padding: 0.875rem 2rem !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
   font-size: 1rem !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(120, 111, 128, 0.4) !important;
   border: none !important;
   text-decoration: none !important;
 }
 
 .agreementor-btn-primary:hover {
-  background-color: #059669 !important;
-  box-shadow: 0 6px 20px rgba(16, 185, 129, 0.6) !important;
+  background-color: #5a5163 !important;
+  box-shadow: 0 6px 20px rgba(120, 111, 128, 0.6) !important;
   transform: translateY(-2px) !important;
   color: #ffffff !important;
   text-decoration: none !important;
@@ -6313,8 +6313,8 @@ section h2 {
 /* Expertise Card - spans two rows */
 .agreementor-expertise-card {
   grid-row: span 2;
-  background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
-  border: 1px solid #10b981;
+  background: linear-gradient(135deg, #f3f1f5 0%, #e6e2e9 100%);
+  border: 1px solid #786F80;
 }
 
 .agreementor-expertise-list {
@@ -6341,19 +6341,19 @@ section h2 {
 .agreementor-problem-icon-glyph {
   width: 1.25rem;
   height: 1.25rem;
-  color: #10b981;
+  color: #786F80;
   flex-shrink: 0;
 }
 
 .agreementor-counsel-icon {
   width: 1.25rem;
   height: 1.25rem;
-  color: #10b981;
+  color: #786F80;
   flex-shrink: 0;
 }
 
 .agreementor-highlight-text {
-  color: #10b981;
+  color: #786F80;
   font-weight: bold;
 }
 
@@ -6513,19 +6513,19 @@ section h2 {
 }
 
 .agreementor-card-digital .agreementor-coverage-icon {
-  background: rgba(16, 185, 129, 0.15);
-  color: #10b981;
+  background: rgba(120, 111, 128, 0.15);
+  color: #786F80;
 }
 .agreementor-card-digital .agreementor-coverage-list li::before {
-  color: #10b981;
+  color: #786F80;
 }
 .agreementor-card-digital {
-  border-color: rgba(16, 185, 129, 0.3);
+  border-color: rgba(120, 111, 128, 0.3);
 }
 
 /* Trust Section */
 .agreementor-trust-section {
-  background: linear-gradient(to bottom, #10b981 0%, #059669 100%);
+  background: linear-gradient(to bottom, #786F80 0%, #5a5163 100%);
 }
 
 .agreementor-trust-grid {
@@ -6688,7 +6688,7 @@ section h2 {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #786F80 0%, #5a5163 100%);
   color: #ffffff;
   display: flex;
   align-items: center;
@@ -6696,7 +6696,7 @@ section h2 {
   font-size: 1.25rem;
   font-weight: 700;
   margin: 0 auto;
-  box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 4px 14px rgba(120, 111, 128, 0.4);
 }
 
 .agreementor-step-title {
@@ -6721,7 +6721,7 @@ section h2 {
 }
 
 .agreementor-colorful-box {
-  background-color: #10b981;
+  background-color: #786F80;
   padding: 1rem 2rem;
   border-radius: 0.5rem;
   margin: 0 auto;
@@ -6785,13 +6785,13 @@ section h2 {
   width: 1.25rem;
   height: 1.25rem;
   flex-shrink: 0;
-  color: #10b981;
+  color: #786F80;
   margin-top: 0.125rem;
 }
 
 /* Final CTA Section */
 .agreementor-final-cta {
-  background: linear-gradient(to bottom, #10b981 0%, #059669 100%);
+  background: linear-gradient(to bottom, #786F80 0%, #5a5163 100%);
   padding-top: 2rem !important;
   padding-bottom: 2rem !important;
 }
