@@ -50,8 +50,10 @@ const ServiceCoverageCard = ({ icon, title, items, colorClass }: ServiceCardProp
     transition={{ duration: 0.5 }}
     className={`agreementor-coverage-card ${colorClass}`}
   >
-    <div className="agreementor-coverage-icon">{icon}</div>
-    <h3 className="agreementor-coverage-title">{title}</h3>
+    <div className="agreementor-coverage-header">
+      <div className="agreementor-coverage-icon">{icon}</div>
+      <h3 className="agreementor-coverage-title">{title}</h3>
+    </div>
     <ul className="agreementor-coverage-list">
       {items.map((item, index) => (
         <li key={index}>{item}</li>
@@ -104,7 +106,7 @@ export default function AgreementorClient() {
     },
     {
       icon: <Home className="w-8 h-8" />,
-      title: "Real Estate Stakeholders",
+      title: "Real Estate Industry",
       items: [
         "Agreement to Sell",
         "Title Assurance & Indemnity",
@@ -268,7 +270,7 @@ export default function AgreementorClient() {
               Comprehensive Contract Coverage for Every Need
             </h2>
             <p className="agreementor-section-paragraph max-w-3xl mx-auto">
-              Whatever your industry or stage of growth, we have the expertise to protect your interests with tailored contracts and agreements.
+              Whatever your industry or stage of growth, we have the expertise to protect your interests with tailored solutions.
             </p>
           </div>
           
@@ -452,7 +454,7 @@ export default function AgreementorClient() {
               <div className="agreementor-step-number">3</div>
               <h3 className="agreementor-step-title">Draft & Review</h3>
               <p className="agreementor-step-description">
-                Expert drafting with risk assessment. Redlined contracts with plain-English explanations.
+                Expert drafting with risk assessment. Redlining with plain-English explanations.
               </p>
             </motion.div>
 
