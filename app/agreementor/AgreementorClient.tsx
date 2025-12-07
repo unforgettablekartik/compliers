@@ -585,7 +585,7 @@ export default function AgreementorClient() {
             
             <div className="agreementor-final-cta-buttons">
               <Button className="agreementor-btn-primary agreementor-btn-large" asChild>
-                <a href="/book-a-call">Book A Call</a>
+                <a href="/book-a-call">Appointment</a>
               </Button>
               <Button 
                 className="agreementor-btn-primary agreementor-btn-large" 

@@ -13,12 +13,12 @@ export default function BookACall() {
   return (
     <>
       <Head>
-        <title>Book A Call | The Compliers</title>
+        <title>Appointment | The Compliers</title>
         <meta name="description" content="Schedule a consultation with The Compliers." />
       </Head>
       <section className="legal-page">
         <div className="container">
-          <h1>Book A Call</h1>
+          <h1>Appointment</h1>
           <p style={{ textAlign: "center" }}>Schedule a consultation with our legal experts. Choose a convenient time from the availability calendar below.</p>
           <div style={{ width: "100%", height: "600px", marginTop: "2rem", border: "2px solid #708090", borderRadius: "8px", overflow: "hidden" }}>
             <Cal 

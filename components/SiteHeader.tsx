@@ -49,7 +49,7 @@ export default function SiteHeader() {
             <Link href="/blog" onClick={handleLinkClick('/blog')}>Blogs</Link>
           </li>
           <li>
-            <Link href="/book-a-call" onClick={handleLinkClick('/book-a-call')}>Book A Call</Link>
+            <Link href="/book-a-call" onClick={handleLinkClick('/book-a-call')}>Appointment</Link>
           </li>
           <li>
             <Link href="/#contact" onClick={handleLinkClick('/#contact')}>Contact</Link>
