@@ -15,8 +15,8 @@ export default function Privacy() {
           <p>This Privacy Policy explains how <strong>The Compliers</strong> (&quot;<strong>The Compliers</strong>&quot;, &quot;<strong>we</strong>&quot;, &quot;<strong>us</strong>&quot;, or &quot;<strong>our</strong>&quot;) collects, uses, shares and protects your digital personal data when you:</p>
           <ul>
             <li>visit our website <a href="https://www.thecompliers.com">https://www.thecompliers.com</a> (the &quot;<strong>Website</strong>&quot;);</li>
-            <li>interact with our service sections, including pages &quot;<strong>Agreementor</strong>&quot;, &quot;<strong><a href="/creator-in-law">Creator&apos;s in Law</a></strong>&quot;, and &quot;<strong><a href="/markster">Markster</a></strong>&quot;; and</li>
-            <li>contact us through our contact form, chat box, WhatsApp, or the &quot;Book A Call&quot; button.</li>
+            <li>interact with our service sections, including pages &quot;<strong><a href="/agreementor">Agreementor</a></strong>&quot;, &quot;<strong><a href="/creator-in-law">Creator&apos;s in Law</a></strong>&quot;, and &quot;<strong><a href="/markster">Markster</a></strong>&quot;; and</li>
+            <li>contact us through our contact form, chat box, WhatsApp, or the &quot;Appointment&quot; button.</li>
           </ul>
           
           <p>This Policy is prepared with reference to the Digital Personal Data Protection Act, 2023 (&quot;<strong>DPDP Act</strong>&quot;) and the rules made thereunder, as applicable in India.</p>
@@ -46,13 +46,13 @@ export default function Privacy() {
           
           <p>This Privacy Policy applies to:</p>
           <ul>
-            <li>personal data we receive directly from you when you use contact forms, chat box, WhatsApp, or Book A Call; and</li>
+            <li>personal data we receive directly from you when you use contact forms, chat box, WhatsApp, or Appointment; and</li>
             <li>personal data captured when you use or browse our Website (such as basic technical logs).</li>
           </ul>
           
           <p>It does not apply to:</p>
           <ul>
-            <li>third-party websites or platforms that we link to (including any third-party scheduling tool used for &quot;Book A Call&quot; and WhatsApp); or</li>
+            <li>third-party websites or platforms that we link to (including any third-party scheduling tool used for &quot;Appointment&quot; and WhatsApp); or</li>
             <li>data processed under a signed engagement letter or client agreement, which will be governed separately by that agreement.</li>
           </ul>
           
@@ -91,7 +91,7 @@ export default function Privacy() {
             </thead>
             <tbody>
               <tr style={{borderBottom: '1px solid #e0e0e0'}}>
-                <td style={{padding: '0.75rem'}}>Responding to enquiries via contact form, chat box, WhatsApp or Book A Call</td>
+                <td style={{padding: '0.75rem'}}>Responding to enquiries via contact form, chat box, WhatsApp or Appointment</td>
                 <td style={{padding: '0.75rem'}}>Consent / Legitimate interest</td>
               </tr>
               <tr style={{borderBottom: '1px solid #e0e0e0'}}>

@@ -464,7 +464,7 @@ export default function CreatorInLawLanding() {
             
             <div className="creator-final-cta-buttons">
               <Button className="creator-btn-primary creator-btn-large" asChild>
-                <a href="/book-a-call">Book A Call</a>
+                <a href="/book-a-call">Appointment</a>
               </Button>
               <Button 
                 className="creator-btn-primary creator-btn-large" 

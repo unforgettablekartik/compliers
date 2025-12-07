@@ -15,7 +15,7 @@ export default function Terms() {
           <p>Welcome to <strong>The Compliers</strong> (the &quot;<strong>Website</strong>&quot;). These Terms of Use (&quot;<strong>Terms</strong>&quot;) govern your access to and use of:</p>
           <ul>
             <li>our website <a href="https://www.thecompliers.com">www.thecompliers.com</a> (including all sub-pages and tools),</li>
-            <li>our branded service pages and tools, including <strong>&quot;Agreementor&quot;</strong>, <strong><a href="/creator-in-law">&quot;Creator&apos;s in Law&quot;</a></strong>, and <strong><a href="/markster">&quot;Markster&quot;</a></strong>, and</li>
+            <li>our branded service pages and tools, including <strong><a href="/agreementor">&quot;Agreementor&quot;</a></strong>, <strong><a href="/creator-in-law">&quot;Creator&apos;s in Law&quot;</a></strong>, and <strong><a href="/markster">&quot;Markster&quot;</a></strong>, and</li>
             <li>any associated contact forms, chat features, and third-party booking tools (collectively, the &quot;<strong>Services</strong>&quot;).</li>
           </ul>
           
@@ -30,7 +30,7 @@ export default function Terms() {
           <p><strong>1.1 About The Compliers</strong><br />
           The Compliers is a legal services and consulting brand that provides, among other things:</p>
           <ul>
-            <li><strong>&quot;Agreementor&quot;</strong> – support with commercial contracts and agreements;</li>
+            <li><strong><a href="/agreementor">&quot;Agreementor&quot;</a></strong> – support with commercial contracts and agreements;</li>
             <li><strong><a href="/creator-in-law">&quot;Creator&apos;s in Law&quot;</a></strong> – legal services tailored for creators and creative businesses; and</li>
             <li><strong><a href="/markster">&quot;Markster&quot;</a></strong> – assistance with trademark registration and related brand protection services.</li>
           </ul>

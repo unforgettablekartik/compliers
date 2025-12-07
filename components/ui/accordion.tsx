@@ -23,9 +23,12 @@ export function Accordion({
         className={className} 
         {...props} 
         style={{ 
-          fontFamily: "Times New Roman, Times, serif",
+          fontFamily: "Montserrat, sans-serif",
           maxWidth: "1100px",
-          margin: "0 auto"
+          margin: "0 auto",
+          display: "flex",
+          flexDirection: "column",
+          gap: "1rem"
         }}
       >
         {children}
@@ -44,11 +47,37 @@ export function AccordionItem({
   if (!ctx) throw new Error("AccordionItem must be used within Accordion");
   const isOpen = ctx.openItem === value;
   return (
-    <div className={`${className}`} style={{ marginBottom: "16px" }} {...props}>
+    <div 
+      className={`${className}`} 
+      style={{ 
+        background: "#ffffff",
+        borderRadius: "12px",
+        border: "1px solid #e8e8e8",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.04)",
+        overflow: "hidden",
+        transition: "box-shadow 0.3s ease, border-color 0.3s ease",
+        ...(isOpen && {
+          borderColor: "#0077cc",
+          boxShadow: "0 4px 16px rgba(0, 119, 204, 0.15)"
+        })
+      }} 
+      {...props}
+      onMouseEnter={(e) => {
+        if (!isOpen) {
+          e.currentTarget.style.boxShadow = "0 4px 16px rgba(0, 119, 204, 0.1)";
+          e.currentTarget.style.borderColor = "#d0e8f0";
+        }
+      }}
+      onMouseLeave={(e) => {
+        if (!isOpen) {
+          e.currentTarget.style.boxShadow = "0 2px 8px rgba(0, 0, 0, 0.04)";
+          e.currentTarget.style.borderColor = "#e8e8e8";
+        }
+      }}
+    >
       {React.Children.map(children, (child: any) =>
         React.cloneElement(child, { isOpen, onToggle: () => ctx.setOpenItem(isOpen && ctx.collapsible ? null : value) })
       )}
-      <div style={{ borderBottom: "1px solid #e5e7eb" }} />
     </div>
   );
 }
@@ -61,23 +90,29 @@ export function AccordionTrigger({
   className = "",
   ...props
 }: React.PropsWithChildren<{ isOpen?: boolean; onToggle?: () => void; className?: string }>) {
+  const [isHovered, setIsHovered] = React.useState(false);
+  
   return (
     <button
-      className={`w-full text-left bg-white cursor-pointer ${className}`}
+      className={`w-full text-left cursor-pointer ${className}`}
       style={{
         border: 'none',
         outline: 'none',
-        background: 'white',
+        background: isHovered ? '#f9fafb' : 'transparent',
         boxShadow: 'none',
-        fontFamily: "Times New Roman, Times, serif",
-        fontSize: "1rem",
-        minHeight: "64px",
-        padding: "20px 24px",
-        paddingRight: "64px",
-        display: "block",
-        position: "relative"
+        fontFamily: "Montserrat, sans-serif",
+        fontSize: "1.05rem",
+        padding: "1.25rem 1.5rem",
+        paddingRight: "3.5rem",
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
+        position: "relative",
+        transition: "background-color 0.2s ease"
       }}
       onClick={onToggle}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
       type="button"
       aria-expanded={isOpen}
       {...props}
@@ -85,36 +120,36 @@ export function AccordionTrigger({
       <span
         className="font-bold"
         style={{
-          fontFamily: "Times New Roman, Times, serif",
-          fontWeight: "bold",
-          fontSize: "1rem",
+          fontFamily: "Montserrat, sans-serif",
+          fontWeight: "600",
+          fontSize: "1.05rem",
           display: "block",
-          lineHeight: "1.5"
+          lineHeight: "1.4",
+          color: "#1a1a1a",
+          flex: 1,
+          paddingRight: "1rem"
         }}
       >
         {children}
       </span>
-      {/* Chevron icon with 180° rotation - absolutely positioned for perfect alignment */}
+      {/* Chevron icon with 180° rotation */}
       <span
         aria-hidden="true"
         style={{ 
-          position: "absolute",
-          right: "24px",
-          top: "50%",
-          width: '24px', 
-          height: '24px', 
+          color: "#0077cc",
+          flexShrink: 0,
+          width: '20px', 
+          height: '20px', 
           display: 'flex', 
           alignItems: 'center', 
           justifyContent: 'center',
-          flexShrink: 0,
-          marginTop: '-12px',
           transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)',
           transition: 'transform 0.3s ease'
         }}
       >
         {/* Down arrow (chevron) - rotates to up when open */}
-        <svg width="24" height="24" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="1.5">
-          <polyline points="6 9 12 15 18 9"/>
+        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true" fill="none" stroke="currentColor" strokeWidth="2">
+          <polyline points="6 8 10 12 14 8"/>
         </svg>
       </span>
     </button>
@@ -127,20 +162,42 @@ export function AccordionContent({
   className = "",
   ...props
 }: React.PropsWithChildren<{ isOpen?: boolean; className?: string }>) {
-  return isOpen ? (
+  const contentRef = React.useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = React.useState<string>("0px");
+
+  React.useEffect(() => {
+    if (isOpen && contentRef.current) {
+      setMaxHeight(`${contentRef.current.scrollHeight}px`);
+    } else {
+      setMaxHeight("0px");
+    }
+  }, [isOpen, children]);
+
+  return (
     <div
-      className={`bg-white font-normal leading-relaxed ${className}`}
       style={{
-        fontFamily: "Times New Roman, Times, serif",
-        fontWeight: 400,
-        fontSize: "1rem",
-        background: "white",
-        margin: 0,
-        padding: "16px 24px 20px 24px"
+        maxHeight: maxHeight,
+        overflow: "hidden",
+        transition: isOpen ? "max-height 0.5s ease-in" : "max-height 0.3s ease-out"
       }}
-      {...props}
     >
-      {children}
+      <div
+        ref={contentRef}
+        className={`font-normal leading-relaxed ${className}`}
+        style={{
+          fontFamily: "Montserrat, sans-serif",
+          fontWeight: 400,
+          fontSize: "1rem",
+          background: "#f9fafb",
+          margin: 0,
+          padding: "0 1.5rem 1.5rem 1.5rem",
+          lineHeight: "1.7",
+          color: "#4a4a4a"
+        }}
+        {...props}
+      >
+        {children}
+      </div>
     </div>
-  ) : null;
+  );
 }
