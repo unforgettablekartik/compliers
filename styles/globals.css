@@ -271,7 +271,7 @@
   background: linear-gradient(90deg, #3b82f6 0%, #60a5fa 50%, #93c5fd 100%);
 }
 .agreementor-card::before {
-  background: linear-gradient(90deg, #10b981 0%, #34d399 50%, #6ee7b7 100%);
+  background: linear-gradient(90deg, #723D84 0%, #8E5AA0 50%, #A87BB8 100%);
 }
 .featured-service-card:hover {
   transform: translateY(-8px);
@@ -285,11 +285,11 @@
   border-color: #3b82f6;
 }
 .agreementor-card {
-  border-color: #a7f3d0;
-  background: linear-gradient(160deg, #ffffff 0%, #ecfdf5 40%, #d1fae5 100%);
+  border-color: #D4BFE0;
+  background: linear-gradient(160deg, #ffffff 0%, rgba(114, 61, 132, 0.15) 40%, rgba(114, 61, 132, 0.25) 100%);
 }
 .agreementor-card:hover {
-  border-color: #10b981;
+  border-color: #723D84;
 }
 .featured-service-header {
   margin-bottom: 1.75rem;
@@ -314,7 +314,7 @@
   color: #ffffff;
 }
 .agreementor-card .featured-service-brand {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #723D84 0%, #5A2E6A 100%);
   color: #ffffff;
 }
 .featured-service-title {
@@ -372,7 +372,7 @@
   border-left-color: #3b82f6;
 }
 .agreementor-card .featured-service-timeline {
-  border-left-color: #10b981;
+  border-left-color: #723D84;
 }
 .featured-service-perfect {
   font-size: 0.95rem;
@@ -404,11 +404,11 @@
   transform: translateY(-2px);
 }
 .agreementor-card .featured-btn-primary {
-  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(135deg, #723D84 0%, #5A2E6A 100%);
   color: #ffffff;
 }
 .agreementor-card .featured-btn-primary:hover {
-  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  background: linear-gradient(135deg, #5A2E6A 0%, #4A2457 100%);
   transform: translateY(-2px);
 }
 .featured-btn-disabled {
@@ -1603,12 +1603,12 @@ nav .nav-links a:hover {
 
 /* Agreementor Button */
 .homepage-service-btn-agreementor {
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%);
-  color: #065f46;
+  background: linear-gradient(135deg, rgba(114, 61, 132, 0.25) 0%, rgba(114, 61, 132, 0.35) 50%, rgba(142, 90, 160, 0.45) 100%);
+  color: #4A2457;
 }
 
 .homepage-service-btn-agreementor:hover {
-  background: linear-gradient(135deg, #a7f3d0 0%, #6ee7b7 50%, #34d399 100%);
+  background: linear-gradient(135deg, rgba(114, 61, 132, 0.35) 0%, rgba(142, 90, 160, 0.45) 50%, #8E5AA0 100%);
 }
 
 /* Creator in Law Button */
@@ -2513,11 +2513,11 @@ section h2 {
 }
 
 .service-tab-agreementor {
-  background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 50%, #6ee7b7 100%);
+  background: linear-gradient(135deg, rgba(114, 61, 132, 0.25) 0%, rgba(114, 61, 132, 0.35) 50%, rgba(142, 90, 160, 0.45) 100%);
 }
 
 .service-tab-agreementor::before {
-  background: linear-gradient(90deg, #10b981 0%, #059669 100%);
+  background: linear-gradient(90deg, #723D84 0%, #5A2E6A 100%);
 }
 
 .service-tab-markster {
