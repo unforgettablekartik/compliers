@@ -2795,7 +2795,7 @@ section h2 {
   border-radius: 9999px;
   font-size: 0.875rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;  /* Reduced by 50% from 1.5rem */
 }
 
 .markster-brand-name {
@@ -2822,7 +2822,7 @@ section h2 {
 
 @media (min-width: 768px) {
   .markster-hero-title {
-    font-size: 3.375rem;  /* Desktop size */
+    font-size: 3.3125rem;  /* Desktop size - reduced by 1pt (3.375rem - 0.0625rem) */
     margin-bottom: 1.5rem;
   }
 }
@@ -2845,7 +2845,7 @@ section h2 {
 }
 
 .markster-hero-description {
-  margin-top: 0.75rem;
+  margin-top: 0.375rem;  /* Reduced by 50% from 0.75rem */
   margin-bottom: 0.75rem;
   font-size: 0.81rem;  /* Reduced by 10% from 0.9rem (total 19% reduction from 1rem) */
   line-height: 1.6;  /* Tighter line height to fit in 3 lines */
