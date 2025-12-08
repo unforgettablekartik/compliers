@@ -1176,7 +1176,7 @@ export default function HRLegalCounsel() {
       {/* Custom Review Modal */}
       <Dialog open={showCustomReviewModal} onOpenChange={setShowCustomReviewModal}>
         <DialogContent>
-          <DialogClose onClose={() => setShowCustomReviewModal(false)} />
+          <DialogClose />
           <DialogHeader>
             <DialogTitle>Request Custom Legal Review</DialogTitle>
             <DialogDescription>
