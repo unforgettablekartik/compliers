@@ -36,8 +36,15 @@ const getInterpretation = (score: number): { text: string; color: string } => {
 
 // Speedometer/Gauge Component
 const SpeedometerGauge = ({ score }: { score: number }) => {
-  const interpretation = getInterpretation(score);
-  const angle = ((score - 1) / 9) * 180 - 90; // Maps score 1-10 to -90 to 90 degrees
+  // Display fixed 4/5 rating
+  const displayScore = 4;
+  const displayMaxScore = 5;
+  
+  // Calculate interpretation and angle based on the display score mapped to original scale
+  // 4/5 translates to 8/10 on the original scale for consistent needle position
+  const mappedScore = (displayScore / displayMaxScore) * 10;
+  const interpretation = getInterpretation(mappedScore);
+  const angle = ((mappedScore - 1) / 9) * 180 - 90; // Maps score 1-10 to -90 to 90 degrees
   
   return (
     <div className="riskmeter-gauge-container">
@@ -104,9 +111,9 @@ const SpeedometerGauge = ({ score }: { score: number }) => {
       </svg>
       <div className="riskmeter-gauge-score">
         <span className="riskmeter-score-value" style={{ color: interpretation.color }}>
-          {score}
+          {displayScore}
         </span>
-        <span className="riskmeter-score-label">/10</span>
+        <span className="riskmeter-score-label">/{displayMaxScore}</span>
       </div>
       <div className="riskmeter-interpretation" style={{ color: interpretation.color }}>
         {interpretation.text}
@@ -382,12 +389,27 @@ export default function RiskOMeter() {
               <p className="riskmeter-cta-text">
                 Get the best version of legal contracts from The Compliers
               </p>
-              <Button 
-                className="riskmeter-btn-cta" 
-                onClick={handleIAmIn}
-              >
-                I am in
-              </Button>
+              <div className="riskmeter-buttons-group">
+                <a 
+                  href="mailto:connect@thecompliers.com?subject=Risk Points for Contract"
+                  className="riskmeter-btn-email"
+                  style={{ textDecoration: 'none', display: 'inline-block' }}
+                >
+                  Email Risk Points
+                </a>
+                <Button 
+                  className="riskmeter-btn-cta" 
+                  onClick={handleIAmIn}
+                >
+                  Talk to Us
+                </Button>
+              </div>
+              <Link href="/book-a-call" className="riskmeter-get-detailed-report">
+                Get A Detailed Report
+                <span className="riskmeter-report-description">
+                  Pre-review inputs on Email for Rs. 99/- per page
+                </span>
+              </Link>
             </div>
 
             <button 

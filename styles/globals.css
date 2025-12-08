@@ -5769,7 +5769,17 @@ section h2 {
   line-height: 1.5;
 }
 
-.riskmeter-btn-cta {
+/* Buttons Group */
+.riskmeter-buttons-group {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+/* Email Risk Points Button */
+.riskmeter-btn-email {
   background-color: #6366f1 !important;
   color: #ffffff !important;
   padding: 0.625rem 1.5rem !important;
@@ -5781,10 +5791,54 @@ section h2 {
   border: none !important;
 }
 
-.riskmeter-btn-cta:hover {
+.riskmeter-btn-email:hover {
   background-color: #4f46e5 !important;
   box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6) !important;
   transform: translateY(-2px) !important;
+}
+
+/* Talk to Us Button - Caribbean Green */
+.riskmeter-btn-cta {
+  background-color: #00CC99 !important;
+  color: #ffffff !important;
+  padding: 0.625rem 1.5rem !important;
+  border-radius: 9999px !important;
+  font-weight: 600 !important;
+  font-size: 0.875rem !important;
+  transition: all 0.3s ease !important;
+  box-shadow: 0 4px 14px rgba(0, 204, 153, 0.4) !important;
+  border: none !important;
+}
+
+.riskmeter-btn-cta:hover {
+  background-color: #00B386 !important;
+  box-shadow: 0 6px 20px rgba(0, 204, 153, 0.6) !important;
+  transform: translateY(-2px) !important;
+}
+
+/* Get Detailed Report Link */
+.riskmeter-get-detailed-report {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.875rem;
+  color: #0077cc;
+  text-decoration: underline;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  font-weight: 600;
+}
+
+.riskmeter-get-detailed-report:hover {
+  color: #005fa3;
+}
+
+.riskmeter-report-description {
+  font-size: 0.75rem;
+  color: #6b7280;
+  font-weight: 400;
+  text-decoration: none;
 }
 
 .riskmeter-reset-link {
@@ -6785,7 +6839,7 @@ section h2 {
   width: 1.25rem;
   height: 1.25rem;
   flex-shrink: 0;
-  color: #786F80;
+  color: #723D84;
   margin-top: 0.125rem;
 }
 
