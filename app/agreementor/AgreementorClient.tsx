@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { 
   CheckCircle2, 
@@ -18,11 +18,11 @@ import {
   Palette,
   Globe,
   Mail,
-  CircleHelp
+  CircleHelp,
+  ChevronDown
 } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import RiskOMeter from "@/components/RiskOMeter";
 
 // --- Utility components ---
@@ -282,7 +282,7 @@ export default function AgreementorClient() {
               <Users className="agreementor-trust-icon" aria-hidden />
               <h3 className="agreementor-trust-title">Business-first, not billable-hour-first</h3>
               <p className="agreementor-trust-description">
-                Fixed fees and clear scope. Your growth is our success, not your legal bills.
+                We act upon the pre-agreed scope and pre-determined prices. No hidden costs. Full transparency since day one. Your growth is our incentive.
               </p>
             </div>
 
@@ -298,7 +298,7 @@ export default function AgreementorClient() {
               <Lightbulb className="agreementor-trust-icon" aria-hidden />
               <h3 className="agreementor-trust-title">Plain-language explanations</h3>
               <p className="agreementor-trust-description">
-                We will decipher your legal document in plain English, and interpret the complex legal provision most understandably.
+                We decipher your legal documents in plain English. Interpret and convey the complex legal provisions most understandably.
               </p>
             </div>
 
@@ -306,7 +306,7 @@ export default function AgreementorClient() {
               <HandshakeIcon className="agreementor-trust-icon" aria-hidden />
               <h3 className="agreementor-trust-title">Long-term partnership approach</h3>
               <p className="agreementor-trust-description">
-                Think of us as your external legal desk — reliable support as your business scales.
+                Think of us as your trusted legal partner and reliable support, approachable and available to help you scale the business. We understand our role, as you understand yours.
               </p>
             </div>
           </div>
@@ -453,7 +453,7 @@ export default function AgreementorClient() {
             </motion.div>
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center" style={{ marginTop: '3rem' }}>
             <div className="agreementor-colorful-box">
               <p className="agreementor-colorful-text">
                 Get a comprehensive risk report for your contracts. Protect your business interests.
@@ -510,49 +510,7 @@ export default function AgreementorClient() {
             <h2 className="agreementor-section-heading">Frequently asked questions</h2>
           </div>
           
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>What types of contracts do you handle?</AccordionTrigger>
-              <AccordionContent>
-                We handle all commercial contracts including NDAs, MSAs, employment agreements, vendor contracts, investment documents, privacy policies, terms of service, real estate agreements, and more. If it's a business contract, we can help.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-2">
-              <AccordionTrigger>How quickly can you review or draft a contract?</AccordionTrigger>
-              <AccordionContent>
-                Standard turnaround is 3-5 business days for most contracts. For urgent requests, we offer priority service with same-day or next-day delivery at a rush fee. Retainer clients get priority turnaround included.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-3">
-              <AccordionTrigger>Do you work with startups and small businesses?</AccordionTrigger>
-              <AccordionContent>
-                Absolutely! We work with businesses of all sizes — from early-stage startups to established enterprises. Our retainership packages are designed to scale with your growth and budget.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-4">
-              <AccordionTrigger>What about cross-border contracts and international deals?</AccordionTrigger>
-              <AccordionContent>
-                Yes, we regularly handle cross-border contracts and can advise on jurisdiction-specific issues. For highly specialized international matters, we collaborate with our network of global legal partners.
-              </AccordionContent>
-            </AccordionItem>
-            
-            <AccordionItem value="item-5">
-              <AccordionTrigger>How do your fixed fees work?</AccordionTrigger>
-              <AccordionContent>
-                We assess scope during initial consultation and provide a fixed fee quote upfront. No hourly billing, no surprise invoices. If scope changes significantly, we discuss and agree on adjustments before proceeding.
-              </AccordionContent>
-            </AccordionItem>
-
-            <AccordionItem value="item-6">
-              <AccordionTrigger>Can you help with regulatory compliance like GDPR, DPDP?</AccordionTrigger>
-              <AccordionContent>
-                Yes, we specialize in privacy and data protection compliance including GDPR, CCPA, and India's DPDP Act. We can draft compliant privacy policies, conduct privacy risk assessments, and ensure your contracts meet regulatory requirements.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+          <FAQSection />
         </Container>
       </Section>
 
@@ -596,6 +554,80 @@ export default function AgreementorClient() {
           </div>
         </Container>
       </Section>
+    </div>
+  );
+}
+
+// FAQ Accordion Item Component
+function FAQItem({ question, answer, isOpen, onClick }: { 
+  question: string; 
+  answer: React.ReactNode; 
+  isOpen: boolean; 
+  onClick: () => void;
+}) {
+  return (
+    <div className={`faq-item ${isOpen ? 'faq-item-open' : ''}`}>
+      <button className="faq-question" onClick={onClick} type="button" aria-expanded={isOpen}>
+        <span className="faq-question-text">{question}</span>
+        <ChevronDown className={`faq-chevron ${isOpen ? 'faq-chevron-open' : ''}`} size={20} />
+      </button>
+      <div className={`faq-answer ${isOpen ? 'faq-answer-open' : ''}`}>
+        <div className="faq-answer-content">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// FAQ Section Component
+function FAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "What types of contracts do you handle?",
+      answer: "We handle all commercial contracts including NDAs, MSAs, employment agreements, vendor contracts, investment documents, privacy policies, terms of service, real estate agreements, and more. If it's a business contract, we can help."
+    },
+    {
+      question: "How quickly can you review or draft a contract?",
+      answer: "Standard turnaround is 3-5 business days for most contracts. For urgent requests, we offer priority service with same-day or next-day delivery at a rush fee. Retainer clients get priority turnaround included."
+    },
+    {
+      question: "Do you work with startups and small businesses?",
+      answer: "Absolutely! We work with businesses of all sizes — from early-stage startups to established enterprises. Our retainership packages are designed to scale with your growth and budget."
+    },
+    {
+      question: "What about cross-border contracts and international deals?",
+      answer: "Yes, we regularly handle cross-border contracts and can advise on jurisdiction-specific issues. For highly specialized international matters, we collaborate with our network of global legal partners."
+    },
+    {
+      question: "How do your fixed fees work?",
+      answer: "We assess scope during initial consultation and provide a fixed fee quote upfront. No hourly billing, no surprise invoices. If scope changes significantly, we discuss and agree on adjustments before proceeding."
+    },
+    {
+      question: "Can you help with regulatory compliance like GDPR, DPDP?",
+      answer: "Yes, we specialize in privacy and data protection compliance including GDPR, CCPA, and India's DPDP Act. We can draft compliant privacy policies, conduct privacy risk assessments, and ensure your contracts meet regulatory requirements."
+    }
+  ];
+
+  return (
+    <div className="faq-container" style={{ maxWidth: '800px', margin: '0 auto' }}>
+      <div className="faq-grid" style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+        {faqData.map((faq, index) => (
+          <FAQItem
+            key={index}
+            question={faq.question}
+            answer={faq.answer}
+            isOpen={openIndex === index}
+            onClick={() => toggleFAQ(index)}
+          />
+        ))}
+      </div>
     </div>
   );
 }
