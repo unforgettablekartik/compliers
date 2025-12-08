@@ -290,7 +290,7 @@ export default function AgreementorClient() {
               <Shield className="agreementor-trust-icon" aria-hidden />
               <h3 className="agreementor-trust-title">Deep specialization in contract law</h3>
               <p className="agreementor-trust-description">
-                From investment deals to privacy policies — we live and breathe commercial contracts.
+                Investment deals, debt arrangements, VC fundings, share purchase, or operational agreements. We live and breathe commercial contracts.
               </p>
             </div>
 
@@ -298,7 +298,7 @@ export default function AgreementorClient() {
               <Lightbulb className="agreementor-trust-icon" aria-hidden />
               <h3 className="agreementor-trust-title">Plain-language explanations</h3>
               <p className="agreementor-trust-description">
-                No 50-page legal memos. Clear risk reports, redlined contracts, and actionable advice.
+                We will decipher your legal document in plain English, and interpret the complex legal provision most understandably.
               </p>
             </div>
 
