@@ -36,12 +36,15 @@ const getInterpretation = (score: number): { text: string; color: string } => {
 
 // Speedometer/Gauge Component
 const SpeedometerGauge = ({ score }: { score: number }) => {
-  const interpretation = getInterpretation(score);
-  const angle = ((score - 1) / 9) * 180 - 90; // Maps score 1-10 to -90 to 90 degrees
-  
   // Display fixed 4/5 rating
   const displayScore = 4;
   const displayMaxScore = 5;
+  
+  // Calculate interpretation and angle based on the display score mapped to original scale
+  // 4/5 translates to 8/10 on the original scale for consistent needle position
+  const mappedScore = (displayScore / displayMaxScore) * 10;
+  const interpretation = getInterpretation(mappedScore);
+  const angle = ((mappedScore - 1) / 9) * 180 - 90; // Maps score 1-10 to -90 to 90 degrees
   
   return (
     <div className="riskmeter-gauge-container">
@@ -387,12 +390,13 @@ export default function RiskOMeter() {
                 Get the best version of legal contracts from The Compliers
               </p>
               <div className="riskmeter-buttons-group">
-                <Button 
-                  className="riskmeter-btn-email" 
-                  onClick={() => window.location.href = 'mailto:connect@thecompliers.com?subject=Risk Points for Contract'}
+                <a 
+                  href="mailto:connect@thecompliers.com?subject=Risk Points for Contract"
+                  className="riskmeter-btn-email"
+                  style={{ textDecoration: 'none', display: 'inline-block' }}
                 >
                   Email Risk Points
-                </Button>
+                </a>
                 <Button 
                   className="riskmeter-btn-cta" 
                   onClick={handleIAmIn}
