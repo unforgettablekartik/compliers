@@ -215,7 +215,7 @@ export default function AgreementorClient() {
                 A document can make or break your business.
               </h2>
               <p className="agreementor-section-paragraph">
-                <span className="agreementor-highlight-text">Your growth is your expertise! Contracts are ours.</span>
+                <span className="agreementor-highlight-text">We lead as your preventive legal counsel.</span>
                 <br />
                 Most businesses execute deals without assessing the legal risks. Poor contracts lead to disputes, financial losses, and missed opportunities. We navigate, analyze, and suggest on the legal complexities.
               </p>
@@ -227,23 +227,7 @@ export default function AgreementorClient() {
                   <CircleHelp className="agreementor-problem-icon-glyph" aria-hidden />
                   <span>Hidden Risks</span>
                 </h3>
-                <p className="agreementor-problem-description">One-sided clauses, unlimited liability, unfavorable terms buried in legal jargon.</p>
-              </div>
-              
-              <div className="agreementor-problem-card agreementor-expertise-card">
-                <h3 className="agreementor-problem-title agreementor-problem-title-with-icon">
-                  <HandshakeIcon className="agreementor-counsel-icon" aria-hidden />
-                  <span>We Serve:</span>
-                </h3>
-                <ul className="agreementor-expertise-list">
-                  <li>Founders & Startups</li>
-                  <li>Growing Businesses</li>
-                  <li>HR & Recruiters</li>
-                  <li>Real Estate Stakeholders</li>
-                  <li>Creators & Brands</li>
-                  <li>Digital Businesses</li>
-                  <li>Agencies & Companies</li>
-                </ul>
+                <p className="agreementor-problem-description">One-sided clauses, stretched indemnities, unlimited liability, unfavorable terms buried in vague legal language.</p>
               </div>
               
               <div className="agreementor-problem-card">
@@ -251,7 +235,7 @@ export default function AgreementorClient() {
                   <CircleHelp className="agreementor-problem-icon-glyph" aria-hidden />
                   <span>Compliance Gaps</span>
                 </h3>
-                <p className="agreementor-problem-description">Regulatory requirements, data privacy laws, and industry-specific compliances often overlooked.</p>
+                <p className="agreementor-problem-description">Regulatory requirements, industry-specific compliances, due diligence, course corrections, risk assessment, and general legal advisory in respect of the contract law.</p>
               </div>
             </div>
           </div>
