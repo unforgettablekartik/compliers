@@ -227,7 +227,7 @@ export default function AgreementorClient() {
                   <CircleHelp className="agreementor-problem-icon-glyph" aria-hidden />
                   <span>Hidden Risks</span>
                 </h3>
-                <p className="agreementor-problem-description">One-sided clauses, stretched indemnities, unlimited liability, unfavorable terms buried in vague legal language.</p>
+                <p className="agreementor-problem-description">One-sided clauses, stretched indemnities, unlimited liability, unfavorable terms buried in unclear legal terms.</p>
               </div>
               
               <div className="agreementor-problem-card">
@@ -235,7 +235,7 @@ export default function AgreementorClient() {
                   <CircleHelp className="agreementor-problem-icon-glyph" aria-hidden />
                   <span>Compliance Gaps</span>
                 </h3>
-                <p className="agreementor-problem-description">Regulatory requirements, industry-specific compliances, due diligence, course corrections, risk assessment, and general legal advisory in respect of the contract law.</p>
+                <p className="agreementor-problem-description">Regulatory requirements, industry-specific compliances, due diligence, course corrections, risk assessment.</p>
               </div>
             </div>
           </div>

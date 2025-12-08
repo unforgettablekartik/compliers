@@ -8,6 +8,7 @@ import { handleHashNavigation } from '@/lib/navigation';
 export default function SiteFooter() {
   const router = useRouter();
   const pathname = usePathname();
+  const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919999999999';
 
   const handleLinkClick = (href: string) => (e: React.MouseEvent) => {
     handleHashNavigation(href, pathname || '/', router, e);
@@ -40,7 +41,7 @@ export default function SiteFooter() {
             <ul className="footer-links">
               <li><Link href="/book-a-call" onClick={handleLinkClick('/book-a-call')}>Book a Call</Link></li>
               <li><Link href="/about#contact" onClick={handleLinkClick('/about#contact')}>Write to us</Link></li>
-              <li><Link href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer">WhatsApp</Link></li>
+              <li><Link href={`https://wa.me/${whatsappNumber}`} target="_blank" rel="noopener noreferrer">WhatsApp</Link></li>
               <li><button type="button" className="footer-chat-button" onClick={() => window.dispatchEvent(new CustomEvent('openCompliersBot'))}>Let&apos;s Chat</button></li>
             </ul>
           </div>
