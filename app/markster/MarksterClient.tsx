@@ -2,7 +2,11 @@
 
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye, CheckCircle, XCircle as XCircleIcon, Bell, Shield, ChevronDown } from "lucide-react";
+import { 
+  ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, 
+  CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye, CheckCircle, 
+  XCircle as XCircleIcon, Bell, Shield, ChevronDown 
+} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
