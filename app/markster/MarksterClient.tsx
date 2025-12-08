@@ -1,12 +1,15 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye, CheckCircle, XCircle as XCircleIcon, Bell, Shield } from "lucide-react";
+import { 
+  ShieldCheck, Search, FileText, AlertTriangle, Globe2, Scale, Clock, BellRing, 
+  CheckCircle2, XCircle, ChevronRight, Mail, Target, Zap, Eye, CheckCircle, 
+  XCircle as XCircleIcon, Bell, Shield, ChevronDown 
+} from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 
 // --- Utility components ---
 const Section = ({ id, className = "", children }: { id?: string; className?: string; children: React.ReactNode }) => (
@@ -16,6 +19,73 @@ const Section = ({ id, className = "", children }: { id?: string; className?: st
 const Container = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
   <div className={`mx-auto max-w-6xl px-4 md:px-6 ${className}`}>{children}</div>
 );
+
+// --- FAQ Components ---
+function FAQItem({ question, answer, isOpen, onClick }: { 
+  question: string; 
+  answer: React.ReactNode; 
+  isOpen: boolean; 
+  onClick: () => void;
+}) {
+  return (
+    <div className={`faq-item ${isOpen ? 'faq-item-open' : ''}`}>
+      <button className="faq-question" onClick={onClick} type="button" aria-expanded={isOpen}>
+        <span className="faq-question-text">{question}</span>
+        <ChevronDown className={`faq-chevron ${isOpen ? 'faq-chevron-open' : ''}`} size={20} />
+      </button>
+      <div className={`faq-answer ${isOpen ? 'faq-answer-open' : ''}`}>
+        <div className="faq-answer-content">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function MarksterFAQSection() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqData = [
+    {
+      question: "Can I use ™ right after filing?",
+      answer: "Yes. You may use ™ immediately after filing. Switch to ® only after registration is granted."
+    },
+    {
+      question: "Do I need use evidence to file?",
+      answer: "Not necessarily. You can file on a \"proposed to be used\" basis. Use evidence strengthens examination/opposition stages."
+    },
+    {
+      question: "How many classes should I choose?",
+      answer: "Select classes that reflect actual/near term (3–12 months) goods/services. We map this during kickoff to avoid waste."
+    },
+    {
+      question: "Will you attend hearings?",
+      answer: "Hearing appearance is an add on. We include a hearing brief and can appear/brief counsel upon request."
+    },
+    {
+      question: "Can you help with global protection?",
+      answer: "Yes. We coordinate Madrid Protocol and national filings with partner counsel and timeline planning."
+    }
+  ];
+
+  return (
+    <div className="faq-container">
+      {faqData.map((faq, index) => (
+        <FAQItem
+          key={index}
+          question={faq.question}
+          answer={faq.answer}
+          isOpen={openIndex === index}
+          onClick={() => toggleFAQ(index)}
+        />
+      ))}
+    </div>
+  );
+}
 
 // --- Main Page ---
 export default function MarksterLanding() {
@@ -223,7 +293,7 @@ export default function MarksterLanding() {
                 <span>Step 2</span>
               </div>
               <h3 className="markster-card-title-hiw">Search → Strategy</h3>
-              <p className="markster-card-paragraph-hiw">Deep search across mark variants; availability rating &amp; recommendations.</p>
+              <p className="markster-card-paragraph-hiw">Deep search across mark variants; availability &amp; recommendations.</p>
             </motion.div>
             
             {/* Card 3 */}
@@ -287,10 +357,6 @@ export default function MarksterLanding() {
               <ul className="markster-list">
                 <li className="markster-list-item">
                   <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
-                  <span className="markster-list-text">Kickoff call &amp; class mapping</span>
-                </li>
-                <li className="markster-list-item">
-                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
                   <span className="markster-list-text">Identical/phonetic/visual searches with risk memo</span>
                 </li>
                 <li className="markster-list-item">
@@ -308,10 +374,6 @@ export default function MarksterLanding() {
                 <li className="markster-list-item">
                   <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
                   <span className="markster-list-text">™/® usage guide, policing SOP, monthly status updates</span>
-                </li>
-                <li className="markster-list-item">
-                  <CheckCircle className="markster-icon markster-icon-check" aria-hidden="true" />
-                  <span className="markster-list-text">Dossier access &amp; time-stamped filings</span>
                 </li>
               </ul>
             </div>
@@ -347,58 +409,10 @@ export default function MarksterLanding() {
       </Section>
 
       {/* FAQ Section */}
-      <Section className="bg-white markster-snap-section">
+      <Section className="faq-section markster-snap-section">
         <Container>
-          <div className="text-center" style={{ marginBottom: "24px" }}>
-            <h2
-              className="font-bold"
-              style={{ 
-                fontFamily: 'Times New Roman, Times, serif',
-                fontSize: "clamp(24px, 5vw, 36px)",
-                fontWeight: "800"
-              }}
-            >
-              Frequently asked questions (FAQs)
-            </h2>
-          </div>
-          <div>
-            <Accordion type="single" collapsible>
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Can I use ™ right after filing?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. You may use ™ immediately after filing. Switch to ® only after registration is granted.
-                </AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-2">
-                <AccordionTrigger>Do I need use evidence to file?</AccordionTrigger>
-                <AccordionContent>
-                  Not necessarily. You can file on a "proposed to be used" basis. Use evidence strengthens examination/opposition stages.
-                </AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-3">
-                <AccordionTrigger>How many classes should I choose?</AccordionTrigger>
-                <AccordionContent>
-                  Select classes that reflect actual/near term (3–12 months) goods/services. We map this during kickoff to avoid waste.
-                </AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-4">
-                <AccordionTrigger>Will you attend hearings?</AccordionTrigger>
-                <AccordionContent>
-                  Hearing appearance is an add on. We include a hearing brief and can appear/brief counsel upon request.
-                </AccordionContent>
-              </AccordionItem>
-              
-              <AccordionItem value="item-5">
-                <AccordionTrigger>Can you help with global protection?</AccordionTrigger>
-                <AccordionContent>
-                  Yes. We coordinate Madrid Protocol and national filings with partner counsel and timeline planning.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
-          </div>
+          <h2 className="faq-headline">Frequently asked questions (FAQs)</h2>
+          <MarksterFAQSection />
         </Container>
       </Section>
 
@@ -461,12 +475,13 @@ export default function MarksterLanding() {
             
             {/* Right Column: Quick intake card */}
             <div className="markster-quick-intake-card">
-              <h3 className="markster-intake-title">Quick intake (what we'll ask)</h3>
+              <h3 className="markster-intake-title">Quick intake (we ask):</h3>
               <ol className="markster-intake-list">
                 <li>Applicant details &amp; fee category (Individual/Startup/MSME/Company)</li>
-                <li>Brand name/logo &amp; high-res asset (for device marks)</li>
+                <li>Brand name/logo &amp; high-resolution asset (for device marks)</li>
                 <li>Goods/services &amp; first-use date (if any)</li>
                 <li>TM-48 (Authorization) and KYC (as applicable)</li>
+                <li>Declaration of use and ownership</li>
               </ol>
               <div className="markster-intake-contact">
                 <div className="markster-contact-item">
