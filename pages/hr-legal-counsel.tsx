@@ -20,7 +20,6 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import {
@@ -279,6 +278,7 @@ export default function HRLegalCounsel() {
           <div className="hr-hero-ctas">
             <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
               Get Started with HR Tool
+              <ArrowRight size={20} />
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/book-a-call">Book a Call with a Startup Lawyer</Link>
@@ -320,6 +320,7 @@ export default function HRLegalCounsel() {
           <div style={{ textAlign: "center", marginTop: "2rem" }}>
             <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
               Launch HR Legal Counsel Tool
+              <ArrowRight size={20} />
             </Button>
           </div>
         </section>
@@ -415,15 +416,25 @@ export default function HRLegalCounsel() {
         <section className="hr-wizard" id="hr-wizard">
           <h2 className="hr-section-title">HR Legal Counsel Tool</h2>
           <Card className="hr-wizard-card">
-            <Tabs value={activeTab} onValueChange={(v) => setActiveTab(v as "handbook" | "posh")}>
-              <TabsList className="grid w-full grid-cols-2">
-                <TabsTrigger value="handbook">Employee Handbook</TabsTrigger>
-                <TabsTrigger value="posh">POSH & Policies</TabsTrigger>
-              </TabsList>
+            {/* Document Type Selector */}
+            <div className="hr-doc-type-selector">
+              <label htmlFor="docType" className="hr-doc-type-label">
+                I WANT:
+              </label>
+              <select
+                id="docType"
+                className="hr-doc-type-dropdown"
+                value={activeTab}
+                onChange={(e) => setActiveTab(e.target.value as "handbook" | "posh")}
+              >
+                <option value="handbook">Employee Handbook</option>
+                <option value="posh">Workplace Policies</option>
+              </select>
+            </div>
 
-              {/* Common Company Profile Section */}
-              <div className="hr-form-section">
-                <h3 className="hr-form-section-title">Company Profile</h3>
+            {/* Common Company Profile Section */}
+            <div className="hr-form-section">
+              <h3 className="hr-form-section-title">Company Profile</h3>
                 <div className="hr-form-grid hr-form-grid-2">
                   <div className="hr-form-field">
                     <Label htmlFor="legalName">
@@ -546,8 +557,8 @@ export default function HRLegalCounsel() {
                 </div>
               </div>
 
-              {/* Employee Handbook Tab */}
-              <TabsContent value="handbook">
+              {/* Employee Handbook Configuration */}
+              {activeTab === "handbook" && (
                 <div className="hr-form-section">
                   <h3 className="hr-form-section-title">Handbook Configuration</h3>
                   <div className="hr-form-grid">
@@ -683,10 +694,10 @@ export default function HRLegalCounsel() {
                     </div>
                   </div>
                 </div>
-              </TabsContent>
+              )}
 
-              {/* POSH & Policies Tab */}
-              <TabsContent value="posh">
+              {/* POSH & Policies Configuration */}
+              {activeTab === "posh" && (
                 <div className="hr-form-section">
                   <h3 className="hr-form-section-title">POSH Policy Configuration</h3>
                   <div className="hr-form-grid">
@@ -871,7 +882,7 @@ export default function HRLegalCounsel() {
                     </div>
                   </div>
                 </div>
-              </TabsContent>
+              )}
 
               {/* Form Buttons */}
               <div className="hr-form-buttons">
@@ -1054,9 +1065,8 @@ export default function HRLegalCounsel() {
                   </div>
                 </motion.div>
               )}
-            </Tabs>
-          </Card>
-        </section>
+            </Card>
+          </section>
 
         {/* Why HR Teams Trust The Compliers */}
         <section className="hr-trust">
@@ -1169,6 +1179,7 @@ export default function HRLegalCounsel() {
           </p>
           <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
             Launch HR Legal Counsel Tool
+            <ArrowRight size={20} />
           </Button>
         </section>
       </div>

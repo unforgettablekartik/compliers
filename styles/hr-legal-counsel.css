@@ -75,21 +75,32 @@
   font-weight: 500;
 }
 
-/* Primary Button Styling */
+/* Primary Button Styling - Replicating homepage style */
 .hr-primary-button {
-  background: #0ea5e9 !important;
+  background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%) !important;
   color: white !important;
   font-weight: 700 !important;
+  font-size: 1.125rem !important;
+  padding: 1rem 2.5rem !important;
+  border-radius: 9999px !important;
   border: none !important;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.4) !important;
+  transition: all 0.3s ease !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 0.5rem !important;
 }
 
 .hr-primary-button:hover {
-  background: #0284c7 !important;
+  background: linear-gradient(135deg, #0284c7 0%, #0891b2 100%) !important;
+  box-shadow: 0 6px 25px rgba(14, 165, 233, 0.5) !important;
+  transform: translateY(-2px) !important;
 }
 
 .hr-primary-button:disabled {
   background: #94a3b8 !important;
   cursor: not-allowed;
+  box-shadow: none !important;
 }
 
 /* How It Works Section */
@@ -228,6 +239,44 @@
   font-size: 0.875rem;
   color: #475569;
   line-height: 1.6;
+}
+
+/* Document Type Selector */
+.hr-doc-type-selector {
+  margin-bottom: 2rem;
+}
+
+.hr-doc-type-label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 0.75rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hr-doc-type-dropdown {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 0.5rem;
+  background: white;
+  color: #0f172a;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.hr-doc-type-dropdown:hover {
+  border-color: #0ea5e9;
+}
+
+.hr-doc-type-dropdown:focus {
+  outline: none;
+  border-color: #0ea5e9;
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
 }
 
 /* Wizard Section */
@@ -451,7 +500,7 @@
 /* Final CTA */
 .hr-final-cta {
   padding: 4rem;
-  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
   color: white;
   text-align: center;
   border-radius: 0.75rem;
@@ -470,6 +519,14 @@
   margin-bottom: 2rem;
   opacity: 0.95;
   color: white;
+}
+
+.hr-final-cta .hr-primary-button {
+  background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%) !important;
+}
+
+.hr-final-cta .hr-primary-button:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0891b2 100%) !important;
 }
 
 /* Loading State */
