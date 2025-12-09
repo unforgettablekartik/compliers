@@ -67,6 +67,31 @@
   flex-wrap: wrap;
 }
 
+.hr-trust-badge-note {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.875rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+/* Primary Button Styling */
+.hr-primary-button {
+  background: #0ea5e9 !important;
+  color: white !important;
+  font-weight: 700 !important;
+  border: none !important;
+}
+
+.hr-primary-button:hover {
+  background: #0284c7 !important;
+}
+
+.hr-primary-button:disabled {
+  background: #94a3b8 !important;
+  cursor: not-allowed;
+}
+
 /* How It Works Section */
 .hr-how-it-works {
   padding: 4rem 0;
@@ -426,7 +451,7 @@
 /* Final CTA */
 .hr-final-cta {
   padding: 4rem;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #0ea5e9 0%, #38bdf8 100%);
   color: white;
   text-align: center;
   border-radius: 0.75rem;
@@ -437,12 +462,14 @@
   font-size: 2rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: white;
 }
 
 .hr-final-cta-subtitle {
   font-size: 1.125rem;
   margin-bottom: 2rem;
-  opacity: 0.9;
+  opacity: 0.95;
+  color: white;
 }
 
 /* Loading State */

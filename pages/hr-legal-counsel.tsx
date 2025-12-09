@@ -232,10 +232,10 @@ export default function HRLegalCounsel() {
   return (
     <>
       <Head>
-        <title>HR's Legal Counsel for Handbooks & POSH | The Compliers</title>
+        <title>HR's Legal Counsel for Handbooks & Workplace Policies | The Compliers</title>
         <meta
           name="description"
-          content="Create compliant employee handbooks and POSH policies in minutes. HR-focused legal counsel by The Compliers with AI drafts and custom lawyer review."
+          content="Get the most effective employee handbooks and policies. Optional custom lawyer review available on request. India-focused HR Compliance by The Compliers."
         />
         <meta
           name="keywords"
@@ -248,11 +248,11 @@ export default function HRLegalCounsel() {
         {/* Hero Section */}
         <section className="hr-hero">
           <h1 className="hr-hero-title">
-            HR's Legal Counsel for Handbooks, POSH & Workplace Policies
+            HR's Legal Counsel for Handbooks & Workplace Policies
           </h1>
           <p className="hr-hero-subtitle">
-            Generate compliant employee handbooks and POSH policies in minutes, with
-            HR-focused legal counsel by The Compliers and optional custom lawyer review.
+            Get the most effective employee handbooks and policies.<br />
+            Optional custom lawyer review available on request.
           </p>
 
           <div className="hr-hero-benefits">
@@ -277,17 +277,16 @@ export default function HRLegalCounsel() {
           </div>
 
           <div className="hr-hero-ctas">
-            <Button size="lg" onClick={scrollToWizard}>
-              Start HR Legal Wizard
+            <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
+              Get Started with HR Tool
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link href="/book-a-call">Book a Call with a Startup Lawyer</Link>
             </Button>
           </div>
 
-          <div className="hr-trust-badges">
-            <Badge variant="secondary">For Startups & SMEs</Badge>
-            <Badge variant="secondary">India-focused HR Compliance</Badge>
+          <div className="hr-trust-badge-note">
+            India-focused HR Compliance by The Compliers
           </div>
         </section>
 
@@ -319,7 +318,7 @@ export default function HRLegalCounsel() {
             </div>
           </div>
           <div style={{ textAlign: "center", marginTop: "2rem" }}>
-            <Button size="lg" onClick={scrollToWizard}>
+            <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
               Launch HR Legal Counsel Tool
             </Button>
           </div>
@@ -878,6 +877,7 @@ export default function HRLegalCounsel() {
               <div className="hr-form-buttons">
                 <Button
                   size="lg"
+                  className="hr-primary-button"
                   onClick={handleGenerateDraft}
                   disabled={isGenerating}
                 >
@@ -887,7 +887,7 @@ export default function HRLegalCounsel() {
                       Generating...
                     </>
                   ) : (
-                    "Generate Draft with AI"
+                    "Generate Draft Now"
                   )}
                 </Button>
                 <Button
@@ -895,7 +895,7 @@ export default function HRLegalCounsel() {
                   variant="outline"
                   onClick={() => setShowCustomReviewModal(true)}
                 >
-                  Talk to a Lawyer Instead
+                  Talk to a Lawyer
                 </Button>
               </div>
 
@@ -1167,7 +1167,7 @@ export default function HRLegalCounsel() {
             Use the HR legal counsel tool to get instant drafts, then upgrade to a fully
             customised handbook and POSH policy with The Compliers.
           </p>
-          <Button size="lg" style={{ background: "white", color: "#0f172a" }} onClick={scrollToWizard}>
+          <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
             Launch HR Legal Counsel Tool
           </Button>
         </section>
