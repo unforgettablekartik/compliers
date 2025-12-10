@@ -1,6 +1,9 @@
 /* Import Compliers Bot styles */
 @import './compliers-bot.css';
 
+/* Import HR Legal Counsel styles */
+@import './hr-legal-counsel.css';
+
 /* Disclosure Banner - Now positioned at bottom with transparency */
 .disclosure-banner {
   position: fixed;

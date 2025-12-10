@@ -33,6 +33,7 @@ export default function SiteFooter() {
             <ul className="footer-links">
               <li><Link href="/blog" onClick={handleLinkClick('/blog')}>Articles & Blogs</Link></li>
               <li><span className="footer-text-unclickable">Toolkits & Checklists</span></li>
+              <li><Link href="/hr-legal-counsel" onClick={handleLinkClick('/hr-legal-counsel')}>HR Legal Tool</Link></li>
             </ul>
           </div>
 
