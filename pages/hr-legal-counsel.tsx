@@ -264,14 +264,12 @@ export default function HRLegalCounsel() {
       <div className="hr-legal-container">
         {/* Hero Section */}
         <section className="hr-hero">
-          <h1 className="hr-hero-title">
-            HR's Legal Counsel
-            <br />
-            <span className="hr-hero-subtitle-line">Handbooks & Workplace Policies</span>
+          <h1 className="hr-hero-title hr-hero-title-large">
+            HR's Legal Resource
           </h1>
           <p className="hr-hero-subtitle">
-            Get the most effective employee handbooks and policies.<br />
-            Optional custom lawyer review available on request.
+            Most effective employee handbooks and policies.<br />
+            Optional review available on request.
           </p>
 
           <div className="hr-hero-benefits">
@@ -290,7 +288,7 @@ export default function HRLegalCounsel() {
             <div className="hr-benefit-item">
               <CheckCircle className="hr-benefit-icon" size={20} />
               <span>
-                AI-powered drafts + optional upgrade for customised legal review.
+                Easy to understand, customised, compliant & conducive drafts.
               </span>
             </div>
           </div>
@@ -312,36 +310,77 @@ export default function HRLegalCounsel() {
 
         {/* How It Works Section */}
         <section className="hr-how-it-works">
-          <h2 className="hr-section-title">How It Works</h2>
-          <div className="hr-steps">
-            <div className="hr-step">
-              <div className="hr-step-number">1</div>
-              <h3 className="hr-step-title">Choose what you need</h3>
-              <p className="hr-step-description">
-                Employee Handbook or POSH & Workplace Policy Suite.
-              </p>
+          <div className="hr-how-it-works-container">
+            <div className="text-center mb-12">
+              <h2 className="hr-section-title mb-3">
+                Simple Process. Expert Delivery.
+              </h2>
             </div>
-            <div className="hr-step">
-              <div className="hr-step-number">2</div>
-              <h3 className="hr-step-title">Answer a few HR-focused questions</h3>
-              <p className="hr-step-description">
-                Company size, work model, leave structure, risk profile.
-              </p>
+            
+            <div className="hr-steps-timeline">
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+                className="hr-step"
+              >
+                <div className="hr-step-number">1</div>
+                <h3 className="hr-step-title">Choose your document type</h3>
+                <p className="hr-step-description">
+                  Select Employee Handbook or Workplace Policy Suite based on your needs.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.1 }}
+                className="hr-step"
+              >
+                <div className="hr-step-number">2</div>
+                <h3 className="hr-step-title">Answer HR-focused questions</h3>
+                <p className="hr-step-description">
+                  Provide company profile, work model, leave structure, and policy preferences.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.2 }}
+                className="hr-step"
+              >
+                <div className="hr-step-number">3</div>
+                <h3 className="hr-step-title">Generate & Download</h3>
+                <p className="hr-step-description">
+                  Get your customised draft instantly with clear, compliant language.
+                </p>
+              </motion.div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }} 
+                whileInView={{ opacity: 1, y: 0 }} 
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.3 }}
+                className="hr-step"
+              >
+                <div className="hr-step-number">4</div>
+                <h3 className="hr-step-title">Optional Legal Review</h3>
+                <p className="hr-step-description">
+                  Request customised legal review by The Compliers for full compliance assurance.
+                </p>
+              </motion.div>
             </div>
-            <div className="hr-step">
-              <div className="hr-step-number">3</div>
-              <h3 className="hr-step-title">Get your AI draft + optional lawyer upgrade</h3>
-              <p className="hr-step-description">
-                Download an HR-ready draft and, if you wish, request a customised review by
-                The Compliers.
-              </p>
+
+            <div style={{ textAlign: "center", marginTop: "3rem" }}>
+              <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
+                Launch HR Legal Counsel Tool
+                <ArrowRight size={20} />
+              </Button>
             </div>
-          </div>
-          <div style={{ textAlign: "center", marginTop: "2rem" }}>
-            <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
-              Launch HR Legal Counsel Tool
-              <ArrowRight size={20} />
-            </Button>
           </div>
         </section>
 
