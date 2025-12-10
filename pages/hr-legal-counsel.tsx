@@ -1220,7 +1220,7 @@ export default function HRLegalCounsel() {
             customised handbook and POSH policy with The Compliers.
           </p>
           <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
-            Launch HR Legal Counsel Tool
+            Book FREE consultation
             <ArrowRight size={20} />
           </Button>
         </section>
