@@ -743,3 +743,544 @@
     font-size: 1.5rem;
   }
 }
+
+/* New POSH Pricing Section Styles */
+
+/* Hero Launch Badge */
+.hero-launch-badge {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+/* Hero Trust Pills */
+.hr-trust-pills {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.hr-trust-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: #f0f9ff;
+  border: 1px solid #bae6fd;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #0369a1;
+}
+
+.hr-trust-pill svg {
+  color: #10b981;
+}
+
+/* POSH Pricing Section */
+.posh-pricing-section {
+  padding: 4rem 0;
+  background: linear-gradient(135deg, #f9fafb 0%, #ffffff 100%);
+  margin: 2rem -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.posh-pricing-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.posh-pricing-subtitle {
+  font-size: 1.125rem;
+  color: #64748b;
+  margin-top: 0.5rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.posh-pricing-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.posh-pricing-card {
+  background: white;
+  border: 2px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 2rem;
+  position: relative;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.posh-pricing-card:hover {
+  border-color: #0ea5e9;
+  box-shadow: 0 8px 24px rgba(14, 165, 233, 0.15);
+  transform: translateY(-4px);
+}
+
+.posh-card-recommended {
+  border-color: #8b5cf6;
+  background: linear-gradient(135deg, #faf5ff 0%, #ffffff 100%);
+  transform: scale(1.05);
+}
+
+.posh-card-recommended:hover {
+  border-color: #7c3aed;
+  transform: scale(1.05) translateY(-4px);
+}
+
+.posh-card-premium {
+  border-color: #f59e0b;
+}
+
+.posh-card-premium:hover {
+  border-color: #d97706;
+}
+
+.posh-recommended-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+}
+
+.posh-card-badge {
+  display: inline-block;
+  padding: 0.375rem 0.875rem;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.posh-badge-blue {
+  background: #dbeafe;
+  color: #1e40af;
+}
+
+.posh-badge-purple {
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.posh-badge-gold {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.posh-card-title {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.posh-price-container {
+  margin-bottom: 1.5rem;
+}
+
+.posh-price-main {
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.posh-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.posh-price-original {
+  font-size: 1.5rem;
+  color: #94a3b8;
+  text-decoration: line-through;
+}
+
+.posh-price-savings {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #10b981;
+}
+
+.posh-card-description {
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.posh-features-list {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
+}
+
+.posh-features-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  color: #334155;
+  font-size: 0.95rem;
+}
+
+.posh-features-list li svg {
+  color: #10b981;
+  flex-shrink: 0;
+  margin-top: 0.125rem;
+}
+
+.posh-card-note {
+  font-size: 0.8rem;
+  color: #94a3b8;
+  font-style: italic;
+  margin-bottom: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.posh-cta-button {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.posh-cta-primary {
+  background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%) !important;
+  color: white !important;
+  border: none !important;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.3);
+}
+
+.posh-cta-primary:hover {
+  background: linear-gradient(135deg, #0284c7 0%, #0891b2 100%) !important;
+  box-shadow: 0 6px 16px rgba(14, 165, 233, 0.4);
+  transform: translateY(-2px);
+}
+
+.posh-cta-secondary {
+  background: white !important;
+  color: #0ea5e9 !important;
+  border: 2px solid #0ea5e9 !important;
+}
+
+.posh-cta-secondary:hover {
+  background: #f0f9ff !important;
+  border-color: #0284c7 !important;
+  transform: translateY(-2px);
+}
+
+.posh-pricing-footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.posh-footer-text {
+  font-size: 0.875rem;
+  color: #64748b;
+  margin-bottom: 1rem;
+}
+
+.posh-trust-badges {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.posh-trust-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  color: #475569;
+  font-weight: 500;
+}
+
+.posh-trust-item svg {
+  color: #10b981;
+}
+
+/* What's Included Section */
+.posh-whats-included {
+  padding: 4rem 0;
+}
+
+.posh-included-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.posh-included-card {
+  background: #f9fafb;
+  border: 1px solid #e2e8f0;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.posh-included-card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  border-color: #0ea5e9;
+}
+
+.posh-included-center {
+  grid-column: 1 / -1;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.posh-included-icon {
+  color: #0ea5e9;
+  margin-bottom: 1rem;
+}
+
+.posh-included-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 0.5rem;
+}
+
+.posh-included-subtitle {
+  font-size: 0.875rem;
+  color: #8b5cf6;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.posh-included-list {
+  list-style: none;
+  padding: 0;
+}
+
+.posh-included-list li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #475569;
+  line-height: 1.6;
+}
+
+.posh-included-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #0ea5e9;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+/* Social Proof Section */
+.posh-social-proof {
+  padding: 3rem 0;
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  margin: 2rem -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.posh-proof-banner {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 2rem;
+}
+
+.posh-proof-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.posh-proof-icon {
+  color: #0ea5e9;
+  flex-shrink: 0;
+}
+
+.posh-proof-text {
+  font-size: 1rem;
+  color: #334155;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.posh-urgency-banner {
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 9999px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.3);
+}
+
+/* Comparison Table Section */
+.posh-comparison {
+  padding: 4rem 0;
+  background: #f9fafb;
+  margin: 2rem -1.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.posh-comparison-table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 2rem;
+}
+
+.posh-comparison-table {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  background: white;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.posh-comparison-table th {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: white;
+  padding: 1.25rem;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.posh-table-recommended {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%) !important;
+  position: relative;
+}
+
+.posh-comparison-table td {
+  padding: 1rem 1.25rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+  color: #334155;
+}
+
+.posh-comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.posh-comparison-table tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+.posh-comparison-table td:first-child {
+  text-align: left;
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.posh-check {
+  color: #10b981;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.posh-no-check {
+  color: #cbd5e1;
+  font-size: 1.25rem;
+}
+
+.posh-table-price-row td {
+  font-size: 1.125rem;
+  background: #f0f9ff;
+  color: #0369a1;
+  font-weight: 700;
+}
+
+/* Mobile Responsiveness for New Sections */
+@media (max-width: 768px) {
+  .posh-pricing-cards {
+    grid-template-columns: 1fr;
+  }
+  
+  .posh-card-recommended {
+    transform: scale(1);
+  }
+  
+  .posh-card-recommended:hover {
+    transform: translateY(-4px);
+  }
+  
+  .posh-proof-banner {
+    grid-template-columns: 1fr;
+  }
+  
+  .posh-urgency-banner {
+    font-size: 0.875rem;
+    padding: 0.875rem 1.5rem;
+  }
+  
+  .posh-included-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .posh-comparison-table {
+    font-size: 0.875rem;
+  }
+  
+  .posh-comparison-table th,
+  .posh-comparison-table td {
+    padding: 0.75rem 0.5rem;
+  }
+  
+  .posh-price {
+    font-size: 2rem;
+  }
+  
+  .posh-price-original {
+    font-size: 1.25rem;
+  }
+}
