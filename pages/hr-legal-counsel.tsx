@@ -14,6 +14,7 @@ import {
   Check,
   Loader2,
   AlertCircle,
+  ChevronDown,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -22,12 +23,6 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Alert, AlertDescription } from "@/components/ui/alert";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import {
   Dialog,
   DialogContent,
@@ -106,6 +101,28 @@ const INDIAN_STATES = [
   "Delhi",
 ];
 
+// FAQ Item Component
+function FAQItem({ question, answer, isOpen, onClick }: { 
+  question: string; 
+  answer: string; 
+  isOpen: boolean; 
+  onClick: () => void;
+}) {
+  return (
+    <div className={`faq-item ${isOpen ? 'faq-item-open' : ''}`}>
+      <button className="faq-question" onClick={onClick} type="button" aria-expanded={isOpen}>
+        <span className="faq-question-text">{question}</span>
+        <ChevronDown className={`faq-chevron ${isOpen ? 'faq-chevron-open' : ''}`} size={20} />
+      </button>
+      <div className={`faq-answer ${isOpen ? 'faq-answer-open' : ''}`}>
+        <div className="faq-answer-content">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HRLegalCounsel() {
   const [activeTab, setActiveTab] = useState<"handbook" | "posh">("handbook");
   const [isGenerating, setIsGenerating] = useState(false);
@@ -114,6 +131,7 @@ export default function HRLegalCounsel() {
   const [copied, setCopied] = useState(false);
   const [showCustomReviewModal, setShowCustomReviewModal] = useState(false);
   const [showLeadForm, setShowLeadForm] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   // Company Profile State
   const [companyProfile, setCompanyProfile] = useState<CompanyProfile>({
@@ -247,7 +265,9 @@ export default function HRLegalCounsel() {
         {/* Hero Section */}
         <section className="hr-hero">
           <h1 className="hr-hero-title">
-            HR's Legal Counsel for Handbooks & Workplace Policies
+            HR's Legal Counsel
+            <br />
+            <span className="hr-hero-subtitle-line">Handbooks & Workplace Policies</span>
           </h1>
           <p className="hr-hero-subtitle">
             Get the most effective employee handbooks and policies.<br />
@@ -280,8 +300,8 @@ export default function HRLegalCounsel() {
               Get Started with HR Tool
               <ArrowRight size={20} />
             </Button>
-            <Button size="lg" variant="outline" asChild>
-              <Link href="/book-a-call">Book a Call with a Startup Lawyer</Link>
+            <Button size="lg" className="hr-secondary-button" asChild>
+              <Link href="/book-a-call">Talk to a Lawyer</Link>
             </Button>
           </div>
 
@@ -334,11 +354,11 @@ export default function HRLegalCounsel() {
               <CardHeader>
                 <FileText size={32} style={{ color: "#0ea5e9", marginBottom: "1rem" }} />
                 <CardTitle className="hr-product-title">
-                  Employee Handbook Builder for HR & People Ops
+                  Employee Handbook Manual
                 </CardTitle>
                 <p className="hr-product-tagline">
-                  Codify your culture, policies and expectations in a clear, compliant
-                  handbook.
+                  Codify your culture, practices, and expectations in a clear, compliant
+                  handbook, as an explanatory guide.
                 </p>
               </CardHeader>
               <CardContent>
@@ -358,7 +378,7 @@ export default function HRLegalCounsel() {
                   </p>
                 </div>
                 <Button
-                  className="w-full"
+                  className="hr-generate-button"
                   onClick={() => {
                     setActiveTab("handbook");
                     scrollToWizard();
@@ -374,10 +394,11 @@ export default function HRLegalCounsel() {
               <CardHeader>
                 <Shield size={32} style={{ color: "#0ea5e9", marginBottom: "1rem" }} />
                 <CardTitle className="hr-product-title">
-                  POSH & Workplace Policy Suite for Indian Employers
+                  Workplace Policy Suite
                 </CardTitle>
                 <p className="hr-product-tagline">
-                  Build a clear, accessible POSH policy and supporting workplace policies.
+                  Clear, accessible and compliant workplace policies customized to company
+                  objectives, values, and mission.
                 </p>
               </CardHeader>
               <CardContent>
@@ -399,7 +420,7 @@ export default function HRLegalCounsel() {
                   </p>
                 </div>
                 <Button
-                  className="w-full"
+                  className="hr-generate-button"
                   onClick={() => {
                     setActiveTab("posh");
                     scrollToWizard();
@@ -904,6 +925,7 @@ export default function HRLegalCounsel() {
                 <Button
                   size="lg"
                   variant="outline"
+                  className="hr-secondary-button"
                   onClick={() => setShowCustomReviewModal(true)}
                 >
                   Talk to a Lawyer
@@ -1114,57 +1136,38 @@ export default function HRLegalCounsel() {
         <section className="hr-faq">
           <div className="hr-faq-container">
             <h2 className="hr-section-title">FAQs on HR Legal Documentation</h2>
-            <Accordion type="single" collapsible>
-              <AccordionItem value="item-1">
-                <AccordionTrigger>Is this enough without a lawyer?</AccordionTrigger>
-                <AccordionContent>
-                  AI drafts are starting points. For high-risk issues (POSH, terminations,
-                  etc.) we recommend The Compliers' customised legal review to ensure full
-                  compliance with your specific state laws and industry requirements.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-2">
-                <AccordionTrigger>
-                  Is the HR legal counsel tool India-specific?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes, it is optimised for Indian employers and HR teams. The tool
-                  considers the Sexual Harassment of Women at Workplace Act 2013, Shops
-                  and Establishments Acts, and other relevant Indian employment laws.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-3">
-                <AccordionTrigger>
-                  Can I edit the draft employee handbook or POSH policy?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes, you'll receive an editable version that you can refine before
-                  rollout. You can copy the content and make any necessary adjustments to
-                  fit your company's specific needs.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-4">
-                <AccordionTrigger>
-                  Can we request a fully customised handbook / POSH policy?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes, via the "Request Custom Review" option. You'll get a quote and
-                  timeline from our legal team. This includes a thorough review by an
-                  experienced employment lawyer who will customise the document for your
-                  exact requirements.
-                </AccordionContent>
-              </AccordionItem>
-              <AccordionItem value="item-5">
-                <AccordionTrigger>
-                  Will this work for remote / hybrid teams?
-                </AccordionTrigger>
-                <AccordionContent>
-                  Yes, the wizard asks about your work model and adjusts the draft
-                  accordingly. Whether you're fully remote, hybrid, or office-based, the
-                  policies will reflect your work arrangement.
-                </AccordionContent>
-              </AccordionItem>
-            </Accordion>
+            <div className="faq-container">
+              {[
+                {
+                  question: "Is this enough without a lawyer?",
+                  answer: "AI drafts are starting points. For high-risk issues (POSH, terminations, etc.) we recommend The Compliers' customised legal review to ensure full compliance with your specific state laws and industry requirements."
+                },
+                {
+                  question: "Is the HR legal counsel tool India-specific?",
+                  answer: "Yes, it is optimised for Indian employers and HR teams. The tool considers the Sexual Harassment of Women at Workplace Act 2013, Shops and Establishments Acts, and other relevant Indian employment laws."
+                },
+                {
+                  question: "Can I edit the draft employee handbook or POSH policy?",
+                  answer: "Yes, you'll receive an editable version that you can refine before rollout. You can copy the content and make any necessary adjustments to fit your company's specific needs."
+                },
+                {
+                  question: "Can we request a fully customised handbook / POSH policy?",
+                  answer: "Yes, via the \"Request Custom Review\" option. You'll get a quote and timeline from our legal team. This includes a thorough review by an experienced employment lawyer who will customise the document for your exact requirements."
+                },
+                {
+                  question: "Will this work for remote / hybrid teams?",
+                  answer: "Yes, the wizard asks about your work model and adjusts the draft accordingly. Whether you're fully remote, hybrid, or office-based, the policies will reflect your work arrangement."
+                }
+              ].map((faq, index) => (
+                <FAQItem
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  isOpen={openFaqIndex === index}
+                  onClick={() => setOpenFaqIndex(openFaqIndex === index ? null : index)}
+                />
+              ))}
+            </div>
           </div>
         </section>
 
