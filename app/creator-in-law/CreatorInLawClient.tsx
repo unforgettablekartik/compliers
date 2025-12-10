@@ -100,7 +100,7 @@ export default function CreatorInLawLanding() {
               </p>
 
               <div className="creator-hero-buttons">
-                <Button className="creator-btn-primary" asChild>
+                <Button className="creator-btn-primary btn-caribbean-green" asChild>
                   <a href="/book-a-call">Connect Now</a>
                 </Button>
               </div>
@@ -486,7 +486,7 @@ export default function CreatorInLawLanding() {
             </p>
             
             <div className="creator-final-cta-buttons">
-              <Button className="creator-btn-primary creator-btn-large" asChild>
+              <Button className="creator-btn-primary creator-btn-large btn-caribbean-green" asChild>
                 <a href="/book-a-call">Appointment</a>
               </Button>
               <Button 

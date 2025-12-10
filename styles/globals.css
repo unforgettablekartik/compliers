@@ -1411,19 +1411,19 @@ nav .nav-links a:hover {
 }
 
 .homepage-btn-primary {
-  background-color: #00CC99 !important;
+  background-color: #0077cc !important;
   color: #ffffff !important;
   padding: 0.625rem 1.25rem !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
   font-size: 0.9rem !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 4px 14px rgba(0, 204, 153, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(0, 119, 204, 0.4) !important;
 }
 
 .homepage-btn-primary:hover {
-  background-color: #00AA7F !important;
-  box-shadow: 0 6px 20px rgba(0, 204, 153, 0.6) !important;
+  background-color: #005fa3 !important;
+  box-shadow: 0 6px 20px rgba(0, 119, 204, 0.6) !important;
   transform: translateY(-2px);
 }
 
@@ -1441,6 +1441,17 @@ nav .nav-links a:hover {
 .homepage-btn-secondary:hover {
   background-color: #f5f7ff !important;
   border-color: #c7d2fe !important;
+}
+
+/* Caribbean green button for Connect Now and Appointment buttons only */
+.btn-caribbean-green {
+  background-color: #00CC99 !important;
+  box-shadow: 0 4px 14px rgba(0, 204, 153, 0.4) !important;
+}
+
+.btn-caribbean-green:hover {
+  background-color: #00AA7F !important;
+  box-shadow: 0 6px 20px rgba(0, 204, 153, 0.6) !important;
 }
 
 .homepage-hero-caption {
@@ -4522,21 +4533,21 @@ section h2 {
 }
 
 .creator-btn-primary {
-  background-color: #00CC99 !important;
+  background-color: #6366f1 !important;
   color: #ffffff !important;
   padding: 0.875rem 2rem !important;
   border-radius: 9999px !important;
   font-weight: 600 !important;
   font-size: 1rem !important;
   transition: all 0.3s ease !important;
-  box-shadow: 0 4px 14px rgba(0, 204, 153, 0.4) !important;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4) !important;
   border: none !important;
   text-decoration: none !important;
 }
 
 .creator-btn-primary:hover {
-  background-color: #00AA7F !important;
-  box-shadow: 0 6px 20px rgba(0, 204, 153, 0.6) !important;
+  background-color: #4f46e5 !important;
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6) !important;
   transform: translateY(-2px) !important;
   color: #ffffff !important;
   text-decoration: none !important;

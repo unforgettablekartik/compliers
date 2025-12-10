@@ -125,7 +125,7 @@ export default function MarksterLanding() {
                 Lawyer‑led, specialized trademark package for Indian startups &amp; MSMEs: with deep search &amp; risk opinion, form filing, examination reply, and 60‑day watch—wrapped with transparency.
               </p>
               <div className="markster-hero-buttons">
-                <Button className="markster-btn-primary" asChild>
+                <Button className="markster-btn-primary btn-caribbean-green" asChild>
                   <a href="#start">Connect Now</a>
                 </Button>
                 <p className="markster-hero-consult-note">Have questions? Let's connect over a FREE call.</p>
@@ -454,7 +454,7 @@ export default function MarksterLanding() {
               
               {/* CTA Buttons - pill shaped */}
               <div className="markster-cta-buttons">
-                <a href="/book-a-call" className="markster-cta-btn markster-cta-btn-solid">
+                <a href="/book-a-call" className="markster-cta-btn markster-cta-btn-solid btn-caribbean-green">
                   Appointment
                 </a>
                 <button 

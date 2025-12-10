@@ -183,7 +183,7 @@ export default function AgreementorClient() {
               </p>
 
               <div className="agreementor-hero-buttons">
-                <Button className="agreementor-btn-primary" asChild>
+                <Button className="agreementor-btn-primary btn-caribbean-green" asChild>
                   <a href="/book-a-call">Connect Now</a>
                 </Button>
               </div>
@@ -526,7 +526,7 @@ export default function AgreementorClient() {
             </p>
             
             <div className="agreementor-final-cta-buttons">
-              <Button className="agreementor-btn-primary agreementor-btn-large" asChild>
+              <Button className="agreementor-btn-primary agreementor-btn-large btn-caribbean-green" asChild>
                 <a href="/book-a-call">Appointment</a>
               </Button>
               <Button 
