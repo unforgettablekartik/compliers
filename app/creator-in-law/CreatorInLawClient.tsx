@@ -14,6 +14,7 @@ import {
   MessageSquare,
   TrendingUp,
   ChevronRight,
+  ChevronDown,
   Mail,
   CircleHelp
 } from "lucide-react";
@@ -21,7 +22,6 @@ import { FaWhatsapp, FaYoutube, FaInstagram, FaLinkedin, FaTiktok, FaFacebook } 
 import { FaXTwitter } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import RiskOMeter from "@/components/RiskOMeter";
 
 // --- Utility components ---
@@ -33,9 +33,32 @@ const Container = ({ children, className = "" }: { children: React.ReactNode; cl
   <div className={`mx-auto max-w-6xl px-4 md:px-6 lg:px-8 ${className}`}>{children}</div>
 );
 
+// FAQ Accordion Item Component
+function FAQItem({ question, answer, isOpen, onClick }: { 
+  question: string; 
+  answer: string; 
+  isOpen: boolean; 
+  onClick: () => void;
+}) {
+  return (
+    <div className={`faq-item ${isOpen ? 'faq-item-open' : ''}`}>
+      <button className="faq-question" onClick={onClick} type="button" aria-expanded={isOpen}>
+        <span className="faq-question-text">{question}</span>
+        <ChevronDown className={`faq-chevron ${isOpen ? 'faq-chevron-open' : ''}`} size={20} />
+      </button>
+      <div className={`faq-answer ${isOpen ? 'faq-answer-open' : ''}`}>
+        <div className="faq-answer-content">
+          {answer}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 // --- Main Page ---
 export default function CreatorInLawLanding() {
   const whatsappNumber = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || '919540101740';
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(null);
 
   return (
     <div className="creator-in-law-page-container relative min-h-screen bg-white text-gray-900">
@@ -77,7 +100,7 @@ export default function CreatorInLawLanding() {
               </p>
 
               <div className="creator-hero-buttons">
-                <Button className="creator-btn-primary" asChild>
+                <Button className="creator-btn-primary btn-caribbean-green" asChild>
                   <a href="/book-a-call">Connect Now</a>
                 </Button>
               </div>
@@ -406,48 +429,48 @@ export default function CreatorInLawLanding() {
 
 
       {/* 9. FAQ SECTION */}
-      <Section className="bg-gray-50">
+      <Section id="faq" className="faq-section">
         <Container>
           <div className="text-center mb-12">
-            <h2 className="creator-section-heading">Frequently asked questions</h2>
+            <h2 className="faq-headline">Frequently asked questions</h2>
           </div>
           
-          <Accordion type="single" collapsible>
-            <AccordionItem value="item-1">
-              <AccordionTrigger>Do you only work with big influencers?</AccordionTrigger>
-              <AccordionContent>
-                No. We work with micro, mid-tier, and top creators. What matters is that you treat your creator work as a serious business.
-              </AccordionContent>
-            </AccordionItem>
+          <div className="faq-container">
+            <FAQItem
+              question="Do you only work with big influencers?"
+              answer="No. We work with micro, mid-tier, and top creators. What matters is that you treat your creator work as a serious business."
+              isOpen={openFaqIndex === 0}
+              onClick={() => setOpenFaqIndex(openFaqIndex === 0 ? null : 0)}
+            />
             
-            <AccordionItem value="item-2">
-              <AccordionTrigger>Can you help if the brand is outside India?</AccordionTrigger>
-              <AccordionContent>
-                Yes, we frequently review cross-border contracts. We'll flag jurisdiction-specific issues and suggest practical protections.
-              </AccordionContent>
-            </AccordionItem>
+            <FAQItem
+              question="Can you help if the brand is outside India?"
+              answer="Yes, we frequently review cross-border contracts. We'll flag jurisdiction-specific issues and suggest practical protections."
+              isOpen={openFaqIndex === 1}
+              onClick={() => setOpenFaqIndex(openFaqIndex === 1 ? null : 1)}
+            />
             
-            <AccordionItem value="item-3">
-              <AccordionTrigger>What if I just need a one-time review?</AccordionTrigger>
-              <AccordionContent>
-                We can start with a single engagement and, if it makes sense, move to an ongoing retainership once you see the value.
-              </AccordionContent>
-            </AccordionItem>
+            <FAQItem
+              question="What if I just need a one-time review?"
+              answer="We can start with a single engagement and, if it makes sense, move to an ongoing retainership once you see the value."
+              isOpen={openFaqIndex === 2}
+              onClick={() => setOpenFaqIndex(openFaqIndex === 2 ? null : 2)}
+            />
             
-            <AccordionItem value="item-4">
-              <AccordionTrigger>How fast can you review a contract?</AccordionTrigger>
-              <AccordionContent>
-                For retainership clients, we typically offer priority turnaround on time-sensitive deals. We'll confirm timelines on our first call.
-              </AccordionContent>
-            </AccordionItem>
+            <FAQItem
+              question="How fast can you review a contract?"
+              answer="For retainership clients, we typically offer priority turnaround on time-sensitive deals. We'll confirm timelines on our first call."
+              isOpen={openFaqIndex === 3}
+              onClick={() => setOpenFaqIndex(openFaqIndex === 3 ? null : 3)}
+            />
             
-            <AccordionItem value="item-5">
-              <AccordionTrigger>Will you talk directly to the brand or agency?</AccordionTrigger>
-              <AccordionContent>
-                Where appropriate and with your consent, we can coordinate or draft responses so you don't have to handle the legal back-and-forth alone.
-              </AccordionContent>
-            </AccordionItem>
-          </Accordion>
+            <FAQItem
+              question="Will you talk directly to the brand or agency?"
+              answer="Where appropriate and with your consent, we can coordinate or draft responses so you don't have to handle the legal back-and-forth alone."
+              isOpen={openFaqIndex === 4}
+              onClick={() => setOpenFaqIndex(openFaqIndex === 4 ? null : 4)}
+            />
+          </div>
         </Container>
       </Section>
 
@@ -463,7 +486,7 @@ export default function CreatorInLawLanding() {
             </p>
             
             <div className="creator-final-cta-buttons">
-              <Button className="creator-btn-primary creator-btn-large" asChild>
+              <Button className="creator-btn-primary creator-btn-large btn-caribbean-green" asChild>
                 <a href="/book-a-call">Appointment</a>
               </Button>
               <Button 

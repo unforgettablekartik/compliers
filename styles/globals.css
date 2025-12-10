@@ -1443,6 +1443,17 @@ nav .nav-links a:hover {
   border-color: #c7d2fe !important;
 }
 
+/* Caribbean green button for Connect Now and Appointment buttons only */
+.btn-caribbean-green {
+  background-color: #00CC99 !important;
+  box-shadow: 0 4px 14px rgba(0, 204, 153, 0.4) !important;
+}
+
+.btn-caribbean-green:hover {
+  background-color: #00AA7F !important;
+  box-shadow: 0 6px 20px rgba(0, 204, 153, 0.6) !important;
+}
+
 .homepage-hero-caption {
   font-size: 0.875rem;
   color: #6b7280;
