@@ -15,6 +15,14 @@ import {
   Loader2,
   AlertCircle,
   ChevronDown,
+  Download,
+  Presentation,
+  ClipboardList,
+  Star,
+  Clock,
+  Lock,
+  Sparkles,
+  Rocket,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -180,6 +188,13 @@ export default function HRLegalCounsel() {
     }
   };
 
+  const scrollToPricing = () => {
+    const pricingSection = document.getElementById("posh-pricing");
+    if (pricingSection) {
+      pricingSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   const handleGenerateDraft = async () => {
     setError(null);
     setIsGenerating(true);
@@ -249,14 +264,14 @@ export default function HRLegalCounsel() {
   return (
     <>
       <Head>
-        <title>HR's Legal Counsel for Handbooks & Workplace Policies | The Compliers</title>
+        <title>POSH Compliance Policy & Training Package | Ready-to-Use Documents | The Compliers</title>
         <meta
           name="description"
-          content="Get the most effective employee handbooks and policies. Optional custom lawyer review available on request. India-focused HR Compliance by The Compliers."
+          content="Download professional POSH workplace policy and training presentation decks. Instant compliance with the 2013 Act. Editable documents from ₹3,499. Start protecting your workplace today."
         />
         <meta
           name="keywords"
-          content="hr legal counsel, hr legal counsel india, employee handbook builder, employee handbook for startups, hr policies and procedures india, posh policy drafting, workplace policy suite, hr compliance toolkit, hr legal templates, hr legal documentation india"
+          content="hr legal counsel, hr legal counsel india, employee handbook builder, employee handbook for startups, hr policies and procedures india, posh policy drafting, workplace policy suite, hr compliance toolkit, hr legal templates, hr legal documentation india, posh compliance package, posh policy template, posh training materials"
         />
         <link rel="canonical" href="https://thecompliers.com/hr-legal-counsel" />
       </Head>
@@ -264,42 +279,41 @@ export default function HRLegalCounsel() {
       <div className="hr-legal-container">
         {/* Hero Section */}
         <section className="hr-hero">
+          <Badge variant="warning" className="hero-launch-badge">
+            <Rocket size={16} className="mr-1" />
+            NEW LAUNCH 🚀
+          </Badge>
+          
           <h1 className="hr-hero-title hr-hero-title-large">
-            HR's Legal Resource
+            Launch-Ready POSH Compliance Suite
           </h1>
           <p className="hr-hero-subtitle">
-            Most effective employee handbooks and policies.<br />
-            Optional review available on request.
+            Professionally crafted policy documents and training materials.<br />
+            Download instantly, implement immediately.
           </p>
 
-          <div className="hr-hero-benefits">
-            <div className="hr-benefit-item">
-              <CheckCircle className="hr-benefit-icon" size={20} />
-              <span>
-                Employee handbooks drafted around your policies, not generic templates.
-              </span>
-            </div>
-            <div className="hr-benefit-item">
-              <CheckCircle className="hr-benefit-icon" size={20} />
-              <span>
-                POSH & workplace policies aligned with Indian law and HR realities.
-              </span>
-            </div>
-            <div className="hr-benefit-item">
-              <CheckCircle className="hr-benefit-icon" size={20} />
-              <span>
-                Easy to understand, customised, compliant & conducive drafts.
-              </span>
-            </div>
+          <div className="hr-trust-pills">
+            <span className="hr-trust-pill">
+              <CheckCircle size={16} />
+              Legally Vetted
+            </span>
+            <span className="hr-trust-pill">
+              <CheckCircle size={16} />
+              2013 Act Compliant
+            </span>
+            <span className="hr-trust-pill">
+              <CheckCircle size={16} />
+              Instant Download
+            </span>
           </div>
 
           <div className="hr-hero-ctas">
-            <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
-              Get Started with HR Tool
+            <Button size="lg" className="hr-primary-button" onClick={scrollToPricing}>
+              Get POSH Compliance Suite
               <ArrowRight size={20} />
             </Button>
-            <Button size="lg" className="hr-secondary-button" asChild>
-              <Link href="/book-a-call">Talk to a Lawyer</Link>
+            <Button size="lg" className="hr-secondary-button" onClick={scrollToWizard}>
+              Use HR Customization Tool
             </Button>
           </div>
 
@@ -381,6 +395,312 @@ export default function HRLegalCounsel() {
                 <ArrowRight size={20} />
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* POSH Pricing Cards Section */}
+        <section className="posh-pricing-section" id="posh-pricing">
+          <div className="posh-pricing-header">
+            <h2 className="hr-section-title">Choose Your POSH Compliance Package</h2>
+            <p className="posh-pricing-subtitle">
+              Everything you need to meet legal mandates and protect your workplace
+            </p>
+          </div>
+
+          <div className="posh-pricing-cards">
+            {/* Essential Kit */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="posh-pricing-card"
+            >
+              <div className="posh-card-badge posh-badge-blue">For Small Teams</div>
+              <h3 className="posh-card-title">Essential Kit</h3>
+              
+              <div className="posh-price-container">
+                <div className="posh-price-main">
+                  <span className="posh-price">₹3,499</span>
+                  <span className="posh-price-original">₹4,999</span>
+                </div>
+                <div className="posh-price-savings">Save 30%</div>
+              </div>
+
+              <p className="posh-card-description">
+                Perfect for startups and small businesses needing basic compliance documentation.
+              </p>
+
+              <ul className="posh-features-list">
+                <li><CheckCircle size={18} /> POSH Policy Document (PDF)</li>
+                <li><CheckCircle size={18} /> 20+ Slide Training Deck (PDF)</li>
+                <li><CheckCircle size={18} /> Watermarked for internal use</li>
+                <li><CheckCircle size={18} /> Legally compliant framework</li>
+                <li><CheckCircle size={18} /> Instant digital download</li>
+              </ul>
+
+              <p className="posh-card-note">*Includes plain PDF files for immediate compliance</p>
+
+              <Button className="posh-cta-button posh-cta-secondary">
+                Get Essential Kit
+              </Button>
+            </motion.div>
+
+            {/* Pro Bundle - RECOMMENDED */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="posh-pricing-card posh-card-recommended"
+            >
+              <div className="posh-recommended-badge">
+                <Sparkles size={16} />
+                MOST POPULAR
+              </div>
+              <div className="posh-card-badge posh-badge-purple">For Growing Companies</div>
+              <h3 className="posh-card-title">Pro Bundle</h3>
+              
+              <div className="posh-price-container">
+                <div className="posh-price-main">
+                  <span className="posh-price">₹4,999</span>
+                  <span className="posh-price-original">₹8,499</span>
+                </div>
+                <div className="posh-price-savings">Save 41% • Best Value</div>
+              </div>
+
+              <p className="posh-card-description">
+                Fully editable documents you can customize and brand for your organization.
+              </p>
+
+              <ul className="posh-features-list">
+                <li><CheckCircle size={18} /> Editable POSH Policy (.docx)</li>
+                <li><CheckCircle size={18} /> Editable Training Deck (.pptx)</li>
+                <li><CheckCircle size={18} /> Customize with your branding</li>
+                <li><CheckCircle size={18} /> Modify as per your company needs</li>
+                <li><CheckCircle size={18} /> Legally compliant foundation</li>
+                <li><CheckCircle size={18} /> No watermarks</li>
+                <li><CheckCircle size={18} /> Instant digital download</li>
+              </ul>
+
+              <p className="posh-card-note">*Full editing rights for internal customization</p>
+
+              <Button className="posh-cta-button posh-cta-primary">
+                Get Pro Bundle
+              </Button>
+            </motion.div>
+
+            {/* Expert Package */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="posh-pricing-card posh-card-premium"
+            >
+              <div className="posh-card-badge posh-badge-gold">For Complete Solutions</div>
+              <h3 className="posh-card-title">Expert Package</h3>
+              
+              <div className="posh-price-container">
+                <div className="posh-price-main">
+                  <span className="posh-price">₹9,999</span>
+                  <span className="posh-price-original">₹16,999</span>
+                </div>
+                <div className="posh-price-savings">Save 41% • Enterprise Ready</div>
+              </div>
+
+              <p className="posh-card-description">
+                Presentation-ready materials with interactive training tools for professional rollout.
+              </p>
+
+              <ul className="posh-features-list">
+                <li><CheckCircle size={18} /> Professionally designed POSH Policy</li>
+                <li><CheckCircle size={18} /> Ready-to-present Training Deck</li>
+                <li><CheckCircle size={18} /> Interactive Training Questionnaire</li>
+                <li><CheckCircle size={18} /> Yes/No response format for engagement</li>
+                <li><CheckCircle size={18} /> Premium visual design</li>
+                <li><CheckCircle size={18} /> Fully editable formats</li>
+                <li><CheckCircle size={18} /> Instant digital download</li>
+                <li><CheckCircle size={18} /> Suitable for 200+ employees</li>
+              </ul>
+
+              <p className="posh-card-note">*Includes practical assessment tools</p>
+
+              <Button className="posh-cta-button posh-cta-primary">
+                Get Expert Package
+              </Button>
+            </motion.div>
+          </div>
+
+          <div className="posh-pricing-footer">
+            <p className="posh-footer-text">
+              All packages include lifetime access. One-time payment, no subscriptions.
+            </p>
+            <div className="posh-trust-badges">
+              <span className="posh-trust-item">
+                <Lock size={16} />
+                Secure checkout
+              </span>
+              <span className="posh-trust-item">
+                <Download size={16} />
+                Instant delivery
+              </span>
+              <span className="posh-trust-item">
+                <Shield size={16} />
+                Email support
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* What's Included Section */}
+        <section className="posh-whats-included">
+          <h2 className="hr-section-title">What You're Getting</h2>
+          
+          <div className="posh-included-grid">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="posh-included-card"
+            >
+              <FileText size={40} className="posh-included-icon" />
+              <h3 className="posh-included-title">Comprehensive POSH Policy</h3>
+              <ul className="posh-included-list">
+                <li>Complete Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013 compliance</li>
+                <li>Internal Complaints Committee (ICC) framework and structure</li>
+                <li>Clear complaint filing and investigation procedures</li>
+                <li>Penalty clauses and disciplinary actions</li>
+                <li>Employee rights and employer obligations</li>
+                <li>Industry-agnostic, easily adaptable template</li>
+              </ul>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              className="posh-included-card"
+            >
+              <Presentation size={40} className="posh-included-icon" />
+              <h3 className="posh-included-title">Employee Training Presentation</h3>
+              <ul className="posh-included-list">
+                <li>20+ professionally designed slides</li>
+                <li>Definition and types of workplace harassment</li>
+                <li>Real-world scenarios and case studies</li>
+                <li>Employee rights and reporting mechanisms</li>
+                <li>Employer responsibilities and ICC process</li>
+                <li>Q&A guidance for facilitators</li>
+                <li>Visual aids for better retention</li>
+              </ul>
+            </motion.div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="posh-included-card posh-included-center"
+          >
+            <ClipboardList size={40} className="posh-included-icon" />
+            <h3 className="posh-included-title">Interactive Training Questionnaire</h3>
+            <p className="posh-included-subtitle">(Included in Expert Package)</p>
+            <ul className="posh-included-list">
+              <li>Scenario-based assessment questions</li>
+              <li>Yes/No response format for easy facilitation</li>
+              <li>Tests understanding of POSH concepts</li>
+              <li>Can be used in training sessions or self-assessment</li>
+              <li>Helps gauge employee awareness levels</li>
+            </ul>
+          </motion.div>
+        </section>
+
+        {/* Social Proof & Urgency Section */}
+        <section className="posh-social-proof">
+          <div className="posh-proof-banner">
+            <div className="posh-proof-item">
+              <Star size={24} className="posh-proof-icon" />
+              <p className="posh-proof-text">
+                Join 500+ Indian businesses who've downloaded our POSH compliance suite
+              </p>
+            </div>
+            <div className="posh-proof-item">
+              <Clock size={24} className="posh-proof-icon" />
+              <p className="posh-proof-text">
+                Instant download • Implementation in hours, not weeks
+              </p>
+            </div>
+            <div className="posh-proof-item">
+              <Shield size={24} className="posh-proof-icon" />
+              <p className="posh-proof-text">
+                Legally reviewed by employment law experts
+              </p>
+            </div>
+          </div>
+          <div className="posh-urgency-banner">
+            <Sparkles size={20} />
+            Launch offer: Save up to 41% • Limited time pricing
+          </div>
+        </section>
+
+        {/* Comparison Table Section */}
+        <section className="posh-comparison">
+          <h2 className="hr-section-title">Compare Packages</h2>
+          <div className="posh-comparison-table-wrapper">
+            <table className="posh-comparison-table">
+              <thead>
+                <tr>
+                  <th>Feature</th>
+                  <th>Essential Kit</th>
+                  <th className="posh-table-recommended">Pro Bundle</th>
+                  <th>Expert Package</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>POSH Policy Document</td>
+                  <td><Check size={20} className="posh-check" /> PDF</td>
+                  <td><Check size={20} className="posh-check" /> Editable .docx</td>
+                  <td><Check size={20} className="posh-check" /> Premium Design</td>
+                </tr>
+                <tr>
+                  <td>Training Presentation</td>
+                  <td><Check size={20} className="posh-check" /> PDF (20+ slides)</td>
+                  <td><Check size={20} className="posh-check" /> Editable .pptx</td>
+                  <td><Check size={20} className="posh-check" /> Presentation-Ready</td>
+                </tr>
+                <tr>
+                  <td>Training Questionnaire</td>
+                  <td className="posh-no-check">✗</td>
+                  <td className="posh-no-check">✗</td>
+                  <td><Check size={20} className="posh-check" /> Interactive</td>
+                </tr>
+                <tr>
+                  <td>Editable/Customizable</td>
+                  <td className="posh-no-check">✗</td>
+                  <td><Check size={20} className="posh-check" /></td>
+                  <td><Check size={20} className="posh-check" /></td>
+                </tr>
+                <tr>
+                  <td>Watermarks</td>
+                  <td>Yes</td>
+                  <td>No</td>
+                  <td>No</td>
+                </tr>
+                <tr>
+                  <td>Best For</td>
+                  <td>10-50 employees</td>
+                  <td>50-200 employees</td>
+                  <td>200+ employees</td>
+                </tr>
+                <tr className="posh-table-price-row">
+                  <td>Price</td>
+                  <td><strong>₹3,499</strong></td>
+                  <td><strong>₹4,999</strong></td>
+                  <td><strong>₹9,999</strong></td>
+                </tr>
+              </tbody>
+            </table>
           </div>
         </section>
 
@@ -1134,11 +1454,12 @@ export default function HRLegalCounsel() {
           <h2 className="hr-section-title">Why HR Teams Trust The Compliers</h2>
           <div className="hr-trust-cards">
             <div className="hr-trust-card">
-              <Users size={40} style={{ color: "#0ea5e9", margin: "0 auto 1rem" }} />
-              <h3 className="hr-trust-card-title">HR & startup-first legal expertise</h3>
+              <Download size={40} style={{ color: "#0ea5e9", margin: "0 auto 1rem" }} />
+              <h3 className="hr-trust-card-title">
+                Ready-to-deploy compliance packages
+              </h3>
               <p className="hr-trust-card-description">
-                We understand the unique challenges of building HR policies for growing
-                teams.
+                Download professionally crafted POSH policies and training decks instantly. No waiting, no back-and-forth—just compliant documentation ready to implement.
               </p>
             </div>
             <div className="hr-trust-card">
@@ -1177,6 +1498,30 @@ export default function HRLegalCounsel() {
             <h2 className="hr-section-title">FAQs on HR Legal Documentation</h2>
             <div className="faq-container">
               {[
+                {
+                  question: "What's the difference between the Essential Kit and Pro Bundle?",
+                  answer: "The Essential Kit provides watermarked PDF files suitable for immediate compliance and internal reference. The Pro Bundle gives you fully editable Word and PowerPoint files that you can customize with your company branding, modify content to match your specific needs, and present without watermarks. Pro Bundle is ideal if you want to adapt the documents to your organization's unique requirements."
+                },
+                {
+                  question: "Can we use these documents for companies of any size?",
+                  answer: "Yes. The Essential Kit and Pro Bundle work for companies from 10 to 500+ employees. The Expert Package is specifically designed for larger organizations (200+ employees) that need presentation-ready materials and interactive training tools for comprehensive rollout."
+                },
+                {
+                  question: "Are these documents legally compliant with the POSH Act 2013?",
+                  answer: "Absolutely. All documents have been reviewed by employment law experts and align with the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013. However, we recommend consulting with legal counsel for company-specific customizations or if you have unique industry requirements."
+                },
+                {
+                  question: "How quickly will I receive the documents after purchase?",
+                  answer: "Instantly. Upon successful payment, you'll receive an email with download links within 2-3 minutes. All files are delivered digitally, so you can start implementing immediately."
+                },
+                {
+                  question: "Can I get help customizing the documents?",
+                  answer: "Yes. While the Pro and Expert packages are designed to be self-sufficient, you can book a consultation with The Compliers for personalized guidance on customization, ICC setup, or training delivery. This is available as an add-on service."
+                },
+                {
+                  question: "Do you offer refunds?",
+                  answer: "Due to the digital nature of the products, all sales are final. However, if you face any technical issues with downloads or file access, our support team will assist you immediately."
+                },
                 {
                   question: "Is this enough without a lawyer?",
                   answer: "AI drafts are starting points. For high-risk issues (POSH, terminations, etc.) we recommend The Compliers' customised legal review to ensure full compliance with your specific state laws and industry requirements."
@@ -1306,6 +1651,38 @@ export default function HRLegalCounsel() {
             "@context": "https://schema.org",
             "@type": "FAQPage",
             mainEntity: [
+              {
+                "@type": "Question",
+                name: "What's the difference between the Essential Kit and Pro Bundle?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "The Essential Kit provides watermarked PDF files suitable for immediate compliance and internal reference. The Pro Bundle gives you fully editable Word and PowerPoint files that you can customize with your company branding, modify content to match your specific needs, and present without watermarks. Pro Bundle is ideal if you want to adapt the documents to your organization's unique requirements.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Can we use these documents for companies of any size?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Yes. The Essential Kit and Pro Bundle work for companies from 10 to 500+ employees. The Expert Package is specifically designed for larger organizations (200+ employees) that need presentation-ready materials and interactive training tools for comprehensive rollout.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "Are these documents legally compliant with the POSH Act 2013?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Absolutely. All documents have been reviewed by employment law experts and align with the Sexual Harassment of Women at Workplace (Prevention, Prohibition and Redressal) Act, 2013. However, we recommend consulting with legal counsel for company-specific customizations or if you have unique industry requirements.",
+                },
+              },
+              {
+                "@type": "Question",
+                name: "How quickly will I receive the documents after purchase?",
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: "Instantly. Upon successful payment, you'll receive an email with download links within 2-3 minutes. All files are delivered digitally, so you can start implementing immediately.",
+                },
+              },
               {
                 "@type": "Question",
                 name: "Is this enough without a lawyer?",
