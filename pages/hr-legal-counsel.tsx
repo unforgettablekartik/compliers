@@ -313,7 +313,7 @@ export default function HRLegalCounsel() {
               <ArrowRight size={20} />
             </Button>
             <Button size="lg" className="hr-secondary-button" onClick={scrollToWizard}>
-              Use HR Customization Tool
+              Connect Now
             </Button>
           </div>
 
@@ -340,9 +340,9 @@ export default function HRLegalCounsel() {
                 className="hr-step"
               >
                 <div className="hr-step-number">1</div>
-                <h3 className="hr-step-title">Choose your document type</h3>
+                <h3 className="hr-step-title">Choose Package</h3>
                 <p className="hr-step-description">
-                  Select Employee Handbook or Workplace Policy Suite based on your needs.
+                  Select the POSH compliance package that fits your organization's needs.
                 </p>
               </motion.div>
 
@@ -354,9 +354,9 @@ export default function HRLegalCounsel() {
                 className="hr-step"
               >
                 <div className="hr-step-number">2</div>
-                <h3 className="hr-step-title">Answer HR-focused questions</h3>
+                <h3 className="hr-step-title">Fill Information</h3>
                 <p className="hr-step-description">
-                  Provide company profile, work model, leave structure, and policy preferences.
+                  Provide your company details and specific compliance requirements.
                 </p>
               </motion.div>
 
@@ -368,9 +368,9 @@ export default function HRLegalCounsel() {
                 className="hr-step"
               >
                 <div className="hr-step-number">3</div>
-                <h3 className="hr-step-title">Generate & Download</h3>
+                <h3 className="hr-step-title">Make Payment</h3>
                 <p className="hr-step-description">
-                  Get your customised draft instantly with clear, compliant language.
+                  Complete secure checkout with your preferred payment method.
                 </p>
               </motion.div>
 
@@ -382,16 +382,16 @@ export default function HRLegalCounsel() {
                 className="hr-step"
               >
                 <div className="hr-step-number">4</div>
-                <h3 className="hr-step-title">Optional Legal Review</h3>
+                <h3 className="hr-step-title">Get It Delivered</h3>
                 <p className="hr-step-description">
-                  Request customised legal review by The Compliers for full compliance assurance.
+                  Receive your complete POSH compliance documents instantly via email.
                 </p>
               </motion.div>
             </div>
 
             <div style={{ textAlign: "center", marginTop: "3rem" }}>
-              <Button size="lg" className="hr-primary-button" onClick={scrollToWizard}>
-                Launch HR Legal Counsel Tool
+              <Button size="lg" className="hr-primary-button" onClick={scrollToPricing}>
+                Get POSH Compliance Suite
                 <ArrowRight size={20} />
               </Button>
             </div>
@@ -498,6 +498,10 @@ export default function HRLegalCounsel() {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="posh-pricing-card posh-card-premium"
             >
+              <div className="posh-recommended-badge posh-recommended-badge-gold">
+                <Sparkles size={16} />
+                BEST VALUE
+              </div>
               <div className="posh-card-badge posh-badge-gold">For Complete Solutions</div>
               <h3 className="posh-card-title">Expert Package</h3>
               
@@ -583,7 +587,7 @@ export default function HRLegalCounsel() {
               className="posh-included-card"
             >
               <Presentation size={40} className="posh-included-icon" />
-              <h3 className="posh-included-title">Employee Training Presentation</h3>
+              <h3 className="posh-included-title">Training Presentation</h3>
               <ul className="posh-included-list">
                 <li>20+ professionally designed slides</li>
                 <li>Definition and types of workplace harassment</li>
@@ -704,794 +708,6 @@ export default function HRLegalCounsel() {
           </div>
         </section>
 
-        {/* Product Cards Section */}
-        <section className="hr-products">
-          <h2 className="hr-section-title">Choose Your HR Legal Document</h2>
-          <div className="hr-product-cards">
-            {/* Employee Handbook Card */}
-            <Card className="hr-product-card">
-              <CardHeader>
-                <FileText size={32} style={{ color: "#0ea5e9", marginBottom: "1rem" }} />
-                <CardTitle className="hr-product-title">
-                  Employee Handbook Manual
-                </CardTitle>
-                <p className="hr-product-tagline">
-                  Codify your culture, practices, and expectations in a clear, compliant
-                  handbook, as an explanatory guide.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="hr-product-bullets">
-                  <li>Customised to your working days, hours and leave policy.</li>
-                  <li>Tone options: strict, balanced or startup-friendly.</li>
-                  <li>
-                    India-specific compliance considerations for shops & establishments.
-                  </li>
-                </ul>
-                <div className="hr-product-sections">
-                  <p className="hr-product-sections-title">Sections generated:</p>
-                  <p className="hr-product-sections-list">
-                    Company overview & values • Employment classifications • Working hours
-                    & remote/hybrid rules • Leave & holidays • Attendance & overtime •
-                    Behaviour, ethics & conduct
-                  </p>
-                </div>
-                <Button
-                  className="hr-generate-button"
-                  onClick={() => {
-                    setActiveTab("handbook");
-                    scrollToWizard();
-                  }}
-                >
-                  Generate Employee Handbook
-                </Button>
-              </CardContent>
-            </Card>
-
-            {/* POSH & Policy Suite Card */}
-            <Card className="hr-product-card">
-              <CardHeader>
-                <Shield size={32} style={{ color: "#0ea5e9", marginBottom: "1rem" }} />
-                <CardTitle className="hr-product-title">
-                  Workplace Policy Suite
-                </CardTitle>
-                <p className="hr-product-tagline">
-                  Clear, accessible and compliant workplace policies customized to company
-                  objectives, values, and mission.
-                </p>
-              </CardHeader>
-              <CardContent>
-                <ul className="hr-product-bullets">
-                  <li>POSH policy framework aligned with Indian law.</li>
-                  <li>
-                    Configurable based on your ICC, workforce and risk profile.
-                  </li>
-                  <li>
-                    Includes code of conduct, anti-discrimination and complaint handling.
-                  </li>
-                </ul>
-                <div className="hr-product-sections">
-                  <p className="hr-product-sections-title">Policies included:</p>
-                  <p className="hr-product-sections-list">
-                    POSH policy (ICC, process, timelines) • Code of conduct &
-                    anti-harassment • Anti-discrimination & equal opportunity •
-                    Whistleblower & complaint escalation
-                  </p>
-                </div>
-                <Button
-                  className="hr-generate-button"
-                  onClick={() => {
-                    setActiveTab("posh");
-                    scrollToWizard();
-                  }}
-                >
-                  Generate POSH & Policy Suite
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-        </section>
-
-        {/* Main Wizard Section */}
-        <section className="hr-wizard" id="hr-wizard">
-          <h2 className="hr-section-title">HR Legal Counsel Tool</h2>
-          <Card className="hr-wizard-card">
-            {/* Document Type Selector */}
-            <div className="hr-doc-type-selector">
-              <label htmlFor="docType" className="hr-doc-type-label">
-                I WANT:
-              </label>
-              <select
-                id="docType"
-                className="hr-doc-type-dropdown"
-                value={activeTab}
-                onChange={(e) => setActiveTab(e.target.value as "handbook" | "posh")}
-              >
-                <option value="handbook">Employee Handbook</option>
-                <option value="posh">Workplace Policies</option>
-              </select>
-            </div>
-
-            {/* Common Company Profile Section */}
-            <div className="hr-form-section">
-              <h3 className="hr-form-section-title">Company Profile</h3>
-                <div className="hr-form-grid hr-form-grid-2">
-                  <div className="hr-form-field">
-                    <Label htmlFor="legalName">
-                      Company Legal Name <span style={{ color: "red" }}>*</span>
-                    </Label>
-                    <Input
-                      id="legalName"
-                      value={companyProfile.legalName}
-                      onChange={(e) =>
-                        setCompanyProfile({ ...companyProfile, legalName: e.target.value })
-                      }
-                      placeholder="Acme Technologies Private Limited"
-                      required
-                    />
-                  </div>
-
-                  <div className="hr-form-field">
-                    <Label htmlFor="brandName">Brand Name (Optional)</Label>
-                    <Input
-                      id="brandName"
-                      value={companyProfile.brandName}
-                      onChange={(e) =>
-                        setCompanyProfile({ ...companyProfile, brandName: e.target.value })
-                      }
-                      placeholder="Acme Tech"
-                    />
-                  </div>
-
-                  <div className="hr-form-field">
-                    <Label htmlFor="state">
-                      Registered State <span style={{ color: "red" }}>*</span>
-                    </Label>
-                    <select
-                      id="state"
-                      value={companyProfile.state}
-                      onChange={(e) =>
-                        setCompanyProfile({ ...companyProfile, state: e.target.value })
-                      }
-                      className="border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500"
-                      required
-                    >
-                      <option value="">Select State</option>
-                      {INDIAN_STATES.map((state) => (
-                        <option key={state} value={state}>
-                          {state}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-
-                  <div className="hr-form-field">
-                    <Label htmlFor="industry">
-                      Industry <span style={{ color: "red" }}>*</span>
-                    </Label>
-                    <select
-                      id="industry"
-                      value={companyProfile.industry}
-                      onChange={(e) =>
-                        setCompanyProfile({ ...companyProfile, industry: e.target.value })
-                      }
-                      className="border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500"
-                      required
-                    >
-                      <option value="">Select Industry</option>
-                      <option value="SaaS / Tech">SaaS / Tech</option>
-                      <option value="Services">Services</option>
-                      <option value="Manufacturing">Manufacturing</option>
-                      <option value="E-commerce">E-commerce</option>
-                      <option value="Other">Other</option>
-                    </select>
-                  </div>
-
-                  <div className="hr-form-field">
-                    <Label htmlFor="sizeBand">
-                      Team Size <span style={{ color: "red" }}>*</span>
-                    </Label>
-                    <select
-                      id="sizeBand"
-                      value={companyProfile.sizeBand}
-                      onChange={(e) =>
-                        setCompanyProfile({ ...companyProfile, sizeBand: e.target.value })
-                      }
-                      className="border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500"
-                      required
-                    >
-                      <option value="">Select Team Size</option>
-                      <option value="0-20">0-20</option>
-                      <option value="21-50">21-50</option>
-                      <option value="51-250">51-250</option>
-                      <option value="251-1000">251-1000</option>
-                      <option value="1000+">1000+</option>
-                    </select>
-                  </div>
-
-                  <div className="hr-form-field">
-                    <Label htmlFor="workModel">
-                      Work Model <span style={{ color: "red" }}>*</span>
-                    </Label>
-                    <div className="hr-radio-group">
-                      {["Office", "Hybrid", "Remote-first"].map((model) => (
-                        <div key={model} className="hr-radio-item">
-                          <input
-                            type="radio"
-                            id={`workModel-${model}`}
-                            name="workModel"
-                            value={model}
-                            checked={companyProfile.workModel === model}
-                            onChange={(e) =>
-                              setCompanyProfile({
-                                ...companyProfile,
-                                workModel: e.target.value,
-                              })
-                            }
-                          />
-                          <label htmlFor={`workModel-${model}`}>{model}</label>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Employee Handbook Configuration */}
-              {activeTab === "handbook" && (
-                <div className="hr-form-section">
-                  <h3 className="hr-form-section-title">Handbook Configuration</h3>
-                  <div className="hr-form-grid">
-                    <div className="hr-form-field">
-                      <Label>Tone of Handbook</Label>
-                      <div className="hr-radio-group">
-                        {[
-                          { value: "strict", label: "Strict" },
-                          { value: "balanced", label: "Balanced" },
-                          { value: "startup", label: "Startup-friendly" },
-                        ].map((option) => (
-                          <div key={option.value} className="hr-radio-item">
-                            <input
-                              type="radio"
-                              id={`tone-${option.value}`}
-                              name="tone"
-                              value={option.value}
-                              checked={handbookConfig.tone === option.value}
-                              onChange={(e) =>
-                                setHandbookConfig({
-                                  ...handbookConfig,
-                                  tone: e.target.value as "strict" | "balanced" | "startup",
-                                })
-                              }
-                            />
-                            <label htmlFor={`tone-${option.value}`}>{option.label}</label>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label>Working Days</Label>
-                      <div className="hr-checkbox-group">
-                        {[
-                          "Monday",
-                          "Tuesday",
-                          "Wednesday",
-                          "Thursday",
-                          "Friday",
-                          "Saturday",
-                        ].map((day) => (
-                          <div key={day} className="hr-checkbox-item">
-                            <input
-                              type="checkbox"
-                              id={`day-${day}`}
-                              checked={handbookConfig.workingDays.includes(day)}
-                              onChange={(e) => {
-                                if (e.target.checked) {
-                                  setHandbookConfig({
-                                    ...handbookConfig,
-                                    workingDays: [...handbookConfig.workingDays, day],
-                                  });
-                                } else {
-                                  setHandbookConfig({
-                                    ...handbookConfig,
-                                    workingDays: handbookConfig.workingDays.filter(
-                                      (d) => d !== day
-                                    ),
-                                  });
-                                }
-                              }}
-                            />
-                            <label htmlFor={`day-${day}`}>{day}</label>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label htmlFor="workingHours">Working Hours</Label>
-                      <Input
-                        id="workingHours"
-                        value={handbookConfig.workingHours}
-                        onChange={(e) =>
-                          setHandbookConfig({
-                            ...handbookConfig,
-                            workingHours: e.target.value,
-                          })
-                        }
-                        placeholder="9:00 AM - 6:00 PM"
-                      />
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label htmlFor="leaveSummary">Leave Structure Summary</Label>
-                      <Textarea
-                        id="leaveSummary"
-                        value={handbookConfig.leaveSummary}
-                        onChange={(e) =>
-                          setHandbookConfig({
-                            ...handbookConfig,
-                            leaveSummary: e.target.value,
-                          })
-                        }
-                        placeholder="Summarise your planned leave types (CL/SL/EL, maternity, paternity, etc)"
-                      />
-                      <span className="hr-form-helper">
-                        E.g., "12 CL, 12 SL, 15 EL per year, 26 weeks maternity leave"
-                      </span>
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label htmlFor="probationRules">Probation & Confirmation Rules</Label>
-                      <Textarea
-                        id="probationRules"
-                        value={handbookConfig.probationRules}
-                        onChange={(e) =>
-                          setHandbookConfig({
-                            ...handbookConfig,
-                            probationRules: e.target.value,
-                          })
-                        }
-                        placeholder="E.g., 3-month probation with performance review"
-                      />
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label htmlFor="extraPolicies">
-                        Any non-standard policies to include? (Optional)
-                      </Label>
-                      <Textarea
-                        id="extraPolicies"
-                        value={handbookConfig.extraPolicies}
-                        onChange={(e) =>
-                          setHandbookConfig({
-                            ...handbookConfig,
-                            extraPolicies: e.target.value,
-                          })
-                        }
-                        placeholder="E.g., Work-from-anywhere month, wellness day, sabbatical policy"
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* POSH & Policies Configuration */}
-              {activeTab === "posh" && (
-                <div className="hr-form-section">
-                  <h3 className="hr-form-section-title">POSH Policy Configuration</h3>
-                  <div className="hr-form-grid">
-                    <div className="hr-form-field">
-                      <Label>POSH Policy Required?</Label>
-                      <div className="hr-radio-group">
-                        <div className="hr-radio-item">
-                          <input
-                            type="radio"
-                            id="posh-yes"
-                            name="poshRequired"
-                            checked={poshConfig.poshRequired}
-                            onChange={() =>
-                              setPoshConfig({ ...poshConfig, poshRequired: true })
-                            }
-                          />
-                          <label htmlFor="posh-yes">Yes</label>
-                        </div>
-                        <div className="hr-radio-item">
-                          <input
-                            type="radio"
-                            id="posh-no"
-                            name="poshRequired"
-                            checked={!poshConfig.poshRequired}
-                            onChange={() =>
-                              setPoshConfig({ ...poshConfig, poshRequired: false })
-                            }
-                          />
-                          <label htmlFor="posh-no">No</label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label>Do you already have an ICC?</Label>
-                      <div className="hr-radio-group">
-                        <div className="hr-radio-item">
-                          <input
-                            type="radio"
-                            id="icc-yes"
-                            name="hasICC"
-                            checked={poshConfig.hasICC}
-                            onChange={() => setPoshConfig({ ...poshConfig, hasICC: true })}
-                          />
-                          <label htmlFor="icc-yes">Yes</label>
-                        </div>
-                        <div className="hr-radio-item">
-                          <input
-                            type="radio"
-                            id="icc-no"
-                            name="hasICC"
-                            checked={!poshConfig.hasICC}
-                            onChange={() => setPoshConfig({ ...poshConfig, hasICC: false })}
-                          />
-                          <label htmlFor="icc-no">No</label>
-                        </div>
-                      </div>
-                      {!poshConfig.hasICC && (
-                        <Alert variant="default" style={{ marginTop: "0.5rem" }}>
-                          <AlertDescription>
-                            We'll include a generic ICC framework and you can plug in names
-                            later.
-                          </AlertDescription>
-                        </Alert>
-                      )}
-                    </div>
-
-                    {poshConfig.hasICC && (
-                      <div className="hr-form-field">
-                        <Label htmlFor="iccDetails">ICC Members (Simple text)</Label>
-                        <Textarea
-                          id="iccDetails"
-                          value={poshConfig.iccDetails}
-                          onChange={(e) =>
-                            setPoshConfig({ ...poshConfig, iccDetails: e.target.value })
-                          }
-                          placeholder="E.g., Presiding Officer: Jane Doe, Members: John Smith, etc."
-                        />
-                      </div>
-                    )}
-
-                    <div className="hr-form-field">
-                      <Label htmlFor="riskLevel">Industry Risk Level</Label>
-                      <select
-                        id="riskLevel"
-                        value={poshConfig.riskLevel}
-                        onChange={(e) =>
-                          setPoshConfig({
-                            ...poshConfig,
-                            riskLevel: e.target.value as "low" | "medium" | "high",
-                          })
-                        }
-                        className="border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500"
-                      >
-                        <option value="low">Low</option>
-                        <option value="medium">Medium</option>
-                        <option value="high">High public interaction</option>
-                      </select>
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label>Workforce Mix</Label>
-                      <div className="hr-checkbox-group">
-                        {[
-                          "Full-time employees",
-                          "Interns",
-                          "Contract staff",
-                          "Vendors & third-party workers on site",
-                        ].map((type) => (
-                          <div key={type} className="hr-checkbox-item">
-                            <input
-                              type="checkbox"
-                              id={`workforce-${type}`}
-                              checked={poshConfig.workforceMix.includes(type)}
-                              onChange={(e) => {
-                                if (e.target.checked) {
-                                  setPoshConfig({
-                                    ...poshConfig,
-                                    workforceMix: [...poshConfig.workforceMix, type],
-                                  });
-                                } else {
-                                  setPoshConfig({
-                                    ...poshConfig,
-                                    workforceMix: poshConfig.workforceMix.filter(
-                                      (t) => t !== type
-                                    ),
-                                  });
-                                }
-                              }}
-                            />
-                            <label htmlFor={`workforce-${type}`}>{type}</label>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label>Do employees interact with customers/public on-site?</Label>
-                      <div className="hr-radio-group">
-                        <div className="hr-radio-item">
-                          <input
-                            type="radio"
-                            id="interact-yes"
-                            name="interactsWithPublic"
-                            checked={poshConfig.interactsWithPublic}
-                            onChange={() =>
-                              setPoshConfig({ ...poshConfig, interactsWithPublic: true })
-                            }
-                          />
-                          <label htmlFor="interact-yes">Yes</label>
-                        </div>
-                        <div className="hr-radio-item">
-                          <input
-                            type="radio"
-                            id="interact-no"
-                            name="interactsWithPublic"
-                            checked={!poshConfig.interactsWithPublic}
-                            onChange={() =>
-                              setPoshConfig({ ...poshConfig, interactsWithPublic: false })
-                            }
-                          />
-                          <label htmlFor="interact-no">No</label>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div className="hr-form-field">
-                      <Label htmlFor="specialCircumstances">
-                        Any special circumstances to mention? (Optional)
-                      </Label>
-                      <Textarea
-                        id="specialCircumstances"
-                        value={poshConfig.specialCircumstances}
-                        onChange={(e) =>
-                          setPoshConfig({
-                            ...poshConfig,
-                            specialCircumstances: e.target.value,
-                          })
-                        }
-                        placeholder="E.g., late-night shifts, field teams, etc."
-                      />
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* Form Buttons */}
-              <div className="hr-form-buttons">
-                <Button
-                  size="lg"
-                  className="hr-primary-button"
-                  onClick={handleGenerateDraft}
-                  disabled={isGenerating}
-                >
-                  {isGenerating ? (
-                    <>
-                      <Loader2 className="animate-spin mr-2" size={20} />
-                      Generating...
-                    </>
-                  ) : (
-                    "Generate Draft Now"
-                  )}
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="hr-secondary-button"
-                  onClick={() => setShowCustomReviewModal(true)}
-                >
-                  Talk to a Lawyer
-                </Button>
-              </div>
-
-              {/* Error Display */}
-              {error && (
-                <Alert variant="error" style={{ marginTop: "1.5rem" }}>
-                  <AlertCircle size={20} />
-                  <AlertDescription>{error}</AlertDescription>
-                </Alert>
-              )}
-
-              {/* Loading State */}
-              {isGenerating && (
-                <div className="hr-loading">
-                  <div className="hr-loading-spinner"></div>
-                  <p className="hr-loading-text">
-                    We're preparing your HR legal draft. This usually takes less than a
-                    minute.
-                  </p>
-                </div>
-              )}
-
-              {/* Output Panel */}
-              {generatedDoc && !isGenerating && (
-                <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  className="hr-output"
-                >
-                  <div className="hr-output-header">
-                    <div className="hr-output-meta">
-                      <h3 className="hr-output-title">
-                        {generatedDoc.type === "handbook"
-                          ? "Employee Handbook Draft"
-                          : "POSH & Workplace Policy Suite Draft"}
-                      </h3>
-                      <div className="hr-output-summary">
-                        <span className="hr-output-summary-item">
-                          <strong>Pages:</strong> ~{generatedDoc.estimatedPages}
-                        </span>
-                        <span className="hr-output-summary-item">
-                          <strong>Company:</strong> {generatedDoc.companyName}
-                        </span>
-                        <span className="hr-output-summary-item">
-                          <strong>Tone:</strong>{" "}
-                          {activeTab === "handbook"
-                            ? handbookConfig.tone.charAt(0).toUpperCase() +
-                              handbookConfig.tone.slice(1)
-                            : "Professional"}
-                        </span>
-                      </div>
-                    </div>
-                    <Button onClick={handleCopyToClipboard}>
-                      {copied ? (
-                        <>
-                          <Check size={16} className="mr-2" />
-                          Copied!
-                        </>
-                      ) : (
-                        <>
-                          <Copy size={16} className="mr-2" />
-                          Copy to Clipboard
-                        </>
-                      )}
-                    </Button>
-                  </div>
-
-                  <div className="hr-output-content">
-                    {generatedDoc.document.split("\n").map((line, idx) => {
-                      if (line.startsWith("## ")) {
-                        return <h2 key={idx}>{line.replace("## ", "")}</h2>;
-                      } else if (line.startsWith("### ")) {
-                        return <h3 key={idx}>{line.replace("### ", "")}</h3>;
-                      } else if (line.trim().startsWith("- ")) {
-                        return <li key={idx}>{line.replace("- ", "")}</li>;
-                      } else if (line.trim()) {
-                        return <p key={idx}>{line}</p>;
-                      }
-                      return <br key={idx} />;
-                    })}
-                  </div>
-
-                  {/* Lead Form */}
-                  {showLeadForm && (
-                    <div className="hr-lead-form">
-                      <h4 className="hr-lead-form-title">
-                        Get this draft & checklist via email
-                      </h4>
-                      <form onSubmit={handleLeadFormSubmit}>
-                        <div className="hr-form-grid hr-form-grid-2">
-                          <div className="hr-form-field">
-                            <Label htmlFor="leadName">Name</Label>
-                            <Input
-                              id="leadName"
-                              value={leadForm.name}
-                              onChange={(e) =>
-                                setLeadForm({ ...leadForm, name: e.target.value })
-                              }
-                              required
-                            />
-                          </div>
-                          <div className="hr-form-field">
-                            <Label htmlFor="leadEmail">Work Email</Label>
-                            <Input
-                              id="leadEmail"
-                              type="email"
-                              value={leadForm.email}
-                              onChange={(e) =>
-                                setLeadForm({ ...leadForm, email: e.target.value })
-                              }
-                              required
-                            />
-                          </div>
-                          <div className="hr-form-field">
-                            <Label htmlFor="leadCompany">Company Size</Label>
-                            <select
-                              id="leadCompany"
-                              value={leadForm.company}
-                              onChange={(e) =>
-                                setLeadForm({ ...leadForm, company: e.target.value })
-                              }
-                              className="border rounded px-3 py-2 outline-none focus:ring-2 focus:ring-sky-500"
-                              required
-                            >
-                              <option value="">Select</option>
-                              <option value="0-20">0-20</option>
-                              <option value="21-50">21-50</option>
-                              <option value="51-250">51-250</option>
-                              <option value="251+">251+</option>
-                            </select>
-                          </div>
-                          <div className="hr-form-field" style={{ gridColumn: "1 / -1" }}>
-                            <Button type="submit" className="w-full">
-                              Email Me This Draft & Checklist
-                            </Button>
-                          </div>
-                        </div>
-                      </form>
-                    </div>
-                  )}
-
-                  {/* Upgrade Banner */}
-                  <div className="hr-upgrade-banner">
-                    <p className="hr-upgrade-text">
-                      Want a lawyer to review & customise this for your exact state laws and
-                      risks?
-                    </p>
-                    <Button
-                      size="lg"
-                      style={{ background: "white", color: "#0ea5e9" }}
-                      onClick={() => setShowCustomReviewModal(true)}
-                    >
-                      Request Custom Review
-                      <ArrowRight className="ml-2" size={20} />
-                    </Button>
-                  </div>
-                </motion.div>
-              )}
-            </Card>
-          </section>
-
-        {/* Why HR Teams Trust The Compliers */}
-        <section className="hr-trust">
-          <h2 className="hr-section-title">Why HR Teams Trust The Compliers</h2>
-          <div className="hr-trust-cards">
-            <div className="hr-trust-card">
-              <Download size={40} style={{ color: "#0ea5e9", margin: "0 auto 1rem" }} />
-              <h3 className="hr-trust-card-title">
-                Ready-to-deploy compliance packages
-              </h3>
-              <p className="hr-trust-card-description">
-                Download professionally crafted POSH policies and training decks instantly. No waiting, no back-and-forth—just compliant documentation ready to implement.
-              </p>
-            </div>
-            <div className="hr-trust-card">
-              <Shield size={40} style={{ color: "#0ea5e9", margin: "0 auto 1rem" }} />
-              <h3 className="hr-trust-card-title">
-                Templates guided by real employment mandates
-              </h3>
-              <p className="hr-trust-card-description">
-                Our AI is trained on Indian labor laws and POSH requirements.
-              </p>
-            </div>
-            <div className="hr-trust-card">
-              <CheckCircle size={40} style={{ color: "#0ea5e9", margin: "0 auto 1rem" }} />
-              <h3 className="hr-trust-card-title">
-                Balanced between compliance and culture
-              </h3>
-              <p className="hr-trust-card-description">
-                Legal protection without sacrificing your startup's unique culture.
-              </p>
-            </div>
-            <div className="hr-trust-card">
-              <FileText size={40} style={{ color: "#0ea5e9", margin: "0 auto 1rem" }} />
-              <h3 className="hr-trust-card-title">
-                Optional retainers and ongoing HR legal support
-              </h3>
-              <p className="hr-trust-card-description">
-                Go beyond drafts with continuous legal counsel for your HR team.
-              </p>
-            </div>
-          </div>
-        </section>
-
         {/* FAQs */}
         <section className="hr-faq">
           <div className="hr-faq-container">
@@ -1521,26 +737,6 @@ export default function HRLegalCounsel() {
                 {
                   question: "Do you offer refunds?",
                   answer: "Due to the digital nature of the products, all sales are final. However, if you face any technical issues with downloads or file access, our support team will assist you immediately."
-                },
-                {
-                  question: "Is this enough without a lawyer?",
-                  answer: "AI drafts are starting points. For high-risk issues (POSH, terminations, etc.) we recommend The Compliers' customised legal review to ensure full compliance with your specific state laws and industry requirements."
-                },
-                {
-                  question: "Is the HR legal counsel tool India-specific?",
-                  answer: "Yes, it is optimised for Indian employers and HR teams. The tool considers the Sexual Harassment of Women at Workplace Act 2013, Shops and Establishments Acts, and other relevant Indian employment laws."
-                },
-                {
-                  question: "Can I edit the draft employee handbook or POSH policy?",
-                  answer: "Yes, you'll receive an editable version that you can refine before rollout. You can copy the content and make any necessary adjustments to fit your company's specific needs."
-                },
-                {
-                  question: "Can we request a fully customised handbook / POSH policy?",
-                  answer: "Yes, via the \"Request Custom Review\" option. You'll get a quote and timeline from our legal team. This includes a thorough review by an experienced employment lawyer who will customise the document for your exact requirements."
-                },
-                {
-                  question: "Will this work for remote / hybrid teams?",
-                  answer: "Yes, the wizard asks about your work model and adjusts the draft accordingly. Whether you're fully remote, hybrid, or office-based, the policies will reflect your work arrangement."
                 }
               ].map((faq, index) => (
                 <FAQItem
@@ -1685,42 +881,18 @@ export default function HRLegalCounsel() {
               },
               {
                 "@type": "Question",
-                name: "Is this enough without a lawyer?",
+                name: "Can I get help customizing the documents?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "AI drafts are starting points. For high-risk issues (POSH, terminations, etc.) we recommend The Compliers' customised legal review to ensure full compliance with your specific state laws and industry requirements.",
+                  text: "Yes. While the Pro and Expert packages are designed to be self-sufficient, you can book a consultation with The Compliers for personalized guidance on customization, ICC setup, or training delivery. This is available as an add-on service.",
                 },
               },
               {
                 "@type": "Question",
-                name: "Is the HR legal counsel tool India-specific?",
+                name: "Do you offer refunds?",
                 acceptedAnswer: {
                   "@type": "Answer",
-                  text: "Yes, it is optimised for Indian employers and HR teams. The tool considers the Sexual Harassment of Women at Workplace Act 2013, Shops and Establishments Acts, and other relevant Indian employment laws.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can I edit the draft employee handbook or POSH policy?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, you'll receive an editable version that you can refine before rollout. You can copy the content and make any necessary adjustments to fit your company's specific needs.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Can we request a fully customised handbook / POSH policy?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, via the 'Request Custom Review' option. You'll get a quote and timeline from our legal team. This includes a thorough review by an experienced employment lawyer who will customise the document for your exact requirements.",
-                },
-              },
-              {
-                "@type": "Question",
-                name: "Will this work for remote / hybrid teams?",
-                acceptedAnswer: {
-                  "@type": "Answer",
-                  text: "Yes, the wizard asks about your work model and adjusts the draft accordingly. Whether you're fully remote, hybrid, or office-based, the policies will reflect your work arrangement.",
+                  text: "Due to the digital nature of the products, all sales are final. However, if you face any technical issues with downloads or file access, our support team will assist you immediately.",
                 },
               },
             ],
