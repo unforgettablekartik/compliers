@@ -131,8 +131,6 @@ export default function CreatorInLawLanding() {
                 Influencer campaigns are scaling. So are the risks.
               </h2>
               <p className="creator-section-paragraph">
-                <span style={{ color: '#D9A3A5', fontWeight: 'bold' }}>Marketing is your expertise! Legal protection is ours.</span>
-                <br />
                 We help brands navigate influencer agreements, disclosure requirements, and platform policies. Running campaigns without proper legal oversight exposes you to significant risks. That's where we come in.
               </p>
               
@@ -146,7 +144,7 @@ export default function CreatorInLawLanding() {
               </div>
               
               <p className="creator-support-text text-center">
-                Whether you're running micro-influencer campaigns or partnering with top-tier talent, your legal framework needs to match your scale.
+                Whether you're running micro-influencer campaigns or partnering with top-tier talent, you're under tremendous risk.
               </p>
             </div>
             
@@ -378,7 +376,7 @@ export default function CreatorInLawLanding() {
           <div className="text-center mt-12">
             <div className="creator-colorful-box">
               <p className="creator-colorful-text">
-                Discuss your influencer marketing program and explore how ongoing legal support can protect your brand.
+                Explore how ongoing legal support protects your brand and keeps you harmless.
               </p>
             </div>
             <div className="creator-share-btn-container">
