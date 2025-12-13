@@ -92,7 +92,7 @@ export default function CreatorInLawLanding() {
                 <span><span className="creator-brand-name">Creator in Law</span> by The Compliers</span>
               </div>
               <h1 className="creator-hero-title">
-                Legal Protection for Brands Running Influencer Campaigns
+                Legal Protection for Brands sponsoring Influencers
               </h1>
 
               <p className="creator-hero-description">
@@ -128,7 +128,7 @@ export default function CreatorInLawLanding() {
           <div className="creator-problem-grid">
             <div className="creator-problem-left">
               <h2 className="creator-section-heading mb-4">
-                Influencer campaigns are scaling. So are the compliance risks.
+                Influencer campaigns are scaling. So are the risks.
               </h2>
               <p className="creator-section-paragraph">
                 <span style={{ color: '#D9A3A5', fontWeight: 'bold' }}>Marketing is your expertise! Legal protection is ours.</span>
