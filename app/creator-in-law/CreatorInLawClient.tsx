@@ -92,7 +92,7 @@ export default function CreatorInLawLanding() {
                 <span><span className="creator-brand-name">Creator in Law</span> by The Compliers</span>
               </div>
               <h1 className="creator-hero-title">
-                Legal armour for content creators &amp; influencers.
+                Legal Protection for Brands Running Influencer Campaigns
               </h1>
 
               <p className="creator-hero-description">
