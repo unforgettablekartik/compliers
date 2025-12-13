@@ -69,10 +69,10 @@ export default function CreatorInLawLanding() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "Service",
-            name: "Creator in Law — Legal Support for Influencers & Creators",
+            name: "Creator in Law — Legal Support for Brands Running Influencer Campaigns",
             provider: { "@type": "LegalService", name: "The Compliers" },
             areaServed: "IN",
-            serviceType: "Contract reviews, compliance guidance, IP protection for creators",
+            serviceType: "Contract reviews, compliance guidance, campaign protection for brands and agencies",
           }),
         }}
       />
@@ -96,7 +96,7 @@ export default function CreatorInLawLanding() {
               </h1>
 
               <p className="creator-hero-description">
-                The Compliers helps you decode brand deals, protect your content, and stay compliant — so you can focus on content creation and not contracts and legal verification.
+                The Compliers helps brands, sponsors, and agencies navigate influencer partnerships with confidence — ensuring compliance, protecting your investment, and minimizing legal risks in creator collaborations.
               </p>
 
               <div className="creator-hero-buttons">
@@ -128,12 +128,12 @@ export default function CreatorInLawLanding() {
           <div className="creator-problem-grid">
             <div className="creator-problem-left">
               <h2 className="creator-section-heading mb-4">
-                Brand deals are getting bigger. So are the risks.
+                Influencer campaigns are scaling. So are the compliance risks.
               </h2>
               <p className="creator-section-paragraph">
-                <span style={{ color: '#D9A3A5', fontWeight: 'bold' }}>To act is your expertise! Contract is ours.</span>
+                <span style={{ color: '#D9A3A5', fontWeight: 'bold' }}>Marketing is your expertise! Legal protection is ours.</span>
                 <br />
-                Let us handle complex contracts, disclosure rules, and content policies. Most creators still sign whatever is sent to them. That's where we come in.
+                We help brands navigate influencer agreements, disclosure requirements, and platform policies. Running campaigns without proper legal oversight exposes you to significant risks. That's where we come in.
               </p>
               
               <div className="creator-social-icons">
@@ -146,7 +146,7 @@ export default function CreatorInLawLanding() {
               </div>
               
               <p className="creator-support-text text-center">
-                Whether you're at 50k or 5M followers, your contracts and compliance need to evolve with your growth.
+                Whether you're running micro-influencer campaigns or partnering with top-tier talent, your legal framework needs to match your scale.
               </p>
             </div>
             
@@ -154,9 +154,9 @@ export default function CreatorInLawLanding() {
               <div className="creator-problem-card">
                 <h3 className="creator-problem-title creator-problem-title-with-icon">
                   <CircleHelp className="creator-problem-icon-glyph" aria-hidden />
-                  <span>Unclear contracts</span>
+                  <span>Campaign liability risks</span>
                 </h3>
-                <p className="creator-problem-description">Complex legalese. Vague terms. Safety compromised. No idea what you are signing up for.</p>
+                <p className="creator-problem-description">Unclear deliverables, missing compliance clauses, and inadequate brand protection in influencer agreements.</p>
               </div>
               
               <div className="creator-problem-card creator-legal-counsel-card">
@@ -165,25 +165,25 @@ export default function CreatorInLawLanding() {
                   <span>Legal Counsel for:</span>
                 </h3>
                 <ul className="creator-legal-counsel-list">
-                  <li>Content Creators</li>
-                  <li>Influencers</li>
-                  <li>Managers and Agencies</li>
-                  <li>YouTubers</li>
-                  <li>Artists</li>
-                  <li>Celebrities</li>
-                  <li>Podcasters</li>
-                  <li>Freelancers</li>
-                  <li>Media Intermediaries</li>
-                  <li>Anchors or Collaborators</li>
+                  <li>Brands &amp; Sponsors</li>
+                  <li>Marketing Agencies</li>
+                  <li>Talent Management Firms</li>
+                  <li>PR Agencies</li>
+                  <li>Digital Marketing Teams</li>
+                  <li>E-commerce Brands</li>
+                  <li>Advertising Agencies</li>
+                  <li>Campaign Managers</li>
+                  <li>Media Buying Agencies</li>
+                  <li>Brand Partnerships Teams</li>
                 </ul>
               </div>
               
               <div className="creator-problem-card">
                 <h3 className="creator-problem-title creator-problem-title-with-icon">
                   <CircleHelp className="creator-problem-icon-glyph" aria-hidden />
-                  <span>Compliance anxiety</span>
+                  <span>Regulatory compliance</span>
                 </h3>
-                <p className="creator-problem-description">Worried over content censorship, disclosures, guidelines, regulations, and legal provisions.</p>
+                <p className="creator-problem-description">Navigating ASCI guidelines, disclosure requirements, and advertising standards across influencer partnerships.</p>
               </div>
             </div>
           </div>
@@ -195,24 +195,24 @@ export default function CreatorInLawLanding() {
         <Container>
           <div className="text-center mb-12">
             <h2 className="creator-section-heading text-white mb-8">
-              Why creators choose The Compliers
+              Why brands &amp; agencies choose The Compliers
             </h2>
           </div>
           
           <div className="creator-trust-grid">
             <div className="creator-trust-card">
               <Users className="creator-trust-icon" aria-hidden />
-              <h3 className="creator-trust-title">Creator-first, not brand-first</h3>
+              <h3 className="creator-trust-title">Brand protection without friction</h3>
               <p className="creator-trust-description">
-                Our job is to protect your interests — your content, your time, your reputation.
+                We protect your investment, reputation, and campaign outcomes while maintaining positive influencer relationships.
               </p>
             </div>
 
             <div className="creator-trust-card">
               <Shield className="creator-trust-icon" aria-hidden />
-              <h3 className="creator-trust-title">Deep focus on influencer &amp; digital law</h3>
+              <h3 className="creator-trust-title">Deep focus on influencer marketing law</h3>
               <p className="creator-trust-description">
-                We live in the world of brand deals, endorsements, platform policies and evolving regulations.
+                We specialize in brand-influencer partnerships, campaign compliance, platform policies, and advertising regulations.
               </p>
             </div>
 
@@ -226,9 +226,9 @@ export default function CreatorInLawLanding() {
 
             <div className="creator-trust-card">
               <HandshakeIcon className="creator-trust-icon" aria-hidden />
-              <h3 className="creator-trust-title">Reliable, long-term partnership</h3>
+              <h3 className="creator-trust-title">Scalable partnership support</h3>
               <p className="creator-trust-description">
-                Think of us as your external legal desk — on your side as you grow from your first deal to your fiftieth.
+                Think of us as your external legal team — supporting you from pilot campaigns to multi-platform influencer programs.
               </p>
             </div>
           </div>
@@ -240,7 +240,7 @@ export default function CreatorInLawLanding() {
         <Container>
           <div className="text-center mb-12">
             <h2 className="creator-section-heading mb-3">
-              What we do for influencers &amp; creators
+              What we do for brands &amp; agencies
             </h2>
           </div>
           
@@ -248,60 +248,60 @@ export default function CreatorInLawLanding() {
             <div className="creator-service-card">
               <div className="creator-service-header">
                 <FileText className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-                <h3 className="creator-service-title">Brand Deal Contract Review</h3>
+                <h3 className="creator-service-title">Influencer Contract Drafting &amp; Review</h3>
               </div>
               <p className="creator-service-description">
-                We review your collaboration and campaign agreements, highlight red flags, and suggest edits to protect your rights &amp; interests.
+                We draft and review influencer agreements to protect your brand, ensure clear deliverables, and include proper compliance safeguards.
               </p>
             </div>
 
             <div className="creator-service-card">
               <div className="creator-service-header">
                 <HandshakeIcon className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-                <h3 className="creator-service-title">Negotiation Support</h3>
+                <h3 className="creator-service-title">Partnership Negotiation Support</h3>
               </div>
               <p className="creator-service-description">
-                Don't want to sound "tough"? We help you push back smartly on usage rights, exclusivity, payment terms, and penalties — carefully.
+                We support your team in negotiating favorable terms on usage rights, exclusivity, deliverables, and payment structures with influencers.
               </p>
             </div>
 
             <div className="creator-service-card">
               <div className="creator-service-header">
                 <Shield className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-                <h3 className="creator-service-title">Risk &amp; Compliance</h3>
+                <h3 className="creator-service-title">Campaign Compliance &amp; Risk Management</h3>
               </div>
               <p className="creator-service-description">
-                Guidance on disclosures, endorsements, and advertising rules so you don't accidentally violate ASCI or consumer guidelines while promoting products.
+                Ensure your influencer campaigns meet ASCI guidelines, disclosure requirements, and advertising standards to avoid regulatory penalties.
               </p>
             </div>
 
             <div className="creator-service-card">
               <div className="creator-service-header">
                 <Scale className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-                <h3 className="creator-service-title">IP &amp; Content Ownership</h3>
+                <h3 className="creator-service-title">Content Rights &amp; Usage Management</h3>
               </div>
               <p className="creator-service-description">
-                Clarify who owns your videos, photos, scripts, and likeness. Protect your creator name and ensure brands don't overreach on perpetual or global rights.
+                Secure appropriate usage rights for campaign content, manage licensing terms, and protect your brand's interests in creator-generated material.
               </p>
             </div>
 
             <div className="creator-service-card">
               <div className="creator-service-header">
                 <AlertTriangle className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-                <h3 className="creator-service-title">Disputes &amp; Claims Support</h3>
+                <h3 className="creator-service-title">Dispute Resolution &amp; Brand Protection</h3>
               </div>
               <p className="creator-service-description">
-                From strongly worded legal notices to strategy on resolving non-payment, misrepresentation, or breach issues — we help you respond with confidence.
+                Handle contract breaches, underdelivery, compliance violations, or reputational issues with influencer partners professionally and legally.
               </p>
             </div>
 
             <div className="creator-service-card">
               <div className="creator-service-header">
                 <TrendingUp className="creator-service-icon" style={{ color: '#d9a3a5' }} aria-hidden />
-                <h3 className="creator-service-title">Business Structuring Advice</h3>
+                <h3 className="creator-service-title">Program Structuring &amp; Policy Development</h3>
               </div>
               <p className="creator-service-description">
-                Light-touch guidance on when and how to formalise your creator business so you're set up for long-term growth.
+                Build scalable influencer marketing programs with proper legal frameworks, standard templates, and compliance policies.
               </p>
             </div>
           </div>
@@ -313,7 +313,7 @@ export default function CreatorInLawLanding() {
         <Container>
           <div className="text-center mb-12">
             <h2 className="creator-section-heading mb-3">
-              Legal Support designed for the creator's economy
+              Legal support designed for influencer marketing programs
             </h2>
           </div>
           
@@ -326,9 +326,9 @@ export default function CreatorInLawLanding() {
               className="creator-step"
             >
               <div className="creator-step-number">1</div>
-              <h3 className="creator-step-title">Share your contract or concern</h3>
+              <h3 className="creator-step-title">Share your campaign details or contract</h3>
               <p className="creator-step-description">
-                Upload your agreement or tell us what's worrying you. We sign an NDA if needed.
+                Share your influencer agreements or campaign requirements. We maintain strict confidentiality with NDAs as needed.
               </p>
             </motion.div>
 
@@ -340,9 +340,9 @@ export default function CreatorInLawLanding() {
               className="creator-step"
             >
               <div className="creator-step-number">2</div>
-              <h3 className="creator-step-title">We review &amp; map the risks</h3>
+              <h3 className="creator-step-title">We analyze &amp; identify gaps</h3>
               <p className="creator-step-description">
-                Our team breaks down key clauses, risks, and opportunities in an easy-to-read format.
+                Our team reviews contracts for brand protection gaps, compliance risks, and optimization opportunities.
               </p>
             </motion.div>
 
@@ -354,9 +354,9 @@ export default function CreatorInLawLanding() {
               className="creator-step"
             >
               <div className="creator-step-number">3</div>
-              <h3 className="creator-step-title">Discuss practical next steps</h3>
+              <h3 className="creator-step-title">Receive actionable recommendations</h3>
               <p className="creator-step-description">
-                Get on a call to walk through our recommendations and your negotiation options.
+                Get clear guidance on contract improvements, compliance requirements, and risk mitigation strategies.
               </p>
             </motion.div>
 
@@ -368,9 +368,9 @@ export default function CreatorInLawLanding() {
               className="creator-step"
             >
               <div className="creator-step-number">4</div>
-              <h3 className="creator-step-title">Ongoing retainership support</h3>
+              <h3 className="creator-step-title">Scale with ongoing support</h3>
               <p className="creator-step-description">
-                Keep us in your corner for future contracts, disputes, and legal questions as your creator business grows.
+                Establish a retainer for continuous support across campaigns, contracts, and compliance as your program grows.
               </p>
             </motion.div>
           </div>
@@ -378,7 +378,7 @@ export default function CreatorInLawLanding() {
           <div className="text-center mt-12">
             <div className="creator-colorful-box">
               <p className="creator-colorful-text">
-                Talk through your current contracts and see if a retainership makes sense for you.
+                Discuss your influencer marketing program and explore how ongoing legal support can protect your brand.
               </p>
             </div>
             <div className="creator-share-btn-container">
@@ -395,11 +395,11 @@ export default function CreatorInLawLanding() {
         <Container>
           <div className="text-center mb-8">
             <h2 className="creator-section-heading mb-4">
-              Reasonable, customised retainers — aligned with your creator journey.
+              Flexible retainers aligned with your campaign scale.
             </h2>
             <p className="creator-section-paragraph max-w-4xl mx-auto mb-8">
-              Instead of one-size-fits-all fees, we work with influencers and agencies on customised retainers that match your deal flow, complexity, and stage of growth.
-              Whether you need support on a couple of deals a month or a steady stream of campaigns across platforms, we design a plan that covers you without surprise invoices or billable-hour anxiety.
+              Instead of one-size-fits-all fees, we work with brands and agencies on customized retainers that match your campaign volume, complexity, and growth stage.
+              Whether you're running a few influencer partnerships per month or managing large-scale multi-platform programs, we design a plan that provides predictable legal support without surprise invoices.
             </p>
           </div>
 
@@ -407,19 +407,19 @@ export default function CreatorInLawLanding() {
             <ul className="creator-retainer-list">
               <li className="creator-retainer-item">
                 <CheckCircle2 className="creator-retainer-icon" aria-hidden />
-                <span>Fixed monthly retainers calibrated to your volume of contracts</span>
+                <span>Fixed monthly retainers calibrated to your campaign volume</span>
               </li>
               <li className="creator-retainer-item">
                 <CheckCircle2 className="creator-retainer-icon" aria-hidden />
-                <span>Clear scope: contract reviews, calls, negotiation support &amp; advisory</span>
+                <span>Comprehensive support: contract drafting, compliance review &amp; advisory</span>
               </li>
               <li className="creator-retainer-item">
                 <CheckCircle2 className="creator-retainer-icon" aria-hidden />
-                <span>Priority turnaround on time-sensitive brand deals</span>
+                <span>Priority turnaround on time-sensitive influencer partnerships</span>
               </li>
               <li className="creator-retainer-item">
                 <CheckCircle2 className="creator-retainer-icon" aria-hidden />
-                <span>Option to add IP &amp; dispute support as you scale</span>
+                <span>Scalable support including dispute resolution &amp; program structuring</span>
               </li>
             </ul>
           </div>
@@ -437,36 +437,36 @@ export default function CreatorInLawLanding() {
           
           <div className="faq-container">
             <FAQItem
-              question="Do you only work with big influencers?"
-              answer="No. We work with micro, mid-tier, and top creators. What matters is that you treat your creator work as a serious business."
+              question="Do you only work with large brands?"
+              answer="No. We support startups, mid-sized companies, and large enterprises. What matters is that you're running influencer campaigns professionally and want proper legal protection."
               isOpen={openFaqIndex === 0}
               onClick={() => setOpenFaqIndex(openFaqIndex === 0 ? null : 0)}
             />
             
             <FAQItem
-              question="Can you help if the brand is outside India?"
-              answer="Yes, we frequently review cross-border contracts. We'll flag jurisdiction-specific issues and suggest practical protections."
+              question="Can you help if we work with international influencers?"
+              answer="Yes, we regularly handle cross-border influencer partnerships. We'll identify jurisdiction-specific compliance requirements and suggest appropriate contractual protections."
               isOpen={openFaqIndex === 1}
               onClick={() => setOpenFaqIndex(openFaqIndex === 1 ? null : 1)}
             />
             
             <FAQItem
-              question="What if I just need a one-time review?"
-              answer="We can start with a single engagement and, if it makes sense, move to an ongoing retainership once you see the value."
+              question="What if we just need a one-time contract review?"
+              answer="Absolutely. We can start with a single campaign or contract review. Once you see the value, we can discuss an ongoing retainer for your regular influencer partnerships."
               isOpen={openFaqIndex === 2}
               onClick={() => setOpenFaqIndex(openFaqIndex === 2 ? null : 2)}
             />
             
             <FAQItem
-              question="How fast can you review a contract?"
-              answer="For retainership clients, we typically offer priority turnaround on time-sensitive deals. We'll confirm timelines on our first call."
+              question="How fast can you review influencer contracts?"
+              answer="For retainer clients, we provide priority turnaround on urgent campaigns. Typical turnaround is 24-48 hours. We'll confirm specific timelines on our discovery call."
               isOpen={openFaqIndex === 3}
               onClick={() => setOpenFaqIndex(openFaqIndex === 3 ? null : 3)}
             />
             
             <FAQItem
-              question="Will you talk directly to the brand or agency?"
-              answer="Where appropriate and with your consent, we can coordinate or draft responses so you don't have to handle the legal back-and-forth alone."
+              question="Will you communicate directly with influencers or their management?"
+              answer="When needed and with your approval, we can handle legal communications with influencers or their representatives, ensuring professional and legally sound negotiations."
               isOpen={openFaqIndex === 4}
               onClick={() => setOpenFaqIndex(openFaqIndex === 4 ? null : 4)}
             />
@@ -479,10 +479,10 @@ export default function CreatorInLawLanding() {
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="creator-final-cta-heading">
-              Protect your content. Protect your deals.
+              Protect your brand. Protect your investment.
             </h2>
             <p className="creator-final-cta-subheading">
-              One confusing contract or risky endorsement can undo months of hard work. Let's make sure your next deal moves you forward — safely.
+              One poorly structured influencer contract or compliance violation can damage your brand reputation and budget. Let's ensure your campaigns are legally sound and strategically protected.
             </p>
             
             <div className="creator-final-cta-buttons">
